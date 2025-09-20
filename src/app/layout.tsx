@@ -3,12 +3,13 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Nguyen Huynh - Full Stack Developer',
-    template: '%s | Nguyen Huynh Portfolio'
+    default: 'Huynh. - Full Stack Developer',
+    template: '%s | Huynh. Portfolio'
   },
-  description: 'Portfolio of Nguyen Huynh, Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS. Building scalable web applications with modern technologies.',
+  description: 'Portfolio of Huynh., Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS. Building scalable web applications with modern technologies.',
   keywords: [
     'Nguyen Huynh',
+    'Huynh.',
     'Full Stack Developer',
     'React.js Developer',
     'Next.js Developer', 
@@ -43,16 +44,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Nguyen Huynh - Full Stack Developer',
-    description: 'Portfolio of Nguyen Huynh, Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.',
+    title: 'Huynh. - Full Stack Developer',
+    description: 'Portfolio of Huynh., Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.',
     url: 'https://www.facebook.com/nghuynhit',
-    siteName: 'Nguyen Huynh Portfolio',
+    siteName: 'Huynh. Portfolio',
     images: [
       {
         url: 'https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/524052939_1061905626046297_1156620824287850354_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=zEm-P-FckZIQ7kNvwEt30ao&_nc_oc=Adn5IGgAuwHv65OW4x3qtSPQ-Pn36CVBpDE86GbLK_mMRVX3_4LqohvzHTkvVG9YVKc&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=fBXyB74EaEinXz7_cF0TTQ&oh=00_AfYYnBFgV0YTEkKFXWTmABnn_Zl8NidyIutmw-nLXeH9vw&oe=68D4AAF2',
         width: 1200,
         height: 630,
-        alt: 'Nguyen Huynh - Full Stack Developer Portfolio',
+        alt: 'Huynh. - Full Stack Developer Portfolio',
       },
     ],
     locale: 'en_US',
@@ -60,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nguyen Huynh - Full Stack Developer',
-    description: 'Portfolio of Nguyen Huynh, Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.',
+    title: 'Huynh. - Full Stack Developer',
+    description: 'Portfolio of Huynh., Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.',
     images: ['https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/524052939_1061905626046297_1156620824287850354_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=zEm-P-FckZIQ7kNvwEt30ao&_nc_oc=Adn5IGgAuwHv65OW4x3qtSPQ-Pn36CVBpDE86GbLK_mMRVX3_4LqohvzHTkvVG9YVKc&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=fBXyB74EaEinXz7_cF0TTQ&oh=00_AfYYnBFgV0YTEkKFXWTmABnn_Zl8NidyIutmw-nLXeH9vw&oe=68D4AAF2'],
     creator: '@nghuynhit',
   },
