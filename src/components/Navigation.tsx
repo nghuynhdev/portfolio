@@ -11,11 +11,21 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState('hero')
   const { t } = useLanguage()
 
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ 
-      behavior: 'smooth' 
-    })
-    setIsMenuOpen(false)
+  const scrollToSection = (sectionId: string, navHeight?: number) => {
+    const element = document.getElementById(sectionId)
+    
+    if (element) {
+      setIsMenuOpen(false)
+      
+      setTimeout(() => {
+        const elementPosition = element.offsetTop - (navHeight)
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        })
+      }, 150)
+    } else {
+    }
   }
 
   const menuItems = [
@@ -75,7 +85,7 @@ export default function Navigation() {
               return (
                 <motion.button
                   key={item.key}
-                  onClick={() => scrollToSection(item.section)}
+                  onClick={() => scrollToSection(item.section, 0)}
                   className={`relative px-2 lg:px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                     isActive
                       ? 'text-blue-600 dark:text-blue-400'
@@ -111,7 +121,8 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <motion.button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:bg-blue-100/50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              onTouchStart={() => {}}
+              className="md:hidden p-3 text-gray-700 dark:text-gray-300 hover:bg-blue-100/50 dark:hover:bg-gray-800 rounded-lg transition-colors touch-manipulation select-none active:bg-blue-100 dark:active:bg-gray-700"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -149,16 +160,18 @@ export default function Navigation() {
                   return (
                     <motion.button
                       key={item.key}
-                      onClick={() => scrollToSection(item.section)}
-                      className={`relative text-left py-3 px-4 rounded-lg transition-all duration-200 ${
+                      onClick={() => scrollToSection(item.section, 64)}
+                      onTouchStart={() => {}} 
+                      className={`relative text-left py-4 px-4 rounded-lg transition-all duration-200 touch-manipulation select-none ${
                         isActive
                           ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800/50'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800/50 active:bg-blue-100 dark:active:bg-gray-700'
                       }`}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ x: -10 }}
+                      animate={{ x: 0 }}
                       transition={{ delay: 0.1 * index }}
                       whileHover={{ x: 5 }}
+                      whileTap={{ scale: 0.98 }}
                     >
                       {t.nav[item.key as keyof typeof t.nav]}
                     </motion.button>
