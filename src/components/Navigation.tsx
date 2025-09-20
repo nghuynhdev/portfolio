@@ -11,7 +11,7 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState('hero')
   const { t } = useLanguage()
 
-  const scrollToSection = (sectionId: string, navHeight: number = 64) => {
+  const scrollToSection = (sectionId: string, navHeight: number) => {
     const element = document.getElementById(sectionId)
     
     if (element) {
@@ -48,9 +48,8 @@ export default function Navigation() {
       { threshold: 0.3 }
     )
 
-    const sections = ['hero', 'overview', 'experience', 'skills', 'education', 'contact']
-    sections.forEach((sectionId) => {
-      const element = document.getElementById(sectionId)
+    menuItems.forEach((item) => {
+      const element = document.getElementById(item.section)
       if (element) observer.observe(element)
     })
 
