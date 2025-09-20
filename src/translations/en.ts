@@ -123,7 +123,7 @@ export const en = {
       title: "💼 Currently Available",
       description: "Open to full-time opportunities, freelance projects, and consulting work. Specializing in React.js, Next.js, Node.js, and NestJS development."
     },
-    footer: "© 2025 Created by Nguyen Huynh"
+    footer: "<b>© 2025</b> Website designed and developed by <b>Huynh.</b>"
   },
   overview: {
     title: "Overview",

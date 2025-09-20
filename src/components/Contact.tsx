@@ -184,9 +184,7 @@ export default function Contact() {
         
         {/* Footer */}
         <div className="mt-12 sm:mt-16 lg:mt-20 pt-6 sm:pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
-          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
-            {t.contact.footer}
-          </p>
+          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base" dangerouslySetInnerHTML={{__html: t.contact.footer}} />
         </div>
       </div>
     </section>
