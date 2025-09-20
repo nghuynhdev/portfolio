@@ -30,7 +30,7 @@ export const vi = {
       ]
     },
     okvip: {
-      company: "OKVIP",
+      company: "Asia Digital",
       position: "Lập trình viên Full-stack",
       duration: "04/2024 - 05/2025",
       description: [
