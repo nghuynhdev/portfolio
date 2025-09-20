@@ -36,7 +36,7 @@ export default function LanguageToggle() {
     <div className="relative" ref={dropdownRef}>
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 rounded-lg hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-200"
+        className="flex items-center gap-2 px-3 py-2 bg-blue-50/50 dark:bg-gray-800/50 backdrop-blur-sm border border-blue-200/50 dark:border-gray-700/50 rounded-lg hover:bg-blue-100/50 dark:hover:bg-gray-700/50 transition-all duration-200"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
@@ -45,7 +45,7 @@ export default function LanguageToggle() {
           {currentLang.code.toUpperCase()}
         </span>
         <motion.svg
-          className="w-4 h-4 text-gray-500 dark:text-gray-400"
+          className="w-4 h-4 text-gray-600 dark:text-gray-400"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

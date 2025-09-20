@@ -49,7 +49,7 @@ export default function Navigation() {
 
   return (
     <motion.nav 
-      className="fixed top-0 left-0 right-0 bg-gradient-to-r from-white/90 via-white/95 to-white/90 dark:from-gray-900/90 dark:via-gray-900/95 dark:to-gray-900/90 backdrop-blur-md z-50 border-b border-gray-200/20 dark:border-gray-700/20"
+      className="fixed top-0 left-0 right-0 bg-gradient-to-r from-white/90 via-blue-50/95 to-purple-50/90 dark:from-slate-900/95 dark:via-gray-900/95 dark:to-slate-900/95 backdrop-blur-lg z-50 border-b border-blue-200/30 dark:border-gray-700/30"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -79,7 +79,7 @@ export default function Navigation() {
                   className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                     isActive
                       ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <motion.button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              className="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:bg-blue-100/50 dark:hover:bg-gray-800 rounded-lg transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -153,7 +153,7 @@ export default function Navigation() {
                       className={`relative text-left py-3 px-4 rounded-lg transition-all duration-200 ${
                         isActive
                           ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800/50'
                       }`}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
