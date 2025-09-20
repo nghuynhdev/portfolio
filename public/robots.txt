@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Disallow admin or private pages (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all crawlers to access CSS and JS files
+Allow: /_next/static/
+
+# Block access to API routes (optional)
+# Disallow: /api/
