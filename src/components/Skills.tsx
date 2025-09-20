@@ -66,7 +66,15 @@ export default function Skills() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {skillCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
+              <motion.div 
+                key={categoryIndex} 
+                className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700 relative overflow-hidden"
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.15)"
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center">
                   {category.title}
                 </h3>
@@ -91,7 +99,7 @@ export default function Skills() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
           
@@ -101,27 +109,48 @@ export default function Skills() {
               {t.skills.coreStrengths}
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
+              <motion.div 
+                className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 15px 30px rgba(0,0,0,0.12)"
+                }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
                 <div className="text-blue-600 dark:text-blue-400 text-3xl mb-4">🚀</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.performance.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {t.skills.performance.description}
                 </p>
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
+              </motion.div>
+              <motion.div 
+                className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 15px 30px rgba(0,0,0,0.12)"
+                }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
                 <div className="text-green-600 dark:text-green-400 text-3xl mb-4">✨</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.cleanCode.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {t.skills.cleanCode.description}
                 </p>
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
+              </motion.div>
+              <motion.div 
+                className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 15px 30px rgba(0,0,0,0.12)"
+                }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
                 <div className="text-purple-600 dark:text-purple-400 text-3xl mb-4">🤝</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.teamwork.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {t.skills.teamwork.description}
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

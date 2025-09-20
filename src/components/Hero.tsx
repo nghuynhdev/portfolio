@@ -140,29 +140,63 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Floating elements animation */}
+          {/* Enhanced Floating elements animation */}
           <motion.div
-            className="absolute top-20 left-10 w-20 h-20 bg-blue-200 dark:bg-blue-800 rounded-full opacity-20"
+            className="absolute top-20 left-10 w-32 h-32 bg-blue-200/30 dark:bg-blue-800/30 rounded-full blur-sm"
             animate={{ 
-              y: [0, -20, 0],
+              y: [0, -40, 0, -25, 0],
+              x: [0, 20, -15, 10, 0],
+              scale: [1, 1.2, 0.8, 1.1, 1],
               rotate: [0, 180, 360]
             }}
             transition={{ 
-              duration: 6,
+              duration: 10,
               repeat: Infinity,
               ease: "easeInOut"
             }}
           />
           <motion.div
-            className="absolute bottom-20 right-10 w-16 h-16 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20"
+            className="absolute bottom-20 right-10 w-28 h-28 bg-purple-200/30 dark:bg-purple-800/30 rounded-full blur-sm"
             animate={{ 
-              y: [0, 20, 0],
+              y: [0, 30, 0, 15, 0],
+              x: [0, -25, 20, -10, 0],
+              scale: [1, 0.9, 1.3, 0.95, 1],
               rotate: [360, 180, 0]
             }}
             transition={{ 
-              duration: 8,
+              duration: 12,
               repeat: Infinity,
               ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-1/4 w-24 h-24 bg-emerald-200/25 dark:bg-emerald-800/25 rounded-full blur-sm"
+            animate={{ 
+              y: [0, -20, 15, -10, 0],
+              x: [0, 15, -20, 25, 0],
+              scale: [1, 1.15, 0.85, 1.05, 1],
+              rotate: [0, 90, 270, 180, 360]
+            }}
+            transition={{ 
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+          />
+          <motion.div
+            className="absolute top-1/3 right-1/4 w-20 h-20 bg-rose-200/25 dark:bg-rose-800/25 rounded-full blur-sm"
+            animate={{ 
+              y: [0, 25, -30, 20, 0],
+              x: [0, -20, 15, -15, 0],
+              scale: [1, 0.9, 1.25, 0.95, 1],
+              rotate: [0, -90, -180, -270, -360]
+            }}
+            transition={{ 
+              duration: 11,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 4
             }}
           />
         </div>
