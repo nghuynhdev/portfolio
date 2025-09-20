@@ -10,7 +10,7 @@ export default function Overview() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="overview" className="min-h-screen py-20 bg-white dark:bg-gray-900" ref={ref}>
+    <section id="overview" className="min-h-screen py-20" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -104,7 +104,7 @@ export default function Overview() {
 
               {/* Stats */}
               <motion.div
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg border border-blue-100 dark:border-gray-600"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.0 }}

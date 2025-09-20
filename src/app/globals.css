@@ -7,17 +7,16 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #111827;
+  --foreground: #f9fafb;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #111827;
+    --foreground: #f9fafb;
+  }
 }
 
 @layer utilities {

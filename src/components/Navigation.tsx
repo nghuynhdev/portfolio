@@ -1,12 +1,14 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import LanguageToggle from './LanguageToggle'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
   const { t } = useLanguage()
 
   const scrollToSection = (sectionId: string) => {
@@ -25,62 +27,108 @@ export default function Navigation() {
     { key: 'contact', section: 'contact' }
   ]
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    menuItems.forEach((item) => {
+      const element = document.getElementById(item.section)
+      if (element) observer.observe(element)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <motion.nav 
-      className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50"
+      className="fixed top-0 left-0 right-0 bg-gradient-to-r from-white/90 via-white/95 to-white/90 dark:from-gray-900/90 dark:via-gray-900/95 dark:to-gray-900/90 backdrop-blur-md z-50 border-b border-gray-200/20 dark:border-gray-700/20"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <motion.div 
-            className="text-xl font-bold text-gray-800 dark:text-white"
+            className="flex items-center space-x-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            {t.hero.name}
+            <span className="text-lg font-semibold text-gray-800 dark:text-white">
+              Huynh.
+            </span>
           </motion.div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item, index) => (
-              <motion.button
-                key={item.key}
-                onClick={() => scrollToSection(item.section)}
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * (index + 1) }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {t.nav[item.key as keyof typeof t.nav]}
-              </motion.button>
-            ))}
-            <LanguageToggle />
+          <div className="hidden md:flex items-center space-x-1">
+            {menuItems.map((item, index) => {
+              const isActive = activeSection === item.section
+              return (
+                <motion.button
+                  key={item.key}
+                  onClick={() => scrollToSection(item.section)}
+                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                    isActive
+                      ? 'text-blue-600 dark:text-blue-400'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                  }`}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * (index + 1) }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-blue-100 dark:bg-blue-900/30 rounded-lg"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10">
+                    {t.nav[item.key as keyof typeof t.nav]}
+                  </span>
+                </motion.button>
+              )
+            })}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          {/* Right Actions */}
+          <div className="flex items-center space-x-3">
+            <ThemeToggle />
             <LanguageToggle />
+            
+            {/* Mobile Menu Button */}
             <motion.button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 dark:text-gray-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <motion.svg 
-                className="w-6 h-6" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-                animate={isMenuOpen ? { rotate: 90 } : { rotate: 0 }}
-                transition={{ duration: 0.2 }}
+              <motion.div
+                animate={isMenuOpen ? { rotate: 180 } : { rotate: 0 }}
+                transition={{ duration: 0.3 }}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </motion.svg>
+                {isMenuOpen ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
+              </motion.div>
             </motion.button>
           </div>
         </div>
@@ -89,26 +137,33 @@ export default function Navigation() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div 
-              className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700"
+              className="md:hidden py-4 border-t border-gray-200/30 dark:border-gray-700/30"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="flex flex-col space-y-4">
-                {menuItems.map((item, index) => (
-                  <motion.button
-                    key={item.key}
-                    onClick={() => scrollToSection(item.section)}
-                    className="text-left text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * index }}
-                    whileHover={{ x: 10 }}
-                  >
-                    {t.nav[item.key as keyof typeof t.nav]}
-                  </motion.button>
-                ))}
+              <div className="flex flex-col space-y-2">
+                {menuItems.map((item, index) => {
+                  const isActive = activeSection === item.section
+                  return (
+                    <motion.button
+                      key={item.key}
+                      onClick={() => scrollToSection(item.section)}
+                      className={`relative text-left py-3 px-4 rounded-lg transition-all duration-200 ${
+                        isActive
+                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50'
+                      }`}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 * index }}
+                      whileHover={{ x: 5 }}
+                    >
+                      {t.nav[item.key as keyof typeof t.nav]}
+                    </motion.button>
+                  )
+                })}
               </div>
             </motion.div>
           )}

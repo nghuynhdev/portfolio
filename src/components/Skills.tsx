@@ -57,16 +57,16 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">
+        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
 {t.skills.title}
         </h2>
         
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {skillCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md">
+              <div key={categoryIndex} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center">
                   {category.title}
                 </h3>
@@ -101,21 +101,21 @@ export default function Skills() {
               {t.skills.coreStrengths}
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
                 <div className="text-blue-600 dark:text-blue-400 text-3xl mb-4">🚀</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.performance.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {t.skills.performance.description}
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
                 <div className="text-green-600 dark:text-green-400 text-3xl mb-4">✨</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.cleanCode.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {t.skills.cleanCode.description}
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700">
                 <div className="text-purple-600 dark:text-purple-400 text-3xl mb-4">🤝</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.teamwork.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">

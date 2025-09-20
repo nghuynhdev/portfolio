@@ -44,7 +44,7 @@ export default function Hero() {
   ]
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-slate-900 dark:to-indigo-950 pt-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="absolute inset-0" style={{

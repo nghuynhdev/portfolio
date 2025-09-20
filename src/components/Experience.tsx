@@ -26,10 +26,10 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900" ref={ref}>
+    <section id="experience" className="py-20" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16"
+          className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}

@@ -5,9 +5,9 @@ import { useLanguage } from '@/contexts/LanguageContext'
 export default function Education() {
   const { t } = useLanguage()
   return (
-    <section id="education" className="py-20 bg-white dark:bg-gray-900">
+    <section id="education" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">
+        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
           {t.education.title}
         </h2>
         

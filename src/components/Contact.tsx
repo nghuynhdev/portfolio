@@ -28,7 +28,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+    <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">
           {t.contact.title}
