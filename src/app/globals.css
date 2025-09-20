@@ -38,3 +38,10 @@ body {
     user-select: none;
   }
 }
+
+/* Logo font styles */
+.logo-font {
+  font-family: var(--font-leckerli), 'Leckerli One', 'Dancing Script', cursive;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}

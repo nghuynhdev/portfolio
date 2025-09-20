@@ -73,7 +73,7 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="text-lg font-semibold text-gray-800 dark:text-white">
+            <span className="text-2xl font-bold text-gray-800 dark:text-white logo-font">
               Huynh.
             </span>
           </motion.div>
