@@ -41,12 +41,9 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
                 {t.contact.subtitle}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
-                {t.contact.description}
-              </p>
               
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+              <div className="space-y-5">
+                <a href="mailto:nghuynh.dev@gmail.com?subject=Portfolio Contact&body=Hi Nguyen," className="flex items-center space-x-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 p-2 rounded-lg transition-colors cursor-pointer">
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -56,9 +53,9 @@ export default function Contact() {
                     <h4 className="font-semibold text-gray-800 dark:text-white">Email</h4>
                     <p className="text-gray-600 dark:text-gray-300">nghuynh.dev@gmail.com</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex items-center space-x-4">
+                <a href="tel:+66612140383" className="flex items-center space-x-4 hover:bg-green-50 dark:hover:bg-green-900/20 p-2 rounded-lg transition-colors cursor-pointer">
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -68,9 +65,9 @@ export default function Contact() {
                     <h4 className="font-semibold text-gray-800 dark:text-white">Phone</h4>
                     <p className="text-gray-600 dark:text-gray-300">+66 612140383</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex items-center space-x-4">
+                <a href="https://maps.google.com/?q=Ho+Chi+Minh+City,Vietnam" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 hover:bg-red-50 dark:hover:bg-red-900/20 p-2 rounded-lg transition-colors cursor-pointer">
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -81,7 +78,31 @@ export default function Contact() {
                     <h4 className="font-semibold text-gray-800 dark:text-white">Location</h4>
                     <p className="text-gray-600 dark:text-gray-300">Ho Chi Minh, Vietnam</p>
                   </div>
-                </div>
+                </a>
+                
+                <a href="https://www.facebook.com/nghuynhit" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 p-2 rounded-lg transition-colors">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-white">Facebook</h4>
+                    <p className="text-gray-600 dark:text-gray-300">@nghuynhit</p>
+                  </div>
+                </a>
+                
+                <a href="https://zalo.me/84327514700" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 hover:bg-sky-50 dark:hover:bg-sky-900/20 p-2 rounded-lg transition-colors">
+                  <div className="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 14.5h-9v-1.5h9v1.5zm0-3h-9V12h9v1.5zm0-3h-9V9h9v1.5z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-white">Zalo</h4>
+                    <p className="text-gray-600 dark:text-gray-300">+84 327 514 700</p>
+                  </div>
+                </a>
               </div>
               
               {/* Availability */}

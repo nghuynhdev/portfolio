@@ -123,7 +123,7 @@ export const vi = {
       title: "💼 Hiện đang sẵn sàng",
       description: "Mở cho các cơ hội toàn thời gian, dự án freelance và công việc tư vấn. Chuyên về phát triển React.js, Next.js, Node.js và NestJS."
     },
-    footer: "© 2025 Nguyễn Huỳnh. Được xây dựng với Next.js và Tailwind CSS."
+    footer: "© 2025 Được tạo bởi Nguyễn Huỳnh"
   },
   overview: {
     title: "Tổng quan", 
