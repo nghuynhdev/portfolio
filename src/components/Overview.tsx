@@ -10,15 +10,15 @@ export default function Overview() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="overview" className="min-h-screen py-20" ref={ref}>
+    <section id="overview" className="min-h-screen py-10 md:py-20" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-4 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
             {t.overview?.title || "Overview"}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">

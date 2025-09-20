@@ -57,10 +57,10 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-10 md:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
-{t.skills.title}
+        <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
+          {t.skills.title}
         </h2>
         
         <div className="max-w-6xl mx-auto">
@@ -104,8 +104,8 @@ export default function Skills() {
           </div>
           
           {/* Additional strengths */}
-          <div className="mt-12 text-center">
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+          <div className="mt-8 md:mt-12 text-center">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white mb-6">
               {t.skills.coreStrengths}
             </h3>
             <div className="grid md:grid-cols-3 gap-6">

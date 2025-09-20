@@ -26,10 +26,10 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20" ref={ref}>
+    <section id="experience" className="py-10 md:py-20" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-8"
+          className="text-2xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
@@ -41,7 +41,7 @@ export default function Experience() {
           <div className="relative">
             {/* Timeline line */}
             <motion.div 
-              className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"
+              className="absolute left-2 md:left-8 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
               transition={{ duration: 1.5, delay: 0.5 }}
@@ -54,14 +54,14 @@ export default function Experience() {
               return (
                 <motion.div 
                   key={index} 
-                  className="relative mb-12 ml-20"
+                  className="relative mb-12 ml-8 md:ml-20"
                   initial={{ opacity: 0, x: -50 }}
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                   transition={{ duration: 0.6, delay: 0.8 + (index * 0.2) }}
                 >
                   {/* Timeline dot */}
                   <motion.div 
-                    className="absolute -left-14 top-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-900"
+                    className="absolute -left-[31px] md:-left-[55px] top-6 w-4 h-4 bg-blue-600 rounded-full border-2 md:border-4 border-white dark:border-gray-900"
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : { scale: 0 }}
                     transition={{ duration: 0.4, delay: 1.0 + (index * 0.2) }}
@@ -95,7 +95,7 @@ export default function Experience() {
                         </motion.h4>
                       </div>
                       <motion.span 
-                        className="text-sm text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full"
+                        className="text-sm text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 px-3 py-1 w-fit rounded-full"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                         transition={{ duration: 0.4, delay: 1.4 + (index * 0.2) }}
@@ -119,7 +119,7 @@ export default function Experience() {
                           transition={{ duration: 0.4, delay: 1.6 + (index * 0.2) + (idx * 0.1) }}
                         >
                           <span className="text-blue-600 dark:text-blue-400 mr-2 mt-2 flex-shrink-0">•</span>
-                          {item}
+                          <span className="text-sm md:text-base">{item}</span>
                         </motion.li>
                       ))}
                     </motion.ul>

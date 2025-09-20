@@ -76,7 +76,7 @@ export default function Navigation() {
                 <motion.button
                   key={item.key}
                   onClick={() => scrollToSection(item.section)}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                  className={`relative px-2 lg:px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                     isActive
                       ? 'text-blue-600 dark:text-blue-400'
                       : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'

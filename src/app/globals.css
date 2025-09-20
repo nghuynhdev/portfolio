@@ -8,7 +8,7 @@
 }
 
 .dark {
-  --background: #111827;
+  --background: rgb(15 23 42);
   --foreground: #f9fafb;
 }
 

@@ -8,11 +8,46 @@ export default function Hero() {
   const { t } = useLanguage()
 
   const technologies = [
-    { name: "React.js", color: "blue" },
-    { name: "Next.js", color: "green" },
-    { name: "Node.js", color: "purple" },
-    { name: "NestJS", color: "red" },
-    { name: "TypeScript", color: "yellow" }
+    {
+      name: "React.js",
+      color: "blue",
+      bgLight: "bg-blue-100",
+      textLight: "text-blue-800",
+      textDark: "dark:text-blue-200",
+      bgDark: "dark:bg-blue-900",
+    },
+    {
+      name: "Next.js",
+      color: "green",
+      bgLight: "bg-green-100",
+      textLight: "text-green-800",
+      textDark: "dark:text-green-200",
+      bgDark: "dark:bg-green-900",
+    },
+    {
+      name: "Node.js",
+      color: "purple",
+      bgLight: "bg-purple-100",
+      textLight: "text-purple-800",
+      textDark: "dark:text-purple-200",
+      bgDark: "dark:bg-purple-900",
+    },
+    {
+      name: "NestJS",
+      color: "red",
+      bgLight: "bg-red-100",
+      textLight: "text-red-800",
+      textDark: "dark:text-red-200",
+      bgDark: "dark:bg-red-900",
+    },
+    {
+      name: "TypeScript",
+      color: "yellow",
+      bgLight: "bg-yellow-100",
+      textLight: "text-yellow-800",
+      textDark: "dark:text-yellow-200",
+      bgDark: "dark:bg-yellow-900",
+    }
   ]
 
   const contactInfo = [
@@ -120,7 +155,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div 
-            className="flex flex-wrap gap-3 justify-center"
+            className="flex flex-wrap gap-1.5 md:gap-3 justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
@@ -128,7 +163,7 @@ export default function Hero() {
             {technologies.map((tech, index) => (
               <motion.span
                 key={tech.name}
-                className={`px-4 py-2 bg-${tech.color}-100 dark:bg-${tech.color}-900 text-${tech.color}-800 dark:text-${tech.color}-200 rounded-full text-sm`}
+                className={`px-2.5 md:px-4 py-2 ${tech.bgLight} ${tech.bgDark} ${tech.textLight} ${tech.textDark} rounded-full text-xs md:text-sm`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + (index * 0.1) }}
