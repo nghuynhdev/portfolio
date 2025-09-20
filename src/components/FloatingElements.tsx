@@ -40,20 +40,33 @@ export default function FloatingElements() {
       ))}
       
       {/* Floating particles */}
-      {Array.from({ length: 12 }).map((_, index) => (
+      {[
+        { x: '15%', y: '20%', duration: 8 },
+        { x: '85%', y: '30%', duration: 10 },
+        { x: '25%', y: '60%', duration: 9 },
+        { x: '75%', y: '15%', duration: 12 },
+        { x: '45%', y: '80%', duration: 7 },
+        { x: '65%', y: '45%', duration: 11 },
+        { x: '35%', y: '25%', duration: 8 },
+        { x: '55%', y: '70%', duration: 9 },
+        { x: '20%', y: '50%', duration: 10 },
+        { x: '80%', y: '65%', duration: 8 },
+        { x: '40%', y: '35%', duration: 11 },
+        { x: '70%', y: '85%', duration: 9 }
+      ].map((particle, index) => (
         <motion.div
           key={`particle-${index}`}
           className="absolute w-2 h-2 bg-blue-300/30 dark:bg-blue-600/30 rounded-full"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: particle.x,
+            top: particle.y,
           }}
           animate={{
             y: [0, -100, 0],
             opacity: [0, 1, 0],
           }}
           transition={{
-            duration: 8 + Math.random() * 4,
+            duration: particle.duration,
             repeat: Infinity,
             delay: index * 1.2,
             ease: "easeInOut",
