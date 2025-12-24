@@ -30,11 +30,9 @@ export default function ThemeToggle() {
     if (newTheme) {
       document.documentElement.classList.add('dark')
       localStorage.setItem('theme', 'dark')
-      console.log('Dark mode activated, html classes:', document.documentElement.className)
     } else {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('theme', 'light')
-      console.log('Light mode activated, html classes:', document.documentElement.className)
     }
   }
 
@@ -50,7 +48,7 @@ export default function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className={`relative w-14 h-7 rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+      className={`relative w-14 h-7 rounded-full p-1 transition-colors duration-300 focus:outline-none ${
         isDark ? 'bg-gray-700' : 'bg-gray-200'
       }`}
       whileHover={{ scale: 1.05 }}

@@ -19,7 +19,7 @@ export const vi = {
   experience: {
     title: "Kinh nghiệm làm việc",
     hyperpush: {
-      company: "Hyperpush",
+      company: "Accenture",
       position: "Lập trình viên Full-stack",
       duration: "05/2025 – Hiện tại",
       description: [
@@ -117,7 +117,8 @@ export const vi = {
       message: "Tin nhắn của bạn",
       messagePlaceholder: "Hãy kể cho tôi về dự án của bạn hoặc chỉ chào hỏi!",
       submit: "Gửi tin nhắn",
-      successMessage: "Cảm ơn bạn đã gửi tin nhắn! Tôi sẽ phản hồi sớm nhất có thể."
+      successMessage: "Cảm ơn bạn đã gửi tin nhắn! Tôi sẽ phản hồi sớm nhất có thể.",
+      errorMessage: "Gửi tin nhắn thất bại. Vui lòng thử lại."
     },
     availability: {
       title: "💼 Hiện đang sẵn sàng",
