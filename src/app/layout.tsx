@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Leckerli_One } from 'next/font/google'
+import ToasterProvider from '@/components/ToasterProvider'
 
 const leckerliOne = Leckerli_One({
   weight: ['400'],
@@ -163,6 +164,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${leckerliOne.variable} antialiased bg-gradient-to-br from-blue-50 via-purple-50 via-emerald-50 via-orange-50 via-rose-50 to-violet-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-gray-800 dark:via-zinc-900 dark:via-slate-800 dark:to-gray-900 text-gray-900 dark:text-gray-100 min-h-screen`}>
+        <ToasterProvider />
         {children}
       </body>
     </html>

@@ -19,7 +19,7 @@ export const en = {
   experience: {
     title: "Work Experience",
     hyperpush: {
-      company: "Hyperpush",
+      company: "Accenture",
       position: "Full-stack Developer",
       duration: "05/2025 – Present",
       description: [
@@ -117,7 +117,8 @@ export const en = {
       message: "Your Message",
       messagePlaceholder: "Tell me about your project or just say hello!",
       submit: "Send Message",
-      successMessage: "Thank you for your message! I will get back to you soon."
+      successMessage: "Thank you for your message! I will get back to you soon.",
+      errorMessage: "Failed to send message. Please try again."
     },
     availability: {
       title: "💼 Currently Available",
