@@ -121,7 +121,7 @@ export const en = {
       errorMessage: "Failed to send message. Please try again."
     },
     availability: {
-      title: "💼 Currently Available",
+      title: "Currently Available",
       description: "Open to full-time opportunities, freelance projects, and consulting work. Specializing in React.js, Next.js, Node.js, and NestJS development."
     },
     footer: "<b>© 2025</b> Website designed and developed by <b>Huynh.</b>"

@@ -100,45 +100,36 @@ export default function Education() {
             </h3>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
-                <div className="text-blue-600 dark:text-blue-400 text-2xl mb-3">🎯</div>
-                <h4 className="font-bold text-gray-800 dark:text-white mb-2">
-                  {t.education.accomplishments.quickLearner.title}
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {t.education.accomplishments.quickLearner.description}
-                </p>
-              </div>
-              
-              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
-                <div className="text-green-600 dark:text-green-400 text-2xl mb-3">⏱️</div>
-                <h4 className="font-bold text-gray-800 dark:text-white mb-2">
-                  {t.education.accomplishments.timeManagement.title}
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {t.education.accomplishments.timeManagement.description}
-                </p>
-              </div>
-              
-              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
-                <div className="text-purple-600 dark:text-purple-400 text-2xl mb-3">🌐</div>
-                <h4 className="font-bold text-gray-800 dark:text-white mb-2">
-                  {t.education.accomplishments.international.title}
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {t.education.accomplishments.international.description}
-                </p>
-              </div>
-              
-              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
-                <div className="text-red-600 dark:text-red-400 text-2xl mb-3">🚀</div>
-                <h4 className="font-bold text-gray-800 dark:text-white mb-2">
-                  {t.education.accomplishments.performance.title}
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {t.education.accomplishments.performance.description}
-                </p>
-              </div>
+              {[
+                {
+                  item: t.education.accomplishments.quickLearner,
+                  iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
+                },
+                {
+                  item: t.education.accomplishments.timeManagement,
+                  iconPath: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                },
+                {
+                  item: t.education.accomplishments.international,
+                  iconPath: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+                },
+                {
+                  item: t.education.accomplishments.performance,
+                  iconPath: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+                },
+              ].map(({ item, iconPath }) => (
+                <div key={item.title} className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-emerald-600 dark:text-[#46f2a7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={iconPath} />
+                      </svg>
+                    </div>
+                    <h4 className="font-bold text-gray-800 dark:text-white">{item.title}</h4>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

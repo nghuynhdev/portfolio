@@ -109,48 +109,39 @@ export default function Skills() {
               {t.skills.coreStrengths}
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <motion.div 
-                className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 15px 30px rgba(0,0,0,0.12)"
-                }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <div className="text-blue-600 dark:text-blue-400 text-3xl mb-4">🚀</div>
-                <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.performance.title}</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {t.skills.performance.description}
-                </p>
-              </motion.div>
-              <motion.div 
-                className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 15px 30px rgba(0,0,0,0.12)"
-                }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <div className="text-green-600 dark:text-green-400 text-3xl mb-4">✨</div>
-                <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.cleanCode.title}</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {t.skills.cleanCode.description}
-                </p>
-              </motion.div>
-              <motion.div 
-                className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 15px 30px rgba(0,0,0,0.12)"
-                }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <div className="text-purple-600 dark:text-purple-400 text-3xl mb-4">🤝</div>
-                <h4 className="font-bold text-gray-800 dark:text-white mb-2">{t.skills.teamwork.title}</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {t.skills.teamwork.description}
-                </p>
-              </motion.div>
+              {[
+                {
+                  label: t.skills.performance,
+                  icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />,
+                },
+                {
+                  label: t.skills.cleanCode,
+                  icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />,
+                },
+                {
+                  label: t.skills.teamwork,
+                  icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />,
+                },
+              ].map((item) => (
+                <motion.div
+                  key={item.label.title}
+                  className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]"
+                  whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0,0,0,0.12)" }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-emerald-600 dark:text-[#46f2a7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {item.icon}
+                      </svg>
+                    </div>
+                    <h4 className="font-bold text-gray-800 dark:text-white">{item.label.title}</h4>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed text-left">
+                    {item.label.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>

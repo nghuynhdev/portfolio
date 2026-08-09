@@ -9,6 +9,48 @@ export default function Overview() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
+  const cards = [
+    {
+      delay: 0.4,
+      iconBg: "bg-blue-100 dark:bg-blue-900",
+      icon: (
+        <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      ),
+      title: t.overview?.aboutTitle || "About Me",
+      description: t.overview?.aboutDescription || "I am a passionate developer with expertise in modern web technologies.",
+    },
+    {
+      delay: 0.6,
+      iconBg: "bg-emerald-100 dark:bg-emerald-900",
+      icon: (
+        <svg className="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      ),
+      title: t.overview?.missionTitle || "My Mission",
+      description: t.overview?.missionDescription || "To leverage technology to solve real-world problems.",
+    },
+    {
+      delay: 0.8,
+      iconBg: "bg-purple-100 dark:bg-purple-900",
+      icon: (
+        <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      ),
+      title: t.overview?.approachTitle || "My Approach",
+      description: t.overview?.approachDescription || "I believe in continuous learning, attention to detail, and collaborative problem-solving.",
+    },
+  ]
+
+  const stats = [
+    { value: "4+", label: t.overview?.yearsExp || "Years Experience", color: "text-[#46f2a7]" },
+    { value: "20+", label: t.overview?.projects || "Projects Completed", color: "text-emerald-600 dark:text-emerald-400" },
+    { value: "10+", label: t.overview?.technologies || "Technologies", color: "text-purple-600 dark:text-purple-400" },
+  ]
+
   return (
     <section id="overview" className="min-h-screen py-10 md:py-20" ref={ref}>
       <div className="container mx-auto px-4">
@@ -26,7 +68,6 @@ export default function Overview() {
           </p>
         </motion.div>
 
-        {/* Overview Content - Centered Layout */}
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="grid lg:grid-cols-2 gap-12 items-stretch"
@@ -34,95 +75,43 @@ export default function Overview() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Left Column - About & Mission */}
+            {/* Left Column - Info cards */}
             <div className="flex flex-col space-y-8">
-              <motion.div
-                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+              {cards.map((card) => (
+                <motion.div
+                  key={card.title}
+                  className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: card.delay }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className={`w-12 h-12 ${card.iconBg} rounded-full flex items-center justify-center mr-4`}>
+                      {card.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{card.title}</h3>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
-                    {t.overview?.aboutTitle || "About Me"}
-                  </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t.overview?.aboutDescription || "I am a passionate developer with expertise in modern web technologies. I love creating innovative solutions that make a difference in people's lives."}
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
-                    {t.overview?.missionTitle || "My Mission"}
-                  </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t.overview?.missionDescription || "To leverage technology to solve real-world problems and create meaningful experiences through clean, efficient, and scalable code."}
-                </p>
-              </motion.div>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{card.description}</p>
+                </motion.div>
+              ))}
             </div>
 
-            {/* Right Column - Approach & Stats */}
-            <div className="flex flex-col space-y-8">
+            {/* Right Column - Stats */}
+            <div className="flex flex-col justify-center">
               <motion.div
-                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
-                    {t.overview?.approachTitle || "My Approach"}
-                  </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t.overview?.approachDescription || "I believe in continuous learning, attention to detail, and collaborative problem-solving to deliver high-quality solutions."}
-                </p>
-              </motion.div>
-
-              {/* Stats */}
-              <motion.div
-                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
+                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
               >
                 <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center">Key Numbers</h4>
                 <div className="grid grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-[#46f2a7] mb-2">4+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">20+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">10+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
-                  </div>
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="text-center">
+                      <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             </div>

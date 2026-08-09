@@ -121,7 +121,7 @@ export const vi = {
       errorMessage: "Gửi tin nhắn thất bại. Vui lòng thử lại."
     },
     availability: {
-      title: "💼 Hiện đang sẵn sàng",
+      title: "Hiện đang sẵn sàng",
       description: "Mở cho các cơ hội toàn thời gian, dự án freelance và công việc tư vấn. Chuyên về phát triển React.js, Next.js, Node.js và NestJS."
     },
     footer: "<b>© 2025</b> Website được thiết kế và phát triển bởi <b>Huynh.</b>"
