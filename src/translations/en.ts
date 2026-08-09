@@ -23,10 +23,11 @@ export const en = {
       position: "Full-stack Developer",
       duration: "05/2025 – Present",
       description: [
-        "Designed DB, built, and maintained internal tools, branded marketing websites, cross-platform applications, and various digital platforms",
-        "Specialized in React.js, Next.js, Node.js, NestJS, and React Native for building both web and mobile applications",
-        "Developed custom browser extensions and integrated third-party services for enhanced user experience and functionality",
-        "Optimized performance, improved load times, and enhanced system scalability across multiple platforms and environments"
+        "Developed internal productivity tools to support and enhance team efficiency across multiple workflows",
+        "Integrated Telegram and Signal APIs for real-time notification delivery within internal systems",
+        "Architected embeddable modular systems as self-contained modules pluggable into third-party websites",
+        "Implemented Kubernetes horizontal pod scaling to handle parallel workloads across distributed tasks",
+        "Scaled backend services with Redis caching; developed browser extensions and integrated third-party APIs"
       ]
     },
     okvip: {

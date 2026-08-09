@@ -38,7 +38,7 @@ export default function Skills() {
         { name: "PostgreSQL", level: 80 },
         { name: "MySQL", level: 80 },
         { name: "MongoDB", level: 75 },
-        { name: "Git", level: 85 },
+        { name: "Redis", level: 75 },
         { name: "Docker", level: 70 },
         { name: "AWS", level: 65 }
       ]

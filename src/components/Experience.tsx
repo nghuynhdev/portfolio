@@ -13,7 +13,7 @@ export default function Experience() {
   const experiences = [
     {
       key: 'hyperpush',
-      technologies: ["React.js", "Next.js", "Node.js", "NestJS", "React Native"]
+      technologies: ["React.js", "Next.js", "NestJS", "Redis", "Docker", "K8s"]
     },
     {
       key: 'okvip',

@@ -23,10 +23,11 @@ export const vi = {
       position: "Lập trình viên Full-stack",
       duration: "05/2025 – Hiện tại",
       description: [
-        "Thiết kế cơ sở dữ liệu, xây dựng và bảo trì các công cụ nội bộ, trang web marketing thương hiệu, ứng dụng đa nền tảng và các nền tảng kỹ thuật số khác",
-        "Chuyên về React.js, Next.js, Node.js, NestJS và React Native để xây dựng cả ứng dụng web và di động",
-        "Phát triển tiện ích mở rộng trình duyệt tùy chỉnh và tích hợp dịch vụ bên thứ ba để nâng cao trải nghiệm người dùng",
-        "Tối ưu hóa hiệu suất, cải thiện thời gian tải và nâng cao khả năng mở rộng hệ thống trên nhiều nền tảng"
+        "Phát triển các công cụ nội bộ hỗ trợ và nâng cao hiệu suất làm việc của đội nhóm trên nhiều quy trình",
+        "Tích hợp Telegram và Signal API để nhận thông báo thời gian thực trong các hệ thống nội bộ",
+        "Thiết kế hệ thống kiến trúc module dưới dạng các module độc lập có thể nhúng vào website bên thứ ba",
+        "Triển khai Kubernetes horizontal pod scaling để xử lý song song các tác vụ phân tán",
+        "Tối ưu backend với Redis caching; phát triển browser extension và tích hợp API bên thứ ba"
       ]
     },
     okvip: {
