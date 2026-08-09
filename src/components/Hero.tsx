@@ -63,7 +63,7 @@ export default function Hero() {
           >
             <div className="w-32 h-32 md:w-56 md:h-56 rounded-full mx-auto overflow-hidden border-4 border-[#46f2a7] shadow-[0_0_20px_rgba(70,242,167,0.3)]">
               <Image
-                src="/assets/images/avatar-rmbg.png"
+                src="/assets/images/avatar-v2.png"
                 alt="Avatar"
                 width={300}
                 height={300}
