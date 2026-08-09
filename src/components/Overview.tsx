@@ -46,7 +46,7 @@ export default function Overview() {
   ]
 
   const stats = [
-    { value: "4+", label: "Years Experience", color: "text-[#46f2a7]" },
+    { value: "4+", label: "Years Experience", color: "text-accent" },
     { value: "20+", label: "Projects Completed", color: "text-emerald-600 dark:text-emerald-400" },
     { value: "10+", label: "Technologies", color: "text-purple-600 dark:text-purple-400" },
   ]

@@ -169,7 +169,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${leckerliOne.variable} ${inter.variable} font-sans antialiased bg-[#f8fafc] dark:bg-[#0f1117] text-gray-900 dark:text-gray-100 min-h-screen`}>
+      <body className={`${leckerliOne.variable} ${inter.variable} font-sans antialiased dark:bg-[#0f1117] text-gray-900 dark:text-gray-100 min-h-screen`}>
         <ToasterProvider />
         {children}
       </body>

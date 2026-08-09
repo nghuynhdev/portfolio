@@ -54,7 +54,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-32 h-32 md:w-56 md:h-56 rounded-full mx-auto overflow-hidden border-4 border-[#46f2a7] shadow-[0_0_20px_rgba(70,242,167,0.3)]">
+            <div className="w-32 h-32 md:w-56 md:h-56 rounded-full mx-auto overflow-hidden border-4 border-accent shadow-[0_0_20px_rgb(var(--accent)/0.3)]">
               <Image
                 src="/assets/images/avt-v2.png"
                 alt="Avatar"
@@ -76,7 +76,7 @@ export default function Hero() {
           </motion.h1>
           
           <motion.h2 
-            className="text-2xl md:text-3xl text-[#46f2a7] mb-6 drop-shadow-[0_0_12px_rgba(70,242,167,0.35)]"
+            className="text-2xl md:text-3xl text-accent mb-6 drop-shadow-[0_0_12px_rgb(var(--accent)/0.35)]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -123,7 +123,7 @@ export default function Hero() {
             {technologies.map((tech, index) => (
               <motion.span
                 key={tech.name}
-                className="px-2.5 md:px-4 py-2 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-xs md:text-sm"
+                className="px-2.5 md:px-4 py-2 bg-accent/10 text-accent border border-accent/25 rounded-full text-xs md:text-sm"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + (index * 0.1) }}

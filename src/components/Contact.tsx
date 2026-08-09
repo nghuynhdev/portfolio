@@ -85,7 +85,7 @@ export default function Contact() {
     },
   ]
 
-  const inputClass = "w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-[#46f2a7]/50 dark:focus:border-[#46f2a7]/40 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+  const inputClass = "w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-accent/50 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -203,7 +203,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#46f2a7] hover:bg-[#2dd4a0] text-gray-900 font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-full shadow-sm shadow-[#46f2a7]/25 hover:shadow-[#46f2a7]/40 transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  className="w-full bg-accent hover:bg-accent/90 text-gray-900 font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-full shadow-sm shadow-accent/25 hover:shadow-accent/40 transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>

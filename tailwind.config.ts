@@ -17,7 +17,7 @@ const config: Config = {
         foreground: 'var(--foreground)',
         card: 'var(--card)',
         primary: '#4f46e5',
-        accent: '#46f2a7',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
       },
     },
   },

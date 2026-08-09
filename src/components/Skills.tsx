@@ -92,7 +92,7 @@ export default function Skills() {
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                         <div 
-                          className="bg-[#46f2a7] h-2 rounded-full transition-all duration-1000 ease-out"
+                          className="bg-accent h-2 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
@@ -130,8 +130,8 @@ export default function Skills() {
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-emerald-600 dark:text-[#46f2a7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         {item.icon}
                       </svg>
                     </div>

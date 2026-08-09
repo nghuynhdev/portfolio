@@ -25,7 +25,7 @@ export default function Education() {
                   <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
                     {t.education.degree}
                   </h4>
-                  <h5 className="text-lg text-emerald-600 dark:text-[#46f2a7] mb-3">
+                  <h5 className="text-lg text-accent mb-3">
                     {t.education.university}
                   </h5>
                   <p className="text-gray-600 dark:text-gray-300">
@@ -66,7 +66,7 @@ export default function Education() {
                       <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
                         {t.education.hackathon.title}
                       </h4>
-                      <h5 className="text-base text-emerald-600 dark:text-[#46f2a7] mb-3">
+                      <h5 className="text-base text-accent mb-3">
                         {t.education.hackathon.company}
                       </h5>
                     </div>
@@ -78,13 +78,13 @@ export default function Education() {
                     {t.education.hackathon.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-sm">
+                    <span className="px-3 py-1 bg-accent/10 text-accent border border-accent/25 rounded-full text-sm">
                       Algorithm Competition
                     </span>
-                    <span className="px-3 py-1 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-sm">
+                    <span className="px-3 py-1 bg-accent/10 text-accent border border-accent/25 rounded-full text-sm">
                       Team Collaboration
                     </span>
-                    <span className="px-3 py-1 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-sm">
+                    <span className="px-3 py-1 bg-accent/10 text-accent border border-accent/25 rounded-full text-sm">
                       Problem Solving
                     </span>
                   </div>
@@ -120,8 +120,8 @@ export default function Education() {
               ].map(({ item, iconPath }) => (
                 <div key={item.title} className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative z-10">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-emerald-600 dark:text-[#46f2a7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-9 h-9 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={iconPath} />
                       </svg>
                     </div>
