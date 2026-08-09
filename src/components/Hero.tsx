@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+const ParticleBackground = dynamic(() => import('./ParticleBackground'), { ssr: false })
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -45,13 +48,8 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.5) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
+      {/* Three.js particle background */}
+      <ParticleBackground />
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Avatar */}
