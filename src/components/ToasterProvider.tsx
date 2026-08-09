@@ -29,6 +29,7 @@ export default function ToasterProvider() {
     <Toaster
       position="top-center"
       reverseOrder={false}
+      containerStyle={{ top: 80 }}
       toastOptions={{
         duration: 4000,
         style: {
