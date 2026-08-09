@@ -19,7 +19,7 @@ export default function Education() {
               {t.education.educationTitle}
             </h3>
             
-            <div className="bg-white dark:bg-[#161b27] rounded-xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
+            <div className="bg-white dark:bg-[#161b27] rounded-xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative z-10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start">
                 <div className="mb-4 md:mb-0">
                   <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
@@ -47,7 +47,7 @@ export default function Education() {
               {t.education.awardsTitle}
             </h3>
             
-            <div className="bg-white dark:bg-[#161b27] rounded-xl shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] overflow-hidden">
+            <div className="bg-white dark:bg-[#161b27] rounded-xl shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] overflow-hidden relative z-10">
               <div className="flex flex-col md:flex-row">
                 {/* Evidence image */}
                 <div className="md:w-56 flex-shrink-0">
@@ -118,7 +118,7 @@ export default function Education() {
                   iconPath: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
                 },
               ].map(({ item, iconPath }) => (
-                <div key={item.title} className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
+                <div key={item.title} className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative z-10">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-9 h-9 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-5 h-5 text-emerald-600 dark:text-[#46f2a7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

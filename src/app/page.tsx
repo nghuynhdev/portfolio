@@ -5,14 +5,14 @@ import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
 import Education from '@/components/Education'
 import Contact from '@/components/Contact'
-import FloatingElements from '@/components/FloatingElements'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import ParticleWrapper from '@/components/ParticleWrapper'
 
 export default function Home() {
   return (
     <LanguageProvider>
       <main className="relative">
-        <FloatingElements />
+        <ParticleWrapper />
         <Navigation />
         <Hero />
         <Overview />

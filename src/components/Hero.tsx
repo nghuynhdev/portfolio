@@ -3,9 +3,6 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
-
-const ParticleBackground = dynamic(() => import('./ParticleBackground'), { ssr: false })
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -48,8 +45,6 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Three.js particle background */}
-      <ParticleBackground />
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Avatar */}
@@ -140,31 +135,6 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Floating elements */}
-          {[
-            {
-              className: "absolute top-20 left-10 w-32 h-32 bg-blue-200/30 dark:bg-blue-800/30 rounded-full blur-sm",
-              animate: { y: [0, -40, 0, -25, 0], x: [0, 20, -15, 10, 0], scale: [1, 1.2, 0.8, 1.1, 1], rotate: [0, 180, 360] },
-              transition: { duration: 10, repeat: Infinity, ease: "easeInOut" },
-            },
-            {
-              className: "absolute bottom-20 right-10 w-28 h-28 bg-purple-200/30 dark:bg-purple-800/30 rounded-full blur-sm",
-              animate: { y: [0, 30, 0, 15, 0], x: [0, -25, 20, -10, 0], scale: [1, 0.9, 1.3, 0.95, 1], rotate: [360, 180, 0] },
-              transition: { duration: 12, repeat: Infinity, ease: "easeInOut" },
-            },
-            {
-              className: "absolute top-1/2 left-1/4 w-24 h-24 bg-emerald-200/25 dark:bg-emerald-800/25 rounded-full blur-sm",
-              animate: { y: [0, -20, 15, -10, 0], x: [0, 15, -20, 25, 0], scale: [1, 1.15, 0.85, 1.05, 1], rotate: [0, 90, 270, 180, 360] },
-              transition: { duration: 14, repeat: Infinity, ease: "easeInOut", delay: 2 },
-            },
-            {
-              className: "absolute top-1/3 right-1/4 w-20 h-20 bg-rose-200/25 dark:bg-rose-800/25 rounded-full blur-sm",
-              animate: { y: [0, 25, -30, 20, 0], x: [0, -20, 15, -15, 0], scale: [1, 0.9, 1.25, 0.95, 1], rotate: [0, -90, -180, -270, -360] },
-              transition: { duration: 11, repeat: Infinity, ease: "easeInOut", delay: 4 },
-            },
-          ].map((el, i) => (
-            <motion.div key={i} className={el.className} animate={el.animate} transition={el.transition} />
-          ))}
         </div>
       </div>
     </section>

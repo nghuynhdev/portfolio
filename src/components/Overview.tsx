@@ -75,12 +75,12 @@ export default function Overview() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Left Column - Info cards */}
+            {/* Left Column - About & Mission */}
             <div className="flex flex-col space-y-8">
-              {cards.map((card) => (
+              {cards.slice(0, 2).map((card) => (
                 <motion.div
                   key={card.title}
-                  className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
+                  className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: card.delay }}
@@ -96,10 +96,25 @@ export default function Overview() {
               ))}
             </div>
 
-            {/* Right Column - Stats */}
-            <div className="flex flex-col justify-center">
+            {/* Right Column - Approach & Stats */}
+            <div className="flex flex-col space-y-8">
               <motion.div
-                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]"
+                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: cards[2].delay }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className={`w-12 h-12 ${cards[2].iconBg} rounded-full flex items-center justify-center mr-4`}>
+                    {cards[2].icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{cards[2].title}</h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{cards[2].description}</p>
+              </motion.div>
+
+              <motion.div
+                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.0 }}

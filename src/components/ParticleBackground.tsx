@@ -68,12 +68,12 @@ export default function ParticleBackground() {
   const count = isMobile ? 600 : 1500
 
   return (
-    <div className="absolute inset-0 z-0" aria-hidden="true">
+    <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
       <Canvas
         camera={{ position: [0, 0, 8], fov: 60 }}
         dpr={[1, isMobile ? 1 : 1.5]}
         gl={{ antialias: false, powerPreference: 'low-power' }}
-        style={{ background: 'transparent' }}
+        style={{ background: 'transparent', pointerEvents: 'none' }}
       >
         <Particles count={count} />
       </Canvas>

@@ -68,7 +68,7 @@ export default function Skills() {
             {skillCategories.map((category, categoryIndex) => (
               <motion.div 
                 key={categoryIndex} 
-                className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative overflow-hidden"
+                className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative z-10 overflow-hidden"
                 whileHover={{ 
                   scale: 1.02,
                   boxShadow: "0 10px 25px rgba(0,0,0,0.15)"
@@ -125,7 +125,7 @@ export default function Skills() {
               ].map((item) => (
                 <motion.div
                   key={item.label.title}
-                  className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]"
+                  className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative z-10"
                   whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0,0,0,0.12)" }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >

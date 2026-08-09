@@ -123,7 +123,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
             {/* Contact Information */}
-            <div>
+            <div className="relative z-10">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-4 sm:mb-6">
                 {t.contact.subtitle}
               </h3>
@@ -150,7 +150,7 @@ export default function Contact() {
               </div>
 
               {/* Availability */}
-              <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+              <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md relative z-10">
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2 text-sm sm:text-base">
                   {t.contact.availability.title}
                 </h4>
@@ -161,7 +161,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white dark:bg-[#161b27] rounded-xl shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] p-4 sm:p-6 lg:p-8">
+            <div className="bg-white dark:bg-[#161b27] rounded-xl shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] p-4 sm:p-6 lg:p-8 relative z-10">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-4 sm:mb-6">
                 {t.contact.form.title}
               </h3>
