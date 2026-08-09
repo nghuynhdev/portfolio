@@ -8,7 +8,7 @@
   --card: #ffffff;
   --nav-bg: rgba(255, 255, 255, 0.92);
   --primary: #4f46e5;
-  --accent: 13, 148, 136;
+  --accent: 13 148 136;
   --muted: #64748b;
 }
 
@@ -18,7 +18,7 @@
   --card: #161b27;
   --nav-bg: rgba(11, 14, 24, 0.95);
   --primary: #4f46e5;
-  --accent: 70, 242, 167;
+  --accent: 70 242 167;
   --muted: #94a3b8;
 }
 
