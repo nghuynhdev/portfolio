@@ -18,13 +18,13 @@ export default function Education() {
               {t.education.educationTitle}
             </h3>
             
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 shadow-md">
+            <div className="bg-white dark:bg-[#161b27] rounded-xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start">
                 <div className="mb-4 md:mb-0">
                   <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
                     {t.education.degree}
                   </h4>
-                  <h5 className="text-lg text-blue-600 dark:text-blue-400 mb-3">
+                  <h5 className="text-lg text-indigo-600 dark:text-indigo-400 mb-3">
                     {t.education.university}
                   </h5>
                   <p className="text-gray-600 dark:text-gray-300">
@@ -46,7 +46,7 @@ export default function Education() {
               {t.education.awardsTitle}
             </h3>
             
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-lg p-8 shadow-md border border-yellow-200 dark:border-yellow-800">
+            <div className="bg-white dark:bg-[#161b27] rounded-xl p-8 shadow-sm dark:shadow-black/30 border border-amber-200/60 dark:border-amber-700/30">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
@@ -61,20 +61,20 @@ export default function Education() {
                       <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
                         {t.education.hackathon.title}
                       </h4>
-                      <h5 className="text-lg text-yellow-600 dark:text-yellow-400 mb-3">
+                      <h5 className="text-lg text-amber-600 dark:text-amber-400 mb-3">
                         {t.education.hackathon.company}
                       </h5>
                       <p className="text-gray-600 dark:text-gray-300 mb-4">
                         {t.education.hackathon.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">
+                        <span className="px-3 py-1 bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200/60 dark:border-amber-700/30 rounded-full text-sm">
                           Algorithm Competition
                         </span>
-                        <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                        <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-800/40 rounded-full text-sm">
                           Team Collaboration
                         </span>
-                        <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">
+                        <span className="px-3 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-700/30 rounded-full text-sm">
                           Problem Solving
                         </span>
                       </div>
@@ -97,7 +97,7 @@ export default function Education() {
             </h3>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
                 <div className="text-blue-600 dark:text-blue-400 text-2xl mb-3">🎯</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">
                   {t.education.accomplishments.quickLearner.title}
@@ -107,7 +107,7 @@ export default function Education() {
                 </p>
               </div>
               
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
                 <div className="text-green-600 dark:text-green-400 text-2xl mb-3">⏱️</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">
                   {t.education.accomplishments.timeManagement.title}
@@ -117,7 +117,7 @@ export default function Education() {
                 </p>
               </div>
               
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
                 <div className="text-purple-600 dark:text-purple-400 text-2xl mb-3">🌐</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">
                   {t.education.accomplishments.international.title}
@@ -127,7 +127,7 @@ export default function Education() {
                 </p>
               </div>
               
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+              <div className="bg-white dark:bg-[#161b27] rounded-xl p-6 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07]">
                 <div className="text-red-600 dark:text-red-400 text-2xl mb-3">🚀</div>
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2">
                   {t.education.accomplishments.performance.title}

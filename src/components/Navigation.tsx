@@ -58,7 +58,7 @@ export default function Navigation() {
 
   return (
     <motion.nav 
-      className="fixed top-0 left-0 right-0 bg-gradient-to-r from-white/90 via-blue-50/95 to-purple-50/90 dark:from-slate-900/95 dark:via-gray-900/95 dark:to-slate-900/95 backdrop-blur-lg z-50 border-b border-blue-200/30 dark:border-gray-700/30"
+      className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-[#0b0e18]/95 backdrop-blur-lg z-50 border-b border-black/[0.06] dark:border-white/[0.06]"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}

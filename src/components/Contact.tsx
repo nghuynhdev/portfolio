@@ -145,7 +145,7 @@ export default function Contact() {
             </div>
             
             {/* Contact Form */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+            <div className="bg-white dark:bg-[#161b27] rounded-xl shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] p-4 sm:p-6 lg:p-8">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-4 sm:mb-6">
                 {t.contact.form.title}
               </h3>
@@ -163,7 +163,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none dark:bg-gray-700 dark:text-white text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-indigo-400/70 dark:focus:border-indigo-500/60 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     placeholder={t.contact.form.namePlaceholder}
                   />
                 </div>
@@ -180,7 +180,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none dark:bg-gray-700 dark:text-white text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-indigo-400/70 dark:focus:border-indigo-500/60 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     placeholder={t.contact.form.emailPlaceholder}
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function Contact() {
                     required
                     disabled={isSubmitting}
                     rows={5}
-                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none dark:bg-gray-700 dark:text-white resize-none text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-indigo-400/70 dark:focus:border-indigo-500/60 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 resize-none text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     placeholder={t.contact.form.messagePlaceholder}
                   />
                 </div>
@@ -205,7 +205,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-full shadow-sm shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>

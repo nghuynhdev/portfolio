@@ -8,46 +8,11 @@ export default function Hero() {
   const { t } = useLanguage()
 
   const technologies = [
-    {
-      name: "React.js",
-      color: "blue",
-      bgLight: "bg-blue-100",
-      textLight: "text-blue-800",
-      textDark: "dark:text-blue-200",
-      bgDark: "dark:bg-blue-900",
-    },
-    {
-      name: "Next.js",
-      color: "green",
-      bgLight: "bg-green-100",
-      textLight: "text-green-800",
-      textDark: "dark:text-green-200",
-      bgDark: "dark:bg-green-900",
-    },
-    {
-      name: "Node.js",
-      color: "purple",
-      bgLight: "bg-purple-100",
-      textLight: "text-purple-800",
-      textDark: "dark:text-purple-200",
-      bgDark: "dark:bg-purple-900",
-    },
-    {
-      name: "NestJS",
-      color: "red",
-      bgLight: "bg-red-100",
-      textLight: "text-red-800",
-      textDark: "dark:text-red-200",
-      bgDark: "dark:bg-red-900",
-    },
-    {
-      name: "TypeScript",
-      color: "yellow",
-      bgLight: "bg-yellow-100",
-      textLight: "text-yellow-800",
-      textDark: "dark:text-yellow-200",
-      bgDark: "dark:bg-yellow-900",
-    }
+    { name: "React.js" },
+    { name: "Next.js" },
+    { name: "Node.js" },
+    { name: "NestJS" },
+    { name: "TypeScript" },
   ]
 
   const contactInfo = [
@@ -163,7 +128,7 @@ export default function Hero() {
             {technologies.map((tech, index) => (
               <motion.span
                 key={tech.name}
-                className={`px-2.5 md:px-4 py-2 ${tech.bgLight} ${tech.bgDark} ${tech.textLight} ${tech.textDark} rounded-full text-xs md:text-sm`}
+                className="px-2.5 md:px-4 py-2 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-800/50 rounded-full text-xs md:text-sm"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + (index * 0.1) }}

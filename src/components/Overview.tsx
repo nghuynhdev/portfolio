@@ -37,7 +37,7 @@ export default function Overview() {
             {/* Left Column - About & Mission */}
             <div className="flex flex-col space-y-8">
               <motion.div
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 flex-1"
+                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -58,7 +58,7 @@ export default function Overview() {
               </motion.div>
 
               <motion.div
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 flex-1"
+                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -82,7 +82,7 @@ export default function Overview() {
             {/* Right Column - Approach & Stats */}
             <div className="flex flex-col space-y-8">
               <motion.div
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 flex-1"
+                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -104,7 +104,7 @@ export default function Overview() {
 
               {/* Stats */}
               <motion.div
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 flex-1"
+                className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.0 }}

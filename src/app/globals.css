@@ -3,13 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --primary: #4f46e5;
+  --accent: #46f2a7;
+  --muted: #64748b;
 }
 
 .dark {
-  --background: rgb(15 23 42);
-  --foreground: #f9fafb;
+  --background: #0f1117;
+  --foreground: #e2e8f0;
+  --card: #161b27;
+  --nav-bg: rgba(11, 14, 24, 0.95);
+  --primary: #4f46e5;
+  --accent: #46f2a7;
+  --muted: #94a3b8;
 }
 
 @layer utilities {
@@ -21,15 +31,19 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Mobile touch optimization */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.35); }
+
 @media (hover: none) and (pointer: coarse) {
   button, a {
     -webkit-tap-highlight-color: transparent;
   }
-
   .touch-manipulation {
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
@@ -39,7 +53,6 @@ body {
   }
 }
 
-/* Logo font styles */
 .logo-font {
   font-family: var(--font-leckerli), 'Leckerli One', 'Dancing Script', cursive;
   font-weight: 400;

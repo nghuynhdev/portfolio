@@ -9,9 +9,15 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        card: 'var(--card)',
+        primary: '#4f46e5',
+        accent: '#46f2a7',
       },
     },
   },
