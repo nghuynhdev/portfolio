@@ -23,11 +23,10 @@ export const vi = {
       position: "Lập trình viên Full-stack",
       duration: "05/2025 – Hiện tại",
       description: [
-        "Phát triển các công cụ nội bộ hỗ trợ và nâng cao hiệu suất làm việc của đội nhóm trên nhiều quy trình",
-        "Tích hợp Telegram và Signal API để nhận thông báo thời gian thực trong các hệ thống nội bộ",
-        "Thiết kế hệ thống kiến trúc module dưới dạng các module độc lập có thể nhúng vào website bên thứ ba",
-        "Triển khai Kubernetes horizontal pod scaling để xử lý song song các tác vụ phân tán",
-        "Tối ưu backend với Redis caching; phát triển browser extension và tích hợp API bên thứ ba"
+        "Phát triển công cụ nội bộ tích hợp Telegram và Signal API để nhận thông báo thời gian thực, hỗ trợ và nâng cao hiệu suất vận hành đội nhóm",
+        "Xây dựng giao diện frontend hiện đại, tối ưu SEO với React.js, Next.js; thiết kế kiến trúc module độc lập có thể nhúng vào website bên thứ ba",
+        "Triển khai Kubernetes horizontal pod scaling cho tác vụ cào dữ liệu và xử lý song song phân tán trên quy mô lớn",
+        "Tối ưu backend với Redis caching; phát triển browser extension và tích hợp API bên thứ ba trên nhiều nền tảng"
       ]
     },
     okvip: {

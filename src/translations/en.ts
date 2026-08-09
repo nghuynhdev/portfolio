@@ -23,11 +23,10 @@ export const en = {
       position: "Full-stack Developer",
       duration: "05/2025 – Present",
       description: [
-        "Developed internal productivity tools to support and enhance team efficiency across multiple workflows",
-        "Integrated Telegram and Signal APIs for real-time notification delivery within internal systems",
-        "Architected embeddable modular systems as self-contained modules pluggable into third-party websites",
-        "Implemented Kubernetes horizontal pod scaling to handle parallel workloads across distributed tasks",
-        "Scaled backend services with Redis caching; developed browser extensions and integrated third-party APIs"
+        "Developed internal tools integrating Telegram and Signal APIs for real-time notifications, boosting team operational efficiency",
+        "Built modern, SEO-optimized frontend interfaces with React.js and Next.js; architected self-contained modular systems embeddable into third-party websites",
+        "Implemented Kubernetes horizontal pod scaling for large-scale data crawling and parallel distributed processing",
+        "Scaled backend services with Redis caching; developed browser extensions and integrated third-party APIs across platforms"
       ]
     },
     okvip: {
