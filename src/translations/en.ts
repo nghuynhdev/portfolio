@@ -13,7 +13,7 @@ export const en = {
     title: "Fullstack Developer",
     description: "3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.\nBuilding scalable web applications with modern technologies and best practices.",
     email: "nghuynh.dev@gmail.com",
-    phone: "+66 612140383",
+    phone: "+84 327151506",
     location: "Ho Chi Minh, Vietnam"
   },
   experience: {

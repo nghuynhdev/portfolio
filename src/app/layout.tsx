@@ -141,7 +141,7 @@ export default function RootLayout({
       addressCountry: 'Vietnam'
     },
     email: 'nghuynh.dev@gmail.com',
-    telephone: '+66612140383',
+    telephone: '+84327151506',
     knowsAbout: [
       'React.js',
       'Next.js', 

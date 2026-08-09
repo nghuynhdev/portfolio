@@ -83,7 +83,7 @@ export default function Contact() {
                   </div>
                 </a>
                 
-                <a href="tel:+66612140383" className="flex items-center space-x-3 sm:space-x-4 hover:bg-green-50 dark:hover:bg-green-900/20 py-3.5 rounded-lg transition-colors cursor-pointer">
+                <a href="tel:+84327151506" className="flex items-center space-x-3 sm:space-x-4 hover:bg-green-50 dark:hover:bg-green-900/20 py-3.5 rounded-lg transition-colors cursor-pointer">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -91,7 +91,7 @@ export default function Contact() {
                   </div>
                   <div className="min-w-0 flex-1">
                     <h4 className="font-semibold text-gray-800 dark:text-white text-sm sm:text-base">Phone</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">+66 612140383</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">+84 327151506</p>
                   </div>
                 </a>
                 

@@ -13,7 +13,7 @@ export const vi = {
     title: "Lập trình viên Fullstack",
     description: "3 năm kinh nghiệm chuyên về React.js, Next.js, Node.js và NestJS.\nXây dựng ứng dụng web có khả năng mở rộng với công nghệ hiện đại và thực hành tốt nhất.",
     email: "nghuynh.dev@gmail.com",
-    phone: "+66 612140383",
+    phone: "+84 327151506",
     location: "Thành phố Hồ Chí Minh, Việt Nam"
   },
   experience: {
