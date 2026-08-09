@@ -46,9 +46,9 @@ export default function Overview() {
   ]
 
   const stats = [
-    { value: "4+", label: t.overview?.yearsExp || "Years Experience", color: "text-[#46f2a7]" },
-    { value: "20+", label: t.overview?.projects || "Projects Completed", color: "text-emerald-600 dark:text-emerald-400" },
-    { value: "10+", label: t.overview?.technologies || "Technologies", color: "text-purple-600 dark:text-purple-400" },
+    { value: "4+", label: "Years Experience", color: "text-[#46f2a7]" },
+    { value: "20+", label: "Projects Completed", color: "text-emerald-600 dark:text-emerald-400" },
+    { value: "10+", label: "Technologies", color: "text-purple-600 dark:text-purple-400" },
   ]
 
   return (
