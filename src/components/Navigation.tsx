@@ -87,8 +87,8 @@ export default function Navigation() {
                   onClick={() => scrollToSection(item.section, 0)}
                   className={`relative px-2 lg:px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                     isActive
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      ? 'text-[#46f2a7] dark:text-[#46f2a7]'
+                      : 'text-gray-600 dark:text-gray-400 hover:text-[#46f2a7] dark:hover:text-[#46f2a7]'
                   }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ export default function Navigation() {
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-blue-100 dark:bg-blue-900/30 rounded-lg"
+                      className="absolute inset-0 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] rounded-lg"
                       initial={false}
                       transition={{ type: "spring", stiffness: 500, damping: 30 }}
                     />
@@ -147,7 +147,7 @@ export default function Navigation() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div 
-              className="md:hidden py-4 border-t border-gray-200/30 dark:border-gray-700/30"
+              className="md:hidden py-4 border-t border-black/[0.06] dark:border-white/[0.06]"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -163,7 +163,7 @@ export default function Navigation() {
                       onTouchStart={() => {}} 
                       className={`relative text-left py-4 px-4 rounded-lg transition-all duration-200 touch-manipulation select-none ${
                         isActive
-                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                          ? 'bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-[#2dd4a0] dark:text-[#46f2a7]'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800/50 active:bg-blue-100 dark:active:bg-gray-700'
                       }`}
                       initial={{ x: -10 }}

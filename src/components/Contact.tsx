@@ -163,7 +163,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-indigo-400/70 dark:focus:border-indigo-500/60 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-[#46f2a7]/50 dark:focus:border-[#46f2a7]/40 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     placeholder={t.contact.form.namePlaceholder}
                   />
                 </div>
@@ -180,7 +180,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-indigo-400/70 dark:focus:border-indigo-500/60 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-[#46f2a7]/50 dark:focus:border-[#46f2a7]/40 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     placeholder={t.contact.form.emailPlaceholder}
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function Contact() {
                     required
                     disabled={isSubmitting}
                     rows={5}
-                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-indigo-400/70 dark:focus:border-indigo-500/60 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 resize-none text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-[#46f2a7]/50 dark:focus:border-[#46f2a7]/40 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 resize-none text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     placeholder={t.contact.form.messagePlaceholder}
                   />
                 </div>
@@ -205,7 +205,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-full shadow-sm shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  className="w-full bg-[#46f2a7] hover:bg-[#2dd4a0] text-gray-900 font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-full shadow-sm shadow-[#46f2a7]/25 hover:shadow-[#46f2a7]/40 transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -225,7 +225,7 @@ export default function Contact() {
         </div>
         
         {/* Footer */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 pt-6 sm:pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
+        <div className="mt-12 sm:mt-16 lg:mt-20 pt-6 sm:pt-8 border-t border-black/[0.07] dark:border-white/[0.07] text-center">
           <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base" dangerouslySetInnerHTML={{__html: t.contact.footer}} />
         </div>
       </div>

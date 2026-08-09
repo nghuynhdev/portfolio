@@ -41,7 +41,7 @@ export default function Experience() {
           <div className="relative">
             {/* Timeline line */}
             <motion.div 
-              className="absolute left-2 md:left-8 top-0 bottom-0 w-0.5 bg-indigo-200 dark:bg-indigo-900/50"
+              className="absolute left-2 md:left-8 top-0 bottom-0 w-0.5 bg-[#46f2a7]/30 dark:bg-[#46f2a7]/20"
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
               transition={{ duration: 1.5, delay: 0.5 }}
@@ -61,7 +61,7 @@ export default function Experience() {
                 >
                   {/* Timeline dot */}
                   <motion.div 
-                    className="absolute -left-[31px] md:-left-[55px] top-6 w-4 h-4 bg-indigo-600 rounded-full border-2 md:border-4 border-white dark:border-[#0f1117]"
+                    className="absolute -left-[31px] md:-left-[55px] top-6 w-4 h-4 bg-[#46f2a7] rounded-full border-2 md:border-4 border-white dark:border-[#0f1117] shadow-[0_0_8px_rgba(70,242,167,0.5)]"
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : { scale: 0 }}
                     transition={{ duration: 0.4, delay: 1.0 + (index * 0.2) }}
@@ -86,7 +86,7 @@ export default function Experience() {
                           {expData.position}
                         </motion.h3>
                         <motion.h4 
-                          className="text-lg text-indigo-600 dark:text-indigo-400 mb-2"
+                          className="text-lg text-emerald-600 dark:text-[#46f2a7] mb-2"
                           initial={{ opacity: 0 }}
                           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                           transition={{ duration: 0.6, delay: 1.3 + (index * 0.2) }}
@@ -118,7 +118,7 @@ export default function Experience() {
                           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                           transition={{ duration: 0.4, delay: 1.6 + (index * 0.2) + (idx * 0.1) }}
                         >
-                          <span className="text-indigo-500 dark:text-indigo-400 mr-2 mt-2 flex-shrink-0">•</span>
+                          <span className="text-emerald-500 dark:text-[#46f2a7] mr-2 mt-2 flex-shrink-0">•</span>
                           <span className="text-sm md:text-base">{item}</span>
                         </motion.li>
                       ))}
@@ -133,7 +133,7 @@ export default function Experience() {
                       {exp.technologies.map((tech, idx) => (
                         <motion.span 
                           key={idx}
-                          className="px-3 py-1 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-800/40 rounded-full text-sm"
+                          className="px-3 py-1 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-sm"
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                           transition={{ duration: 0.3, delay: 1.9 + (index * 0.2) + (idx * 0.05) }}

@@ -11,7 +11,7 @@ export const en = {
   hero: {
     name: "Nguyen Huynh",
     title: "Fullstack Developer",
-    description: "3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.\nBuilding scalable web applications with modern technologies and best practices.",
+    description: "4 years of experience specializing in React.js, Next.js, Node.js, and NestJS.\nBuilding scalable web applications with modern technologies and best practices.",
     email: "nghuynh.dev@gmail.com",
     phone: "+84 327151506",
     location: "Ho Chi Minh, Vietnam"

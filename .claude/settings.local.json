@@ -3,7 +3,12 @@
     "allow": [
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(curl *)",
+      "Bash(xargs ls *)",
+      "Bash(vercel *)",
+      "Bash(git -C /Users/ebram/Desktop/project/portfolio add src/translations/en.ts src/translations/vi.ts src/components/Contact.tsx src/app/layout.tsx)",
+      "Bash(git -C /Users/ebram/Desktop/project/portfolio commit -m \"fix: update phone number to +84 327151506\")"
     ]
   }
 }

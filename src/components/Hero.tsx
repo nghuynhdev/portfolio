@@ -61,14 +61,16 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image
-              src="/assets/images/avatar1.png"
-              alt="Avatar"
-              width={224}
-              height={224}
-              className="w-32 h-32 md:w-56 md:h-56 rounded-full mx-auto object-cover object-[center_10%] border-4 border-blue-500 shadow-lg"
-              priority
-            />
+            <div className="w-32 h-32 md:w-56 md:h-56 rounded-full mx-auto overflow-hidden border-4 border-[#46f2a7] shadow-[0_0_20px_rgba(70,242,167,0.3)]">
+              <Image
+                src="/assets/images/avatar-rmbg.png"
+                alt="Avatar"
+                width={300}
+                height={300}
+                className="w-full h-full object-contain translate-y-4"
+                priority
+              />
+            </div>
           </motion.div>
 
           <motion.h1 
@@ -81,7 +83,7 @@ export default function Hero() {
           </motion.h1>
           
           <motion.h2 
-            className="text-2xl md:text-3xl text-blue-600 dark:text-blue-400 mb-6"
+            className="text-2xl md:text-3xl text-[#46f2a7] mb-6 drop-shadow-[0_0_12px_rgba(70,242,167,0.35)]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -128,7 +130,7 @@ export default function Hero() {
             {technologies.map((tech, index) => (
               <motion.span
                 key={tech.name}
-                className="px-2.5 md:px-4 py-2 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-800/50 rounded-full text-xs md:text-sm"
+                className="px-2.5 md:px-4 py-2 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-xs md:text-sm"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + (index * 0.1) }}

@@ -1,6 +1,7 @@
 "use client"
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import Image from 'next/image'
 
 export default function Education() {
   const { t } = useLanguage()
@@ -24,7 +25,7 @@ export default function Education() {
                   <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
                     {t.education.degree}
                   </h4>
-                  <h5 className="text-lg text-indigo-600 dark:text-indigo-400 mb-3">
+                  <h5 className="text-lg text-emerald-600 dark:text-[#46f2a7] mb-3">
                     {t.education.university}
                   </h5>
                   <p className="text-gray-600 dark:text-gray-300">
@@ -46,44 +47,46 @@ export default function Education() {
               {t.education.awardsTitle}
             </h3>
             
-            <div className="bg-white dark:bg-[#161b27] rounded-xl p-8 shadow-sm dark:shadow-black/30 border border-amber-200/60 dark:border-amber-700/30">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+            <div className="bg-white dark:bg-[#161b27] rounded-xl shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] overflow-hidden">
+              <div className="flex flex-col md:flex-row">
+                {/* Evidence image */}
+                <div className="md:w-56 flex-shrink-0">
+                  <Image
+                    src="/assets/images/hinh1.webp"
+                    alt="Hackathon - In Devs We Trust"
+                    width={400}
+                    height={500}
+                    className="w-full h-52 md:h-full object-cover"
+                  />
                 </div>
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start">
+                {/* Content */}
+                <div className="flex-1 p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                     <div>
-                      <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                      <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
                         {t.education.hackathon.title}
                       </h4>
-                      <h5 className="text-lg text-amber-600 dark:text-amber-400 mb-3">
+                      <h5 className="text-base text-emerald-600 dark:text-[#46f2a7] mb-3">
                         {t.education.hackathon.company}
                       </h5>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">
-                        {t.education.hackathon.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200/60 dark:border-amber-700/30 rounded-full text-sm">
-                          Algorithm Competition
-                        </span>
-                        <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-800/40 rounded-full text-sm">
-                          Team Collaboration
-                        </span>
-                        <span className="px-3 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-700/30 rounded-full text-sm">
-                          Problem Solving
-                        </span>
-                      </div>
                     </div>
-                    <div className="mt-4 md:mt-0 text-right">
-                      <span className="text-sm text-gray-500 dark:text-gray-400 bg-yellow-200 dark:bg-yellow-800 px-3 py-1 rounded-full">
-                        10/2023
-                      </span>
-                    </div>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 bg-black/[0.05] dark:bg-white/[0.06] px-3 py-1 rounded-full w-fit">
+                      10/2023
+                    </span>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                    {t.education.hackathon.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-sm">
+                      Algorithm Competition
+                    </span>
+                    <span className="px-3 py-1 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-sm">
+                      Team Collaboration
+                    </span>
+                    <span className="px-3 py-1 bg-[#46f2a7]/10 dark:bg-[#46f2a7]/[0.08] text-emerald-700 dark:text-[#46f2a7] border border-[#46f2a7]/25 dark:border-[#46f2a7]/20 rounded-full text-sm">
+                      Problem Solving
+                    </span>
                   </div>
                 </div>
               </div>

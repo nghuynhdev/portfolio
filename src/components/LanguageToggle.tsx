@@ -36,7 +36,7 @@ export default function LanguageToggle() {
     <div className="relative" ref={dropdownRef}>
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 bg-blue-50/50 dark:bg-gray-800/50 backdrop-blur-sm border border-blue-200/50 dark:border-gray-700/50 rounded-lg hover:bg-blue-100/50 dark:hover:bg-gray-700/50 transition-all duration-200"
+        className="flex items-center gap-2 px-3 py-2 bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm border border-black/[0.07] dark:border-white/[0.08] rounded-lg hover:bg-white/80 dark:hover:bg-white/[0.07] transition-all duration-200"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
@@ -63,7 +63,7 @@ export default function LanguageToggle() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full mt-2 right-0 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden min-w-[160px] z-50"
+            className="absolute top-full mt-2 right-0 bg-white dark:bg-[#161b27] rounded-xl shadow-lg dark:shadow-black/40 border border-black/[0.07] dark:border-white/[0.08] overflow-hidden min-w-[160px] z-50"
           >
             {languages.map((lang, index) => (
               <motion.button
