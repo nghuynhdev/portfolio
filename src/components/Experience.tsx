@@ -53,8 +53,8 @@ export default function Experience() {
               
               return (
                 <motion.div 
-                  key={index} 
-                  className="relative mb-12 ml-8 md:ml-20"
+                  key={index}
+                  className="relative mb-8 md:mb-12 ml-8 md:ml-20"
                   initial={{ opacity: 0, x: -50 }}
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                   transition={{ duration: 0.6, delay: 0.8 + (index * 0.2) }}

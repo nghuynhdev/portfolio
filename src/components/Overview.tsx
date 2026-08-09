@@ -52,10 +52,10 @@ export default function Overview() {
   ]
 
   return (
-    <section id="overview" className="min-h-screen py-10 md:py-20" ref={ref}>
+    <section id="overview" className="py-10 md:py-20" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-4 md:mb-16"
+          className="text-center mb-8 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
@@ -70,17 +70,17 @@ export default function Overview() {
 
         <div className="max-w-6xl mx-auto">
           <motion.div
-            className="grid lg:grid-cols-2 gap-12 items-stretch"
+            className="grid lg:grid-cols-2 gap-5 lg:gap-12 items-stretch"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Left Column - About & Mission */}
-            <div className="flex flex-col space-y-8">
+            <div className="flex flex-col space-y-5 md:space-y-8">
               {cards.slice(0, 2).map((card) => (
                 <motion.div
                   key={card.title}
-                  className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
+                  className="bg-white dark:bg-[#161b27] rounded-2xl p-5 md:p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: card.delay }}
@@ -97,7 +97,7 @@ export default function Overview() {
             </div>
 
             {/* Right Column - Approach & Stats */}
-            <div className="flex flex-col space-y-8">
+            <div className="flex flex-col space-y-5 md:space-y-8">
               <motion.div
                 className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
                 initial={{ opacity: 0, y: 20 }}
@@ -120,11 +120,11 @@ export default function Overview() {
                 transition={{ duration: 0.6, delay: 1.0 }}
               >
                 <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center">Key Numbers</h4>
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-2 md:gap-6">
                   {stats.map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
+                      <div className={`text-2xl md:text-3xl font-bold ${stat.color} mb-1 md:mb-2`}>{stat.value}</div>
+                      <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-tight">{stat.label}</div>
                     </div>
                   ))}
                 </div>

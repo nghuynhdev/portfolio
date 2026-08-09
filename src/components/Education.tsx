@@ -19,7 +19,7 @@ export default function Education() {
               {t.education.educationTitle}
             </h3>
             
-            <div className="bg-white dark:bg-[#161b27] rounded-xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative z-10">
+            <div className="bg-white dark:bg-[#161b27] rounded-xl p-5 md:p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] relative z-10">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start">
                 <div className="mb-4 md:mb-0">
                   <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
