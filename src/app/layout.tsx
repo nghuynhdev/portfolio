@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Leckerli_One, Inter } from 'next/font/google'
 import ToasterProvider from '@/components/ToasterProvider'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const leckerliOne = Leckerli_One({
   weight: ['400'],
@@ -153,6 +155,8 @@ export default function RootLayout({
       <body className={`${leckerliOne.variable} ${inter.variable} font-sans antialiased dark:bg-[#0f1117] text-gray-900 dark:text-gray-100 min-h-screen`}>
         <ToasterProvider />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
