@@ -18,12 +18,16 @@ const inter = Inter({
   display: 'swap',
 })
 
+const SITE_URL = 'https://www.huynhnguyen.info.vn'
+const SITE_TITLE = 'Nguyen Huynh - Full Stack Developer | React, Next.js, NestJS'
+const SITE_DESCRIPTION = 'Nguyen Huynh is a Full Stack Developer in Ho Chi Minh City with 4 years of experience building scalable web apps with React.js, Next.js, Node.js, and NestJS.'
+
 export const metadata: Metadata = {
   title: {
-    default: 'Huynh. - Full Stack Developer',
+    default: SITE_TITLE,
     template: '%s | Huynh. Portfolio'
   },
-  description: 'Portfolio of Huynh., Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS. Building scalable web applications with modern technologies.',
+  description: SITE_DESCRIPTION,
   keywords: [
     'Nguyen Huynh',
     'Huynh.',
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
     'Web Development',
     'Software Engineer'
   ],
-  authors: [{ name: 'Nguyen Huynh', url: 'https://www.facebook.com/nghuynhit' }],
+  authors: [{ name: 'Nguyen Huynh', url: SITE_URL }],
   creator: 'Nguyen Huynh',
   publisher: 'Nguyen Huynh',
   formatDetection: {
@@ -52,35 +56,23 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.facebook.com/nghuynhit'),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-      'vi-VN': '/vi-VN',
-    },
   },
   openGraph: {
-    title: 'Huynh. - Full Stack Developer',
-    description: 'Portfolio of Huynh., Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.',
-    url: 'https://www.facebook.com/nghuynhit',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: '/',
     siteName: 'Huynh. Portfolio',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Huynh. - Full Stack Developer Portfolio',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Huynh. - Full Stack Developer',
-    description: 'Portfolio of Huynh., Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS.',
-    images: ['/og-image.png'],    creator: '@nghuynhit',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    creator: '@nghuynhit',
   },
   robots: {
     index: true,
@@ -92,11 +84,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
   },
   manifest: '/manifest.json',
 }
@@ -111,9 +98,9 @@ export default function RootLayout({
     '@type': 'Person',
     name: 'Nguyen Huynh',
     alternateName: 'Huynh',
-    description: 'Full Stack Developer with 3 years of experience specializing in React.js, Next.js, Node.js, and NestJS',
-    url: 'https://www.facebook.com/nghuynhit',
-    image: 'https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/524052939_1061905626046297_1156620824287850354_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=zEm-P-FckZIQ7kNvwEt30ao&_nc_oc=Adn5IGgAuwHv65OW4x3qtSPQ-Pn36CVBpDE86GbLK_mMRVX3_4LqohvzHTkvVG9YVKc&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=fBXyB74EaEinXz7_cF0TTQ&oh=00_AfYYnBFgV0YTEkKFXWTmABnn_Zl8NidyIutmw-nLXeH9vw&oe=68D4AAF2',
+    description: 'Full Stack Developer with 4 years of experience specializing in React.js, Next.js, Node.js, and NestJS',
+    url: SITE_URL,
+    image: `${SITE_URL}/assets/images/avt-v2.png`,
     sameAs: [
       'https://www.facebook.com/nghuynhit',
       'https://github.com/nghuynhdev',
@@ -122,7 +109,7 @@ export default function RootLayout({
     jobTitle: 'Full Stack Developer',
     worksFor: {
       '@type': 'Organization',
-      name: 'Hyperpush'
+      name: 'Accenture'
     },
     address: {
       '@type': 'PostalAddress',
