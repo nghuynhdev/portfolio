@@ -130,7 +130,7 @@ export const en = {
     title: "Overview",
     subtitle: "Discover my journey, skills, and passion for creating innovative solutions",
     aboutTitle: "About Me",
-    aboutDescription: "I am a passionate developer with expertise in modern web technologies. I love creating innovative solutions that make a difference in people's lives.",
+    aboutDescription: "I'm Nguyễn Huỳnh, also written Nguyen Huynh or Huynh Nguyen, a full stack developer with expertise in modern web technologies. I love creating innovative solutions that make a difference in people's lives.",
     missionTitle: "My Mission",
     missionDescription: "To leverage technology to solve real-world problems and create meaningful experiences through clean, efficient, and scalable code.",
     approachTitle: "My Approach",

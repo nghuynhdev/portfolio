@@ -130,7 +130,7 @@ export const vi = {
     title: "Tổng quan", 
     subtitle: "Khám phá hành trình, kỹ năng và đam mê tạo ra những giải pháp sáng tạo của tôi",
     aboutTitle: "Về tôi",
-    aboutDescription: "Tôi là một lập trình viên đam mê với chuyên môn về các công nghệ web hiện đại. Tôi yêu thích tạo ra những giải pháp sáng tạo tạo ra sự khác biệt trong cuộc sống của mọi người.",
+    aboutDescription: "Tôi là Nguyễn Huỳnh (Huynh Nguyen), lập trình viên full stack với chuyên môn về các công nghệ web hiện đại. Tôi yêu thích tạo ra những giải pháp sáng tạo tạo ra sự khác biệt trong cuộc sống của mọi người.",
     missionTitle: "Sứ mệnh của tôi",
     missionDescription: "Tận dụng công nghệ để giải quyết các vấn đề thực tế và tạo ra những trải nghiệm có ý nghĩa thông qua code sạch, hiệu quả và có khả năng mở rộng.",
     approachTitle: "Phương pháp của tôi", 
