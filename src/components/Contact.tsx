@@ -23,7 +23,7 @@ export default function Contact() {
       hoverBg: "hover:bg-green-50 dark:hover:bg-green-900/20",
       iconBg: "bg-green-600",
       icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
-      label: "Phone",
+      label: t.contact.phoneLabel,
       value: "+84 327151506",
     },
     {
@@ -36,8 +36,8 @@ export default function Contact() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </>
       ),
-      label: "Location",
-      value: "Ho Chi Minh, Vietnam",
+      label: t.contact.locationLabel,
+      value: t.hero.location,
       external: true,
     },
     {
@@ -87,6 +87,7 @@ export default function Contact() {
       id: "name",
       type: "input" as const,
       inputType: "text",
+      autoComplete: "name",
       label: t.contact.form.name,
       placeholder: t.contact.form.namePlaceholder,
     },
@@ -94,6 +95,7 @@ export default function Contact() {
       id: "email",
       type: "input" as const,
       inputType: "email",
+      autoComplete: "email",
       label: t.contact.form.email,
       placeholder: t.contact.form.emailPlaceholder,
     },
@@ -105,7 +107,7 @@ export default function Contact() {
     },
   ]
 
-  const inputClass = "w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:outline-none focus:border-accent/50 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+  const inputClass = "w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:border-accent/50 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -207,6 +209,7 @@ export default function Contact() {
                     ) : (
                       <input
                         type={field.inputType}
+                        autoComplete={field.autoComplete}
                         id={field.id}
                         name={field.id}
                         value={formData[field.id as keyof typeof formData]}
@@ -231,7 +234,7 @@ export default function Contact() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                       </svg>
-                      <span>Sending...</span>
+                      <span>{t.contact.form.sending}</span>
                     </>
                   ) : (
                     <span>{t.contact.form.submit}</span>

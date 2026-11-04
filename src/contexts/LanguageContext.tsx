@@ -25,6 +25,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // Save language preference to localStorage when it changes
   useEffect(() => {
     localStorage.setItem('language', language)
+    document.documentElement.lang = language
   }, [language])
 
   const value = {

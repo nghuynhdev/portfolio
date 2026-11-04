@@ -19,9 +19,10 @@ export default function Navigation() {
       
       setTimeout(() => {
         const elementPosition = element.offsetTop - navHeight
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
         window.scrollTo({
           top: elementPosition,
-          behavior: 'smooth'
+          behavior: reduceMotion ? 'auto' : 'smooth'
         })
       }, 150)
     }
@@ -72,9 +73,16 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="text-2xl font-bold text-gray-800 dark:text-white logo-font">
+            <a
+              href="#hero"
+              onClick={(e) => {
+                e.preventDefault()
+                scrollToSection('hero', 0)
+              }}
+              className="text-2xl font-bold text-gray-800 dark:text-white logo-font rounded"
+            >
               Huynh.
-            </span>
+            </a>
           </motion.div>
           
           {/* Desktop Menu */}
@@ -121,6 +129,8 @@ export default function Navigation() {
             <motion.button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               onTouchStart={() => {}}
+              aria-label={isMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
+              aria-expanded={isMenuOpen}
               className="md:hidden p-3 text-gray-700 dark:text-gray-300 hover:bg-blue-100/50 dark:hover:bg-gray-800 rounded-lg transition-colors touch-manipulation select-none active:bg-blue-100 dark:active:bg-gray-700"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

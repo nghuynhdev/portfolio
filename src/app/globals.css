@@ -8,7 +8,7 @@
   --card: #ffffff;
   --nav-bg: rgba(255, 255, 255, 0.92);
   --primary: #4f46e5;
-  --accent: 13 148 136;
+  --accent: 15 118 110;
   --muted: #64748b;
 }
 
@@ -26,6 +26,11 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 2px;
 }
 
 body {

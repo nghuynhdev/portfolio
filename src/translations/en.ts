@@ -6,7 +6,10 @@ export const en = {
     skills: "Skills",
     portfolio: "Portfolio",
     education: "Education",
-    contact: "Contact"
+    contact: "Contact",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    changeLanguage: "Change language"
   },
   hero: {
     name: "Nguyen Huynh",
@@ -105,6 +108,8 @@ export const en = {
     }
   },
   contact: {
+    phoneLabel: "Phone",
+    locationLabel: "Location",
     title: "Get In Touch",
     subtitle: "Let's Connect",
     description: "I'm always interested in new opportunities and collaborations. Whether you have a project in mind or just want to say hello, feel free to reach out!",
@@ -117,6 +122,7 @@ export const en = {
       message: "Your Message",
       messagePlaceholder: "Tell me about your project or just say hello!",
       submit: "Send Message",
+      sending: "Sending...",
       successMessage: "Thank you for your message! I will get back to you soon.",
       errorMessage: "Failed to send message. Please try again."
     },
@@ -124,9 +130,13 @@ export const en = {
       title: "Currently Available",
       description: "Open to full-time opportunities, freelance projects, and consulting work. Specializing in React.js, Next.js, Node.js, and NestJS development."
     },
-    footer: "<b>© 2025</b> Website designed and developed by <b>Huynh.</b>"
+    footer: "<b>© 2026</b> Website designed and developed by <b>Huynh.</b>"
   },
   overview: {
+    keyNumbers: "Key Numbers",
+    yearsExperience: "Years Experience",
+    projectsCompleted: "Projects Completed",
+    technologies: "Technologies",
     title: "Overview",
     subtitle: "Discover my journey, skills, and passion for creating innovative solutions",
     aboutTitle: "About Me",

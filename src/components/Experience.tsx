@@ -95,7 +95,7 @@ export default function Experience() {
                         </motion.h4>
                       </div>
                       <motion.span 
-                        className="text-sm text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 px-3 py-1 w-fit rounded-full"
+                        className="text-sm text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 px-3 py-1 w-fit rounded-full"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                         transition={{ duration: 0.4, delay: 1.4 + (index * 0.2) }}

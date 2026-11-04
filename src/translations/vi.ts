@@ -6,7 +6,10 @@ export const vi = {
     skills: "Kỹ năng",
     portfolio: "Portfolio",
     education: "Học vấn",
-    contact: "Liên hệ"
+    contact: "Liên hệ",
+    openMenu: "Mở menu",
+    closeMenu: "Đóng menu",
+    changeLanguage: "Đổi ngôn ngữ"
   },
   hero: {
     name: "Nguyễn Huỳnh",
@@ -105,6 +108,8 @@ export const vi = {
     }
   },
   contact: {
+    phoneLabel: "Điện thoại",
+    locationLabel: "Địa điểm",
     title: "Liên hệ",
     subtitle: "Hãy kết nối",
     description: "Tôi luôn quan tâm đến những cơ hội và sự hợp tác mới. Dù bạn có dự án trong đầu hay chỉ muốn chào hỏi, hãy thoải mái liên hệ!",
@@ -117,6 +122,7 @@ export const vi = {
       message: "Tin nhắn của bạn",
       messagePlaceholder: "Hãy kể cho tôi về dự án của bạn hoặc chỉ chào hỏi!",
       submit: "Gửi tin nhắn",
+      sending: "Đang gửi...",
       successMessage: "Cảm ơn bạn đã gửi tin nhắn! Tôi sẽ phản hồi sớm nhất có thể.",
       errorMessage: "Gửi tin nhắn thất bại. Vui lòng thử lại."
     },
@@ -124,9 +130,13 @@ export const vi = {
       title: "Hiện đang sẵn sàng",
       description: "Mở cho các cơ hội toàn thời gian, dự án freelance và công việc tư vấn. Chuyên về phát triển React.js, Next.js, Node.js và NestJS."
     },
-    footer: "<b>© 2025</b> Website được thiết kế và phát triển bởi <b>Huynh.</b>"
+    footer: "<b>© 2026</b> Website được thiết kế và phát triển bởi <b>Huynh.</b>"
   },
   overview: {
+    keyNumbers: "Số liệu nổi bật",
+    yearsExperience: "Năm kinh nghiệm",
+    projectsCompleted: "Dự án đã hoàn thành",
+    technologies: "Công nghệ",
     title: "Tổng quan", 
     subtitle: "Khám phá hành trình, kỹ năng và đam mê tạo ra những giải pháp sáng tạo của tôi",
     aboutTitle: "Về tôi",

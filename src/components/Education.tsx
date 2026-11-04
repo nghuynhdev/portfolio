@@ -33,7 +33,7 @@ export default function Education() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="text-sm text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full">
+                  <span className="text-sm text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full">
                     09/2023
                   </span>
                 </div>
@@ -70,7 +70,7 @@ export default function Education() {
                         {t.education.hackathon.company}
                       </h5>
                     </div>
-                    <span className="text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-white/[0.06] px-3 py-1 rounded-full w-fit">
+                    <span className="text-sm text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-white/[0.06] px-3 py-1 rounded-full w-fit">
                       10/2023
                     </span>
                   </div>

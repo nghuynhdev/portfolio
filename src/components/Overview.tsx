@@ -46,9 +46,9 @@ export default function Overview() {
   ]
 
   const stats = [
-    { value: "4+", label: "Years Experience", color: "text-accent" },
-    { value: "20+", label: "Projects Completed", color: "text-emerald-600 dark:text-emerald-400" },
-    { value: "10+", label: "Technologies", color: "text-purple-600 dark:text-purple-400" },
+    { value: "4+", label: t.overview.yearsExperience, color: "text-accent" },
+    { value: "20+", label: t.overview.projectsCompleted, color: "text-emerald-700 dark:text-emerald-400" },
+    { value: "10+", label: t.overview.technologies, color: "text-purple-600 dark:text-purple-400" },
   ]
 
   return (
@@ -119,7 +119,7 @@ export default function Overview() {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
               >
-                <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center">Key Numbers</h4>
+                <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center">{t.overview.keyNumbers}</h4>
                 <div className="grid grid-cols-3 gap-2 md:gap-6">
                   {stats.map((stat) => (
                     <div key={stat.label} className="text-center">

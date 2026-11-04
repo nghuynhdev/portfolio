@@ -48,7 +48,7 @@ export default function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className={`relative w-14 h-7 rounded-full p-1 transition-colors duration-300 focus:outline-none ${
+      className={`relative w-14 h-7 rounded-full p-1 transition-colors duration-300 ${
         isDark ? 'bg-gray-700' : 'bg-gray-200'
       }`}
       whileHover={{ scale: 1.05 }}

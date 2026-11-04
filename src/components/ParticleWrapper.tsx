@@ -10,6 +10,8 @@ export default function ParticleWrapper() {
 
   // Three.js is decorative and heavy: fetch it only after the page has loaded.
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const show = () => setReady(true)
     let idleId: number | undefined
     let timeoutId: ReturnType<typeof setTimeout> | undefined
