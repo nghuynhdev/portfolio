@@ -2,7 +2,7 @@
 title: "Claude SEO: Audit Your Blog With Claude Code and Turn the Report Into Fixes"
 seoTitle: "Claude SEO: How to Audit a Website With Claude Code"
 slug: claude-seo-website-audit
-description: "Use Claude SEO in Claude Code: install the plugin, audit page by page, check technical SEO and schema, and turn findings into evidence-backed fixes."
+description: "Website SEO audit with Claude SEO in Claude Code: install the plugin, audit each page, check technical SEO and schema, then fix."
 keywords: "Claude SEO, Claude Code SEO skill, SEO audit, technical SEO, blog SEO, AgriciDaniel"
 tags: "AI, Claude Code, Skills, SEO"
 date: 2026-08-12

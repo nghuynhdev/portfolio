@@ -2,7 +2,7 @@
 title: "Evals: làm sao biết prompt và model của bạn đủ tốt"
 seoTitle: "LLM evals: cách đánh giá chất lượng prompt và model"
 slug: evals-do-chat-luong-llm
-description: "Vì sao 'thấy ổn' không đủ để lên production. Cách dựng bộ eval cho tính năng AI: tập test, cách chấm (exact, assertion, LLM-as-judge), và đưa eval vào CI."
+description: "'Thấy ổn' chưa đủ để lên production. Dựng bộ eval cho tính năng AI: tập test, cách chấm, LLM-as-judge và chạy eval trong CI."
 keywords: "LLM evals, đánh giá AI, LLM as judge, test prompt, AI regression, AI cho developer"
 tags: "AI, Evals, Testing, Developer"
 date: 2025-06-17

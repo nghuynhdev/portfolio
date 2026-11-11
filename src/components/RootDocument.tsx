@@ -4,6 +4,10 @@ import { Leckerli_One, Inter } from 'next/font/google'
 import ToasterProvider from '@/components/ToasterProvider'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Script from 'next/script'
+
+/** GA4 Measurement ID (G-XXXXXXX). GA only loads when this env var is set. */
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import Navigation from '@/components/Navigation'
 
@@ -22,7 +26,7 @@ const inter = Inter({
 
 const SITE_URL = 'https://www.huynhnguyen.info.vn'
 const SITE_TITLE = 'Nguyễn Huỳnh (Huynh Nguyen) - Full Stack Developer'
-const SITE_DESCRIPTION = 'Nguyễn Huỳnh (Huynh Nguyen) is a Full Stack Developer in Ho Chi Minh City with 4 years of experience building web apps with React.js, Next.js, and NestJS.'
+const SITE_DESCRIPTION = 'Nguyễn Huỳnh (Huynh Nguyen), Full Stack Developer in Ho Chi Minh City with 4 years building web apps in React.js, Next.js and NestJS.'
 const NAME_VARIANTS = ['Nguyễn Huỳnh', 'Huỳnh Nguyễn', 'Huynh Nguyen', 'Huynhnguyen', 'Huỳnh', 'Huynh']
 
 export const siteViewport: Viewport = {
@@ -169,6 +173,12 @@ export default function RootDocument({
         />
       </head>
       <body className={`${leckerliOne.variable} ${inter.variable} font-sans antialiased dark:bg-[#0f1117] text-gray-900 dark:text-gray-100 min-h-screen`}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-3 focus:rounded-lg focus:bg-accent focus:text-gray-900 focus:font-medium"
+        >
+          {lang === 'vi' ? 'Bỏ qua đến nội dung chính' : 'Skip to main content'}
+        </a>
         <LanguageProvider>
           <Navigation />
           {children}
@@ -176,6 +186,14 @@ export default function RootDocument({
         <ToasterProvider />
         <Analytics />
         <SpeedInsights />
+        {GA_ID && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+            <Script id="ga4" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   )

@@ -2,7 +2,7 @@
 title: "Superpowers for Claude Code: Debug With Hypotheses, Fix With Evidence"
 seoTitle: "Superpowers for Claude Code: Systematic AI Debugging"
 slug: superpowers-debugging-claude-code
-description: "Use the Superpowers skills to structure bug investigation in Claude Code: reproduce a search bug, test hypotheses and avoid guess-driven fixes."
+description: "Debugging with Superpowers skills in Claude Code: reproduce the bug, test hypotheses and avoid guess-driven fixes."
 keywords: "Superpowers Claude Code, obra superpowers, systematic debugging, verification before completion, AI debugging"
 tags: "AI, Claude Code, Skills, Debugging"
 date: 2026-10-08

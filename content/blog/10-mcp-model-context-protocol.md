@@ -2,7 +2,7 @@
 title: "MCP (Model Context Protocol) là gì và vì sao dev nên quan tâm"
 seoTitle: "MCP (Model Context Protocol) là gì? Hướng dẫn cho dev"
 slug: mcp-model-context-protocol-la-gi
-description: "MCP giải bài toán tích hợp AI với công cụ ngoài theo kiểu N+M thay vì N×M: cách nó hoạt động, vì sao giống 'USB cho AI' và một MCP server bằng TypeScript."
+description: "MCP (Model Context Protocol) là gì: biến bài toán tích hợp AI N×M thành N+M, cách hoạt động và một MCP server bằng TypeScript."
 keywords: "MCP, Model Context Protocol, AI tool integration, MCP server, AI agent, AI cho developer"
 tags: "AI, MCP, Agent, Developer"
 date: 2026-03-18

@@ -2,7 +2,7 @@
 title: "React Best Practices: Use Claude to Optimize the Real Bottleneck"
 seoTitle: "React Best Practices Skill: Optimize React With Claude"
 slug: react-best-practices-claude-code
-description: "Apply Vercel's React Best Practices skill in Claude Code: find waterfalls, check the bundle and server/client boundary, and measure before and after."
+description: "Vercel's React Best Practices skill in Claude Code: find waterfalls, check the bundle and server/client boundary, measure gains."
 keywords: "vercel-react-best-practices, Claude Code React, Next.js performance, React skill, Vercel agent skills"
 tags: "AI, Claude Code, Skills, React"
 date: 2026-09-15

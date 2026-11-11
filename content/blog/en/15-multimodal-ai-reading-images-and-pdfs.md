@@ -2,7 +2,7 @@
 title: "AI That Reads Images and PDFs: Extracting Data You Can Verify"
 seoTitle: "Multimodal AI: Extracting Data from Images and PDFs"
 slug: multimodal-ai-reading-images-and-pdfs
-description: "Designing an image/PDF extraction flow with multimodal models: pick the right pages, require evidence, allow missing data, and check business rules in code."
+description: "Read images and PDFs with multimodal AI: pick the right pages, require evidence, allow missing data, check business rules in code."
 keywords: "multimodal AI, vision model, PDF extraction, OCR, document AI, AI for developers"
 tags: "AI, Multimodal, Documents, Developer"
 date: 2026-06-05

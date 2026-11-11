@@ -2,7 +2,7 @@
 title: "Prompt engineering thực chiến cho developer (không phải trò 'thần chú')"
 seoTitle: "Prompt engineering là gì? Hướng dẫn thực chiến cho dev"
 slug: prompt-engineering-thuc-chien-cho-dev
-description: "Prompt engineering dưới góc nhìn dev: coi prompt như spec. System prompt, few-shot, ép JSON theo schema, delimiter chống injection và lặp prompt như debug."
+description: "Prompt engineering cho dev: coi prompt như spec. System prompt, few-shot, ép JSON theo schema, delimiter chống injection."
 keywords: "prompt engineering, system prompt, few-shot, structured output, JSON schema, AI cho developer"
 tags: "AI, LLM, Prompt Engineering, Developer"
 date: 2024-05-08

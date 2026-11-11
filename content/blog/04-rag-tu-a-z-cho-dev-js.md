@@ -2,7 +2,7 @@
 title: "RAG từ A–Z cho dev JS/TS: cho LLM 'đọc' tài liệu của bạn"
 seoTitle: "RAG là gì? Hướng dẫn RAG từ A–Z cho dev JavaScript"
 slug: rag-tu-a-z-cho-dev-js
-description: "Giải thích RAG cho dev fullstack JS: embedding, chunking, vector search, ghép context vào prompt. Kèm code tối giản và những chỗ hay làm hỏng chất lượng."
+description: "RAG cho dev fullstack JS: embedding, chunking, vector search, ghép context vào prompt. Kèm code tối giản và lỗi hay gặp."
 keywords: "RAG, retrieval augmented generation, embedding, vector database, chunking, semantic search, AI cho developer"
 tags: "AI, RAG, Embedding, Developer"
 date: 2024-09-24

@@ -2,7 +2,7 @@
 title: "Production RAG: From Ingesting Documents to Hybrid Search and Reranking"
 seoTitle: "Production RAG: Ingestion, Hybrid Search and Reranking"
 slug: production-rag-ingestion-hybrid-search
-description: "Take RAG from demo to production: structure-aware PDF parsing, metadata and revisions, safe index updates, hybrid search with RRF, reranking and recall@k."
+description: "Production RAG: structure-aware PDF parsing, metadata, safe index updates, hybrid search with RRF, reranking and recall@k."
 keywords: "production RAG, RAG ingestion, hybrid search, reranking, RRF, PDF OCR, chunking, vector index, AI for developers"
 tags: "AI, RAG, Search, Data Pipeline"
 date: 2026-03-29

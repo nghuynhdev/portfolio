@@ -2,7 +2,7 @@
 title: "Building Your First AI Agent: Understanding Function/Tool Calling Properly"
 seoTitle: "AI Agents and Function Calling: Build Your First Agent"
 slug: first-ai-agent-function-calling
-description: "How tool calling turns an LLM from a chat machine into an agent that acts: the agent loop, tool schemas and the safety boundaries you must have."
+description: "How tool calling turns an LLM into an agent that acts: the agent loop, tool schemas and the safety boundaries you must have."
 keywords: "AI agent, tool calling, function calling, LLM agent, AI SDK tools, AI for developers"
 tags: "AI, Agent, Tool Calling, Developer"
 date: 2024-12-03

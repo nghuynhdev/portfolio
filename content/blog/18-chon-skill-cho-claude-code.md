@@ -2,7 +2,7 @@
 title: "Chọn skill cho Claude Code: cài đúng việc, dùng đúng lúc"
 seoTitle: "Claude Code skills: nên cài skill nào và dùng khi nào"
 slug: chon-skill-cho-claude-code
-description: "Bộ skill thực dụng cho người dùng Claude Code: UI UX Pro Max, Claude SEO, frontend-design, React và kiểm thử; cách chọn, kiểm tra nguồn và đánh giá hiệu quả."
+description: "Chọn skill cho Claude Code: UI UX Pro Max, Claude SEO, frontend-design, React, testing. Cách chọn, kiểm tra nguồn và đánh giá."
 keywords: "Claude Code skills, skill Claude, UI UX Pro Max, Claude SEO, agent skills"
 tags: "AI, Claude Code, Skills, Developer"
 date: 2026-07-21

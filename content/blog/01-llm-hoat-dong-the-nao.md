@@ -2,7 +2,7 @@
 title: "LLM hoạt động thế nào? Giải thích kiểu dev, bỏ qua mấy thứ huyền bí"
 seoTitle: "LLM là gì? Cách LLM hoạt động giải thích cho developer"
 slug: llm-hoat-dong-the-nao-cho-dev
-description: "Mental model để một developer hiểu LLM: token, xác suất token kế tiếp, context window, vì sao model 'bịa'. Không toán, chỉ đủ để code cho đúng."
+description: "Mental model để developer hiểu LLM: token, xác suất token kế tiếp, context window và vì sao model 'bịa'. Không cần toán."
 keywords: "LLM là gì, large language model, token, context window, hallucination, AI cho developer"
 tags: "AI, LLM, Developer, Fundamentals"
 date: 2024-02-15

@@ -2,7 +2,7 @@
 title: "Evals: How to Know Your Prompt and Model Are Good Enough"
 seoTitle: "LLM Evals: How to Measure Prompt and Model Quality"
 slug: llm-evals-measuring-quality
-description: "Why 'looks fine' isn't enough: build evals for an AI feature with a test set, grading methods (assertions, LLM-as-judge) and evals running in CI."
+description: "'Looks fine' isn't enough. Build LLM evals for an AI feature: a test set, assertions, LLM-as-judge grading and evals in CI."
 keywords: "LLM evals, AI evaluation, LLM as judge, prompt testing, AI regression, AI for developers"
 tags: "AI, Evals, Testing, Developer"
 date: 2025-06-17

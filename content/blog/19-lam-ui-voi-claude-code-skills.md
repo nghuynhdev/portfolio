@@ -2,7 +2,7 @@
 title: "Làm UI với Claude Code: UI UX Pro Max, frontend-design và Web Design Guidelines"
 seoTitle: "Làm UI với Claude Code: UI UX Pro Max và frontend-design"
 slug: lam-ui-voi-claude-code-skills
-description: "Quy trình làm giao diện với Claude Code bằng 3 skill: UI UX Pro Max chốt design system, frontend-design tạo hướng thị giác, Web Design Guidelines để review."
+description: "Làm UI với Claude Code bằng 3 skill: UI UX Pro Max chốt design system, frontend-design tạo hướng thị giác, guidelines để review."
 keywords: "UI UX Pro Max, frontend-design skill, web-design-guidelines, Claude Code UI, Anthropic skills, Vercel skills, AI thiết kế giao diện, UI review"
 tags: "AI, Claude Code, Skills, UI UX"
 date: 2026-08-01

@@ -8,7 +8,7 @@ export const blogStrings = {
     home: 'Trang chủ',
     seriesTitle: 'AI for Devs — Học AI thực chiến cho Developer',
     seriesDescription:
-      'Series AI thực chiến cho lập trình viên: LLM, prompt engineering, RAG, AI agent, tối ưu chi phí, bảo mật và MCP, viết từ trải nghiệm fullstack thật.',
+      'Series AI thực chiến cho lập trình viên: LLM, prompt engineering, RAG, AI agent, chi phí, bảo mật và MCP, viết từ dự án thật.',
     seriesKeywords:
       'AI cho developer, học AI, LLM, prompt engineering, RAG, AI agent, MCP, lập trình AI, AI thực chiến',
     heroTitle: 'AI thực chiến cho Developer',
@@ -56,7 +56,7 @@ export const blogStrings = {
     home: 'Home',
     seriesTitle: 'AI for Devs — Practical AI for Developers',
     seriesDescription:
-      'A practical AI series for developers: LLMs, prompt engineering, RAG, AI agents, cost, security and MCP, written from real full-stack work by Nguyen Huynh.',
+      'A practical AI series for developers: LLMs, prompt engineering, RAG, AI agents, cost, security and MCP, from real full-stack work.',
     seriesKeywords:
       'AI for developers, learn AI, LLM, prompt engineering, RAG, AI agents, MCP, AI engineering, practical AI',
     heroTitle: 'Practical AI for Developers',

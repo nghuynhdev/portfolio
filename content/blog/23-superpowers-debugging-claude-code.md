@@ -2,7 +2,7 @@
 title: "Superpowers cho Claude Code: debug có giả thuyết, sửa có bằng chứng"
 seoTitle: "Superpowers Claude Code: debug có hệ thống bằng AI"
 slug: superpowers-debugging-claude-code
-description: "Dùng bộ skill Superpowers để tổ chức điều tra lỗi và xác minh kết quả trong Claude Code; ví dụ tái hiện lỗi tìm kiếm và tránh sửa lan theo phỏng đoán."
+description: "Debug với bộ skill Superpowers trong Claude Code: tái hiện lỗi, kiểm chứng giả thuyết và tránh sửa lan theo phỏng đoán."
 keywords: "Superpowers Claude Code, obra superpowers, systematic debugging, verification before completion, AI debugging"
 tags: "AI, Claude Code, Skills, Debugging"
 date: 2026-10-08

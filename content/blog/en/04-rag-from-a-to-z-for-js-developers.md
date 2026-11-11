@@ -2,7 +2,7 @@
 title: "RAG from A to Z for JS/TS Developers: Let Your LLM 'Read' Your Docs"
 seoTitle: "What Is RAG? A Complete Guide for JavaScript Developers"
 slug: rag-from-a-to-z-for-js-developers
-description: "RAG from a full-stack JS point of view: embeddings, chunking, vector search and prompt context, with minimal code and the spots where quality breaks."
+description: "RAG for full-stack JS developers: embeddings, chunking, vector search and prompt context, with minimal code and common pitfalls."
 keywords: "RAG, retrieval augmented generation, embeddings, vector database, chunking, semantic search, AI for developers"
 tags: "AI, RAG, Embedding, Developer"
 date: 2024-09-24

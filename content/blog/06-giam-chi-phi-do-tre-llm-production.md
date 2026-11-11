@@ -2,7 +2,7 @@
 title: "Giảm chi phí và độ trễ khi gọi LLM trong production"
 seoTitle: "Tối ưu chi phí và độ trễ LLM trong production"
 slug: giam-chi-phi-do-tre-llm-production
-description: "Những cách thực chiến để hóa đơn LLM không phình to: chọn model theo tác vụ, cache (gồm prompt caching), cắt token thừa, streaming và đo lường."
+description: "Cách giảm chi phí và độ trễ LLM: chọn model theo tác vụ, prompt caching, cắt token thừa, streaming và đo lường thực tế."
 keywords: "chi phí LLM, tối ưu token, prompt caching, model routing, độ trễ LLM, AI cho developer"
 tags: "AI, LLM, Performance, Cost, Developer"
 date: 2025-03-11
