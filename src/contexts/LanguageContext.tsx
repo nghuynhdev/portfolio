@@ -1,7 +1,9 @@
 "use client"
 
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import { Language, translations, TranslationKeys } from '@/translations'
+import { blogHome, blogLangFromPath } from '@/lib/blog-i18n'
 
 interface LanguageContextType {
   language: Language
@@ -11,22 +13,43 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
+/**
+ * Home page: language is a client-side preference (saved in localStorage).
+ * Blog pages: language comes from the URL (/ai-for-devs = vi, /en/ai-for-devs = en),
+ * so server HTML, nav labels and content agree. Switching language there navigates
+ * to the other version of the same page, found through its hreflang link.
+ */
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en')
+  const pathname = usePathname()
+  const router = useRouter()
+  const routeLanguage = blogLangFromPath(pathname)
+  const [preferred, setPreferred] = useState<Language>('en')
+  const language = routeLanguage ?? preferred
 
   // Load language preference from localStorage on mount
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') as Language
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'vi')) {
-      setLanguage(savedLanguage)
+      setPreferred(savedLanguage)
     }
   }, [])
 
-  // Save language preference to localStorage when it changes
   useEffect(() => {
-    localStorage.setItem('language', language)
     document.documentElement.lang = language
   }, [language])
+
+  const setLanguage = useCallback(
+    (lang: Language) => {
+      setPreferred(lang)
+      localStorage.setItem('language', lang)
+      if (!routeLanguage || lang === routeLanguage) return
+      const alternate = document.querySelector<HTMLLinkElement>(
+        `link[rel="alternate"][hreflang="${lang}"]`
+      )
+      router.push(alternate ? new URL(alternate.href).pathname : blogHome(lang))
+    },
+    [routeLanguage, router]
+  )
 
   const value = {
     language,

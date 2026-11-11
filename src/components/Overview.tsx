@@ -11,7 +11,7 @@ export default function Overview() {
 
   const cards = [
     {
-      delay: 0.4,
+      delay: 0.14,
       iconBg: "bg-blue-100 dark:bg-blue-900",
       icon: (
         <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -22,7 +22,7 @@ export default function Overview() {
       description: t.overview?.aboutDescription || "I am a passionate developer with expertise in modern web technologies.",
     },
     {
-      delay: 0.6,
+      delay: 0.21,
       iconBg: "bg-emerald-100 dark:bg-emerald-900",
       icon: (
         <svg className="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,7 +33,7 @@ export default function Overview() {
       description: t.overview?.missionDescription || "To leverage technology to solve real-world problems.",
     },
     {
-      delay: 0.8,
+      delay: 0.28,
       iconBg: "bg-purple-100 dark:bg-purple-900",
       icon: (
         <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,9 +56,9 @@ export default function Overview() {
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-8 md:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+          transition={{ duration: 0.45 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
             {t.overview?.title || "Overview"}
@@ -71,9 +71,9 @@ export default function Overview() {
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="grid lg:grid-cols-2 gap-5 lg:gap-12 items-stretch"
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+            transition={{ duration: 0.5, delay: 0.02 }}
           >
             {/* Left Column - About & Mission */}
             <div className="flex flex-col space-y-5 md:space-y-8">
@@ -81,9 +81,9 @@ export default function Overview() {
                 <motion.div
                   key={card.title}
                   className="bg-white dark:bg-[#161b27] rounded-2xl p-5 md:p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, delay: card.delay }}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+                  transition={{ duration: 0.45, delay: card.delay }}
                 >
                   <div className="flex items-center mb-4">
                     <div className={`w-12 h-12 ${card.iconBg} rounded-full flex items-center justify-center mr-4`}>
@@ -100,9 +100,9 @@ export default function Overview() {
             <div className="flex flex-col space-y-5 md:space-y-8">
               <motion.div
                 className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: cards[2].delay }}
+                initial={{ opacity: 0, y: 8 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+                transition={{ duration: 0.45, delay: cards[2].delay }}
               >
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 ${cards[2].iconBg} rounded-full flex items-center justify-center mr-4`}>
@@ -115,9 +115,9 @@ export default function Overview() {
 
               <motion.div
                 className="bg-white dark:bg-[#161b27] rounded-2xl p-8 shadow-sm dark:shadow-black/30 border border-black/[0.07] dark:border-white/[0.07] flex-1 relative z-10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
+                initial={{ opacity: 0, y: 8 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+                transition={{ duration: 0.45, delay: 0.35 }}
               >
                 <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center">{t.overview.keyNumbers}</h4>
                 <div className="grid grid-cols-3 gap-2 md:gap-6">

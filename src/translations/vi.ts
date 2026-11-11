@@ -16,7 +16,7 @@ export const vi = {
     title: "Lập trình viên Fullstack",
     description: "4 năm kinh nghiệm chuyên về React.js, Next.js, Node.js và NestJS.\nXây dựng ứng dụng web có khả năng mở rộng với công nghệ hiện đại và thực hành tốt nhất.",
     email: "nghuynh.dev@gmail.com",
-    phone: "+84 327151506",
+    phone: "+84 327 514 700",
     location: "Thành phố Hồ Chí Minh, Việt Nam"
   },
   experience: {
@@ -145,6 +145,13 @@ export const vi = {
     missionDescription: "Tận dụng công nghệ để giải quyết các vấn đề thực tế và tạo ra những trải nghiệm có ý nghĩa thông qua code sạch, hiệu quả và có khả năng mở rộng.",
     approachTitle: "Phương pháp của tôi", 
     approachDescription: "Tôi tin vào việc học hỏi liên tục, chú ý đến chi tiết và giải quyết vấn đề hợp tác để cung cấp các giải pháp chất lượng cao."
+  },
+  latestPosts: {
+    eyebrow: "AI for Devs",
+    title: "Bài viết mới",
+    subtitle: "Ghi chép thực chiến về làm sản phẩm với AI — LLM, RAG, agent và Claude Code.",
+    viewAll: "Xem tất cả bài viết",
+    readMore: "Đọc bài"
   },
   portfolio: {
     title: "Portfolio & Dự án",

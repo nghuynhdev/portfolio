@@ -1,10 +1,10 @@
 import { ImageResponse } from 'next/og'
 
-export const alt = 'Nguyen Huynh - Full Stack Developer'
-export const size = { width: 1200, height: 630 }
-export const contentType = 'image/png'
+export const siteOgAlt = 'Nguyen Huynh - Full Stack Developer'
+export const siteOgSize = { width: 1200, height: 630 }
 
-export default function OpengraphImage() {
+/** Default social image, used by the opengraph-image route of each root layout. */
+export default function renderSiteOgImage() {
   return new ImageResponse(
     (
       <div
@@ -27,6 +27,6 @@ export default function OpengraphImage() {
         <div style={{ fontSize: 28, color: '#8b93a3', marginTop: 16 }}>huynhnguyen.info.vn</div>
       </div>
     ),
-    size
+    siteOgSize
   )
 }

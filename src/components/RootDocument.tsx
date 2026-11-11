@@ -1,9 +1,11 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata, Viewport } from 'next'
+import '@/app/globals.css'
 import { Leckerli_One, Inter } from 'next/font/google'
 import ToasterProvider from '@/components/ToasterProvider'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { LanguageProvider } from '@/contexts/LanguageContext'
+import Navigation from '@/components/Navigation'
 
 const leckerliOne = Leckerli_One({
   weight: ['400'],
@@ -23,10 +25,15 @@ const SITE_TITLE = 'Nguyễn Huỳnh (Nguyen Huynh) - Full Stack Developer'
 const SITE_DESCRIPTION = 'Nguyễn Huỳnh (Huynh Nguyen) is a Full Stack Developer in Ho Chi Minh City with 4 years of experience building web apps with React.js, Next.js, and NestJS.'
 const NAME_VARIANTS = ['Nguyễn Huỳnh', 'Huỳnh Nguyễn', 'Huynh Nguyen', 'Huynhnguyen', 'Huỳnh', 'Huynh']
 
-export const metadata: Metadata = {
+export const siteViewport: Viewport = {
+  themeColor: '#0f1117',
+  colorScheme: 'dark',
+}
+
+export const siteMetadata: Metadata = {
   title: {
     default: SITE_TITLE,
-    template: '%s | Huynh. Portfolio'
+    template: '%s | Huynh'
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -89,9 +96,16 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 }
 
-export default function RootLayout({
+/**
+ * The <html> document shared by both root layouts. Each route group passes its
+ * language so the server-rendered `lang` matches the page content:
+ * (site) = home + English blog, (vi) = Vietnamese blog.
+ */
+export default function RootDocument({
+  lang,
   children,
 }: Readonly<{
+  lang: 'en' | 'vi'
   children: React.ReactNode
 }>) {
   const jsonLd = {
@@ -119,7 +133,7 @@ export default function RootLayout({
       addressCountry: 'Vietnam'
     },
     email: 'nghuynh.dev@gmail.com',
-    telephone: '+84327151506',
+    telephone: '+84327514700',
     knowsAbout: [
       'React.js',
       'Next.js', 
@@ -143,13 +157,8 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} className="dark" style={{ colorScheme: 'dark' }} suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{if(localStorage.getItem('theme')!=='light')document.documentElement.classList.add('dark')}catch(e){document.documentElement.classList.add('dark')}`,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -160,8 +169,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${leckerliOne.variable} ${inter.variable} font-sans antialiased dark:bg-[#0f1117] text-gray-900 dark:text-gray-100 min-h-screen`}>
+        <LanguageProvider>
+          <Navigation />
+          {children}
+        </LanguageProvider>
         <ToasterProvider />
-        {children}
         <Analytics />
         <SpeedInsights />
       </body>

@@ -1,4 +1,4 @@
-export default function NotFound() {
+export default function NotFoundView() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">

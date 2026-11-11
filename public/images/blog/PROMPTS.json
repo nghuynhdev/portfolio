@@ -1,0 +1,240 @@
+{
+  "mode": "built-in image_gen",
+  "style": "Sparse visual mechanisms, short English labels for bilingual use",
+  "images": [
+    {
+      "n": 1,
+      "topic": "LLM",
+      "concept": "Token chips enter a visibly layered transformer model; output probability bars select one amber next token; feedback arrow appends token to input sequence.",
+      "labels": "Tokens, LLM, Next token",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: LLM. Visual mechanism: Token chips enter a visibly layered transformer model; output probability bars select one amber next token; feedback arrow appends token to input sequence.. Exact allowed labels: Tokens, LLM, Next token. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-5eef2548-fd09-4ccf-9f10-3369d9df59f1.png",
+      "file": "public/images/blog/01-llm-hoat-dong-the-nao.webp"
+    },
+    {
+      "n": 2,
+      "topic": "Prompt engineering",
+      "concept": "Separate structured instruction cards and one data card feed a model, a clean structured JSON object emerges through a schema check.",
+      "labels": "Prompt, Data, JSON",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Prompt engineering. Visual mechanism: Separate structured instruction cards and one data card feed a model, a clean structured JSON object emerges through a schema check.. Exact allowed labels: Prompt, Data, JSON. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-0bd5a9d1-cc01-4f69-8242-c2bbd64583c2.png",
+      "file": "public/images/blog/02-prompt-engineering-thuc-chien.webp"
+    },
+    {
+      "n": 3,
+      "topic": "Streaming",
+      "concept": "Browser and server joined by two directional paths: request out, individual token chips flowing back into a gradually assembled chat response; key icon stays inside server.",
+      "labels": "Client, Server, Stream",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Streaming. Visual mechanism: Browser and server joined by two directional paths: request out, individual token chips flowing back into a gradually assembled chat response; key icon stays inside server.. Exact allowed labels: Client, Server, Stream. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-1723cd52-7d3e-408c-ba1b-987834d588cb.png",
+      "file": "public/images/blog/03-tich-hop-ai-vao-nextjs-streaming.webp"
+    },
+    {
+      "n": 4,
+      "topic": "RAG",
+      "concept": "Documents cut into chunks enter vector database; query retrieves just three amber source chunks into LLM, answer visibly linked to sources.",
+      "labels": "Index, Retrieve, Generate",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: RAG. Visual mechanism: Documents cut into chunks enter vector database; query retrieves just three amber source chunks into LLM, answer visibly linked to sources.. Exact allowed labels: Index, Retrieve, Generate. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-9825019a-a2ff-4dc2-a83b-4488438b9587.png",
+      "file": "public/images/blog/04-rag-tu-a-z-cho-dev-js.webp"
+    },
+    {
+      "n": 5,
+      "topic": "Tool calling",
+      "concept": "Model proposes tool call, separate application validates then executes a database tool, returns result in visible loop; final response exits loop.",
+      "labels": "Model, App, Tool",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Tool calling. Visual mechanism: Model proposes tool call, separate application validates then executes a database tool, returns result in visible loop; final response exits loop.. Exact allowed labels: Model, App, Tool. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-57ed52e2-8715-4755-b9f7-38db59475db2.png",
+      "file": "public/images/blog/05-ai-agent-dau-tien-function-calling.webp"
+    },
+    {
+      "n": 6,
+      "topic": "Cost latency",
+      "concept": "Request forks cache shortcut directly to response or small/large models via router, compact token stacks illustrate usage reduction.",
+      "labels": "Cache, Route, Model",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Cost latency. Visual mechanism: Request forks cache shortcut directly to response or small/large models via router, compact token stacks illustrate usage reduction.. Exact allowed labels: Cache, Route, Model. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-449acba7-ce96-4c07-b7d7-4abaa83b9b93.png",
+      "file": "public/images/blog/06-giam-chi-phi-do-tre-llm-production.webp"
+    },
+    {
+      "n": 7,
+      "topic": "Evals",
+      "concept": "Same small dataset feeds model A and B; answers pass shared checklist; a few failed test cards highlighted amber for comparison.",
+      "labels": "Dataset, A / B, Eval",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Evals. Visual mechanism: Same small dataset feeds model A and B; answers pass shared checklist; a few failed test cards highlighted amber for comparison.. Exact allowed labels: Dataset, A / B, Eval. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-c26c6cf2-6073-45f1-b524-2f2227f47e00.png",
+      "file": "public/images/blog/07-evals-do-chat-luong-llm.webp"
+    },
+    {
+      "n": 8,
+      "topic": "Ollama",
+      "concept": "Cutaway laptop contains app, local endpoint, model weights and RAM/GPU; document paths remain entirely inside device. Cloud is separate alternative with no connection from local weights.",
+      "labels": "App, Ollama, Local",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Ollama. Visual mechanism: Cutaway laptop contains app, local endpoint, model weights and RAM/GPU; document paths remain entirely inside device. Cloud is separate alternative with no connection from local weights.. Exact allowed labels: App, Ollama, Local. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-05a89bcd-f820-4f56-9d3e-fb8e018752ef.png",
+      "file": "public/images/blog/08-chay-llm-local-voi-ollama.webp"
+    },
+    {
+      "n": 9,
+      "topic": "Prompt injection",
+      "concept": "External document has amber injected instruction entering model; malicious proposed tool path stopped at independent permission gate, authorized data path passes.",
+      "labels": "Data, Model, Permissions",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Prompt injection. Visual mechanism: External document has amber injected instruction entering model; malicious proposed tool path stopped at independent permission gate, authorized data path passes.. Exact allowed labels: Data, Model, Permissions. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-7e5cf218-6dab-43a6-a2c3-c3256191a2d4.png",
+      "file": "public/images/blog/09-bao-mat-ai-prompt-injection.webp"
+    },
+    {
+      "n": 10,
+      "topic": "MCP",
+      "concept": "Two AI apps connect through identical protocol connectors to distinct database/file/CRM MCP servers; standardized reusable connections visually central.",
+      "labels": "Apps, MCP, Tools",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: MCP. Visual mechanism: Two AI apps connect through identical protocol connectors to distinct database/file/CRM MCP servers; standardized reusable connections visually central.. Exact allowed labels: Apps, MCP, Tools. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-838a4e0d-53ec-4d42-97e8-88b00a698ff2.png",
+      "file": "public/images/blog/10-mcp-model-context-protocol.webp"
+    },
+    {
+      "n": 11,
+      "topic": "RAG production",
+      "concept": "PDF structured chunks flow into versioned index; question branches keyword and vector retrieval, merges and reranks selected chunks.",
+      "labels": "Keyword, Vector, Rerank",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: RAG production. Visual mechanism: PDF structured chunks flow into versioned index; question branches keyword and vector retrieval, merges and reranks selected chunks.. Exact allowed labels: Keyword, Vector, Rerank. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-0df29951-bf10-4c49-af06-1d1b04f2f46d.png",
+      "file": "public/images/blog/11-rag-production-ingestion-hybrid-search.webp"
+    },
+    {
+      "n": 12,
+      "topic": "Context",
+      "concept": "Finite context container filled with distinctly colored instruction, task state, recent chat and evidence blocks, reserved output space; history compressed outside container and relevant memory selected.",
+      "labels": "Context, Memory, Output",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Context. Visual mechanism: Finite context container filled with distinctly colored instruction, task state, recent chat and evidence blocks, reserved output space; history compressed outside container and relevant memory selected.. Exact allowed labels: Context, Memory, Output. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-7247c9d3-7664-480a-9915-453c63b0d641.png",
+      "file": "public/images/blog/12-context-engineering-va-memory.webp"
+    },
+    {
+      "n": 13,
+      "topic": "Reliability",
+      "concept": "Top short request timeline bounded deadline with spaced retries. Bottom durable action outbox and repeated same key converge through email API to exactly one envelope, uncertainty routes to inspection.",
+      "labels": "Retry, Key, Outbox",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Reliability. Visual mechanism: Top short request timeline bounded deadline with spaced retries. Bottom durable action outbox and repeated same key converge through email API to exactly one envelope, uncertainty routes to inspection.. Exact allowed labels: Retry, Key, Outbox. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-7ab807ee-ede0-4643-9f54-85f010f3ef9e.png",
+      "file": "public/images/blog/13-do-tin-cay-llm-timeout-retry-idempotency.webp"
+    },
+    {
+      "n": 14,
+      "topic": "Tracing rollout",
+      "concept": "Upper compact trace waterfall aligned with prompt/model/index version bundle. Lower rollout route staged eval to shadow to small canary cohort to release with rollback arrow.",
+      "labels": "Trace, Canary, Rollback",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Tracing rollout. Visual mechanism: Upper compact trace waterfall aligned with prompt/model/index version bundle. Lower rollout route staged eval to shadow to small canary cohort to release with rollback arrow.. Exact allowed labels: Trace, Canary, Rollback. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-1be3a567-5409-481f-b91b-3cb55ed15f19.png",
+      "file": "public/images/blog/14-van-hanh-llm-tracing-version-rollout.webp"
+    },
+    {
+      "n": 15,
+      "topic": "Multimodal PDF",
+      "concept": "Scanned form field with one blurred character, enlarged source crop linked to extracted structured field; unclear field amber and routed to human review while validated fields pass.",
+      "labels": "Source, Extract, Verify",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Multimodal PDF. Visual mechanism: Scanned form field with one blurred character, enlarged source crop linked to extracted structured field; unclear field amber and routed to human review while validated fields pass.. Exact allowed labels: Source, Extract, Verify. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-fba74831-ca13-4d3d-beab-c770fab6641c.png",
+      "file": "public/images/blog/15-multimodal-ai-doc-anh-va-pdf.webp"
+    },
+    {
+      "n": 16,
+      "topic": "Fine tuning",
+      "concept": "Frozen base model weight block with small trainable adapter attached, separated train/test cards and balanced baseline comparison. Subtle separate source retrieval alternative.",
+      "labels": "Base, LoRA, Eval",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Fine tuning. Visual mechanism: Frozen base model weight block with small trainable adapter attached, separated train/test cards and balanced baseline comparison. Subtle separate source retrieval alternative.. Exact allowed labels: Base, LoRA, Eval. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-51686824-b544-4a30-9c14-04b994b70bbf.png",
+      "file": "public/images/blog/16-khi-nao-nen-fine-tune-llm.webp"
+    },
+    {
+      "n": 17,
+      "topic": "AI coding",
+      "concept": "Small order endpoint diff bracketed by acceptance spec and observed tests: owner allowed, other user denied, anonymous denied, final reviewer magnifier.",
+      "labels": "Spec, Diff, Test",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: AI coding. Visual mechanism: Small order endpoint diff bracketed by acceptance spec and observed tests: owner allowed, other user denied, anonymous denied, final reviewer magnifier.. Exact allowed labels: Spec, Diff, Test. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-62dc601e-530a-41b7-85d2-e338c55f1088.png",
+      "file": "public/images/blog/17-dung-ai-viet-code-va-kiem-chung.webp"
+    },
+    {
+      "n": 18,
+      "topic": "Choose skills",
+      "concept": "Task cards UI, SEO, performance, browser tests matched to distinct workflow file modules; side visual differentiates instruction file, plugin package, external tool connector.",
+      "labels": "Task, Skill, Tool",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Choose skills. Visual mechanism: Task cards UI, SEO, performance, browser tests matched to distinct workflow file modules; side visual differentiates instruction file, plugin package, external tool connector.. Exact allowed labels: Task, Skill, Tool. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-83df3b97-c03f-4e22-b542-db408b9ff81d.png",
+      "file": "public/images/blog/18-chon-skill-cho-claude-code.webp"
+    },
+    {
+      "n": 19,
+      "topic": "UI skills",
+      "concept": "Three stages: reusable palette typography spacing tokens, purposeful desktop/mobile blog UI using same tokens, accessibility keyboard-focus review magnifier; no scores or certification.",
+      "labels": "Tokens, Build, Review",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: UI skills. Visual mechanism: Three stages: reusable palette typography spacing tokens, purposeful desktop/mobile blog UI using same tokens, accessibility keyboard-focus review magnifier; no scores or certification.. Exact allowed labels: Tokens, Build, Review. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-c286a003-99cc-4542-adfd-95a2d19461c6.png",
+      "file": "public/images/blog/19-lam-ui-voi-claude-code-skills.webp"
+    },
+    {
+      "n": 20,
+      "topic": "SEO",
+      "concept": "Blog page HTML inspected for canonical and structured article metadata, a specific issue links to small code diff then rechecked rendered page; no rankings graphs.",
+      "labels": "Audit, Fix, Verify",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: SEO. Visual mechanism: Blog page HTML inspected for canonical and structured article metadata, a specific issue links to small code diff then rechecked rendered page; no rankings graphs.. Exact allowed labels: Audit, Fix, Verify. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-87c148a2-7c2d-4480-b2a2-c66c7d027078.png",
+      "file": "public/images/blog/20-claude-seo-audit-website.webp"
+    },
+    {
+      "n": 21,
+      "topic": "React performance",
+      "concept": "Compact before/after waterfall showing two independent fetches sequential versus parallel, component tree mostly server with tiny client leaf, chart loaded only on click.",
+      "labels": "Parallel, Server, Client",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: React performance. Visual mechanism: Compact before/after waterfall showing two independent fetches sequential versus parallel, component tree mostly server with tiny client leaf, chart loaded only on click.. Exact allowed labels: Parallel, Server, Client. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-d63f2644-8567-4b56-b6b2-fad150a8fa0e.png",
+      "file": "public/images/blog/21-react-best-practices-skill-claude-code.webp"
+    },
+    {
+      "n": 22,
+      "topic": "Playwright",
+      "concept": "Browser journey page1 to page2 to article then back, test cursor and assertion checkmarks, tiny separate redirect and 404 artifacts; no code block.",
+      "labels": "Browser, Assert, Evidence",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Playwright. Visual mechanism: Browser journey page1 to page2 to article then back, test cursor and assertion checkmarks, tiny separate redirect and 404 artifacts; no code block.. Exact allowed labels: Browser, Assert, Evidence. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-ed8172ff-d2d3-4a48-ac86-c2c686a155cb.png",
+      "file": "public/images/blog/22-webapp-testing-playwright-claude-code.webp"
+    },
+    {
+      "n": 23,
+      "topic": "Debugging",
+      "concept": "Two search request timelines: earlier react request finishes after later rag and overwrites UI; corrected side uses stale response guard, latest rag remains highlighted.",
+      "labels": "Reproduce, Trace, Verify",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Debugging. Visual mechanism: Two search request timelines: earlier react request finishes after later rag and overwrites UI; corrected side uses stale response guard, latest rag remains highlighted.. Exact allowed labels: Reproduce, Trace, Verify. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-46eece8d-e092-4fa4-a4d4-d5f39693dcbf.png",
+      "file": "public/images/blog/23-superpowers-debugging-claude-code.webp"
+    },
+    {
+      "n": 24,
+      "topic": "Project rules",
+      "concept": "Repo tree root instruction file and scoped rules routed only to relevant blog source files; skill workflow separate; independent permission gate before tool execution.",
+      "labels": "CLAUDE.md, Rules, Scope",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Project rules. Visual mechanism: Repo tree root instruction file and scoped rules routed only to relevant blog source files; skill workflow separate; independent permission gate before tool execution.. Exact allowed labels: CLAUDE.md, Rules, Scope. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-359e8ee3-897a-4a72-895a-16693eb7d30a.png",
+      "file": "public/images/blog/24-claude-md-va-rules-cho-du-an.webp"
+    },
+    {
+      "n": 25,
+      "topic": "Custom skill",
+      "concept": "Small SKILL.md folder with reference checklist, selected Markdown article passes metadata/link/source checks to concise review report; test fixtures good/broken alongside, no publishing arrow.",
+      "labels": "SKILL.md, Check, Report",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Custom skill. Visual mechanism: Small SKILL.md folder with reference checklist, selected Markdown article passes metadata/link/source checks to concise review report; test fixtures good/broken alongside, no publishing arrow.. Exact allowed labels: SKILL.md, Check, Report. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-81c5f8bb-de13-4e77-9c81-61d99d75c91d.png",
+      "file": "public/images/blog/25-viet-skill-rieng-cho-claude-code.webp"
+    },
+    {
+      "n": 26,
+      "topic": "Jailbreak boundaries",
+      "concept": "Instruction file feeds model context but cannot unlock independent runtime permission gate; untrusted document isolated as data, separate sandbox boundary around tools, model output and tool execution clearly distinct.",
+      "labels": "Instructions, Model, Sandbox",
+      "prompt": "Create ONE landscape 16:9 editorial technical illustration for a bilingual English/Vietnamese developer blog. VISUAL FIRST, SPARSE, NO INFOGRAPHIC POSTER. No heading, no subtitle, no prose, no code, no captions, no legends, no dense UI text. Use only the exact 3 short English labels specified, at most one instance each, no other words or numbers. Large purposeful diagram forms and clear directed arrows convey the actual mechanism. Sophisticated restrained 3D/flat hybrid technical illustration, dark ink/navy, frosted panels, cyan pathways, amber selected evidence, ample negative space, large simple focal scene, 3-5 main forms, readable at thumbnail size. NO decorative robots/brains, generic glowing chip, logos or watermarks. Topic: Jailbreak boundaries. Visual mechanism: Instruction file feeds model context but cannot unlock independent runtime permission gate; untrusted document isolated as data, separate sandbox boundary around tools, model output and tool execution clearly distinct.. Exact allowed labels: Instructions, Model, Sandbox. Keep the composition sparse; do not expand into a multi-panel explanation.",
+      "source": "/Users/ebram/.codex/generated_images/01a1ca00-5720-79f0-8040-f6bd6e5ea270/exec-3cfbda20-7e72-4d34-9470-64840a973ec0.png",
+      "file": "public/images/blog/26-jailbreak-claude-va-gioi-han-claude-md.webp"
+    }
+  ]
+}

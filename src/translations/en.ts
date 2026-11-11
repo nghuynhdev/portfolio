@@ -16,7 +16,7 @@ export const en = {
     title: "Fullstack Developer",
     description: "4 years of experience specializing in React.js, Next.js, Node.js, and NestJS.\nBuilding scalable web applications with modern technologies and best practices.",
     email: "nghuynh.dev@gmail.com",
-    phone: "+84 327151506",
+    phone: "+84 327 514 700",
     location: "Ho Chi Minh, Vietnam"
   },
   experience: {
@@ -145,6 +145,13 @@ export const en = {
     missionDescription: "To leverage technology to solve real-world problems and create meaningful experiences through clean, efficient, and scalable code.",
     approachTitle: "My Approach",
     approachDescription: "I believe in continuous learning, attention to detail, and collaborative problem-solving to deliver high-quality solutions."
+  },
+  latestPosts: {
+    eyebrow: "AI for Devs",
+    title: "Latest articles",
+    subtitle: "Practical notes on building products with AI — LLMs, RAG, agents and Claude Code. Written in Vietnamese.",
+    viewAll: "View all articles",
+    readMore: "Read"
   },
   portfolio: {
     title: "Portfolio & Projects",

@@ -19,12 +19,12 @@ export default function Contact() {
       value: "nghuynh.dev@gmail.com",
     },
     {
-      href: "tel:+84327151506",
+      href: "tel:+84327514700",
       hoverBg: "hover:bg-green-50 dark:hover:bg-green-900/20",
       iconBg: "bg-green-600",
       icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
       label: t.contact.phoneLabel,
-      value: "+84 327151506",
+      value: "+84 327 514 700",
     },
     {
       href: "https://maps.google.com/?q=Ho+Chi+Minh+City,Vietnam",
@@ -243,11 +243,6 @@ export default function Contact() {
               </form>
             </div>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 pt-6 sm:pt-8 border-t border-black/[0.07] dark:border-white/[0.07] text-center">
-          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base" dangerouslySetInnerHTML={{ __html: t.contact.footer }} />
         </div>
       </div>
     </section>
