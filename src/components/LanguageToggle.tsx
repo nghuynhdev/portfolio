@@ -25,7 +25,7 @@ export default function LanguageToggle() {
             onClick={() => setLanguage(lang.code as 'en' | 'vi')}
             aria-pressed={active}
             aria-label={lang.name}
-            className={`relative flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold transition-colors duration-200 ${
+            className={`relative flex items-center gap-1 px-2.5 py-1.5 rounded-full touch-manipulation after:absolute after:inset-x-0 after:-inset-y-2 after:content-[''] after:rounded-full text-xs font-semibold transition-colors duration-200 ${
               active
                 ? 'text-gray-900 dark:text-white'
                 : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'

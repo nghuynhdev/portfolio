@@ -68,7 +68,7 @@ export default function LatestPostsSection({
         <div className="mt-10 text-center">
           <Link
             href={seriesUrl}
-            className="inline-flex items-center gap-2 rounded-xl border border-accent/50 px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/10 transition-colors"
+            className="inline-flex items-center gap-2 min-h-[44px] rounded-xl border border-accent/50 px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/10 transition-colors"
           >
             {t.latestPosts.viewAll}
             <span aria-hidden>→</span>

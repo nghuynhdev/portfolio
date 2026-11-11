@@ -22,7 +22,8 @@ export default function Hero() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      text: t.hero.email
+      text: t.hero.email,
+      href: `mailto:${t.hero.email}`
     },
     {
       icon: (
@@ -30,7 +31,8 @@ export default function Hero() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
       ),
-      text: t.hero.phone
+      text: t.hero.phone,
+      href: `tel:${t.hero.phone.replace(/\s+/g, '')}`
     },
     {
       icon: (
@@ -39,12 +41,13 @@ export default function Hero() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      text: t.hero.location
+      text: t.hero.location,
+      href: undefined as string | undefined
     }
   ]
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <section id="hero" className="min-h-screen min-h-[100svh] flex items-center justify-center relative overflow-hidden pt-16">
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Avatar */}
@@ -74,24 +77,40 @@ export default function Hero() {
           </p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+            className="flex flex-col sm:flex-row gap-1 sm:gap-4 justify-center items-center mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {contactInfo.map((item, index) => (
-              <motion.div 
-                key={index}
-                className="flex items-center gap-2 text-gray-600 dark:text-gray-300"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
-                whileHover={{ scale: 1.05 }}
-              >
-                {item.icon}
-                {item.text}
-              </motion.div>
-            ))}
+            {contactInfo.map((item, index) => {
+              const content = (
+                <>
+                  <span aria-hidden="true">{item.icon}</span>
+                  {item.text}
+                </>
+              )
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
+                >
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      className="flex items-center gap-2 min-h-[44px] px-3 rounded-lg text-gray-600 dark:text-gray-300 hover:text-accent active:bg-accent/10 transition-colors touch-manipulation"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <span className="flex items-center gap-2 min-h-[44px] px-3 text-gray-600 dark:text-gray-300">
+                      {content}
+                    </span>
+                  )}
+                </motion.div>
+              )
+            })}
           </motion.div>
 
           <motion.div 

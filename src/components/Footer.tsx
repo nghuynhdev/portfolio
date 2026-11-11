@@ -61,7 +61,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 max-w-sm">
             <Link
               href="/"
-              className="text-2xl font-bold logo-font text-gray-800 dark:text-white rounded"
+              className="inline-block py-1.5 text-2xl font-bold logo-font text-gray-800 dark:text-white rounded"
             >
               Huynh.
             </Link>
@@ -71,15 +71,15 @@ export default function Footer() {
           </div>
 
           {/* Quick links */}
-          <nav aria-label={f.linksLabel} className="flex flex-col gap-3 text-sm">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+          <nav aria-label={f.linksLabel} className="flex flex-col md:gap-3 text-sm">
+            <span className="mb-1 md:mb-0 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
               {f.links}
             </span>
             {quickLinks.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-gray-600 dark:text-gray-300 hover:text-accent transition-colors w-fit"
+                className="py-3 md:py-0 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors w-fit touch-manipulation"
               >
                 {l.label}
               </Link>
@@ -87,8 +87,8 @@ export default function Footer() {
           </nav>
 
           {/* Connect */}
-          <div className="flex flex-col gap-3 text-sm">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+          <div className="flex flex-col md:gap-3 text-sm">
+            <span className="mb-1 md:mb-0 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
               {f.connect}
             </span>
             {socials.map((s) => (
@@ -97,9 +97,10 @@ export default function Footer() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2.5 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors w-fit"
+                className="group inline-flex items-center gap-2.5 py-3 md:py-0 text-gray-600 dark:text-gray-300 hover:text-accent transition-colors w-fit touch-manipulation"
               >
                 <svg
+                  aria-hidden="true"
                   className="w-[18px] h-[18px] text-gray-400 dark:text-gray-500 group-hover:text-accent transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"

@@ -119,7 +119,7 @@ export default function Navigation() {
                   scrollToSection('hero', 0)
                 }
               }}
-              className="text-2xl font-bold text-gray-800 dark:text-white logo-font rounded"
+              className="inline-block py-1.5 text-2xl font-bold text-gray-800 dark:text-white logo-font rounded"
             >
               Huynh.
             </a>

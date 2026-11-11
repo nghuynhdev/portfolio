@@ -93,7 +93,7 @@ export default function BlogIndex({ page, lang = 'vi' }: { page: number; lang?: 
   }
 
   return (
-    <main className="relative min-h-screen" lang={s.htmlLang}>
+    <main id="main" className="relative min-h-screen" lang={s.htmlLang}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

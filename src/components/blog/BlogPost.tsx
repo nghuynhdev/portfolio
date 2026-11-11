@@ -158,7 +158,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
   ]
 
   return (
-    <main className="relative min-h-screen">
+    <main id="main" className="relative min-h-screen">
       <ReadingProgress />
 
       <script

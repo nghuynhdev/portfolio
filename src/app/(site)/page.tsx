@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <MotionProvider>
-      <main className="relative">
+      <main id="main" className="relative">
         <ParticleWrapper />
         <Hero />
         <Overview />

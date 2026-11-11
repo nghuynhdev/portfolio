@@ -107,7 +107,7 @@ export default function Contact() {
     },
   ]
 
-  const inputClass = "w-full px-3 py-2 sm:px-4 sm:py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:border-accent/50 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+  const inputClass = "w-full px-4 py-3 border border-black/10 dark:border-white/[0.1] rounded-lg focus:border-accent/50 bg-white dark:bg-[#1e2535] dark:text-[#e2e8f0] placeholder-slate-400 dark:placeholder-slate-500 text-base disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -176,7 +176,7 @@ export default function Contact() {
                 <h4 className="font-bold text-gray-800 dark:text-white mb-2 text-sm sm:text-base">
                   {t.contact.availability.title}
                 </h4>
-                <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                   {t.contact.availability.description}
                 </p>
               </div>
@@ -191,7 +191,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 {formFields.map((field) => (
                   <div key={field.id}>
-                    <label htmlFor={field.id} className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
+                    <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                       {field.label}
                     </label>
                     {field.type === 'textarea' ? (
@@ -226,7 +226,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-accent hover:bg-accent/90 text-white dark:text-gray-900 font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-full shadow-sm shadow-accent/25 hover:shadow-accent/40 transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  className="w-full bg-accent hover:bg-accent/90 text-white dark:text-gray-900 font-medium min-h-[48px] py-3 px-4 sm:px-6 rounded-full touch-manipulation shadow-sm shadow-accent/25 hover:shadow-accent/40 transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
