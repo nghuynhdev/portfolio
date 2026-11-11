@@ -138,7 +138,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     author: { '@id': `${SITE_URL}/#person`, name: 'Nguyen Huynh' },
     publisher: { '@id': `${SITE_URL}/#person`, name: 'Nguyen Huynh' },
-    image: `${SITE_URL}${post.cover ?? '/assets/images/avt-v2.png'}`,
+    image: `${SITE_URL}${post.cover ?? '/assets/images/avt-v2.webp'}`,
   }
 
   const breadcrumbJsonLd = {

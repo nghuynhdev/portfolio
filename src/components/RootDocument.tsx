@@ -126,7 +126,7 @@ export default function RootDocument({
     alternateName: NAME_VARIANTS,
     description: 'Full Stack Developer with 4 years of experience specializing in React.js, Next.js, Node.js, and NestJS',
     url: SITE_URL,
-    image: `${SITE_URL}/assets/images/avt-v2.png`,
+    image: `${SITE_URL}/assets/images/avt-v2.webp`,
     sameAs: [
       'https://www.facebook.com/nghuynhit',
       'https://github.com/nghuynhdev',

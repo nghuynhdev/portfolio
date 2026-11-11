@@ -54,7 +54,7 @@ export default function Hero() {
           <div className="mb-8">
             <div className="w-32 h-32 md:w-56 md:h-56 rounded-full mx-auto overflow-hidden border-4 border-accent shadow-[0_0_20px_rgb(var(--accent)/0.3)]">
               <Image
-                src="/assets/images/avt-v2.png"
+                src="/assets/images/avt-v2.webp"
                 alt="Nguyễn Huỳnh (Nguyen Huynh), Full Stack Developer"
                 width={224}
                 height={224}

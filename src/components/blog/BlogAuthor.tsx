@@ -39,7 +39,7 @@ export default function BlogAuthor({ lang = 'vi' }: { lang?: BlogLang }) {
         <Link href="/" aria-label={a.homeAria} className="shrink-0">
           <div className="w-24 h-24 rounded-full overflow-hidden border-[3px] border-accent shadow-[0_0_24px_rgb(var(--accent)/0.35)] bg-gray-100 dark:bg-[#0f1117]">
             <Image
-              src="/assets/images/avt-v2.png"
+              src="/assets/images/avt-v2.webp"
               alt={`${name} — Full Stack Developer`}
               width={120}
               height={120}
