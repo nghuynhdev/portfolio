@@ -10,9 +10,11 @@ date: 2026-04-21
 
 # Context engineering: cho AI nhớ đúng thứ, đúng lúc
 
+**Context engineering là việc thiết kế những gì đưa vào context window ở mỗi lượt gọi model: chỉ thị, trạng thái công việc, lịch sử hội thoại, memory và bằng chứng từ tool.** Prompt chỉ là một phần trong đó. Mục tiêu là model có đúng thông tin cần cho bước tiếp theo, không thừa, không thiếu.
+
 Một cuộc chat dài có thể chứa yêu cầu ban đầu, ba lần đổi ý, log lỗi cũ và một tool trả về hàng nghìn dòng. Gửi lại toàn bộ thì tốn; cắt những tin nhắn đầu thì có thể mất ràng buộc quan trọng. Vấn đề thực tế là chọn thông tin nào model cần cho bước tiếp theo.
 
-Đó là cách mình nhìn **context engineering**: thiết kế dữ liệu đầu vào của từng lượt, bao gồm chỉ thị, trạng thái, lịch sử và bằng chứng. Prompt chỉ là một phần trong đó.
+Chọn đúng phần thông tin đó cho từng lượt chính là việc của context engineering.
 
 ## Tách ba thứ thường bị gọi chung là memory
 

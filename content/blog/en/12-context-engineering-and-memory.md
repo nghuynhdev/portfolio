@@ -10,9 +10,11 @@ date: 2026-04-21
 
 # Context Engineering: Helping AI Remember the Right Things at the Right Time
 
+**Context engineering is designing what goes into the context window on each model call: instructions, task state, conversation history, memory and tool evidence.** The prompt is only one part of it. The goal is for the model to have exactly the information it needs for the next step, nothing missing and nothing extra.
+
 A long chat can contain the original request, three changes of mind, old error logs and a tool that returned thousands of lines. Resending all of it is expensive; dropping the earliest messages can lose an important constraint. The practical problem is choosing what information the model needs for its next step.
 
-That's how I see **context engineering**: designing the input for each turn, including instructions, state, history and evidence. The prompt is only one part of it.
+Choosing that information turn by turn is the job of context engineering.
 
 ## Separate three things that all get called "memory"
 

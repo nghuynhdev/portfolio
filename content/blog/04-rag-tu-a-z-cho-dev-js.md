@@ -11,9 +11,11 @@ updated: 2026-11-11
 
 # RAG từ A–Z cho dev JS/TS: cho LLM "đọc" tài liệu của bạn
 
+**RAG (Retrieval-Augmented Generation) là kỹ thuật cho LLM trả lời dựa trên tài liệu của bạn: trước khi hỏi model, hệ thống tìm vài đoạn tài liệu liên quan nhất rồi đưa vào prompt làm ngữ cảnh.** Nhờ đó model trả lời theo dữ liệu riêng và mới cập nhật mà không cần huấn luyện lại.
+
 Câu hỏi muôn thuở khi làm chatbot cho công ty: "làm sao để nó trả lời dựa trên tài liệu nội bộ của mình?". Nhiều người phản xạ đầu tiên là nhồi hết tài liệu vào prompt. Làm thử là thấy ngay hai vấn đề: tài liệu dài hơn context window, và mỗi câu hỏi lại gửi lại cả núi chữ nên vừa chậm vừa đốt tiền.
 
-Lời giải đúng là **RAG — Retrieval-Augmented Generation**. Nghe đao to búa lớn, nhưng bản chất chỉ là: *trước khi hỏi model, đi tìm vài đoạn tài liệu liên quan nhất rồi dán vào prompt làm ngữ cảnh*. Model không cần nhớ toàn bộ, nó chỉ cần đọc đúng mẩu bạn đưa.
+Lời giải đúng là RAG. Nghe đao to búa lớn, nhưng model không cần nhớ toàn bộ tài liệu, nó chỉ cần đọc đúng mẩu bạn đưa.
 
 ## Nhắc lại một ý từ bài đầu: embedding
 

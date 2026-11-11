@@ -11,6 +11,8 @@ updated: 2026-11-11
 
 # LLM hoạt động thế nào? Giải thích kiểu dev, bỏ qua mấy thứ huyền bí
 
+**LLM (Large Language Model, mô hình ngôn ngữ lớn) là mô hình AI được huấn luyện trên lượng văn bản khổng lồ để dự đoán token tiếp theo trong một chuỗi.** ChatGPT, Claude hay Gemini đều chạy trên LLM. Nó không "hiểu" như con người: câu trả lời được sinh ra bằng cách đoán lần lượt từng mẩu văn bản có xác suất cao nhất.
+
 Hồi mới dùng ChatGPT để viết code, mình mắc một lỗi tư duy khá ngớ ngẩn: mình tưởng nó *hiểu* câu hỏi của mình, kiểu như có một bộ não con con ngồi suy nghĩ rồi trả lời. Đến khi nó tự tin bịa ra một hàm `Array.prototype.flatMapAsync` không hề tồn tại, mình mới chịu ngồi xuống tìm hiểu thật sự bên dưới nó là cái gì.
 
 Bài này mình viết cho dev — những người không cần biết đạo hàm hay ma trận, nhưng cần một *mental model* đủ đúng để không bị LLM lừa, và để biết vì sao code tích hợp AI của mình lúc thì ngon lúc thì dở.

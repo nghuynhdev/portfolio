@@ -10,6 +10,8 @@ date: 2026-03-18
 
 # MCP (Model Context Protocol) là gì và vì sao dev nên quan tâm
 
+**MCP (Model Context Protocol) là giao thức mở do Anthropic khởi xướng, chuẩn hóa cách ứng dụng AI kết nối với công cụ và nguồn dữ liệu bên ngoài.** Viết một MCP server cho công cụ của bạn một lần, mọi client hỗ trợ MCP như Claude, Cursor hay VS Code đều dùng được.
+
 Ở [bài về tool calling](/ai-for-devs/ai-agent-dau-tien-function-calling), ta thấy một agent mạnh lên nhờ được cắm thêm công cụ: tra dữ liệu, gọi API, đọc file. Nhưng làm nhiều rồi sẽ đụng một nỗi đau rất kỹ sư: mỗi ứng dụng AI lại phải tự viết lại cách kết nối tới từng công cụ. App A muốn đọc GitHub thì viết tích hợp GitHub; app B cũng muốn đọc GitHub thì... viết lại từ đầu. Nhân lên với hàng chục công cụ và hàng chục app, đó là bài toán tích hợp **N×M** kinh điển.
 
 **MCP — Model Context Protocol** sinh ra để biến N×M thành **N+M**. Và đó là lý do nó đáng để một dev để mắt tới, dù bạn chưa làm AI.

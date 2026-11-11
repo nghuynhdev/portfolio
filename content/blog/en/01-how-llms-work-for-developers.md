@@ -11,6 +11,8 @@ updated: 2026-11-11
 
 # How Do LLMs Actually Work? A Developer's Explanation, Minus the Mystique
 
+**An LLM (Large Language Model) is an AI model trained on huge amounts of text to predict the next token in a sequence.** ChatGPT, Claude and Gemini all run on LLMs. It doesn't "understand" the way people do: it builds an answer by repeatedly predicting the most likely next piece of text.
+
 When I first started using ChatGPT to write code, I made a pretty naive mistake: I assumed it *understood* my question, as if there were a little brain in there thinking things through before answering. It wasn't until it confidently invented an `Array.prototype.flatMapAsync` function that doesn't exist that I sat down and figured out what is really going on underneath.
 
 This post is for developers — people who don't need derivatives or matrices, but do need a *mental model* that is accurate enough to avoid being fooled by an LLM, and to understand why their AI integration works great one minute and falls apart the next.

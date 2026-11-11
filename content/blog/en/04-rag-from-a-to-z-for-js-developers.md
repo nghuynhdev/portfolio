@@ -11,9 +11,11 @@ updated: 2026-11-11
 
 # RAG from A to Z for JS/TS Developers: Let Your LLM "Read" Your Docs
 
+**RAG (Retrieval-Augmented Generation) is a technique that lets an LLM answer from your own documents: before asking the model, the system finds the few most relevant passages and adds them to the prompt as context.** The model then answers from your private, up-to-date data without being retrained.
+
 The eternal question when building a company chatbot: "how do I make it answer based on our internal documents?". Many people's first instinct is to stuff every document into the prompt. Try it and two problems show up immediately: the documents are longer than the context window, and every question resends a mountain of text, which is slow and burns money.
 
-The right answer is **RAG — Retrieval-Augmented Generation**. It sounds grand, but the idea is simply: *before asking the model, find the few most relevant passages from your documents and paste them into the prompt as context*. The model doesn't need to remember everything; it only needs to read the right excerpt you hand it.
+The right answer is RAG. It sounds grand, but the model doesn't need to remember all your documents; it only needs to read the right excerpt you hand it.
 
 ## A recap from the first post: embeddings
 

@@ -10,6 +10,8 @@ date: 2026-03-18
 
 # What Is MCP (Model Context Protocol) and Why Developers Should Care
 
+**MCP (Model Context Protocol) is an open protocol, started by Anthropic, that standardizes how AI applications connect to external tools and data sources.** Write one MCP server for your tool, and every MCP-capable client, such as Claude, Cursor or VS Code, can use it.
+
 In [the post on tool calling](/ai-for-devs/ai-agent-dau-tien-function-calling), we saw an agent become more capable once it's given tools: looking up data, calling APIs, reading files. But after doing this a few times you hit a very engineering kind of pain: every AI application has to rewrite how it connects to each tool. App A wants to read GitHub, so it builds a GitHub integration; app B also wants to read GitHub, so it... builds one from scratch. Multiply by dozens of tools and dozens of apps and you get the classic **N×M** integration problem.
 
 **MCP — the Model Context Protocol** — exists to turn N×M into **N+M**. That's why it's worth a developer's attention, even if you don't work on AI yet.

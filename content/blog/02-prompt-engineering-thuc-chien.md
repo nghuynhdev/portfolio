@@ -11,6 +11,8 @@ updated: 2026-11-11
 
 # Prompt engineering thực chiến cho developer (không phải trò "thần chú")
 
+**Prompt engineering là cách viết và tinh chỉnh chỉ thị (prompt) gửi cho LLM để nhận output đúng ý, ổn định và kiểm chứng được.** Với developer, nó giống viết spec: nói rõ vai trò, đầu vào, định dạng đầu ra và ràng buộc, rồi lặp lại như debug khi kết quả sai.
+
 Có một giai đoạn mình ghét cụm từ "prompt engineering". Nghe như kiểu phải học mấy câu thần chú bí truyền, thêm chữ "please" hay "bạn là chuyên gia 20 năm kinh nghiệm" vào là model giỏi hẳn lên. Làm thật vài tháng mình mới thấy: nó không phải phép thuật, nó là **viết spec**. Và dev thì viết spec cả ngày, chỉ là lần này người đọc spec là một cái model hay đãng trí.
 
 Bài này mình gom lại những thứ thực sự tạo ra khác biệt khi đưa prompt vào code chạy production, bỏ qua mấy mẹo câu view.

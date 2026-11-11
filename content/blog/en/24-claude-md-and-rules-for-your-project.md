@@ -10,9 +10,11 @@ date: 2026-10-19
 
 # CLAUDE.md and Rules: Teach Claude Your Project's Conventions Once
 
+**CLAUDE.md is a Markdown file in your repo with project instructions that Claude Code reads at the start of a session: code conventions, build and test commands, folder layout.** Rules are smaller instruction files split by topic or path, for when a single CLAUDE.md stops being compact.
+
 You want Claude to use the existing components, but it keeps creating a new button. You want content kept in Vietnamese, but every new page comes with English placeholders. That kind of stable information deserves a shared home, instead of relying on remembering to mention it in every prompt.
 
-`CLAUDE.md` is one place to write project instructions for Claude Code. In larger repos you can also split rules by topic or by path scope. [Claude Code's memory documentation](https://code.claude.com/docs/en/memory) describes how these files are loaded and how they differ from auto memory.
+[Claude Code's memory documentation](https://code.claude.com/docs/en/memory) describes how these files are loaded and how they differ from auto memory.
 
 ## Write down what the repo really needs
 

@@ -10,9 +10,11 @@ date: 2026-10-19
 
 # CLAUDE.md và rules: để Claude hiểu quy ước dự án mà không phải nhắc lại
 
+**CLAUDE.md là file Markdown đặt trong repo, chứa hướng dẫn dự án mà Claude Code tự đọc khi bắt đầu phiên làm việc: quy ước code, lệnh build và test, cấu trúc thư mục.** Rules là các file hướng dẫn chia nhỏ theo chủ đề hoặc theo đường dẫn, dùng khi một file CLAUDE.md không còn đủ gọn.
+
 Bạn muốn Claude dùng component đã có nhưng nó cứ tạo một nút mới. Bạn muốn giữ nội dung tiếng Việt nhưng mỗi lần làm trang lại xuất hiện placeholder tiếng Anh. Những thông tin ổn định đó nên có nơi lưu chung, thay vì dựa vào việc nhớ nhắc trong từng prompt.
 
-`CLAUDE.md` là một nơi viết hướng dẫn dự án cho Claude Code. Với repo lớn, có thể chia thêm rules theo chủ đề hoặc phạm vi đường dẫn. [Tài liệu memory của Claude Code](https://code.claude.com/docs/en/memory) mô tả cách các file này được tải và sự khác biệt với auto memory.
+[Tài liệu memory của Claude Code](https://code.claude.com/docs/en/memory) mô tả cách các file này được tải và sự khác biệt với auto memory.
 
 ## Ghi điều repo thật sự cần
 
