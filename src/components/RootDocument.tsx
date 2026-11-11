@@ -21,7 +21,7 @@ const inter = Inter({
 })
 
 const SITE_URL = 'https://www.huynhnguyen.info.vn'
-const SITE_TITLE = 'Nguyễn Huỳnh (Nguyen Huynh) - Full Stack Developer'
+const SITE_TITLE = 'Nguyễn Huỳnh (Huynh Nguyen) - Full Stack Developer'
 const SITE_DESCRIPTION = 'Nguyễn Huỳnh (Huynh Nguyen) is a Full Stack Developer in Ho Chi Minh City with 4 years of experience building web apps with React.js, Next.js, and NestJS.'
 const NAME_VARIANTS = ['Nguyễn Huỳnh', 'Huỳnh Nguyễn', 'Huynh Nguyen', 'Huynhnguyen', 'Huỳnh', 'Huynh']
 
