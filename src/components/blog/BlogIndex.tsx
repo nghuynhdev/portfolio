@@ -103,28 +103,10 @@ export default function BlogIndex({ page, lang = 'vi' }: { page: number; lang?: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
       />
 
-      <div className="container mx-auto px-6 pt-28 pb-4 max-w-4xl">
+      <div className="container mx-auto px-6 pt-[88px] sm:pt-28 pb-4 max-w-4xl">
         {/* Hero */}
         <div className="relative">
           <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[380px] h-[220px] rounded-full bg-accent/10 blur-[90px] -z-10 pointer-events-none" />
-
-          <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-            <Link href="/" className="hover:text-accent transition-colors">
-              {s.home}
-            </Link>
-            <span className="mx-2">/</span>
-            {isFirst ? (
-              <span className="text-gray-700 dark:text-gray-300">AI for Devs</span>
-            ) : (
-              <>
-                <Link href={base} className="hover:text-accent transition-colors">
-                  AI for Devs
-                </Link>
-                <span className="mx-2">/</span>
-                <span className="text-gray-700 dark:text-gray-300">{s.page(page)}</span>
-              </>
-            )}
-          </nav>
 
           <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
             Series · AI for Devs{isFirst ? '' : ` · ${s.page(page)}/${totalPages}`}

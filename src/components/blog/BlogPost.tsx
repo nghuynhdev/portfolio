@@ -170,7 +170,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <div className="container mx-auto px-4 sm:px-6 pt-28 pb-4 max-w-6xl">
+      <div className="container mx-auto px-4 sm:px-6 pt-[88px] sm:pt-28 pb-4 max-w-6xl">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-500 dark:text-gray-400 flex min-w-0">
           <Link href="/" className="hover:text-accent transition-colors shrink-0">
