@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "indexnow": "node scripts/indexnow.mjs",
+    "og-images": "node scripts/make-og-images.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",
