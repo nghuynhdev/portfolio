@@ -1,6 +1,6 @@
 ---
 title: "Viết skill riêng cho Claude Code: bắt đầu bằng quy trình review blog"
-seoTitle: "Viết skill riêng cho Claude Code: review blog"
+seoTitle: "Cách tạo skill riêng cho Claude Code (SKILL.md)"
 slug: viet-skill-rieng-cho-claude-code
 description: "Tạo mẫu skill nội bộ cho Claude Code để review blog tiếng Việt: định nghĩa phạm vi, SKILL.md, bằng chứng đầu ra và các ca kiểm tra trước khi chia sẻ cho team."
 keywords: "tạo Claude skill, SKILL.md, custom Claude Code skills, blog review, agent skills"

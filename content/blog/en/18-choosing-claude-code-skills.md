@@ -1,6 +1,6 @@
 ---
 title: "Choosing Skills for Claude Code: Install for the Job, Use Them at the Right Time"
-seoTitle: "Choosing Skills for Claude Code: What to Install and When"
+seoTitle: "Best Claude Code Skills: What to Install and When"
 slug: choosing-claude-code-skills
 description: "A practical skill set for Claude Code (UI UX Pro Max, Claude SEO, frontend-design, React, testing) and how to pick, vet and evaluate each one."
 keywords: "Claude Code skills, Claude skills, UI UX Pro Max, Claude SEO, agent skills"

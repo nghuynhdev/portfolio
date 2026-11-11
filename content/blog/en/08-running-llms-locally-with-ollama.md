@@ -1,6 +1,6 @@
 ---
 title: "Running LLMs Locally with Ollama: When It Makes Sense and When It Doesn't"
-seoTitle: "Running LLMs Locally with Ollama: When It's Worth It"
+seoTitle: "Run LLMs Locally with Ollama: Guide and Trade-offs"
 slug: running-llms-locally-with-ollama
 description: "Run an LLM on your own machine with Ollama and call it from Node/Next.js, plus a frank look at when local is worth it and when cloud APIs still win."
 keywords: "Ollama, local LLM, run models offline, self-hosted LLM, local AI, AI for developers"

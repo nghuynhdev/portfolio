@@ -1,5 +1,6 @@
 ---
 title: "webapp-testing: để Claude kiểm tra web bằng trình duyệt thật"
+seoTitle: "webapp-testing: test web bằng Playwright với Claude Code"
 slug: webapp-testing-playwright-claude-code
 description: "Dùng skill webapp-testing của Anthropic trong Claude Code để tái hiện tương tác, kiểm tra trạng thái và lưu bằng chứng bằng Playwright thay vì chỉ đọc source."
 keywords: "webapp-testing skill, Claude Code Playwright, browser testing, E2E testing, Anthropic skills"

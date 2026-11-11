@@ -1,5 +1,6 @@
 ---
 title: "Chạy LLM local với Ollama: khi nào nên, khi nào đừng"
+seoTitle: "Chạy LLM local với Ollama: hướng dẫn và khi nào nên dùng"
 slug: chay-llm-local-voi-ollama
 description: "Dựng một LLM chạy ngay trên máy bằng Ollama trong vài phút, gọi từ Node/Next.js. Phân tích thẳng thắn khi nào local đáng dùng và khi nào API cloud vẫn hơn."
 keywords: "Ollama, LLM local, chạy model offline, self-host LLM, local AI, AI cho developer"

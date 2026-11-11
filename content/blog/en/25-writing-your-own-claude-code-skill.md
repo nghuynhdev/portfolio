@@ -1,6 +1,6 @@
 ---
 title: "Writing Your Own Claude Code Skill: Start With a Blog Review Workflow"
-seoTitle: "Writing Your Own Claude Code Skill"
+seoTitle: "How to Create a Custom Claude Code Skill (SKILL.md)"
 slug: writing-your-own-claude-code-skill
 description: "Build an internal Claude Code skill for reviewing blog posts: define the scope, write SKILL.md, require evidence in the output and test it before sharing."
 keywords: "create Claude skill, SKILL.md, custom Claude Code skills, blog review, agent skills"

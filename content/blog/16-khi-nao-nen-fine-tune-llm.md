@@ -1,6 +1,6 @@
 ---
 title: "Khi nào nên fine-tune LLM? Bắt đầu từ lỗi, đừng bắt đầu từ GPU"
-seoTitle: "Khi nào nên fine-tune LLM? Bắt đầu từ lỗi, không từ GPU"
+seoTitle: "Khi nào nên fine-tune LLM? So sánh fine-tuning và RAG"
 slug: khi-nao-nen-fine-tune-llm
 description: "Phân biệt prompt, RAG và fine-tuning theo loại lỗi; chuẩn bị dữ liệu huấn luyện, tránh rò rỉ tập test và đánh giá adapter bằng chất lượng lẫn chi phí."
 keywords: "LLM fine tuning, LoRA, PEFT, training data, RAG vs fine tuning, AI cho developer"

@@ -1,5 +1,6 @@
 ---
 title: "Cutting LLM Cost and Latency in Production"
+seoTitle: "How to Reduce LLM Cost and Latency in Production"
 slug: reduce-llm-cost-and-latency-in-production
 description: "Practical ways to keep your LLM bill down: choose models per task, cache (including prompt caching), trim tokens, stream and measure. With numbers and code."
 keywords: "LLM cost, token optimization, prompt caching, model routing, LLM latency, AI for developers"

@@ -1,5 +1,6 @@
 ---
 title: "Độ tin cậy cho LLM: timeout, retry, fallback và idempotency"
+seoTitle: "Retry, timeout và fallback cho LLM: làm app AI chịu lỗi"
 slug: do-tin-cay-llm-timeout-retry-idempotency
 description: "Làm ứng dụng LLM chịu lỗi: deadline cho cả request, retry có ngân sách với backoff + jitter, fallback giữ hợp đồng và idempotency chống chạy trùng."
 keywords: "LLM retry, timeout, exponential backoff, jitter, model fallback, idempotency, durable AI workflow, outbox, AI agent, AI cho developer"

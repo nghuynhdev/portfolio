@@ -1,6 +1,6 @@
 ---
 title: "CLAUDE.md and Rules: Teach Claude Your Project's Conventions Once"
-seoTitle: "CLAUDE.md and Rules: Teach Claude Your Conventions Once"
+seoTitle: "What Is CLAUDE.md? Writing Rules for Claude Code"
 slug: claude-md-and-rules-for-your-project
 description: "Write project instructions for Claude Code: keep CLAUDE.md short, scope rules, list check commands that really exist, and keep shared context lean."
 keywords: "CLAUDE.md, Claude Code rules, project instructions, AI context, Claude workflow"

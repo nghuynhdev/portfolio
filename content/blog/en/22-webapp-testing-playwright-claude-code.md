@@ -1,6 +1,6 @@
 ---
 title: "webapp-testing: Let Claude Test Your Web App in a Real Browser"
-seoTitle: "webapp-testing: Let Claude Test Your App in a Browser"
+seoTitle: "webapp-testing: Playwright Browser Testing in Claude Code"
 slug: webapp-testing-playwright-claude-code
 description: "Using Anthropic's webapp-testing skill in Claude Code to reproduce interactions, check states and save evidence with Playwright instead of only reading source."
 keywords: "webapp-testing skill, Claude Code Playwright, browser testing, E2E testing, Anthropic skills"

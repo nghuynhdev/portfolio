@@ -1,6 +1,6 @@
 ---
 title: "Bảo mật khi đưa AI vào sản phẩm: prompt injection và rò rỉ dữ liệu"
-seoTitle: "Bảo mật AI: prompt injection và rò rỉ dữ liệu"
+seoTitle: "Prompt injection là gì? Bảo mật AI cho developer"
 slug: bao-mat-ai-prompt-injection
 description: "Prompt injection là gì, khác injection truyền thống ra sao, và cách phòng thủ: tách dữ liệu khỏi lệnh, giới hạn quyền tool, lọc output, chặn rò rỉ."
 keywords: "prompt injection, bảo mật AI, LLM security, rò rỉ dữ liệu, jailbreak, AI cho developer"

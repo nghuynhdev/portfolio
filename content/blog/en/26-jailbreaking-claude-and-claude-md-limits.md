@@ -1,6 +1,6 @@
 ---
 title: "Jailbreaking Claude: Can a CLAUDE.md File Really 'Unlock' the AI?"
-seoTitle: "Jailbreaking Claude: Can CLAUDE.md 'Unlock' the AI?"
+seoTitle: "Jailbreaking Claude: Can CLAUDE.md Bypass Its Limits?"
 slug: jailbreaking-claude-and-claude-md-limits
 description: "What jailbreaking Claude means, how it differs from prompt injection, why CLAUDE.md grants no extra permissions, and how to test boundaries safely."
 keywords: "jailbreak Claude, Claude Code jailbreak, CLAUDE.md, prompt injection, Claude Code security"

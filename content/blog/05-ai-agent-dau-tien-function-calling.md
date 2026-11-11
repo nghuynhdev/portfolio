@@ -1,6 +1,6 @@
 ---
 title: "Xây dựng AI Agent đầu tiên: hiểu function/tool calling cho đúng"
-seoTitle: "AI Agent đầu tiên: hiểu function/tool calling cho đúng"
+seoTitle: "AI Agent là gì? Function calling và tool calling cho dev"
 slug: ai-agent-dau-tien-function-calling
 description: "Tool calling biến LLM từ máy chat thành agent biết hành động. Vòng lặp agent, định nghĩa tool bằng schema và những ranh giới an toàn bắt buộc phải có."
 keywords: "AI agent, tool calling, function calling, LLM agent, AI SDK tools, AI cho developer"

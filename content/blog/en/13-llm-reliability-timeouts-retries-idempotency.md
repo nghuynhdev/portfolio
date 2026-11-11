@@ -1,6 +1,6 @@
 ---
 title: "LLM Reliability: Timeouts, Retries, Fallbacks and Idempotency"
-seoTitle: "LLM Reliability: Timeouts, Retries and Idempotency"
+seoTitle: "LLM Retries, Timeouts and Fallbacks: Reliable AI Apps"
 slug: llm-reliability-timeouts-retries-idempotency
 description: "Make LLM apps fault-tolerant: request deadlines, budgeted retries with backoff and jitter, contract-preserving fallbacks, and idempotent agent actions."
 keywords: "LLM retry, timeout, exponential backoff, jitter, model fallback, idempotency, durable AI workflow, outbox, AI agent, AI for developers"

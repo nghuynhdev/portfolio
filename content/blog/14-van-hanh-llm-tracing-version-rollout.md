@@ -1,6 +1,6 @@
 ---
 title: "Vận hành LLM trong production: tracing, phiên bản và rollout an toàn"
-seoTitle: "Vận hành LLM: tracing, phiên bản và rollout an toàn"
+seoTitle: "LLMOps: tracing, versioning và rollout LLM an toàn"
 slug: van-hanh-llm-tracing-version-rollout
 description: "Vận hành AI như kỹ sư: trace từng bước bằng OpenTelemetry, đóng gói prompt/model/index thành phiên bản, rollout qua eval, shadow traffic, canary và rollback."
 keywords: "LLM observability, AI tracing, OpenTelemetry, prompt versioning, canary release, shadow traffic, AI rollback, LLMOps, AI cho developer"

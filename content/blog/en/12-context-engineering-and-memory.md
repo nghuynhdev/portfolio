@@ -1,6 +1,6 @@
 ---
 title: "Context Engineering: Helping AI Remember the Right Things at the Right Time"
-seoTitle: "Context Engineering: Helping AI Remember the Right Things"
+seoTitle: "What Is Context Engineering? AI Context and Memory"
 slug: context-engineering-and-memory
 description: "Managing context for chatbots and agents: split the token budget, summarize history, keep task state, and store memories with a source and an expiry."
 keywords: "context engineering, AI memory, context window, conversation summary, AI agent, AI for developers"

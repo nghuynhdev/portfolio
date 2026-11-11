@@ -1,5 +1,6 @@
 ---
 title: "Context engineering: cho AI nhớ đúng thứ, đúng lúc"
+seoTitle: "Context engineering là gì? Quản lý context và memory cho AI"
 slug: context-engineering-va-memory
 description: "Quản lý context cho chatbot và agent: chia ngân sách token, tóm tắt lịch sử, giữ trạng thái công việc và lưu memory có nguồn, có hạn dùng."
 keywords: "context engineering, AI memory, context window, conversation summary, AI agent, AI cho developer"

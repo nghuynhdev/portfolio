@@ -1,6 +1,6 @@
 ---
 title: "Practical Prompt Engineering for Developers (No Magic Spells Required)"
-seoTitle: "Practical Prompt Engineering for Developers"
+seoTitle: "Prompt Engineering for Developers: A Practical Guide"
 slug: prompt-engineering-for-developers
 description: "Treat the prompt as a spec: system prompts, few-shot examples, schema-enforced JSON, delimiters against injection, and iterating on prompts like debugging."
 keywords: "prompt engineering, system prompt, few-shot, structured output, JSON schema, AI for developers"

@@ -1,6 +1,6 @@
 ---
 title: "Claude SEO: audit blog bằng Claude Code và biến báo cáo thành việc cần sửa"
-seoTitle: "Claude SEO: audit blog bằng Claude Code"
+seoTitle: "Claude SEO: hướng dẫn audit SEO website bằng Claude Code"
 slug: claude-seo-audit-website
 description: "Dùng Claude SEO trong Claude Code: cài plugin, audit từng trang, kiểm tra technical SEO và schema, rồi biến phát hiện thành thay đổi có bằng chứng."
 keywords: "Claude SEO, Claude Code SEO skill, SEO audit, technical SEO, blog SEO, AgriciDaniel"

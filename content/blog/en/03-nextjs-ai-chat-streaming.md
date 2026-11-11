@@ -1,5 +1,6 @@
 ---
 title: "Adding AI to a Next.js App: Building a Proper Streaming Chat"
+seoTitle: "Next.js AI Chat with Streaming: Vercel AI SDK Guide"
 slug: nextjs-ai-chat-streaming
 description: "Wire a streaming AI chat into the Next.js App Router: a route handler that streams tokens, useChat on the client, cancellation and server-side API keys."
 keywords: "Next.js AI, streaming chat, Vercel AI SDK, useChat, streamText, App Router, AI for developers"

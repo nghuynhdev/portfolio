@@ -1,5 +1,6 @@
 ---
 title: "Coding With AI: Give Clear Tasks and Verify Through Behavior"
+seoTitle: "AI-Assisted Coding: How to Delegate and Verify AI Code"
 slug: ai-assisted-coding-and-verification
 description: "A workflow for AI coding assistants: give just enough context, split changes, review the diff, and write tests from requirements, not the implementation."
 keywords: "AI coding assistant, AI code generation, code review, testing, developer workflow, AI for developers"

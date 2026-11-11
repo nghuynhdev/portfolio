@@ -1,6 +1,6 @@
 ---
 title: "Jailbreak Claude: một file CLAUDE.md có thật sự 'mở khóa' được AI?"
-seoTitle: "Jailbreak Claude: CLAUDE.md có 'mở khóa' được AI?"
+seoTitle: "Jailbreak Claude: CLAUDE.md có vượt được giới hạn AI?"
 slug: jailbreak-claude-va-gioi-han-claude-md
 description: "Jailbreak Claude là gì, khác prompt injection ra sao, vì sao CLAUDE.md không cấp thêm quyền và cách tự kiểm tra ranh giới chỉ thị trong sandbox."
 keywords: "jailbreak Claude, Claude Code jailbreak, CLAUDE.md, prompt injection, Claude Code security"

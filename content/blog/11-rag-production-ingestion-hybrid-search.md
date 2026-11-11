@@ -1,6 +1,6 @@
 ---
 title: "RAG production: từ đưa tài liệu vào index đến hybrid search và rerank"
-seoTitle: "RAG production: ingestion, hybrid search và rerank"
+seoTitle: "RAG production: ingestion, hybrid search và reranking"
 slug: rag-production-tu-ingestion-den-hybrid-search
 description: "Đưa RAG từ demo lên production: parse PDF giữ cấu trúc, lưu metadata, cập nhật index an toàn, hybrid search bằng RRF, thêm reranker và đo recall@k."
 keywords: "RAG production, RAG ingestion, hybrid search, reranking, RRF, PDF OCR, chunking, vector index, AI cho developer"

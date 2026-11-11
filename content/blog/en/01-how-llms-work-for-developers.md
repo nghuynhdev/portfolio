@@ -1,6 +1,6 @@
 ---
 title: "How Do LLMs Actually Work? A Developer's Explanation, Minus the Mystique"
-seoTitle: "How Do LLMs Work? A Developer's Explanation"
+seoTitle: "What Is an LLM? How LLMs Work, Explained for Developers"
 slug: how-llms-work-for-developers
 description: "A developer's mental model of LLMs: tokens, next-token probability, context windows and why models make things up. No math required."
 keywords: "what is an LLM, large language model, tokens, context window, hallucination, AI for developers"

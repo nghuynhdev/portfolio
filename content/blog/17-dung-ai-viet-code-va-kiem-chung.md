@@ -1,5 +1,6 @@
 ---
 title: "Dùng AI viết code: giao việc rõ và kiểm chứng bằng hành vi"
+seoTitle: "Dùng AI viết code: quy trình giao việc và kiểm chứng"
 slug: dung-ai-viet-code-va-kiem-chung
 description: "Quy trình làm việc với AI coding assistant: cung cấp context vừa đủ, chia thay đổi, kiểm tra diff và viết test từ yêu cầu thay vì sao chép implementation."
 keywords: "AI coding assistant, AI viết code, code review, testing, developer workflow, AI cho developer"

@@ -1,6 +1,6 @@
 ---
 title: "Operating LLMs in Production: Tracing, Versioning and Safe Rollouts"
-seoTitle: "Operating LLMs: Tracing, Versioning and Safe Rollouts"
+seoTitle: "LLMOps: Tracing, Prompt Versioning and Safe Rollouts"
 slug: operating-llms-tracing-versioning-rollout
 description: "Ship AI changes like an engineer: trace every step with OpenTelemetry, version prompt, model and index together, and roll out via evals and canaries."
 keywords: "LLM observability, AI tracing, OpenTelemetry, prompt versioning, canary release, shadow traffic, AI rollback, LLMOps, AI for developers"

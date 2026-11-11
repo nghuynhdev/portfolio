@@ -1,5 +1,6 @@
 ---
 title: "Security When Shipping AI: Prompt Injection and Data Leaks"
+seoTitle: "Prompt Injection Explained: AI Security for Developers"
 slug: ai-security-prompt-injection
 description: "What prompt injection is, how it differs from classic injection, and practical defenses: separate data from instructions, limit tools, filter output."
 keywords: "prompt injection, AI security, LLM security, data leakage, jailbreak, AI for developers"

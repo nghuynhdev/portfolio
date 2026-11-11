@@ -1,6 +1,6 @@
 ---
 title: "CLAUDE.md và rules: để Claude hiểu quy ước dự án mà không phải nhắc lại"
-seoTitle: "CLAUDE.md và rules: dạy Claude quy ước dự án"
+seoTitle: "CLAUDE.md là gì? Cách viết rules cho Claude Code"
 slug: claude-md-va-rules-cho-du-an
 description: "Viết hướng dẫn dự án cho Claude Code: giữ CLAUDE.md ngắn, chia rules theo phạm vi, ghi lệnh kiểm tra thật và tránh nhét mọi workflow vào context chung."
 keywords: "CLAUDE.md, Claude Code rules, project instructions, AI context, Claude workflow"
