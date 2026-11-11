@@ -34,6 +34,9 @@ export default function LanguageToggle() {
             {active && (
               <motion.span
                 layoutId="langPill"
+                // Only re-measure when the language changes; otherwise a route
+                // change that resets scroll makes the pill fly in from below.
+                layoutDependency={language}
                 transition={{ type: 'spring', stiffness: 400, damping: 32 }}
                 className="absolute inset-0 rounded-full bg-white dark:bg-white/[0.14] shadow-sm dark:shadow-black/20"
               />

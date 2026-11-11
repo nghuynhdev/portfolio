@@ -143,6 +143,9 @@ export default function Navigation() {
                 {item.active && (
                   <motion.div
                     layoutId={`activeTab-${pathname}`}
+                    // Only re-measure when the active tab changes; otherwise a route
+                    // change that resets scroll makes the pill fly in from below.
+                    layoutDependency={item.key}
                     className="absolute inset-0 bg-accent/10 rounded-lg"
                     initial={false}
                     transition={{ type: 'spring', stiffness: 500, damping: 30 }}
