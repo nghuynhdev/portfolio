@@ -46,13 +46,13 @@ export function blogIndexMetadata(page: number, lang: BlogLang = 'vi'): Metadata
       type: 'website',
       locale: s.ogLocale,
       // Setting openGraph here replaces the layout's opengraph-image, so the image must be explicit.
-      images: [{ url: `/images/blog/og/ai-for-devs-${lang}.jpg`, width: 1200, height: 630, alt: s.seriesTitle }],
+      images: [{ url: `/images/blog/og/ai-for-devs-${lang}.webp`, width: 1200, height: 630, alt: s.seriesTitle }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`/images/blog/og/ai-for-devs-${lang}.jpg`],
+      images: [`/images/blog/og/ai-for-devs-${lang}.webp`],
     },
   }
 }

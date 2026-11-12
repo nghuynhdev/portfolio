@@ -65,7 +65,7 @@ export interface PostMeta {
   order: number
   /** Public path of the cover image, or null when the post has none. */
   cover: string | null
-  /** 1200×630 JPEG for social previews (public/images/blog/og), or null. */
+  /** 1200×630 WebP for social previews (public/images/blog/og), or null. */
   ogImage: string | null
 }
 
@@ -127,13 +127,13 @@ function findCover(order: number, fromFrontmatter: unknown): string | null {
 }
 
 /**
- * Social preview image: public/images/blog/og/<vi-file-base>.jpg, generated from the
- * cover by scripts/make-og-images.mjs (JPEG, because some share targets drop WebP).
+ * Social preview image: public/images/blog/og/<vi-file-base>.webp, generated from the
+ * cover by scripts/make-og-images.mjs.
  */
 function findOgImage(order: number): string | null {
   const viFile = listMarkdown('vi').find((f) => orderOf(f) === order)
   if (!viFile) return null
-  const file = `${viFile.replace(/\.md$/, '')}.jpg`
+  const file = `${viFile.replace(/\.md$/, '')}.webp`
   return fs.existsSync(path.join(COVER_DIR, 'og', file)) ? `/images/blog/og/${file}` : null
 }
 
