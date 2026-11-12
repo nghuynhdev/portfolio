@@ -1,6 +1,6 @@
-// Builds 1200×630 WebP social images into public/images/blog/og/:
+// Builds 1200×630 JPEG social images into public/images/blog/og/:
 //  - one per post, cropped from its WebP cover (public/images/blog/NN-*.webp)
-//  - ai-for-devs-vi.webp / ai-for-devs-en.webp for the series index pages (cover mosaic + title)
+//  - ai-for-devs-vi.jpg / ai-for-devs-en.jpg for the series index pages (cover mosaic + title)
 // Run after adding or changing a cover:  node scripts/make-og-images.mjs
 import fs from 'node:fs'
 import path from 'node:path'
@@ -17,8 +17,8 @@ const covers = fs.readdirSync(SRC).filter((f) => /^\d+-.*\.webp$/.test(f)).sort(
 for (const file of covers) {
   await sharp(path.join(SRC, file))
     .resize(W, H, { fit: 'cover', position: 'centre' })
-    .webp({ quality: 82 })
-    .toFile(path.join(OUT, file))
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toFile(path.join(OUT, file.replace(/\.webp$/, '.jpg')))
 }
 
 // Series image: 4×2 mosaic of the newest covers, darkened, with the series title on top.
@@ -51,8 +51,8 @@ for (const [lang, t] of Object.entries(series)) {
 </svg>`)
   await sharp({ create: { width: W, height: H, channels: 3, background: '#0b0e18' } })
     .composite([...tiles, { input: overlay, left: 0, top: 0 }])
-    .webp({ quality: 82 })
-    .toFile(path.join(OUT, `ai-for-devs-${lang}.webp`))
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toFile(path.join(OUT, `ai-for-devs-${lang}.jpg`))
 }
 
 console.log(`Wrote ${covers.length} post images + 2 series images to ${path.relative(process.cwd(), OUT)}`)
