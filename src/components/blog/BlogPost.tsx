@@ -161,6 +161,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
     <main id="main" className="relative min-h-screen">
       <ReadingProgress />
 
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
