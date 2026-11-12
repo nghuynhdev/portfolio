@@ -163,3 +163,9 @@ Labels: SKILL.md, Check, Report.
 Instruction file feeds model context but cannot unlock independent runtime permission gate; untrusted document isolated as data, separate sandbox boundary around tools, model output and tool execution clearly distinct.
 
 Labels: Instructions, Model, Sandbox.
+
+## 27 — Skills, MCP, connectors and plugins
+
+An open plugin toolkit groups a skill workflow checklist and an MCP socket bridge; a fitted connector cable links the bridge to an external app represented by a database and documents.
+
+Labels: Skill, MCP, Connector, Plugin.
