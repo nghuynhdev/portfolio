@@ -1,8 +1,8 @@
 # Series blog: AI cho Developer
 
-26 bài chia sẻ kiến thức AI dưới góc nhìn fullstack JS/TS. Mỗi file là một bài, có frontmatter (title, slug, description, keywords, tags, date, updated tuỳ chọn, cover tuỳ chọn) và thân bài Markdown, được route `/ai-for-devs` đọc tự động. Bài 1–10 xây nền tảng; bài 11–17 đi sâu vào dữ liệu và vận hành sản phẩm AI; bài 18–25 hướng dẫn dùng skill và tổ chức công việc với Claude Code; bài 26 phân tích jailbreak và ranh giới chỉ thị/quyền thực thi.
+27 bài chia sẻ kiến thức AI dưới góc nhìn fullstack JS/TS. Mỗi file là một bài, có frontmatter (title, slug, description, keywords, tags, date, updated tuỳ chọn, cover tuỳ chọn) và thân bài Markdown, được route `/ai-for-devs` đọc tự động. Bài 1–10 xây nền tảng; bài 11–17 đi sâu vào dữ liệu và vận hành sản phẩm AI; bài 18–25 hướng dẫn dùng skill và tổ chức công việc với Claude Code; bài 26 phân tích jailbreak và ranh giới chỉ thị/quyền thực thi; bài 27 phân biệt skill, MCP, connector và plugin.
 
-Cả 26 bài đã có bản tiếng Anh trong `en/` (dịch ngày 11/11/2026). Bản tiếng Anh nằm trong `en/`, cùng số thứ tự với bài gốc (ví dụ `en/01-how-llms-work-for-developers.md` ↔ `01-llm-hoat-dong-the-nao.md`), có slug tiếng Anh riêng và hiển thị ở `/en/ai-for-devs/<slug>`. Hai bản được ghép theo số thứ tự để sinh hreflang, sitemap và nút đổi ngôn ngữ; ảnh bìa dùng chung theo tên file tiếng Việt. Trong bài tiếng Anh, link nội bộ vẫn viết bằng URL tiếng Việt (`/ai-for-devs/<slug-vi>`); khi bài đích đã có bản tiếng Anh, link tự trỏ sang bản đó. Anchor `#...` lấy theo tiêu đề nên khác nhau giữa hai ngôn ngữ: bài tiếng Anh phải dùng anchor tiếng Anh (ví dụ bảng trong `en/18` trỏ vào các bước của bài 19). Khi sửa bài gốc, cập nhật bản dịch tương ứng.
+Cả 27 bài đã có bản tiếng Anh trong `en/` (dịch ngày 11/11/2026). Bản tiếng Anh nằm trong `en/`, cùng số thứ tự với bài gốc (ví dụ `en/01-how-llms-work-for-developers.md` ↔ `01-llm-hoat-dong-the-nao.md`), có slug tiếng Anh riêng và hiển thị ở `/en/ai-for-devs/<slug>`. Hai bản được ghép theo số thứ tự để sinh hreflang, sitemap và nút đổi ngôn ngữ; ảnh bìa dùng chung theo tên file tiếng Việt. Trong bài tiếng Anh, link nội bộ vẫn viết bằng URL tiếng Việt (`/ai-for-devs/<slug-vi>`); khi bài đích đã có bản tiếng Anh, link tự trỏ sang bản đó. Anchor `#...` lấy theo tiêu đề nên khác nhau giữa hai ngôn ngữ: bài tiếng Anh phải dùng anchor tiếng Anh (ví dụ bảng trong `en/18` trỏ vào các bước của bài 19). Khi sửa bài gốc, cập nhật bản dịch tương ứng.
 
 Quy ước link nội bộ: mỗi bài có ít nhất một link về trang chủ (`/` hoặc `/#experience`, `/#skills`, `/#overview`, `/#contact`) với anchor text tự nhiên, khác nhau giữa các bài. Khi gộp hoặc đổi slug, thêm redirect 301 trong `next.config.ts`.
 
@@ -34,6 +34,7 @@ Quy ước link nội bộ: mỗi bài có ít nhất một link về trang ch�
 | 24 | CLAUDE.md và rules: để Claude hiểu quy ước dự án mà không phải nhắc lại | `24-claude-md-va-rules-cho-du-an.md` |
 | 25 | Viết skill riêng cho Claude Code: bắt đầu bằng quy trình review blog | `25-viet-skill-rieng-cho-claude-code.md` |
 | 26 | Jailbreak Claude: một file CLAUDE.md có thật sự 'mở khóa' được AI? | `26-jailbreak-claude-va-gioi-han-claude-md.md` |
+| 27 | Skill, MCP, Connector, Plugin: vì sao cùng một AI mà người khác để nó tự làm việc? | `27-skill-mcp-connector-plugin.md` |
 
 Các bài mới có liên kết nội bộ bằng slug và nguồn tham khảo chính thức đặt cạnh phần giải thích liên quan. Ví dụ độc lập hoặc phần cần hạ tầng bổ sung được ghi rõ trong bài.
 
@@ -44,10 +45,11 @@ Gợi ý đọc tiếp theo nhu cầu:
 - Vận hành production: bài 6 → 13 → 14.
 - Xử lý tài liệu và thích nghi model: bài 15 → 16.
 - Dùng AI trong công việc lập trình: bài 2 → 17.
+- Hiểu bức tranh tổng thể skill/MCP/connector/plugin: bài 27 → 10 → 18.
 - Chọn và dùng skill trong Claude Code: bài 18 → 24 → 25.
 - Thiết kế và kiểm tra frontend với Claude: bài 19 → 22; bài 21 cho hiệu năng React/Next.js.
 - Audit SEO cho blog/portfolio bằng Claude SEO: bài 20.
 - Điều tra lỗi với quy trình Superpowers: bài 23, kết hợp bài 17 và 22 để xác minh.
 - Hiểu jailbreak và phân biệt chỉ thị với quyền thực thi trong Claude Code: bài 24 → 26, kèm bài 9 về prompt injection.
 
-Các bài 18–25 được đối chiếu tài liệu và repo nguồn ngày 11/11/2026. Lệnh cài nằm trong bài để người đọc tham khảo; việc viết bài không cài plugin/skill vào repo hoặc tài khoản. Mẫu `CLAUDE.md`, rules và `SKILL.md` chỉ là ví dụ trong Markdown. Cả 26 bài có ảnh bìa WebP riêng trong `public/images/blog/`, trùng tên file Markdown. Ảnh minh họa cơ chế chính của bài, chỉ dùng vài nhãn kỹ thuật tiếng Anh để dùng chung cho nội dung Anh/Việt; prompt nằm trong `public/images/blog/PROMPTS.md` và `PROMPTS.json`.
+Các bài 18–25 được đối chiếu tài liệu và repo nguồn ngày 11/11/2026. Lệnh cài nằm trong bài để người đọc tham khảo; việc viết bài không cài plugin/skill vào repo hoặc tài khoản. Mẫu `CLAUDE.md`, rules và `SKILL.md` chỉ là ví dụ trong Markdown. Bài 1–26 có ảnh bìa WebP riêng (bài 27 chưa có) trong `public/images/blog/`, trùng tên file Markdown. Ảnh minh họa cơ chế chính của bài, chỉ dùng vài nhãn kỹ thuật tiếng Anh để dùng chung cho nội dung Anh/Việt; prompt nằm trong `public/images/blog/PROMPTS.md` và `PROMPTS.json`.
