@@ -8,7 +8,7 @@ Final assets are 1600 × 900 WebP. Each language explicitly selects the same Vie
 
 - [BRIEFS-v2.json](./BRIEFS-v2.json): article paths and content fingerprints, section-by-section coverage, main message, alternative concepts, chosen treatment, technical caveats, exact generation/edit prompts and review notes.
 - [PROMPTS.json](./PROMPTS.json): active asset paths and generation sources.
-- [posts/PROMPTS.md](./posts/PROMPTS.md): the five general-blog covers handled separately.
+- [posts/PROMPTS.md](../posts/PROMPTS.md): the five general-blog covers handled separately.
 
 ## Visual direction
 

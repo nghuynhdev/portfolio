@@ -12,7 +12,7 @@ import { marked } from 'marked'
  *
  * The /blog index lists both sections; /ai-for-devs lists the series only.
  */
-import { SECTION_BASES, type BlogLang, type BlogSection } from './blog-i18n'
+import { HOME_URLS, SECTION_BASES, type BlogLang, type BlogSection } from './blog-i18n'
 export type { BlogLang, BlogSection }
 export const BLOG_LANGS: BlogLang[] = ['vi', 'en']
 export const BLOG_SECTIONS: BlogSection[] = ['ai', 'blog']
@@ -173,7 +173,8 @@ function stripTags(html: string): string {
  * at it instead, so new translations are picked up without editing older posts.
  */
 function localizeInternalLinks(html: string, lang: BlogLang): string {
-  if (lang === 'vi') return html
+  // Posts link to the home page as /#section; the Vietnamese home page lives at /vi.
+  if (lang === 'vi') return html.replace(/href="\/(#[^"]*)?"/g, (_m, hash = '') => `href="${HOME_URLS.vi}${hash}"`)
   /** Vietnamese URL -> URL of the translation. */
   const viToLocal = new Map<string, string>()
   for (const section of BLOG_SECTIONS) {

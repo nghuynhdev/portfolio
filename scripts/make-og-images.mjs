@@ -1,5 +1,6 @@
-// Builds 1200×630 JPEG social images into public/images/blog/og/:
-//  - one per post, cropped from its WebP cover (public/images/blog/NN-*.webp)
+// Builds 1200×630 JPEG social images:
+//  - one per series post, cropped from its WebP cover (public/images/blog/NN-*.webp) into public/images/blog/og/
+//  - one per general post (public/images/blog/posts/NN-*.webp) into public/images/blog/posts/og/
 //  - ai-for-devs-vi.jpg / ai-for-devs-en.jpg for the series index pages (cover mosaic + title)
 //  - blog-vi.jpg / blog-en.jpg for the /blog index of every post (same mosaic, blog title)
 // Run after adding or changing a cover:  node scripts/make-og-images.mjs
@@ -13,15 +14,27 @@ const SRC = path.join(process.cwd(), 'public', 'images', 'blog')
 const OUT = path.join(SRC, 'og')
 fs.mkdirSync(OUT, { recursive: true })
 
-const covers = fs.readdirSync(SRC).filter((f) => /^\d+-.*\.webp$/.test(f)).sort()
+const isCover = (f) => /^\d+-.*\.webp$/.test(f)
+const covers = fs.readdirSync(SRC).filter(isCover).sort()
 
-for (const file of covers) {
-  await sharp(path.join(SRC, file))
-    .resize(W, H, { fit: 'cover', position: 'centre' })
-    .jpeg({ quality: 82, mozjpeg: true })
-    // Cover URLs may be versioned to bypass image caches; social lookup uses the article basename.
-    .toFile(path.join(OUT, file.replace(/(?:-v\d+)?\.webp$/, '.jpg')))
+async function writePostImages(srcDir, files) {
+  const outDir = path.join(srcDir, 'og')
+  fs.mkdirSync(outDir, { recursive: true })
+  for (const file of files) {
+    await sharp(path.join(srcDir, file))
+      .resize(W, H, { fit: 'cover', position: 'centre' })
+      .jpeg({ quality: 82, mozjpeg: true })
+      // Cover URLs may be versioned to bypass image caches; social lookup uses the article basename.
+      .toFile(path.join(outDir, file.replace(/(?:-v\d+)?\.webp$/, '.jpg')))
+  }
 }
+
+await writePostImages(SRC, covers)
+
+// General blog posts keep their covers (and social images) in their own folder.
+const POSTS_SRC = path.join(SRC, 'posts')
+const postCovers = fs.existsSync(POSTS_SRC) ? fs.readdirSync(POSTS_SRC).filter(isCover).sort() : []
+await writePostImages(POSTS_SRC, postCovers)
 
 // Series image: 4×2 mosaic of the newest covers, darkened, with the series title on top.
 const tileW = W / 4
@@ -64,4 +77,4 @@ for (const [prefix, title, langs] of indexes) for (const [lang, t] of Object.ent
     .toFile(path.join(OUT, `${prefix}-${lang}.jpg`))
 }
 
-console.log(`Wrote ${covers.length} post images + ${indexes.length * 2} index images to ${path.relative(process.cwd(), OUT)}`)
+console.log(`Wrote ${covers.length} series + ${postCovers.length} general post images + ${indexes.length * 2} index images to ${path.relative(process.cwd(), OUT)}`)

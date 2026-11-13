@@ -1,36 +1,9 @@
-import Hero from '@/components/Hero'
-import Overview from '@/components/Overview'
-import Experience from '@/components/Experience'
-import Skills from '@/components/Skills'
-import Education from '@/components/Education'
-import Contact from '@/components/Contact'
-import LatestPostsSection from '@/components/LatestPostsSection'
-import { getIndexPosts, formatDate, postUrl, type BlogLang } from '@/lib/blog'
-import { SECTION_BASES } from '@/lib/blog-i18n'
-import Footer from '@/components/Footer'
-import ParticleWrapper from '@/components/ParticleWrapper'
-import MotionProvider from '@/components/MotionProvider'
+import type { Metadata } from 'next'
+import HomePage, { homeAlternates } from '@/components/HomePage'
 
+export const metadata: Metadata = { alternates: homeAlternates('en') }
+
+/** English home page; the Vietnamese one is /vi. */
 export default function Home() {
-  const latest = (lang: BlogLang) =>
-    getIndexPosts(lang, 'blog')
-      .slice(0, 3)
-      .map((p) => ({ ...p, url: postUrl(p.slug, lang, p.section), dateLabel: formatDate(p.date, lang) }))
-  const latestPosts = { vi: latest('vi'), en: latest('en') }
-
-  return (
-    <MotionProvider>
-      <main id="main" className="relative">
-        <ParticleWrapper />
-        <Hero />
-        <Overview />
-        <Experience />
-        <Skills />
-        <Education />
-        <LatestPostsSection posts={latestPosts} seriesUrls={SECTION_BASES.blog} />
-        <Contact />
-        <Footer />
-      </main>
-    </MotionProvider>
-  )
+  return <HomePage />
 }

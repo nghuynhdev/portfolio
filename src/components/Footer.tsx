@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { blogHome } from '@/lib/blog-i18n'
+import { blogHome, homeUrl } from '@/lib/blog-i18n'
 
 const socials = [
   {
@@ -47,10 +47,10 @@ export default function Footer() {
   const { t, language } = useLanguage()
   const f = footerText[language]
   const quickLinks = [
-    { href: '/', label: f.home },
-    { href: '/#experience', label: f.experience },
+    { href: homeUrl(language), label: f.home },
+    { href: homeUrl(language, 'experience'), label: f.experience },
     { href: blogHome(language), label: 'Blog' },
-    { href: '/#contact', label: f.contact },
+    { href: homeUrl(language, 'contact'), label: f.contact },
   ]
 
   return (
@@ -60,7 +60,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 max-w-sm">
             <Link
-              href="/"
+              href={homeUrl(language)}
               className="inline-block py-1.5 text-2xl font-bold logo-font text-gray-800 dark:text-white rounded"
             >
               Huynh.
@@ -72,7 +72,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <nav aria-label={f.linksLabel} className="flex flex-col md:gap-3 text-sm">
-            <span className="mb-1 md:mb-0 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+            <span className="mb-1 md:mb-0 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
               {f.links}
             </span>
             {quickLinks.map((l) => (
@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div className="flex flex-col md:gap-3 text-sm">
-            <span className="mb-1 md:mb-0 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+            <span className="mb-1 md:mb-0 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
               {f.connect}
             </span>
             {socials.map((s) => (

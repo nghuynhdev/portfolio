@@ -188,6 +188,22 @@ export function blogLangFromPath(pathname: string): BlogLang | null {
   return null
 }
 
+/** Home page of each language: English at the root, Vietnamese at /vi. */
+export const HOME_URLS: Record<BlogLang, string> = { en: '/', vi: '/vi' }
+
+/** Home page URL for a language, optionally pointing at a section (`homeUrl('vi', 'contact')`). */
+export function homeUrl(lang: BlogLang, section = ''): string {
+  return `${HOME_URLS[lang]}${section ? `#${section}` : ''}`
+}
+
+/** Which language a home page pathname is in, or null when it is not a home page. */
+export function homeLangFromPath(pathname: string): BlogLang | null {
+  const path = pathname.replace(/\/$/, '') || '/'
+  if (path === HOME_URLS.en) return 'en'
+  if (path === HOME_URLS.vi) return 'vi'
+  return null
+}
+
 /** Blog index (all posts) for a language. */
 export function blogHome(lang: BlogLang): string {
   return SECTION_BASES.blog[lang]

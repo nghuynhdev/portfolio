@@ -15,7 +15,7 @@ import {
   type BlogLang,
   type BlogSection,
 } from '@/lib/blog'
-import { SECTION_BASES, blogStrings } from '@/lib/blog-i18n'
+import { SECTION_BASES, blogStrings, homeUrl } from '@/lib/blog-i18n'
 
 const SITE_URL = 'https://www.huynhnguyen.info.vn'
 
@@ -155,7 +155,7 @@ export default function BlogPost({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: s.home, item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 1, name: s.home, item: `${SITE_URL}${homeUrl(lang)}` },
       { '@type': 'ListItem', position: 2, name: sectionName, item: `${SITE_URL}${base}` },
       { '@type': 'ListItem', position: 3, name: post.title, item: url },
     ],
@@ -184,7 +184,7 @@ export default function BlogPost({
       <div className="container mx-auto px-4 sm:px-6 pt-[88px] sm:pt-28 pb-4 max-w-6xl">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-500 dark:text-gray-400 flex min-w-0">
-          <Link href="/" className="hover:text-accent transition-colors shrink-0">
+          <Link href={homeUrl(lang)} className="hover:text-accent transition-colors shrink-0">
             {s.home}
           </Link>
           <span className="mx-2">/</span>
@@ -339,10 +339,11 @@ export default function BlogPost({
                     href={sl.href}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    aria-label={s.shareOn(sl.label)}
                     className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/[0.1] text-sm font-semibold text-gray-300 hover:border-accent hover:text-accent transition-colors"
                   >
-                    {sl.short}
+                    {/* The glyph is decorative; the link is named by the hidden text. */}
+                    <span aria-hidden="true">{sl.short}</span>
+                    <span className="sr-only">{s.shareOn(sl.label)}</span>
                   </a>
                 ))}
               </div>

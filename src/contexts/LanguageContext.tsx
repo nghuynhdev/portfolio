@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { Language, translations, TranslationKeys } from '@/translations'
-import { blogHome, blogLangFromPath } from '@/lib/blog-i18n'
+import { blogHome, blogLangFromPath, homeLangFromPath, homeUrl } from '@/lib/blog-i18n'
 
 interface LanguageContextType {
   language: Language
@@ -14,15 +14,17 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 /**
- * Home page: language is a client-side preference (saved in localStorage).
- * Blog pages: language comes from the URL (/ai-for-devs = vi, /en/ai-for-devs = en),
- * so server HTML, nav labels and content agree. Switching language there navigates
- * to the other version of the same page, found through its hreflang link.
+ * Language comes from the URL on the home page (/ = en, /vi = vi) and on blog pages
+ * (/ai-for-devs = vi, /en/ai-for-devs = en), so server HTML, nav labels and content
+ * agree and each language has its own indexable URL. Switching language navigates to
+ * the other version of the same page, found through its hreflang link.
+ * Elsewhere (404 pages) it falls back to the preference saved in localStorage.
  */
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const router = useRouter()
-  const routeLanguage = blogLangFromPath(pathname)
+  const homeLanguage = homeLangFromPath(pathname)
+  const routeLanguage = blogLangFromPath(pathname) ?? homeLanguage
   const [preferred, setPreferred] = useState<Language>('en')
   const language = routeLanguage ?? preferred
 
@@ -46,9 +48,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       const alternate = document.querySelector<HTMLLinkElement>(
         `link[rel="alternate"][hreflang="${lang}"]`
       )
-      router.push(alternate ? new URL(alternate.href).pathname : blogHome(lang))
+      const fallback = homeLanguage ? homeUrl(lang) : blogHome(lang)
+      router.push(alternate ? new URL(alternate.href).pathname : fallback)
     },
-    [routeLanguage, router]
+    [routeLanguage, homeLanguage, router]
   )
 
   const value = {

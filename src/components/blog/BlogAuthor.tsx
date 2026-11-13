@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { blogStrings, type BlogLang } from '@/lib/blog-i18n'
+import { blogStrings, homeUrl, type BlogLang } from '@/lib/blog-i18n'
 
 const socials = [
   {
@@ -36,7 +36,7 @@ export default function BlogAuthor({ lang = 'vi' }: { lang?: BlogLang }) {
       <div className="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-accent/15 blur-[70px] pointer-events-none" />
 
       <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
-        <Link href="/" aria-label={a.homeAria} className="shrink-0">
+        <Link href={homeUrl(lang)} aria-label={a.homeAria} className="shrink-0">
           <div className="w-24 h-24 rounded-full overflow-hidden border-[3px] border-accent shadow-[0_0_24px_rgb(var(--accent)/0.35)] bg-gray-100 dark:bg-[#0f1117]">
             <Image
               src="/assets/images/avt-v2.webp"
@@ -55,7 +55,7 @@ export default function BlogAuthor({ lang = 'vi' }: { lang?: BlogLang }) {
             {a.label}
           </div>
           <h3 className="mt-0.5 text-xl font-bold text-gray-900 dark:text-white">
-            <Link href="/" className="hover:text-accent transition-colors">
+            <Link href={homeUrl(lang)} className="hover:text-accent transition-colors">
               {name}
             </Link>
           </h3>
@@ -82,13 +82,13 @@ export default function BlogAuthor({ lang = 'vi' }: { lang?: BlogLang }) {
               </a>
             ))}
             <Link
-              href="/"
+              href={homeUrl(lang)}
               className="ml-1 inline-flex items-center h-9 px-4 rounded-full bg-accent text-white dark:text-gray-900 text-sm font-medium hover:bg-accent/90 transition-colors shadow-sm shadow-accent/25"
             >
               {a.portfolio}
             </Link>
             <Link
-              href="/#contact"
+              href={homeUrl(lang, 'contact')}
               className="inline-flex items-center h-9 px-4 rounded-full border border-accent/30 text-accent text-sm font-medium hover:bg-accent/10 transition-colors"
             >
               {a.contact}

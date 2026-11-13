@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
 import LanguageToggle from './LanguageToggle'
-import { blogHome, blogLangFromPath } from '@/lib/blog-i18n'
+import { blogHome, blogLangFromPath, homeLangFromPath, homeUrl } from '@/lib/blog-i18n'
 
 const MotionLink = motion.create(Link)
 
@@ -15,7 +15,7 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState('hero')
   const { t, language } = useLanguage()
   const pathname = usePathname()
-  const isHome = pathname === '/'
+  const isHome = homeLangFromPath(pathname) !== null
   const isBlog = blogLangFromPath(pathname) !== null
 
   const scrollToSection = (sectionId: string, navHeight: number) => {
@@ -48,7 +48,7 @@ export default function Navigation() {
     ...menuItems.map((item) => ({
       key: item.key,
       label: t.nav[item.key as keyof typeof t.nav] as string,
-      href: isHome ? `#${item.section}` : `/#${item.section}`,
+      href: isHome ? `#${item.section}` : homeUrl(language, item.section),
       section: item.section,
       active: isHome && activeSection === item.section,
     })),
@@ -112,7 +112,7 @@ export default function Navigation() {
             transition={{ delay: 0.2 }}
           >
             <a
-              href={isHome ? '#hero' : '/'}
+              href={isHome ? '#hero' : homeUrl(language)}
               onClick={(e) => {
                 if (isHome) {
                   e.preventDefault()

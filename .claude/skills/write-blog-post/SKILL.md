@@ -70,11 +70,11 @@ date: 2026-01-31
 - Dòng đầu thân bài là `# ` trùng với `title` (site tự bỏ H1 này khi hiển thị).
 - Tag đầu tiên hiện trên ảnh bìa thay thế và dùng để gợi ý bài liên quan, nên chọn tag cụ thể. Tránh `AI` và `Developer` ở vị trí đầu.
 - Chia mục bằng `##`. Mục lục của bài lấy từ các tiêu đề `##`.
-- Mỗi bài có ít nhất một link về trang chủ với chữ neo tự nhiên (`/#skills`, `/#experience`, `/#contact`, `/#overview`), và link sang bài liên quan nếu có.
+- Mỗi bài có ít nhất một link về trang chủ với chữ neo tự nhiên (`/#skills`, `/#experience`, `/#contact`, `/#overview`; bản tiếng Việt được site tự đổi sang `/vi#...`), và link sang bài liên quan nếu có.
 - Trong bản tiếng Anh, link nội bộ vẫn viết bằng URL tiếng Việt (`/blog/<slug-vi>`, `/ai-for-devs/<slug-vi>`). Site tự đổi sang bản dịch khi có.
 - Link nguồn đặt ngay trong câu dùng tới nó.
 - Code mẫu ngắn, chạy được, có chú thích ở chỗ dễ sai. Code chưa chạy thử thì báo ở bước 8.
-- Ảnh bìa (không bắt buộc): `public/images/blog/posts/<tên-file-vi>.webp`. Không có thì site dùng khung thay thế. Script `npm run og-images` hiện chỉ xử lý ảnh của series AI for Devs.
+- Ảnh bìa (không bắt buộc): `public/images/blog/posts/<tên-file-vi>.webp`. Không có thì site dùng khung thay thế. Sau khi thêm hoặc đổi ảnh bìa, chạy `npm run og-images` để tạo ảnh JPG 1200×630 cho mạng xã hội (cả series AI for Devs lẫn blog thường).
 
 ## 6. Đọc lại bản nháp
 

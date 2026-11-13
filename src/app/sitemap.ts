@@ -24,8 +24,11 @@ function alternates(urls: Partial<Record<BlogLang, string>>) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Home page: English at the root, Vietnamese at /vi.
+  const home = alternates({ en: '/', vi: '/vi' })
   const entries: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, changeFrequency: 'monthly', priority: 1 },
+    { url: `${SITE_URL}/`, changeFrequency: 'monthly', priority: 1, ...home },
+    { url: `${SITE_URL}/vi`, changeFrequency: 'monthly', priority: 1, ...home },
   ]
 
   // 'blog' = the index of every post plus the general posts; 'ai' = the series index and its posts.

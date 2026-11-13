@@ -15,7 +15,7 @@ import {
   type BlogLang,
   type BlogSection,
 } from '@/lib/blog'
-import { SECTION_BASES, blogStrings } from '@/lib/blog-i18n'
+import { SECTION_BASES, blogStrings, homeUrl } from '@/lib/blog-i18n'
 
 const SITE_URL = 'https://www.huynhnguyen.info.vn'
 
@@ -99,7 +99,7 @@ export default function BlogIndex({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: s.home, item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 1, name: s.home, item: `${SITE_URL}${homeUrl(lang)}` },
       { '@type': 'ListItem', position: 2, name: ix.name, item: `${SITE_URL}${base}` },
       ...(isFirst
         ? []
@@ -149,7 +149,7 @@ export default function BlogIndex({
           {isFirst && (
             <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed text-base sm:text-lg">
               {ix.heroIntroBefore}
-              <Link href="/" className="text-accent hover:underline font-medium">
+              <Link href={homeUrl(lang)} className="text-accent hover:underline font-medium">
                 {ix.heroIntroLink}
               </Link>
               {ix.heroIntroAfter}
