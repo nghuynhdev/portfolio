@@ -5,16 +5,17 @@ import Skills from '@/components/Skills'
 import Education from '@/components/Education'
 import Contact from '@/components/Contact'
 import LatestPostsSection from '@/components/LatestPostsSection'
-import { getAllPosts, formatDate, postUrl, BLOG_BASES, type BlogLang } from '@/lib/blog'
+import { getIndexPosts, formatDate, postUrl, type BlogLang } from '@/lib/blog'
+import { SECTION_BASES } from '@/lib/blog-i18n'
 import Footer from '@/components/Footer'
 import ParticleWrapper from '@/components/ParticleWrapper'
 import MotionProvider from '@/components/MotionProvider'
 
 export default function Home() {
   const latest = (lang: BlogLang) =>
-    getAllPosts(lang)
+    getIndexPosts(lang, 'blog')
       .slice(0, 3)
-      .map((p) => ({ ...p, url: postUrl(p.slug, lang), dateLabel: formatDate(p.date, lang) }))
+      .map((p) => ({ ...p, url: postUrl(p.slug, lang, p.section), dateLabel: formatDate(p.date, lang) }))
   const latestPosts = { vi: latest('vi'), en: latest('en') }
 
   return (
@@ -26,7 +27,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <Education />
-        <LatestPostsSection posts={latestPosts} seriesUrls={BLOG_BASES} />
+        <LatestPostsSection posts={latestPosts} seriesUrls={SECTION_BASES.blog} />
         <Contact />
         <Footer />
       </main>

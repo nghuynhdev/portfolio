@@ -147,9 +147,9 @@ export const vi = {
     approachDescription: "Tôi tin vào việc học hỏi liên tục, chú ý đến chi tiết và giải quyết vấn đề hợp tác để cung cấp các giải pháp chất lượng cao."
   },
   latestPosts: {
-    eyebrow: "AI for Devs",
+    eyebrow: "Blog",
     title: "Bài viết mới",
-    subtitle: "Ghi chép thực chiến về làm sản phẩm với AI — LLM, RAG, agent và Claude Code.",
+    subtitle: "Ghi chép thực chiến về công nghệ web và làm sản phẩm với AI — React, Next.js, LLM, RAG, Claude Code.",
     viewAll: "Xem tất cả bài viết",
     readMore: "Đọc bài"
   },

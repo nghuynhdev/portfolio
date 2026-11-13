@@ -1,6 +1,7 @@
 // Builds 1200×630 JPEG social images into public/images/blog/og/:
 //  - one per post, cropped from its WebP cover (public/images/blog/NN-*.webp)
 //  - ai-for-devs-vi.jpg / ai-for-devs-en.jpg for the series index pages (cover mosaic + title)
+//  - blog-vi.jpg / blog-en.jpg for the /blog index of every post (same mosaic, blog title)
 // Run after adding or changing a cover:  node scripts/make-og-images.mjs
 import fs from 'node:fs'
 import path from 'node:path'
@@ -33,17 +34,24 @@ const tiles = await Promise.all(
 )
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
-const series = {
-  vi: { sub: 'AI thực chiến cho Developer', foot: `${covers.length} bài · LLM · RAG · AI Agent · MCP · Claude Code` },
-  en: { sub: 'Practical AI for Developers', foot: `${covers.length} articles · LLMs · RAG · AI Agents · MCP · Claude Code` },
-}
+// One image per index page and language: [file prefix, title, { lang: { sub, foot } }].
+const indexes = [
+  ['ai-for-devs', 'AI for Devs', {
+    vi: { sub: 'AI thực chiến cho Developer', foot: `${covers.length} bài · LLM · RAG · AI Agent · MCP · Claude Code` },
+    en: { sub: 'Practical AI for Developers', foot: `${covers.length} articles · LLMs · RAG · AI Agents · MCP · Claude Code` },
+  }],
+  ['blog', 'Blog', {
+    vi: { sub: 'AI và công nghệ web thực chiến', foot: 'React · Next.js · Node.js · TypeScript · AI for Devs' },
+    en: { sub: 'Practical Web Tech and AI', foot: 'React · Next.js · Node.js · TypeScript · AI for Devs' },
+  }],
+]
 
-for (const [lang, t] of Object.entries(series)) {
+for (const [prefix, title, langs] of indexes) for (const [lang, t] of Object.entries(langs)) {
   const overlay = Buffer.from(`
 <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#0b0e18" fill-opacity="0.78"/>
   <g font-family="Helvetica Neue, Arial, sans-serif" fill="#ffffff">
-    <text x="80" y="260" font-size="96" font-weight="700">AI for Devs</text>
+    <text x="80" y="260" font-size="96" font-weight="700">${esc(title)}</text>
     <text x="80" y="340" font-size="48" fill="#3b9dff">${esc(t.sub)}</text>
     <text x="80" y="430" font-size="28" fill="#c7ccd6">${esc(t.foot)}</text>
     <text x="80" y="550" font-size="26" fill="#8b93a3">Nguyen Huynh · huynhnguyen.info.vn</text>
@@ -52,7 +60,7 @@ for (const [lang, t] of Object.entries(series)) {
   await sharp({ create: { width: W, height: H, channels: 3, background: '#0b0e18' } })
     .composite([...tiles, { input: overlay, left: 0, top: 0 }])
     .jpeg({ quality: 82, mozjpeg: true })
-    .toFile(path.join(OUT, `ai-for-devs-${lang}.jpg`))
+    .toFile(path.join(OUT, `${prefix}-${lang}.jpg`))
 }
 
-console.log(`Wrote ${covers.length} post images + 2 series images to ${path.relative(process.cwd(), OUT)}`)
+console.log(`Wrote ${covers.length} post images + ${indexes.length * 2} index images to ${path.relative(process.cwd(), OUT)}`)

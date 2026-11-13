@@ -49,7 +49,7 @@ export default function Footer() {
   const quickLinks = [
     { href: '/', label: f.home },
     { href: '/#experience', label: f.experience },
-    { href: blogHome(language), label: 'AI for Devs' },
+    { href: blogHome(language), label: 'Blog' },
     { href: '/#contact', label: f.contact },
   ]
 

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import type { PostMeta } from '@/lib/blog'
 
 type Props = {
-  post: Pick<PostMeta, 'title' | 'cover' | 'order' | 'tags'>
+  post: Pick<PostMeta, 'title' | 'cover' | 'order' | 'tags' | 'section'>
   /** `sizes` hint for next/image; match the rendered width. */
   sizes: string
   priority?: boolean
@@ -13,7 +13,7 @@ type Props = {
 
 /**
  * 16:9 cover for a post. Posts without an image get a branded placeholder
- * (series number + topic) so grids stay visually consistent.
+ * (series number or "Blog", plus the topic) so grids stay visually consistent.
  */
 export default function PostCover({ post, sizes, priority, className = '', compact }: Props) {
   const frame = `relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-[#0b0e18] ${className}`
@@ -33,7 +33,9 @@ export default function PostCover({ post, sizes, priority, className = '', compa
     )
   }
 
-  const topic = post.tags.find((t) => t !== 'AI' && t !== 'Developer') ?? 'AI for Devs'
+  const inSeries = post.section === 'ai'
+  const sectionName = inSeries ? 'AI for Devs' : 'Blog'
+  const topic = post.tags.find((t) => t !== 'AI' && t !== 'Developer') ?? sectionName
   return (
     <div className={frame} aria-hidden>
       <div
@@ -50,14 +52,20 @@ export default function PostCover({ post, sizes, priority, className = '', compa
         <span
           className={`font-semibold uppercase tracking-[0.18em] text-accent/90 ${compact ? 'text-[8px]' : 'text-[11px]'}`}
         >
-          AI for Devs
+          {sectionName}
         </span>
         <div>
-          <div
-            className={`font-bold leading-none text-white/90 tabular-nums ${compact ? 'text-2xl' : 'text-5xl sm:text-6xl'}`}
-          >
-            {String(post.order).padStart(2, '0')}
-          </div>
+          {inSeries ? (
+            <div
+              className={`font-bold leading-none text-white/90 tabular-nums ${compact ? 'text-2xl' : 'text-5xl sm:text-6xl'}`}
+            >
+              {String(post.order).padStart(2, '0')}
+            </div>
+          ) : (
+            <div className={`font-mono font-bold leading-none text-white/90 ${compact ? 'text-xl' : 'text-4xl sm:text-5xl'}`}>
+              {'</>'}
+            </div>
+          )}
           <div className={`mt-1 text-gray-400 ${compact ? 'text-[9px]' : 'text-sm'}`}>{topic}</div>
         </div>
       </div>

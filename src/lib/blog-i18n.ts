@@ -1,5 +1,13 @@
-/** UI strings for the AI for Devs pages. Safe to import from client components. */
+/** UI strings and URL bases for the blog pages. Safe to import from client components. */
 export type BlogLang = 'vi' | 'en'
+/** 'ai' = the AI for Devs series, 'blog' = the general blog (which also lists the series). */
+export type BlogSection = 'ai' | 'blog'
+
+/** Public URL prefix of each section in each language. */
+export const SECTION_BASES: Record<BlogSection, Record<BlogLang, string>> = {
+  ai: { vi: '/ai-for-devs', en: '/en/ai-for-devs' },
+  blog: { vi: '/blog', en: '/en/blog' },
+}
 
 export const blogStrings = {
   vi: {
@@ -54,6 +62,29 @@ export const blogStrings = {
     },
     /** Link to the other-language version, written in that language. */
     translationLink: 'Read in English',
+    seriesName: 'AI for Devs',
+    /** Label for general (non-series) posts. */
+    techLabel: 'Công nghệ',
+    filterLabel: 'Lọc bài viết',
+    filterAll: 'Tất cả bài viết',
+    filterSeries: 'Series AI for Devs',
+    /** The /blog index: same keys as the series fields above. */
+    blog: {
+      name: 'Blog',
+      seriesTitle: 'Blog — AI và công nghệ web thực chiến',
+      seriesDescription:
+        'Blog của Nguyễn Huỳnh: ghi chép thực chiến về React, Next.js, Node.js và làm sản phẩm với AI, viết từ dự án thật, có code chạy được.',
+      seriesKeywords:
+        'blog lập trình, React, Next.js, Node.js, NestJS, TypeScript, AI cho developer, kinh nghiệm lập trình web',
+      heroTitle: 'Blog',
+      heroIntroBefore: 'Mình là ',
+      heroIntroLink: 'Nguyễn Huỳnh, một Full Stack Developer',
+      heroIntroAfter:
+        '. Ở đây có series AI for Devs và những ghi chép về công nghệ web mình dùng hằng ngày: React, Next.js, Node.js, TypeScript.',
+      pageTitle: (n: number) => `Blog — Trang ${n}`,
+      pageDescription: (n: number, total: number) =>
+        `Trang ${n}/${total} của blog Nguyễn Huỳnh: bài viết thực chiến về công nghệ web và AI cho developer.`,
+    },
     author: {
       label: 'Tác giả',
       homeAria: 'Về trang chủ Nguyễn Huỳnh',
@@ -114,6 +145,27 @@ export const blogStrings = {
       hintClose: 'close',
     },
     translationLink: 'Đọc bản tiếng Việt',
+    seriesName: 'AI for Devs',
+    techLabel: 'Tech',
+    filterLabel: 'Filter posts',
+    filterAll: 'All posts',
+    filterSeries: 'AI for Devs series',
+    blog: {
+      name: 'Blog',
+      seriesTitle: 'Blog — Practical Web Tech and AI',
+      seriesDescription:
+        "Nguyen Huynh's blog: practical notes on React, Next.js, Node.js and building products with AI, from real projects, with code that runs.",
+      seriesKeywords:
+        'programming blog, React, Next.js, Node.js, NestJS, TypeScript, AI for developers, web development',
+      heroTitle: 'Blog',
+      heroIntroBefore: "I'm ",
+      heroIntroLink: 'Nguyen Huynh, a Full Stack Developer',
+      heroIntroAfter:
+        '. Here you will find the AI for Devs series and notes on the web tech I use every day: React, Next.js, Node.js, TypeScript.',
+      pageTitle: (n: number) => `Blog — Page ${n}`,
+      pageDescription: (n: number, total: number) =>
+        `Page ${n} of ${total} of Nguyen Huynh's blog: practical articles on web technology and AI for developers.`,
+    },
     author: {
       label: 'Author',
       homeAria: "Nguyen Huynh's homepage",
@@ -125,14 +177,18 @@ export const blogStrings = {
   },
 }
 
-/** Which series language a pathname belongs to, or null outside the blog. */
+/** Which blog language a pathname belongs to, or null outside the blog pages. */
 export function blogLangFromPath(pathname: string): BlogLang | null {
-  if (pathname === '/en/ai-for-devs' || pathname.startsWith('/en/ai-for-devs/')) return 'en'
-  if (pathname === '/ai-for-devs' || pathname.startsWith('/ai-for-devs/')) return 'vi'
+  // English bases are checked first: '/en/blog' must not be mistaken for a Vietnamese path.
+  for (const lang of ['en', 'vi'] as const) {
+    for (const bases of Object.values(SECTION_BASES)) {
+      if (pathname === bases[lang] || pathname.startsWith(`${bases[lang]}/`)) return lang
+    }
+  }
   return null
 }
 
-/** Series root for a language (client-safe twin of BLOG_BASES in lib/blog). */
+/** Blog index (all posts) for a language. */
 export function blogHome(lang: BlogLang): string {
-  return lang === 'en' ? '/en/ai-for-devs' : '/ai-for-devs'
+  return SECTION_BASES.blog[lang]
 }

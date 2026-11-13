@@ -147,9 +147,9 @@ export const en = {
     approachDescription: "I believe in continuous learning, attention to detail, and collaborative problem-solving to deliver high-quality solutions."
   },
   latestPosts: {
-    eyebrow: "AI for Devs",
+    eyebrow: "Blog",
     title: "Latest articles",
-    subtitle: "Practical notes on building products with AI — LLMs, RAG, agents and Claude Code. Written in Vietnamese.",
+    subtitle: "Practical notes on web tech and building products with AI — React, Next.js, LLMs, RAG and Claude Code.",
     viewAll: "View all articles",
     readMore: "Read"
   },

@@ -52,7 +52,7 @@ export default function Navigation() {
       section: item.section,
       active: isHome && activeSection === item.section,
     })),
-    { key: 'blog', label: 'AI for Devs', href: blogHome(language), active: isBlog },
+    { key: 'blog', label: 'Blog', href: blogHome(language), active: isBlog },
   ]
 
   const handleNavClick = (e: React.MouseEvent, item: NavItem, navHeight: number) => {

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import {
   BLOG_LANGS,
+  BLOG_SECTIONS,
   getAllPosts,
   getTotalPages,
   getTranslations,
@@ -27,31 +28,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/`, changeFrequency: 'monthly', priority: 1 },
   ]
 
-  for (const lang of BLOG_LANGS) {
-    // Series index pages; page 1 is the series root.
-    for (let page = 1; page <= getTotalPages(lang); page++) {
-      const urls: Partial<Record<BlogLang, string>> = {}
-      for (const l of BLOG_LANGS) if (page <= getTotalPages(l)) urls[l] = pageUrl(page, l)
-      entries.push({
-        url: `${SITE_URL}${pageUrl(page, lang)}`,
-        changeFrequency: 'weekly',
-        priority: page === 1 ? 0.8 : 0.5,
-        ...alternates(urls),
-      })
-    }
-
-    for (const post of getAllPosts(lang)) {
-      const urls: Partial<Record<BlogLang, string>> = {}
-      for (const [l, p] of Object.entries(getTranslations(post.order)) as [BlogLang, { slug: string }][]) {
-        urls[l] = postUrl(p.slug, l)
+  // 'blog' = the index of every post plus the general posts; 'ai' = the series index and its posts.
+  for (const section of BLOG_SECTIONS) {
+    for (const lang of BLOG_LANGS) {
+      // Index pages; page 1 is the index root.
+      for (let page = 1; page <= getTotalPages(lang, section); page++) {
+        const urls: Partial<Record<BlogLang, string>> = {}
+        for (const l of BLOG_LANGS) {
+          if (page <= getTotalPages(l, section)) urls[l] = pageUrl(page, l, section)
+        }
+        entries.push({
+          url: `${SITE_URL}${pageUrl(page, lang, section)}`,
+          changeFrequency: 'weekly',
+          priority: page === 1 ? 0.8 : 0.5,
+          ...alternates(urls),
+        })
       }
-      entries.push({
-        url: `${SITE_URL}${postUrl(post.slug, lang)}`,
-        lastModified: new Date(post.updated || post.date || Date.now()),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-        ...alternates(urls),
-      })
+
+      for (const post of getAllPosts(lang, section)) {
+        const urls: Partial<Record<BlogLang, string>> = {}
+        for (const [l, p] of Object.entries(getTranslations(post.order, section)) as [BlogLang, { slug: string }][]) {
+          urls[l] = postUrl(p.slug, l, section)
+        }
+        entries.push({
+          url: `${SITE_URL}${postUrl(post.slug, lang, section)}`,
+          lastModified: new Date(post.updated || post.date || Date.now()),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+          ...alternates(urls),
+        })
+      }
     }
   }
 

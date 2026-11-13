@@ -11,35 +11,35 @@ import {
   getRelatedPosts,
   getTranslations,
   formatDate,
-  BLOG_BASES,
   postUrl,
   type BlogLang,
+  type BlogSection,
 } from '@/lib/blog'
-import { blogStrings } from '@/lib/blog-i18n'
+import { SECTION_BASES, blogStrings } from '@/lib/blog-i18n'
 
 const SITE_URL = 'https://www.huynhnguyen.info.vn'
 
 /** Static params for one language's post route. */
-export function postStaticParams(lang: BlogLang) {
-  return getAllPosts(lang).map((p) => ({ slug: p.slug }))
+export function postStaticParams(lang: BlogLang, section: BlogSection = 'ai') {
+  return getAllPosts(lang, section).map((p) => ({ slug: p.slug }))
 }
 
 /** URLs of every language version of a post, keyed by hreflang (plus x-default). */
-function postAlternates(order: number): Record<string, string> {
+function postAlternates(order: number, section: BlogSection): Record<string, string> {
   const languages: Record<string, string> = {}
-  for (const [l, p] of Object.entries(getTranslations(order)) as [BlogLang, { slug: string }][]) {
-    languages[l] = postUrl(p.slug, l)
+  for (const [l, p] of Object.entries(getTranslations(order, section)) as [BlogLang, { slug: string }][]) {
+    languages[l] = postUrl(p.slug, l, section)
   }
   if (languages.vi) languages['x-default'] = languages.vi
   return languages
 }
 
-export function postMetadata(slug: string, lang: BlogLang): Metadata {
+export function postMetadata(slug: string, lang: BlogLang, section: BlogSection = 'ai'): Metadata {
   const s = blogStrings[lang]
-  const post = getPostBySlug(slug, lang)
+  const post = getPostBySlug(slug, lang, section)
   if (!post) return { title: s.notFound }
 
-  const url = postUrl(post.slug, lang)
+  const url = postUrl(post.slug, lang, section)
   const images = post.ogImage
     ? [{ url: post.ogImage, width: 1200, height: 630, alt: post.title }]
     : post.cover
@@ -52,7 +52,7 @@ export function postMetadata(slug: string, lang: BlogLang): Metadata {
     title: { absolute: branded.length <= 60 ? branded : post.seoTitle },
     description: post.description,
     keywords: post.keywords,
-    alternates: { canonical: url, languages: postAlternates(post.order) },
+    alternates: { canonical: url, languages: postAlternates(post.order, section) },
     openGraph: {
       title: post.title,
       locale: s.ogLocale,
@@ -102,19 +102,29 @@ const ICONS = {
   layers: 'm12 3 9 5-9 5-9-5 9-5ZM3 13l9 5 9-5',
 }
 
-export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang }) {
+export default function BlogPost({
+  slug,
+  lang,
+  section = 'ai',
+}: {
+  slug: string
+  lang: BlogLang
+  section?: BlogSection
+}) {
   const s = blogStrings[lang]
-  const post = getPostBySlug(slug, lang)
+  const post = getPostBySlug(slug, lang, section)
   if (!post) notFound()
 
-  const base = BLOG_BASES[lang]
+  const inSeries = section === 'ai'
+  const base = SECTION_BASES[section][lang]
+  const sectionName = inSeries ? s.seriesName : s.blog.name
   // Series numbering follows the Vietnamese original, so totals match across languages.
   const totalPosts = getAllPosts('vi').length
   const isUpdated = Boolean(post.updated && post.updated > post.date)
-  const related = getRelatedPosts(slug, 3, lang)
+  const related = getRelatedPosts(slug, 3, lang, section)
   const otherLang: BlogLang = lang === 'vi' ? 'en' : 'vi'
-  const translation = getTranslations(post.order)[otherLang]
-  const url = `${SITE_URL}${postUrl(post.slug, lang)}`
+  const translation = getTranslations(post.order, section)[otherLang]
+  const url = `${SITE_URL}${postUrl(post.slug, lang, section)}`
   const shareUrl = encodeURIComponent(url)
   const shareText = encodeURIComponent(post.title)
 
@@ -130,7 +140,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
     ...(translation
       ? {
           [lang === 'vi' ? 'workTranslation' : 'translationOfWork']: {
-            '@id': `${SITE_URL}${postUrl(translation.slug, otherLang)}`,
+            '@id': `${SITE_URL}${postUrl(translation.slug, otherLang, section)}`,
           },
         }
       : {}),
@@ -146,7 +156,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: s.home, item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: 'AI for Devs', item: `${SITE_URL}${base}` },
+      { '@type': 'ListItem', position: 2, name: sectionName, item: `${SITE_URL}${base}` },
       { '@type': 'ListItem', position: 3, name: post.title, item: url },
     ],
   }
@@ -179,7 +189,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
           </Link>
           <span className="mx-2">/</span>
           <Link href={base} className="hover:text-accent transition-colors shrink-0">
-            AI for Devs
+            {sectionName}
           </Link>
           <span className="mx-2">/</span>
           <span className="text-gray-700 dark:text-gray-300 truncate">{post.title}</span>
@@ -192,7 +202,9 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
               <header className="relative mb-6">
                 <div className="absolute -top-14 -left-10 w-[300px] h-[160px] rounded-full bg-accent/10 blur-[80px] -z-10 pointer-events-none" />
                 <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-                  AI for Devs · {s.postNumber(String(post.order).padStart(2, '0'))}
+                  {inSeries
+                    ? `${s.seriesName} · ${s.postNumber(String(post.order).padStart(2, '0'))}`
+                    : `${s.blog.name} · ${s.techLabel}`}
                 </div>
                 <h1 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
                   {post.title}
@@ -217,7 +229,7 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
                     <>
                       <span aria-hidden>•</span>
                       <Link
-                        href={postUrl(translation.slug, otherLang)}
+                        href={postUrl(translation.slug, otherLang, section)}
                         hrefLang={otherLang}
                         lang={otherLang}
                         className="font-medium text-accent hover:underline"
@@ -274,14 +286,16 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
                     )}
                   </span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <Icon d={ICONS.layers} />
-                  <span>
-                    {s.seriesPositionBefore}
-                    <strong className="text-white">{post.order}</strong>
-                    {s.seriesPositionAfter(totalPosts)}
-                  </span>
-                </li>
+                {inSeries && (
+                  <li className="flex items-center gap-3">
+                    <Icon d={ICONS.layers} />
+                    <span>
+                      {s.seriesPositionBefore}
+                      <strong className="text-white">{post.order}</strong>
+                      {s.seriesPositionAfter(totalPosts)}
+                    </span>
+                  </li>
+                )}
               </ul>
               {post.tags.length > 0 && (
                 <div className="mt-4 pt-4 border-t border-white/[0.06] flex flex-wrap gap-2">
@@ -351,8 +365,8 @@ export default function BlogPost({ slug, lang }: { slug: string; lang: BlogLang 
             </h2>
             <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((r) => (
-                <li key={r.slug}>
-                  <Link href={postUrl(r.slug, lang)} className="group block h-full">
+                <li key={`${r.section}-${r.slug}`}>
+                  <Link href={postUrl(r.slug, lang, r.section)} className="group block h-full">
                     <article className="h-full flex flex-col rounded-2xl border border-black/[0.08] dark:border-white/[0.07] bg-white dark:bg-[#161b27] p-4 shadow-sm dark:shadow-black/30 transition-all duration-300 hover:border-accent/40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/5">
                       <PostCover post={r} sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" />
                       <div className="mt-4 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">

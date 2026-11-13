@@ -11,9 +11,8 @@ const nextConfig: NextConfig = {
         destination: 'https://www.huynhnguyen.info.vn/:path*',
         permanent: true,
       },
-      // The blog was renamed to the "AI for Devs" series.
-      { source: '/blog', destination: '/ai-for-devs', permanent: true },
-      { source: '/blog/:path*', destination: '/ai-for-devs/:path*', permanent: true },
+      // /blog is the index of every post. Old /blog/<slug> links to series posts
+      // (from before the series moved to /ai-for-devs) are redirected by the /blog/[slug] page.
       // Posts merged into longer guides (content review, 2026-11).
       { source: '/ai-for-devs/hybrid-search-va-reranking-cho-rag', destination: '/ai-for-devs/rag-production-tu-ingestion-den-hybrid-search', permanent: true },
       { source: '/ai-for-devs/ingestion-tai-lieu-cho-rag', destination: '/ai-for-devs/rag-production-tu-ingestion-den-hybrid-search', permanent: true },
@@ -27,6 +26,8 @@ const nextConfig: NextConfig = {
       // Page 1 is canonical at the series root.
       { source: '/ai-for-devs/page/1', destination: '/ai-for-devs', permanent: true },
       { source: '/en/ai-for-devs/page/1', destination: '/en/ai-for-devs', permanent: true },
+      { source: '/blog/page/1', destination: '/blog', permanent: true },
+      { source: '/en/blog/page/1', destination: '/en/blog', permanent: true },
     ]
   },
 }

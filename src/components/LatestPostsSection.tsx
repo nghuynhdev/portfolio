@@ -8,7 +8,7 @@ import type { PostMeta } from '@/lib/blog'
 /** Post data prepared on the server (lib/blog reads the filesystem). */
 export type LatestPostItem = PostMeta & { url: string; dateLabel: string }
 
-/** Home-page teaser for the AI for Devs series: crawlable links from / to the newest posts. */
+/** Home-page teaser for the blog: crawlable links from / to the newest posts. */
 export default function LatestPostsSection({
   posts: postsByLang,
   seriesUrls,
@@ -40,7 +40,7 @@ export default function LatestPostsSection({
 
         <ul className="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
           {posts.map((post) => (
-            <li key={post.slug} lang={lang}>
+            <li key={post.url} lang={lang}>
               <Link href={post.url} className="group block h-full">
                 <article className="h-full flex flex-col rounded-2xl border border-black/[0.08] dark:border-white/[0.07] bg-white dark:bg-[#161b27] p-4 shadow-sm dark:shadow-black/30 transition-all duration-300 hover:border-accent/40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/5">
                   <PostCover post={post} sizes="(min-width: 768px) 360px, 100vw" />

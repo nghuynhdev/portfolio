@@ -7,7 +7,8 @@ import { blogStrings, type BlogLang } from '@/lib/blog-i18n'
 
 export interface SearchItem {
   url: string
-  order: number
+  /** Series number shown in the row badge; null for posts outside the series. */
+  badge: string | null
   title: string
   description: string
   keywords: string
@@ -32,7 +33,7 @@ function fold(text: string): { folded: string; map: number[] } {
   for (let i = 0; i < text.length; i++) {
     const base = text[i]
       .normalize('NFD')
-      .replace(/[̀-ͯ]/g, '')
+      .replace(/[\u0300-\u036f]/g, '')
       .replace(/[đĐ]/g, 'd')
       .toLowerCase()
     for (const ch of base) {
@@ -159,7 +160,8 @@ export default function BlogSearch({
     return indexed
       .map((item) => ({ item, score: scoreItem(item, tokens) }))
       .filter((r) => r.score > 0)
-      .sort((a, b) => b.score - a.score || b.item.order - a.item.order)
+      // Array.sort is stable, so equal scores keep the incoming newest-first order.
+      .sort((a, b) => b.score - a.score)
       .slice(0, MAX_RESULTS)
       .map((r) => r.item)
   }, [indexed, tokens, hasQuery])
@@ -347,7 +349,11 @@ export default function BlogSearch({
                   }`}
                 >
                   <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/10 text-[11px] font-semibold text-accent">
-                    {String(item.order).padStart(2, '0')}
+                    {item.badge ?? (
+                      <svg aria-hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                        <path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6" />
+                      </svg>
+                    )}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-medium leading-snug text-gray-900 line-clamp-2 dark:text-white">
