@@ -39,7 +39,7 @@ Người đọc phải thấy đây là người viết, không phải máy.
 - Không dùng dấu gạch ngang dài. Không dùng khuôn "không chỉ... mà còn", không xếp ba ý cho đủ bộ, không mở bài bằng "Trong thế giới công nghệ ngày nay".
 - Không dùng từ sáo: "mạnh mẽ", "toàn diện", "liền mạch", "tối ưu vượt trội", "hành trình".
 - Được có ý kiến ("mình thấy phần này đáng giá nhất") miễn là có lý do đi kèm.
-- **Không bịa trải nghiệm cá nhân.** Chỉ viết điều kiểm được: thứ có trong repo này (ví dụ site dùng Three.js với React Three Fiber, chạy trên Vercel) hoặc việc vừa làm trong phiên (đã tải bản build về đo). Câu nào nói thay tác giả mà chưa chắc đúng thì phải báo lại ở bước 7.
+- **Không bịa trải nghiệm cá nhân.** Chỉ viết điều kiểm được: thứ có trong repo này (ví dụ site dùng Three.js với React Three Fiber, chạy trên Vercel) hoặc việc vừa làm trong phiên (đã tải bản build về đo). Câu nào nói thay tác giả mà chưa chắc đúng thì phải báo lại ở bước 8.
 - Bản tiếng Anh là bản viết lại tự nhiên, cùng cấu trúc và cùng số liệu, không dịch từng chữ.
 
 ## 5. Tạo file
@@ -73,19 +73,53 @@ date: 2026-01-31
 - Mỗi bài có ít nhất một link về trang chủ với chữ neo tự nhiên (`/#skills`, `/#experience`, `/#contact`, `/#overview`), và link sang bài liên quan nếu có.
 - Trong bản tiếng Anh, link nội bộ vẫn viết bằng URL tiếng Việt (`/blog/<slug-vi>`, `/ai-for-devs/<slug-vi>`). Site tự đổi sang bản dịch khi có.
 - Link nguồn đặt ngay trong câu dùng tới nó.
-- Code mẫu ngắn, chạy được, có chú thích ở chỗ dễ sai. Code chưa chạy thử thì báo ở bước 7.
+- Code mẫu ngắn, chạy được, có chú thích ở chỗ dễ sai. Code chưa chạy thử thì báo ở bước 8.
 - Ảnh bìa (không bắt buộc): `public/images/blog/posts/<tên-file-vi>.webp`. Không có thì site dùng khung thay thế. Script `npm run og-images` hiện chỉ xử lý ảnh của series AI for Devs.
 
-## 6. Kiểm tra
+## 6. Đọc lại bản nháp
+
+Viết xong chưa phải là xong. Những lỗi dưới đây chỉ lộ ra khi đọc lại, và lần review đầu tiên của blog này đã dính gần đủ.
+
+**Đặt bản nháp cạnh đầu vào.** Mở bài, tình huống ví dụ và câu kết có đang kể lại đúng thứ nguồn đã kể không? Đã gặp: nguồn mở bằng "Redis treo, khách bấm đặt hàng báo lỗi, màn hình giám sát vẫn xanh" và bản nháp cũng mở y như vậy; nguồn kết bằng "làm ăn tử tế không cần chơi bẩn" và bản nháp giữ gần nguyên câu. Đổi tên nhân vật là chưa đủ. Phải đổi tình huống, hoặc mở bài từ một góc khác hẳn (ví dụ từ lúc người đọc gặp khái niệm đó trong công việc).
+
+**Đặt bản nháp cạnh hai bài gần nhất trong `content/posts/`.** Từng bài đọc riêng thì ổn, đọc liền nhau mới thấy cùng một khuôn. Kiểm tra:
+
+- Câu mở đầu có cùng kiểu với bài trước không (ví dụ hai bài liền nhau đều mở bằng "câu trả lời quen thuộc X không sai, nhưng...").
+- Đoạn kết có lại là "mình có viết ở bài X" cộng một link về trang chủ không.
+- Chữ neo của link về trang chủ có trùng bài khác không. Mỗi bài một chữ neo, đặt ở chỗ nó có lý do xuất hiện (ví dụ khi nhắc tới chính site này) thay vì dồn xuống câu cuối.
+- Có câu "Bài này đi qua / nói về..." ở cuối phần mở không. Một bài có thì được, bài nào cũng có là khuôn.
+
+**Bỏ các câu dẫn.** Xóa cụm đứng đầu câu mà không mang thông tin: "Đây là...", "Điểm cần nhớ:", "Một lưu ý:", "Để ý...", "Chỗ này hay bị hiểu nhầm.", "Phần này hay bị bỏ qua.", "Tin tốt là...". Nói thẳng nội dung.
+
+**Bỏ phần nhắc lại.** Không có mục "Tóm lại" hay câu "Nếu chỉ nhớ một ý..." lặp lại điều đã nói ở trên. Bảng so sánh thì được, vì nó là cách trình bày khác. Mục cuối nên là việc người đọc làm tiếp.
+
+**Hỏi rồi tự trả lời.** Kiểu "Vậy X có nặng không? Không." viết lại thành câu khẳng định.
+
+**Danh sách in đậm đầu dòng.** Kiểu `- **Nhãn:** giải thích` chỉ dùng khi nội dung đúng là các mục ngang hàng, và không quá một hai chỗ mỗi bài. Các ý nối tiếp nhau thì viết thành đoạn văn.
+
+**Câu nói thay tác giả.** "Là thứ mình dùng", "điểm mình thích nhất", "mình vẫn dùng cho các dự án" là những khẳng định về người thật. Không kiểm được trong repo thì viết trung tính ("phần ví dụ dùng gói này").
+
+**Mô tả SEO.** `description` không quá 160 ký tự, không mở đầu bằng "Bài này...".
+
+Đếm nhanh cho cả thư mục:
+
+```bash
+grep -c "^- \*\*" content/posts/*.md
+grep -n "Bài này\|Đây là\|Điểm cần nhớ\|Một lưu ý\|Tóm lại\|Nếu chỉ nhớ" content/posts/*.md
+grep -o "\[[^]]*\](/#[a-z]*)\|\[[^]]*\](/)" content/posts/*.md
+```
+
+## 7. Kiểm tra
 
 1. Chuỗi escape trong code mẫu: tìm lại `\u` trong file vừa ghi. Công cụ ghi file từng đổi `\u0300` thành ký tự thật, làm regex trong bài hiển thị sai.
 2. `npx tsc --noEmit` phải sạch.
 3. Mở cả hai URL trên dev server và kiểm tra trả về 200. Trang tiếng Anh của bài mới có thể trả 404 cho tới khi dev server nạp lại route; `touch` file `src/app/(site)/en/blog/[slug]/page.tsx` rồi thử lại.
 4. Kiểm tra bài xuất hiện ở `/blog`, và link nội bộ trong bản tiếng Anh đã trỏ sang bản dịch.
 
-## 7. Báo lại cho người dùng
+## 8. Báo lại cho người dùng
 
 - Hai URL để xem thử.
+- Những gì đã sửa ở bước đọc lại, nếu có.
 - Bảng đối chiếu: từng ý trong đầu vào và kết quả kiểm (đúng, sai và đã sửa thành gì, không có nguồn nên đã bỏ).
 - Những gì đã thêm ngoài nội dung gốc.
 - Những chỗ cần người dùng xem lại: câu nói thay tác giả, code chưa chạy thử, bài chưa có ảnh bìa.
