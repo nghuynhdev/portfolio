@@ -2,7 +2,7 @@
 title: "Forward proxy và reverse proxy: khác nhau ở chỗ nó làm việc cho ai"
 seoTitle: "Forward proxy và reverse proxy khác nhau thế nào?"
 slug: forward-proxy-va-reverse-proxy
-description: "Forward proxy đứng về phía client, reverse proxy đứng về phía server. Bài này giải thích từng loại làm gì, HTTPS đi qua proxy ra sao, và lỗi req.ip hay gặp khi app Node.js nằm sau Nginx."
+description: "Forward proxy đứng về phía client, reverse proxy đứng về phía server. Mỗi loại làm gì, HTTPS đi qua proxy ra sao, và lỗi req.ip khi app Node.js nằm sau Nginx."
 keywords: "forward proxy, reverse proxy, proxy là gì, Nginx reverse proxy, X-Forwarded-For, trust proxy Express, load balancer, VPN khác proxy"
 tags: "Networking, Nginx, Backend, Node.js"
 date: 2026-11-13
@@ -10,9 +10,9 @@ date: 2026-11-13
 
 # Forward proxy và reverse proxy: khác nhau ở chỗ nó làm việc cho ai
 
-Câu trả lời hay gặp nhất cho câu hỏi này là: "Forward proxy đứng trước client, reverse proxy đứng trước server." Câu đó không sai, nhưng nghe xong cũng chẳng hiểu thêm gì. Vẽ ra giấy thì cả hai đều là một cái hộp nằm giữa client và server.
+Lần đầu đưa một app Node.js lên server thật, kiểu gì bạn cũng gặp chữ "reverse proxy": hướng dẫn nào cũng bảo đặt Nginx phía trước. "Forward proxy" thì thường gặp ở chỗ khác hẳn, trong phần cài đặt mạng của máy công ty. Tên gần giống nhau, và vẽ ra giấy thì cả hai đều là một cái hộp nằm giữa client và server.
 
-Mình thấy dễ nhớ hơn nếu hỏi một câu khác: **cái proxy đó do ai dựng lên, và nó làm việc cho ai?**
+Chúng khác nhau ở một điểm: **cái hộp đó do ai dựng lên, và nó làm việc cho ai.**
 
 ## Proxy chỉ là người đứng giữa
 
@@ -33,11 +33,11 @@ Người ta dùng nó để:
 - Lưu đệm nội dung hay được tải, đỡ tốn băng thông.
 - Gom toàn bộ truy cập ra ngoài về một vài địa chỉ IP cố định, để đối tác chỉ cần cho phép các IP đó.
 
-Điểm cần nhớ: client **biết** là mình đang dùng proxy. Trình duyệt hoặc hệ điều hành phải được cấu hình để gửi request qua đó.
+Client **biết** là mình đang dùng proxy: trình duyệt hoặc hệ điều hành phải được cấu hình để gửi request qua đó.
 
 ### HTTPS đi qua forward proxy thế nào
 
-Chỗ này hay bị hiểu nhầm. Nếu mọi thứ đã mã hóa thì proxy chuyển tiếp kiểu gì?
+Nếu mọi thứ đã mã hóa thì proxy chuyển tiếp kiểu gì?
 
 Trình duyệt gửi cho proxy một request đặc biệt dùng phương thức `CONNECT`:
 
@@ -77,7 +77,7 @@ Vì mọi request đều phải đi qua nó, đây là chỗ tiện nhất để
 - **Lọc tấn công:** chặn request độc hại, hấp thụ DDoS.
 - **Định tuyến theo đường dẫn:** `/api` vào dịch vụ này, `/images` vào dịch vụ khác.
 
-Khi bạn mở một trang web lớn, thứ bạn chạm vào gần như chắc chắn là reverse proxy chứ không phải server ứng dụng. Blog này cũng vậy: nó chạy trên Vercel, và request của bạn đi qua lớp mạng biên của họ trước khi tới được trang.
+Khi bạn mở một trang web lớn, thứ bạn chạm vào gần như chắc chắn là reverse proxy chứ không phải server ứng dụng. [Trang portfolio này](/) cũng vậy: nó chạy trên Vercel, và request của bạn đi qua lớp mạng biên của họ trước khi tới được trang.
 
 Một cấu hình Nginx tối thiểu trông thế này:
 
@@ -129,7 +129,7 @@ Số `1` nghĩa là tin đúng một lớp proxy đứng ngay trước app. Có 
 
 Khai báo đúng số lớp proxy thì Express đếm từ phải sang, lấy đúng địa chỉ do proxy của bạn ghi vào, bỏ qua phần client tự bịa.
 
-## Tóm tắt
+## Đặt cạnh nhau
 
 | | Forward proxy | Reverse proxy |
 |---|---|---|
@@ -140,6 +140,6 @@ Khai báo đúng số lớp proxy thì Express đếm từ phải sang, lấy đ
 | Dùng để | Chặn trang, ghi log, lưu đệm | Cân bằng tải, TLS, lưu đệm, giới hạn tần suất, lọc tấn công |
 | Ví dụ | Squid, proxy công ty | Nginx, HAProxy, Cloudflare, load balancer của cloud |
 
-Nếu chỉ nhớ một ý thì nhớ ý này: hai loại là cùng một kỹ thuật, khác nhau ở chỗ nó đứng về phía nào. Forward proxy phục vụ người đi ra. Reverse proxy phục vụ dịch vụ đón người vào.
+Với người viết backend, mục `trust proxy` là thứ nên mở dự án đang chạy ra kiểm tra lại ngay. Lỗi này không hiện ra ở máy local, vì ở đó chẳng có proxy nào đứng trước app.
 
-Còn nếu bạn viết backend, phần đáng mang về nhất là mục `trust proxy` ở trên. Đó là loại lỗi không hiện ra ở máy local, chỉ lộ ra khi đã lên production. Reverse proxy cũng là nơi hay đặt health check cho các server phía sau, mình có viết riêng ở bài [health check không chỉ là /ping](/blog/health-check-khong-chi-la-ping). Những công nghệ backend khác mình hay dùng nằm ở [phần kỹ năng trên trang chủ](/#skills).
+Reverse proxy cũng là bên gọi health check của các server phía sau để biết nên chia request cho ai. Phần đó nằm ở bài [health check không chỉ là /ping](/blog/health-check-khong-chi-la-ping).

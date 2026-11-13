@@ -2,7 +2,7 @@
 title: "PlayCanvas: Build 3D Games in the Browser With Nothing to Install"
 seoTitle: "What Is PlayCanvas? 3D Games in the Browser"
 slug: playcanvas-3d-games-in-the-browser
-description: "PlayCanvas is an open-source 3D engine with an editor that runs in the browser. This post covers what it includes, how big it really is, where it is strong and when to pick it over Three.js."
+description: "PlayCanvas is an open-source 3D engine with a browser-based editor: what it includes, how big it really is, and when to pick it over Three.js."
 keywords: "PlayCanvas, what is PlayCanvas, 3D games on the web, WebGL, WebGPU, Gaussian Splatting, SuperSplat, Three.js vs PlayCanvas"
 tags: "PlayCanvas, WebGL, WebGPU, Game Dev"
 date: 2026-11-13
@@ -10,9 +10,11 @@ date: 2026-11-13
 
 # PlayCanvas: Build 3D Games in the Browser With Nothing to Install
 
-If you want 3D on the web, you usually end up between two incomplete options. Unity has a great editor, but its web builds are heavy and players have to wait. Three.js is light, but it has no editor: to move a light you change a number in code and reload the page.
+PlayCanvas is a 3D engine written for the web, and it comes with an editor you open from a link. The reason it deserves a look is fairly specific.
 
-PlayCanvas sits in between. It is an engine written for the web, and it comes with a full editor that runs in the browser. This post covers what it includes, how big it really is, and when to choose it.
+With Three.js, everything lives in code. To move a light to the left you change a number, save, wait for the reload, look, and change it again. That is bearable for a small scene. It is not for a game with dozens of scenes and an artist who doesn't write code. Unity solves this with an editor, but Unity's web builds are heavy, and web players don't wait.
+
+PlayCanvas goes a different way: the engine is written for the browser, and the editor runs in the browser too.
 
 ## PlayCanvas is two things
 
@@ -22,9 +24,9 @@ The **engine** is a JavaScript library for drawing 3D. You install it with `npm 
 
 The **Editor** is a scene-building tool that runs entirely in the browser. Open a link and you get a hierarchy on the left, a 3D viewport in the middle and an inspector on the right. Anyone who has opened Unity will know their way around. The difference is that you download and install nothing, and projects save to the cloud on their own.
 
-## The Editor works like Figma for teams
+## Several people in one scene
 
-What I like most about the Editor is that several people can edit the same scene at the same time.
+A whole team can open the same scene and edit it at the same time, the way people work together in a shared design file.
 
 According to the [official docs](https://developer.playcanvas.com/user-manual/editor/), you can see where the others are looking in the scene, and there is chat built in. An artist can adjust lighting while a developer writes scripts, and nobody waits for anyone to send a file.
 
@@ -43,7 +45,7 @@ For version 2.24.1 on npm, `playcanvas.min.js` is about 2.9 MB. Gzipped, which i
 
 For a sense of scale, I measured Three.js the same way: its two main build files add up to about 195 KB gzipped. Three.js is much lighter, but it only handles rendering. Physics, audio and asset management are libraries you add yourself.
 
-So is 750 KB heavy? Not for a game. One music track or a few textures are already that size, and it is still far smaller than a Unity WebGL build. Just keep the right number in mind: a few hundred KB up to a bit under 1 MB for the engine, not 200 KB.
+For a game, 750 KB is not heavy. One music track or a few textures are already that size, and it is still far smaller than a Unity WebGL build. Just keep the right number in mind: a few hundred KB up to a bit under 1 MB for the engine, not 200 KB.
 
 ## WebGL2 and WebGPU
 
@@ -53,7 +55,7 @@ On performance, don't trust an "always 60 fps on mobile" promise from any engine
 
 ## Gaussian Splatting and SuperSplat
 
-This is an area where PlayCanvas is well ahead.
+PlayCanvas invested in this area early.
 
 Gaussian Splatting rebuilds a real place from photos or video. Instead of a triangle mesh, the scene is made of millions of soft, overlapping blobs of color. The result looks very close to a photograph, especially for things that are hard to model with triangles, such as foliage, hair or glass.
 
@@ -101,7 +103,7 @@ app.on('update', (dt) => box.rotate(10 * dt, 20 * dt, 30 * dt))
 app.start()
 ```
 
-Look at how it is organized: everything is an `Entity`, and you attach components to make it do things. The box has a `render` component, the camera a `camera` component, the light a `light` component. The model is the same as Unity's and holds up well as a scene grows. With Three.js you wire up the scene, camera and renderer yourself and write your own render loop.
+Everything in the scene is an `Entity`, and you attach components to make it do things. The box has a `render` component, the camera a `camera` component, the light a `light` component. The model is the same as Unity's and holds up well as a scene grows. With Three.js you wire up the scene, camera and renderer yourself and write your own render loop.
 
 ## PlayCanvas or Three.js
 
@@ -109,7 +111,7 @@ These two are not really rivals. They suit different kinds of work.
 
 Pick **PlayCanvas** when you are building a game or a 3D experience with many scenes, and some people on the team don't write code. The Editor lets them adjust scenes on their own, and you stop being the go-between for every small change.
 
-Pick **Three.js** when you only need a little 3D inside an existing page: a rotatable product model, a background effect, a 3D chart. It is lighter, and if you use React, React Three Fiber lets you write a 3D scene the way you write components. The particle background on this portfolio uses exactly that; you can see the rest of my stack in the [skills section on my homepage](/#skills).
+Pick **Three.js** when you only need a little 3D inside an existing page: a rotatable product model, a background effect, a 3D chart. It is lighter, and if you use React, React Three Fiber lets you write a 3D scene the way you write components. The particle background on [my homepage](/) uses exactly that.
 
 ## Cost
 

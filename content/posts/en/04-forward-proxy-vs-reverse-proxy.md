@@ -2,7 +2,7 @@
 title: "Forward Proxy vs Reverse Proxy: The Difference Is Who It Works For"
 seoTitle: "Forward Proxy vs Reverse Proxy Explained"
 slug: forward-proxy-vs-reverse-proxy
-description: "A forward proxy sits on the client's side, a reverse proxy on the server's side. This post covers what each does, how HTTPS passes through a proxy, and the req.ip bug Node.js apps hit behind Nginx."
+description: "A forward proxy works for the client, a reverse proxy for the server. What each does, how HTTPS passes through, and the req.ip bug behind Nginx."
 keywords: "forward proxy, reverse proxy, what is a proxy, Nginx reverse proxy, X-Forwarded-For, Express trust proxy, load balancer, VPN vs proxy"
 tags: "Networking, Nginx, Backend, Node.js"
 date: 2026-11-13
@@ -10,9 +10,9 @@ date: 2026-11-13
 
 # Forward Proxy vs Reverse Proxy: The Difference Is Who It Works For
 
-The usual answer to this question is: "A forward proxy sits in front of the client, a reverse proxy sits in front of the server." That is not wrong, but it explains nothing. Draw it on paper and both are a box between a client and a server.
+The first time you put a Node.js app on a real server, you run into the term "reverse proxy": every guide tells you to put Nginx in front. "Forward proxy" tends to show up somewhere else entirely, in the network settings of a company laptop. The names are close, and on paper both are a box between a client and a server.
 
-I find it easier to remember with a different question: **who set the proxy up, and who does it work for?**
+They differ in one thing: **who set the box up, and who it works for.**
 
 ## A proxy is just a middleman
 
@@ -33,11 +33,11 @@ People use it to:
 - Cache frequently downloaded content and save bandwidth.
 - Send all outbound traffic from a few fixed IP addresses, so partners only need to allow those.
 
-One thing to remember: the client **knows** it is using a proxy. The browser or the operating system has to be configured to send requests through it.
+The client **knows** it is using a proxy: the browser or the operating system has to be configured to send requests through it.
 
 ### How HTTPS passes through a forward proxy
 
-This part is often misunderstood. If everything is encrypted, how does the proxy forward it?
+If everything is encrypted, how does the proxy forward it?
 
 The browser sends the proxy a special request using the `CONNECT` method:
 
@@ -77,7 +77,7 @@ Because every request has to pass through it, it is the most convenient place fo
 - **Attack filtering:** block malicious requests and absorb DDoS traffic.
 - **Path-based routing:** `/api` goes to one service, `/images` to another.
 
-When you open a large website, what you reach is almost certainly a reverse proxy, not an application server. This blog is no different: it runs on Vercel, and your request passes through their edge network before it gets to the page.
+When you open a large website, what you reach is almost certainly a reverse proxy, not an application server. [This portfolio](/) is no different: it runs on Vercel, and your request passes through their edge network before it gets to the page.
 
 A minimal Nginx configuration looks like this:
 
@@ -129,7 +129,7 @@ Don't write `app.set('trust proxy', true)` as a shortcut. Headers are something 
 
 Declare the right number of proxy layers and Express counts from the right, takes the address your own proxy wrote, and ignores whatever the client made up.
 
-## Summary
+## Side by side
 
 | | Forward proxy | Reverse proxy |
 |---|---|---|
@@ -140,6 +140,6 @@ Declare the right number of proxy layers and Express counts from the right, take
 | Used for | Blocking sites, logging, caching | Load balancing, TLS, caching, rate limiting, attack filtering |
 | Examples | Squid, a corporate proxy | Nginx, HAProxy, Cloudflare, cloud load balancers |
 
-If you remember one thing, make it this: the two are the same technique, and they differ in whose side they are on. A forward proxy serves the people going out. A reverse proxy serves the service letting people in.
+If you write backends, the `trust proxy` setting is worth opening a running project to check right now. The bug never shows up on a local machine, because nothing sits in front of the app there.
 
-And if you write backends, the part worth taking away is the `trust proxy` section above. It is the kind of bug that never shows up on a local machine and only appears in production. A reverse proxy is also where health checks for the servers behind it usually live, which I covered in [health checks are more than /ping](/blog/health-check-khong-chi-la-ping). The other backend tech I use is in the [skills section on my homepage](/#skills).
+A reverse proxy is also what calls the health checks of the servers behind it, to decide which ones get requests. That part is in [health checks are more than /ping](/blog/health-check-khong-chi-la-ping).

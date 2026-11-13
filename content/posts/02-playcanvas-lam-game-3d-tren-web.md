@@ -2,7 +2,7 @@
 title: "PlayCanvas: làm game 3D ngay trong trình duyệt mà không cần cài gì"
 seoTitle: "PlayCanvas là gì? Làm game 3D trên trình duyệt"
 slug: playcanvas-lam-game-3d-tren-trinh-duyet
-description: "PlayCanvas là engine 3D mã nguồn mở có editor chạy trên trình duyệt. Bài này giải thích nó gồm những gì, nặng bao nhiêu, mạnh ở đâu và khi nào nên chọn thay cho Three.js."
+description: "PlayCanvas là engine 3D mã nguồn mở có editor chạy trên trình duyệt. Nó gồm những gì, nặng bao nhiêu, mạnh ở đâu và khi nào nên chọn thay cho Three.js."
 keywords: "PlayCanvas, PlayCanvas là gì, game 3D trên web, WebGL, WebGPU, Gaussian Splatting, SuperSplat, so sánh Three.js PlayCanvas"
 tags: "PlayCanvas, WebGL, WebGPU, Game Dev"
 date: 2026-11-13
@@ -10,9 +10,11 @@ date: 2026-11-13
 
 # PlayCanvas: làm game 3D ngay trong trình duyệt mà không cần cài gì
 
-Muốn làm 3D chạy trên web, bạn thường đứng giữa hai lựa chọn không trọn vẹn. Unity có editor rất sướng, nhưng bản build cho web thì nặng và người chơi phải chờ. Three.js thì nhẹ, nhưng không có editor: dời một cái đèn cũng phải sửa số trong code rồi tải lại trang.
+PlayCanvas là một engine 3D viết cho web, đi kèm một editor mở bằng đường link. Lý do nó đáng để ý khá cụ thể.
 
-PlayCanvas nằm ở giữa. Nó là engine viết riêng cho web, và có một editor đầy đủ chạy ngay trong trình duyệt. Bài này nói về những gì nó có, nó nặng bao nhiêu trên thực tế, và khi nào nên chọn nó.
+Làm 3D bằng Three.js thì mọi thứ nằm trong code. Muốn dời một cái đèn sang trái, bạn sửa một con số, lưu, chờ trang tải lại, nhìn, rồi sửa tiếp. Một cảnh nhỏ thì chịu được. Một game vài chục cảnh, lại có người làm đồ họa không viết code, thì không. Unity giải quyết chuyện đó bằng editor, nhưng bản build cho web của Unity nặng, mà người chơi web thì không chờ.
+
+PlayCanvas đi hướng khác: engine viết riêng cho trình duyệt, còn editor thì chạy luôn trên trình duyệt.
 
 ## PlayCanvas gồm hai phần
 
@@ -22,9 +24,9 @@ Người ta hay gọi chung một tên, nhưng thật ra có hai thứ tách bi�
 
 **Editor** là công cụ dựng cảnh chạy hoàn toàn trên trình duyệt. Mở một đường link là thấy cây đối tượng bên trái, khung nhìn 3D ở giữa, bảng thuộc tính bên phải. Ai từng mở Unity sẽ thấy quen ngay. Khác ở chỗ không phải tải hay cài gì, và dự án tự lưu lên cloud.
 
-## Editor làm việc nhóm giống Figma
+## Nhiều người sửa chung một cảnh
 
-Điểm mình thích nhất ở Editor là nhiều người sửa cùng một cảnh, cùng một lúc.
+Cả nhóm mở cùng một cảnh và sửa cùng lúc được, giống cách người ta làm việc chung trên một file thiết kế.
 
 Theo [tài liệu chính thức](https://developer.playcanvas.com/user-manual/editor/), bạn thấy được người khác đang nhìn vào đâu trong cảnh, và có khung chat ngay bên trong. Người làm đồ họa chỉnh ánh sáng trong lúc lập trình viên viết script, không ai phải chờ ai gửi file.
 
@@ -43,7 +45,7 @@ Với bản 2.24.1 trên npm, file `playcanvas.min.js` nặng khoảng 2,9 MB. S
 
 Để dễ hình dung, mình đo Three.js theo cùng cách: hai file build chính cộng lại khoảng 195 KB sau khi nén. Three.js nhẹ hơn hẳn, nhưng nó chỉ lo phần vẽ. Vật lý, âm thanh, quản lý tài nguyên bạn phải tự ghép thêm thư viện.
 
-Vậy 750 KB có nặng không? Với một game thì không. Một file nhạc nền hay vài texture đã cỡ đó rồi, và nó vẫn nhỏ hơn nhiều so với bản build WebGL của Unity. Cứ nhớ con số đúng là được: vài trăm KB tới dưới 1 MB cho engine, chứ không phải 200 KB.
+Với một game, 750 KB không phải là nặng. Một file nhạc nền hay vài texture đã cỡ đó rồi, và nó vẫn nhỏ hơn nhiều so với bản build WebGL của Unity. Cứ nhớ con số đúng là được: vài trăm KB tới dưới 1 MB cho engine, chứ không phải 200 KB.
 
 ## WebGL2 và WebGPU
 
@@ -53,7 +55,7 @@ Về tốc độ, đừng tin lời hứa kiểu "luôn 60 khung hình trên đi
 
 ## Gaussian Splatting và SuperSplat
 
-Đây là mảng PlayCanvas đi trước khá xa.
+PlayCanvas đầu tư vào mảng này khá sớm.
 
 Gaussian Splatting là cách dựng lại một không gian thật từ ảnh chụp hoặc video. Thay vì lưới tam giác, cảnh được tạo từ hàng triệu đốm màu mờ xếp chồng lên nhau. Kết quả nhìn rất giống ảnh thật, nhất là ở những thứ khó dựng bằng tam giác như tán cây, tóc hay mặt kính.
 
@@ -101,7 +103,7 @@ app.on('update', (dt) => box.rotate(10 * dt, 20 * dt, 30 * dt))
 app.start()
 ```
 
-Để ý cách tổ chức: mọi thứ là một `Entity`, muốn nó làm gì thì gắn component vào. Hộp có component `render`, camera có component `camera`, đèn có component `light`. Mô hình này giống Unity và rất hợp khi cảnh lớn dần. Với Three.js, bạn tự ghép scene, camera, renderer và tự viết vòng lặp vẽ.
+Mọi thứ trong cảnh là một `Entity`, muốn nó làm gì thì gắn component vào. Hộp có component `render`, camera có component `camera`, đèn có component `light`. Mô hình này giống Unity và rất hợp khi cảnh lớn dần. Với Three.js, bạn tự ghép scene, camera, renderer và tự viết vòng lặp vẽ.
 
 ## Chọn PlayCanvas hay Three.js
 
@@ -109,7 +111,7 @@ Hai thứ này không hẳn là đối thủ, chúng hợp với hai kiểu vi�
 
 Chọn **PlayCanvas** khi bạn làm game hoặc một trải nghiệm 3D có nhiều cảnh, và trong nhóm có người không viết code. Editor giúp họ tự chỉnh cảnh, còn bạn khỏi phải làm trung gian cho từng thay đổi nhỏ.
 
-Chọn **Three.js** khi bạn chỉ cần một chút 3D trong một trang web có sẵn: mô hình sản phẩm xoay được, hiệu ứng nền, biểu đồ 3D. Nó nhẹ hơn, và nếu đang dùng React thì React Three Fiber cho phép viết cảnh 3D như viết component. Phần nền hạt trên trang portfolio này dùng đúng bộ đó, bạn có thể xem thêm ở [phần kỹ năng trên trang chủ](/#skills).
+Chọn **Three.js** khi bạn chỉ cần một chút 3D trong một trang web có sẵn: mô hình sản phẩm xoay được, hiệu ứng nền, biểu đồ 3D. Nó nhẹ hơn, và nếu đang dùng React thì React Three Fiber cho phép viết cảnh 3D như viết component. Phần nền hạt ở [trang chủ của mình](/) dùng đúng bộ đó.
 
 ## Chi phí
 

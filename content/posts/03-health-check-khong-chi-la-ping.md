@@ -2,7 +2,7 @@
 title: "Health check: vì sao /ping trả về pong vẫn chưa nói lên điều gì"
 seoTitle: "Health check đúng cách: không chỉ là /ping"
 slug: health-check-khong-chi-la-ping
-description: "Endpoint /ping chỉ cho biết process còn chạy. Bài này giải thích health check đúng nghĩa, liveness khác readiness thế nào, và cách làm với NestJS Terminus."
+description: "Endpoint /ping chỉ cho biết process còn chạy. Health check đúng nghĩa là gì, liveness khác readiness thế nào, và cách làm với NestJS Terminus."
 keywords: "health check, liveness probe, readiness probe, NestJS Terminus, Spring Boot Actuator, ASP.NET Core health checks, Kubernetes probe, giám sát backend"
 tags: "Backend, NestJS, Kubernetes, Monitoring"
 date: 2026-11-13
@@ -19,9 +19,11 @@ ping() {
 }
 ```
 
-Gọi vào thấy `pong` là yên tâm, màn hình giám sát hiện màu xanh. Rồi một tối nào đó Redis treo, người dùng bấm đặt hàng thì báo lỗi liên tục, còn màn hình giám sát vẫn xanh. Không ai được báo động cho tới khi khách nhắn vào fanpage.
+Load balancer gọi nó vài giây một lần, công cụ uptime gọi nó mỗi phút, và dashboard xanh quanh năm.
 
-Endpoint `/ping` không sai. Nó chỉ trả lời một câu hỏi rất hẹp, và người ta hay hiểu nhầm là nó trả lời câu hỏi rộng hơn.
+Rắc rối là nó vẫn xanh cả trong những lúc không ai dùng được app. Mật khẩu database vừa được đổi mà app chưa nhận. Connection pool cạn sau một đợt deploy. Hàng đợi ngắt kết nối từ nửa đêm. Người dùng gặp lỗi 500 ở mọi màn hình, còn `/ping` vẫn trả `pong` trong vài mili giây.
+
+Endpoint này trả lời một câu hỏi rất hẹp, và người ta hay đọc nó như câu trả lời cho một câu hỏi rộng hơn nhiều.
 
 ## /ping thật ra đo cái gì
 
@@ -37,7 +39,7 @@ Bạn không phải tự viết từ đầu. Tên gọi khác nhau nhưng ý tư
 
 - **Spring Boot** có Actuator. Thêm thư viện là có `/actuator/health`. Database, Redis và dung lượng ổ đĩa được kiểm tra tự động nếu app có dùng. Kafka thì không nằm trong [danh sách có sẵn](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html), bạn phải tự viết một `HealthIndicator`. Chỉ cần một thành phần `DOWN` là cả endpoint trả 503.
 - **ASP.NET Core** có sẵn middleware: gọi `AddHealthChecks()` rồi `MapHealthChecks("/healthz")`. Mặc định nó chưa kiểm tra thành phần nào, bạn khai báo thêm từng cái. Kiểm tra database cần cài thêm gói.
-- **NestJS** có `@nestjs/terminus`, là thứ mình dùng và sẽ lấy làm ví dụ.
+- **NestJS** có `@nestjs/terminus`. Phần ví dụ bên dưới dùng gói này.
 
 ## Làm với NestJS Terminus
 
@@ -108,7 +110,7 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 }
 ```
 
-Hàm `withTimeout` không phải để cho đẹp. Một Redis bị treo thường không từ chối kết nối, nó chỉ im lặng. Lệnh `ping()` khi đó chờ mãi, kéo theo cả endpoint health chờ mãi, và hệ thống giám sát ghi nhận một request quá hạn thay vì một câu trả lời rõ ràng. Mỗi phép kiểm tra phải có giới hạn thời gian riêng, ngắn hơn giới hạn của bên gọi.
+Hàm `withTimeout` là phần quan trọng nhất của đoạn code này. Một Redis bị treo thường không từ chối kết nối, nó chỉ im lặng. Lệnh `ping()` khi đó chờ mãi, kéo theo cả endpoint health chờ mãi, và hệ thống giám sát ghi nhận một request quá hạn thay vì một câu trả lời rõ ràng. Mỗi phép kiểm tra phải có giới hạn thời gian riêng, ngắn hơn giới hạn của bên gọi.
 
 ## Liveness và readiness: hai câu hỏi khác nhau
 
@@ -168,15 +170,18 @@ Còn một trường hợp nữa: phụ thuộc dùng chung cho mọi pod. Khi n
 
 Mấy phụ thuộc không sống còn thì vẫn nên theo dõi, nhưng ở một endpoint riêng cho hệ thống giám sát và cảnh báo, không gắn vào probe.
 
-## Mấy chỗ hay bị bỏ sót
+## Vài chi tiết nữa
 
-- **Đừng để lộ chi tiết ra ngoài.** JSON của health check kể tên từng thành phần hạ tầng và thông báo lỗi, rất có ích cho kẻ đi dò hệ thống. Spring Boot mặc định ẩn phần chi tiết. Với NestJS bạn tự lo: chỉ mở endpoint trong mạng nội bộ, hoặc chặn ở tầng gateway.
-- **Health check cũng tốn tài nguyên.** Probe chạy vài giây một lần trên mỗi pod. Phép kiểm tra chỉ nên là một lệnh rẻ như `SELECT 1` hay `PING`, đừng chạy truy vấn thật.
-- **Kết nối được chưa chắc là làm việc được.** `PING` thành công không có nghĩa là tài khoản còn quyền ghi. Nếu quyền truy cập là thứ hay hỏng ở hệ thống của bạn, hãy kiểm tra đúng thao tác đó.
-- **Tắt app cho êm.** Terminus có tùy chọn `gracefulShutdownTimeoutMs` để app báo chưa sẵn sàng một lúc trước khi dừng hẳn, cho load balancer kịp ngừng gửi request. Nhớ bật shutdown hooks thì nó mới nhận được tín hiệu.
+JSON của health check kể tên từng thành phần hạ tầng kèm thông báo lỗi, rất có ích cho kẻ đi dò hệ thống. Spring Boot mặc định ẩn phần chi tiết. Với NestJS thì bạn tự lo: chỉ mở endpoint trong mạng nội bộ, hoặc chặn ở tầng gateway.
 
-## Tóm lại một câu
+Probe chạy vài giây một lần trên mỗi pod, nên bản thân health check cũng tốn tài nguyên. Mỗi phép kiểm tra chỉ nên là một lệnh rẻ như `SELECT 1` hay `PING`. Đừng chạy truy vấn thật.
 
-`/ping` trả lời "process còn sống không", và đó là câu hỏi đúng cho liveness. Còn "app có phục vụ được người dùng không" là câu hỏi khác, phải đi hỏi từng phụ thuộc quan trọng, có giới hạn thời gian, và trả lời ở một đường dẫn riêng cho readiness.
+Kết nối được cũng chưa chắc là làm việc được. `PING` thành công không có nghĩa là tài khoản còn quyền ghi. Nếu quyền truy cập là thứ hay hỏng ở hệ thống của bạn, hãy kiểm tra đúng thao tác đó.
 
-Chuyện đặt giới hạn thời gian và xử lý khi phụ thuộc bên ngoài chậm mình có viết kỹ hơn trong bài về [timeout, retry và fallback](/ai-for-devs/do-tin-cay-llm-timeout-retry-idempotency). Bài đó nói về LLM nhưng nguyên tắc dùng được cho mọi dịch vụ bên ngoài. Còn nếu bạn muốn biết mình đã làm backend ở những dự án nào thì xem [phần kinh nghiệm trên trang chủ](/#experience).
+Cuối cùng là lúc tắt app. Terminus có tùy chọn `gracefulShutdownTimeoutMs` để app báo chưa sẵn sàng một lúc trước khi dừng hẳn, cho load balancer kịp ngừng gửi request. Phải bật shutdown hooks thì nó mới nhận được tín hiệu.
+
+## Bắt đầu từ đâu
+
+Nếu dự án của bạn mới chỉ có `/ping`, đừng xóa nó. Đổi nó thành `/health/live`. Thêm `/health/ready` với database trước, rồi thêm dần các phụ thuộc khác, cái nào cũng có giới hạn thời gian riêng.
+
+Cách đặt giới hạn thời gian và xử lý khi một dịch vụ bên ngoài chậm có trong bài [timeout, retry và fallback](/ai-for-devs/do-tin-cay-llm-timeout-retry-idempotency). Bài đó lấy LLM làm ví dụ nhưng nguyên tắc áp dụng cho mọi phụ thuộc. Ví dụ trong bài này dùng NestJS, một trong mấy công nghệ chính ở [các dự án mình đã làm](/#experience).

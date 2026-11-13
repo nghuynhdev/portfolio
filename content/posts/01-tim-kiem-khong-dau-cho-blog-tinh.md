@@ -12,7 +12,7 @@ date: 2026-11-13
 
 Người Việt tìm kiếm thường không gõ dấu. Gõ `bao mat` mà ô tìm kiếm không ra bài "Bảo mật" thì với người đọc, ô đó coi như hỏng. Khi thêm tìm kiếm cho chính blog này, mình cần ba thứ: gõ không dấu vẫn ra, có gợi ý ngay khi đang gõ, và không phải dựng thêm dịch vụ nào.
 
-Blog chỉ có vài chục bài, sinh tĩnh từ Markdown. Với quy mô đó, toàn bộ việc tìm kiếm chạy được trên trình duyệt bằng một component React và vài hàm TypeScript. Bài này đi qua ba phần khó hơn mình tưởng: bỏ dấu, xếp hạng và tô sáng.
+Blog này nằm chung với [trang portfolio của mình](/), chỉ có vài chục bài, sinh tĩnh từ Markdown. Với quy mô đó, toàn bộ việc tìm kiếm chạy được trên trình duyệt bằng một component React và vài hàm TypeScript. Bài này đi qua ba phần khó hơn mình tưởng: bỏ dấu, xếp hạng và tô sáng.
 
 ## Vì sao không dùng dịch vụ tìm kiếm
 
@@ -119,4 +119,4 @@ Cách làm này có giới hạn rõ ràng:
 - **Cần tìm trong toàn bộ nội dung bài:** nên dùng công cụ dựng chỉ mục lúc build như Pagefind hoặc thư viện như FlexSearch, MiniSearch.
 - **Cần chịu lỗi gõ sai hoặc tìm theo nghĩa:** `indexOf` không làm được. Tìm theo nghĩa là bài toán của embedding, mình đã viết ở bài về [hybrid search và rerank](/ai-for-devs/rag-production-tu-ingestion-den-hybrid-search).
 
-Còn với một blog cá nhân, vài hàm ở trên là đủ, và bạn hiểu từng dòng của nó. Nếu muốn xem những thứ khác mình hay dùng khi làm sản phẩm, [phần kỹ năng trên trang chủ](/#skills) có danh sách đầy đủ.
+Còn với một blog cá nhân, vài hàm ở trên là đủ, và bạn hiểu từng dòng của nó.

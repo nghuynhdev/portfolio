@@ -2,7 +2,7 @@
 title: "Web bị bắn traffic, bắn backlink: nhận biết và xử lý sao cho đúng"
 seoTitle: "Web bị bắn traffic, bắn backlink: xử lý thế nào?"
 slug: web-bi-ban-traffic-ban-backlink
-description: "Bắn traffic và bắn backlink là hai kiểu chơi xấu để kéo web đối thủ rớt hạng. Bài này chỉ cách nhận biết, kiểm tra Manual Actions, chặn bot bằng Cloudflare và khi nào mới nên dùng Disavow."
+description: "Bắn traffic và bắn backlink là hai trò kéo web đối thủ rớt hạng. Cách nhận biết, xem Manual Actions, chặn bot bằng Cloudflare và khi nào nên dùng Disavow."
 keywords: "bắn traffic, bắn backlink, negative SEO, SEO bẩn, Manual Actions, Disavow links, Bot Fight Mode, Cloudflare chặn bot, web rớt top Google"
 tags: "SEO, Security, Cloudflare, Web"
 date: 2026-11-13
@@ -10,11 +10,11 @@ date: 2026-11-13
 
 # Web bị bắn traffic, bắn backlink: nhận biết và xử lý sao cho đúng
 
-Có một kiểu cạnh tranh không cần sản phẩm tốt hơn, giá rẻ hơn hay bài viết hay hơn. Người ta chỉ cần kéo web của bạn xuống để web họ nhích lên. Dân SEO gọi chung là negative SEO, còn ở Việt Nam hay gọi theo cách làm: **bắn traffic** và **bắn backlink**.
+Negative SEO là tên chung cho những trò làm một trang web tụt hạng trên Google từ bên ngoài, không cần đụng vào trang đó. Ở Việt Nam, hai trò phổ biến nhất được gọi theo cách làm: **bắn traffic** và **bắn backlink**.
 
-Người bị thường là chủ shop, chủ doanh nghiệp nhỏ. Họ không rành kỹ thuật, một sáng thấy đơn hàng im bặt, lên Google tìm không thấy web mình đâu. Lúc hoảng là lúc dễ làm sai nhất: trả tiền cho dịch vụ "gỡ phạt cấp tốc", hoặc tự tay từ chối hàng loạt link và làm web tụt thêm.
+Người gặp chuyện này thường là chủ shop hoặc doanh nghiệp nhỏ tự quản trị web, bên cạnh không có ai làm kỹ thuật. Thiệt hại lớn nhất nhiều khi lại đến từ cách phản ứng: trả tiền cho dịch vụ "gỡ phạt cấp tốc" trong khi chưa hề bị phạt, hoặc tự tay từ chối hàng loạt link rồi làm web tụt thêm.
 
-Bài này đi qua từng bước: hai kiểu tấn công là gì, nhìn vào đâu để biết, và việc nào nên làm, việc nào không.
+Thứ tự hợp lý là xác nhận có bị tấn công thật không trước, rồi mới xử lý từng kiểu.
 
 ## Hai kiểu chơi xấu
 
@@ -36,9 +36,9 @@ Vậy nên hãy xem bằng chứng trước khi kết luận. Có hai chỗ đ�
 
 Thấy một trong hai dấu hiệu này thì mới đáng nghi. Còn nếu cả hai đều bình thường, hãy quay lại tìm nguyên nhân ở chính web mình.
 
-## Bị bắn backlink: đừng hoảng
+## Bị bắn backlink: thường không cần làm gì
 
-Đây là tin tốt mà ít người biết. Google nói rõ trong [tài liệu về công cụ Disavow](https://support.google.com/webmasters/answer/2648487) rằng trong hầu hết trường hợp, họ tự đánh giá được link nào đáng tin mà không cần bạn hướng dẫn, và đa số trang web không cần dùng tới công cụ này.
+Google nói rõ trong [tài liệu về công cụ Disavow](https://support.google.com/webmasters/answer/2648487) rằng trong hầu hết trường hợp, họ tự đánh giá được link nào đáng tin mà không cần bạn hướng dẫn, và đa số trang web không cần dùng tới công cụ này.
 
 Nghĩ một chút thì cũng hợp lý. Nếu link rác trỏ về là đủ để một trang bị phạt, thì ai cũng hạ được đối thủ chỉ bằng vài chục nghìn tiền mua link. Google buộc phải xử lý chuyện này từ lâu, và cách của họ là bỏ qua link rác thay vì trừng phạt trang nhận link.
 
@@ -100,7 +100,7 @@ Nó nhận diện những request khớp với mẫu bot đã biết và bắt c
 
 ### Bật xong phải thử lại ngay
 
-Phần này hay bị bỏ qua, và nó có thể gây thiệt hại còn hơn cả bị tấn công.
+Bỏ qua bước này có thể gây thiệt hại còn hơn cả cuộc tấn công.
 
 Bot Fight Mode ở gói Free áp dụng cho toàn bộ tên miền, và **không tạo ngoại lệ được**. Tài liệu ghi rõ: các rule dạng Skip hay Allow không có tác dụng với nó. Nó cũng có thể thách thức cả lưu lượng API và ứng dụng di động.
 
@@ -133,7 +133,7 @@ hoặc theo nhà mạng, nếu bot tới từ cùng một hệ thống máy ch�
 
 Đừng dùng Block với cả một quốc gia nếu bạn có khách thật ở đó. Managed Challenge là lựa chọn an toàn hơn vì người thật vẫn vào được.
 
-Một lưu ý: tất cả những điều trên chỉ có tác dụng khi lưu lượng thật sự đi qua Cloudflare. Nếu web chạy trên nền tảng khác thì dùng tường lửa của nền tảng đó, nguyên tắc vẫn vậy: nhận diện nguồn, thách thức thay vì chặn hẳn, rồi thử lại các luồng quan trọng.
+Tất cả những điều trên chỉ có tác dụng khi lưu lượng thật sự đi qua Cloudflare. Nếu web chạy trên nền tảng khác thì dùng tường lửa của nền tảng đó, nguyên tắc vẫn vậy: nhận diện nguồn, thách thức thay vì chặn hẳn, rồi thử lại các luồng quan trọng.
 
 ## Những việc không nên làm
 
@@ -150,4 +150,4 @@ Một lưu ý: tất cả những điều trên chỉ có tác dụng khi lưu l
 4. Nếu bị bot: bật Bot Fight Mode hoặc tạo custom rule đúng nguồn, rồi thử lại đăng nhập và thanh toán.
 5. Theo dõi vài tuần. Thứ hạng không hồi ngay trong một đêm.
 
-Làm ăn tử tế thì không cần chơi bẩn, nhưng nên biết web mình đang được bảo vệ tới đâu. Nếu bạn muốn rà lại phần SEO kỹ thuật của web cho chắc, mình có viết cách [audit một trang web bằng Claude SEO](/ai-for-devs/claude-seo-audit-website). Còn nếu cần người xem giúp trực tiếp thì [nhắn cho mình ở trang chủ](/#contact).
+Qua đợt này rồi thì nên rà lại phần SEO kỹ thuật của web một lượt, vì rớt hạng do lỗi của chính mình vẫn phổ biến hơn nhiều so với do bị tấn công. Cách làm có trong bài [audit một trang web bằng Claude SEO](/ai-for-devs/claude-seo-audit-website). Cần hỏi thêm thì [liên hệ với mình](/#contact).

@@ -2,7 +2,7 @@
 title: "Health Checks: Why a /ping That Returns pong Tells You Very Little"
 seoTitle: "Health Checks Done Right: More Than /ping"
 slug: health-checks-more-than-ping
-description: "A /ping endpoint only tells you the process is running. This post covers what a real health check does, how liveness differs from readiness, and how to build one with NestJS Terminus."
+description: "A /ping endpoint only tells you the process is running. What a real health check does, how liveness differs from readiness, and NestJS Terminus code."
 keywords: "health check, liveness probe, readiness probe, NestJS Terminus, Spring Boot Actuator, ASP.NET Core health checks, Kubernetes probes, backend monitoring"
 tags: "Backend, NestJS, Kubernetes, Monitoring"
 date: 2026-11-13
@@ -19,9 +19,11 @@ ping() {
 }
 ```
 
-You call it, see `pong`, and relax. The monitoring dashboard is green. Then one evening Redis hangs, users get an error every time they place an order, and the dashboard is still green. Nobody is paged until customers start messaging support.
+The load balancer calls it every few seconds, the uptime tool calls it every minute, and the dashboard stays green all year.
 
-The `/ping` endpoint is not wrong. It answers one narrow question, and people tend to read it as the answer to a broader one.
+The trouble is that it stays green even when nobody can use the app. The database password was rotated and the app never picked it up. The connection pool ran dry after a deploy. The queue disconnected at midnight. Users get a 500 on every screen, and `/ping` still returns `pong` in a few milliseconds.
+
+This endpoint answers one narrow question, and people tend to read it as the answer to a much broader one.
 
 ## What /ping actually measures
 
@@ -37,7 +39,7 @@ You don't have to write this from scratch. The names differ but the idea is the 
 
 - **Spring Boot** has Actuator. Add the library and you get `/actuator/health`. The database, Redis and disk space are checked automatically when the app uses them. Kafka is not in the [built-in list](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html), so you write your own `HealthIndicator`. One `DOWN` component makes the whole endpoint return 503.
 - **ASP.NET Core** ships the middleware: call `AddHealthChecks()` and then `MapHealthChecks("/healthz")`. By default it checks no components; you register each one. Database checks need an extra package.
-- **NestJS** has `@nestjs/terminus`, which is what I use and what the examples below are written in.
+- **NestJS** has `@nestjs/terminus`. The examples below use it.
 
 ## Building one with NestJS Terminus
 
@@ -108,7 +110,7 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 }
 ```
 
-`withTimeout` is not there for decoration. A hung Redis usually does not refuse the connection. It just goes quiet. `ping()` then waits forever, the health endpoint waits with it, and your monitoring records a timed-out request instead of a clear answer. Every check needs its own time limit, shorter than the caller's.
+`withTimeout` is the most important part of this code. A hung Redis usually does not refuse the connection. It just goes quiet. `ping()` then waits forever, the health endpoint waits with it, and your monitoring records a timed-out request instead of a clear answer. Every check needs its own time limit, shorter than the caller's.
 
 ## Liveness and readiness are two different questions
 
@@ -168,15 +170,18 @@ There is one more case: a dependency shared by every pod. When it fails, all pod
 
 Non-critical dependencies are still worth watching, but on a separate endpoint for monitoring and alerting, not wired to a probe.
 
-## Things that get missed
+## A few more details
 
-- **Don't expose the details publicly.** The health JSON names each infrastructure component and its error message, which is useful to anyone probing your system. Spring Boot hides details by default. With NestJS it is on you: expose the endpoint only on the internal network, or block it at the gateway.
-- **Health checks cost resources too.** A probe runs every few seconds on every pod. A check should be one cheap command such as `SELECT 1` or `PING`, not a real query.
-- **Being connected is not the same as working.** A successful `PING` does not mean the account still has write permission. If permissions are what tends to break in your system, check that exact operation.
-- **Shut down gracefully.** Terminus has a `gracefulShutdownTimeoutMs` option that lets the app report not ready for a moment before it stops, so the load balancer can stop sending requests. Enable shutdown hooks, or it never receives the signal.
+The health JSON names each infrastructure component along with its error message, which is useful to anyone probing your system. Spring Boot hides the details by default. With NestJS it is on you: expose the endpoint only on the internal network, or block it at the gateway.
 
-## In one sentence
+A probe runs every few seconds on every pod, so health checks cost resources themselves. Each check should be one cheap command such as `SELECT 1` or `PING`. Don't run a real query.
 
-`/ping` answers "is the process alive", and that is the right question for liveness. "Can the app serve users" is a different question: ask each critical dependency, with a time limit, and answer on a separate path for readiness.
+Being connected is also not the same as working. A successful `PING` does not mean the account still has write permission. If permissions are what tends to break in your system, check that exact operation.
 
-I wrote more about time limits and handling slow external dependencies in the post on [timeouts, retries and fallbacks](/ai-for-devs/do-tin-cay-llm-timeout-retry-idempotency). It is about LLMs, but the principles apply to any external service. And if you want to know which backend projects I have worked on, see the [experience section on my homepage](/#experience).
+Last is shutdown. Terminus has a `gracefulShutdownTimeoutMs` option that lets the app report not ready for a moment before it stops, so the load balancer can stop sending requests. Shutdown hooks have to be enabled, or it never receives the signal.
+
+## Where to start
+
+If your project only has `/ping` today, don't delete it. Turn it into `/health/live`. Add `/health/ready` with the database first, then add other dependencies one at a time, each with its own time limit.
+
+Setting time limits and handling a slow external service are covered in the post on [timeouts, retries and fallbacks](/ai-for-devs/do-tin-cay-llm-timeout-retry-idempotency). It uses LLMs as the example, but the principles apply to any dependency. The examples here use NestJS, one of the main technologies in [the projects I have worked on](/#experience).

@@ -2,7 +2,7 @@
 title: "Negative SEO: Spotting and Handling Bot Traffic and Spam Backlink Attacks"
 seoTitle: "Negative SEO: Bot Traffic and Spam Backlinks"
 slug: negative-seo-bot-traffic-spam-backlinks
-description: "Fake traffic and spam backlinks are two dirty ways to push a competitor's site down. This post covers how to spot them, check Manual Actions, block bots with Cloudflare, and when Disavow is actually warranted."
+description: "Fake traffic and spam backlinks are meant to push a site down in Google. How to spot them, check Manual Actions, block bots, and when to disavow."
 keywords: "negative SEO, spam backlinks, bot traffic attack, Manual Actions, disavow links, Bot Fight Mode, Cloudflare block bots, site dropped in Google"
 tags: "SEO, Security, Cloudflare, Web"
 date: 2026-11-13
@@ -10,11 +10,11 @@ date: 2026-11-13
 
 # Negative SEO: Spotting and Handling Bot Traffic and Spam Backlink Attacks
 
-There is a kind of competition that needs no better product, lower price or better writing. Someone only has to pull your site down so theirs moves up. SEO people call it negative SEO. In Vietnam it usually goes by the method: "shooting traffic" and "shooting backlinks".
+Negative SEO is the general name for tactics that push a website down in Google from the outside, without touching the site itself. The two most common ones are fake traffic and spam backlinks.
 
-The victims are usually shop owners and small businesses. They are not technical, and one morning the orders stop and the site is nowhere on Google. Panic is when the worst decisions get made: paying for an "express penalty removal" service, or disavowing links in bulk and pushing the site down further.
+The people it happens to are usually shop owners or small businesses who run their own site, with nobody technical to ask. The biggest damage often comes from the reaction: paying for an "express penalty removal" service when there is no penalty, or disavowing links in bulk and pushing the site down further.
 
-This post goes through it step by step: what the two attacks are, where to look, and what to do and not do.
+The sensible order is to confirm an attack is really happening first, and only then deal with each kind.
 
 ## Two dirty tricks
 
@@ -36,9 +36,9 @@ So look at the evidence before you conclude anything. There are two places to ch
 
 One of these signs is reason to be suspicious. If both look normal, go back and look for the cause on your own site.
 
-## Spam backlinks: don't panic
+## Spam backlinks: usually nothing to do
 
-This is the good news few people know. Google states in its [Disavow tool documentation](https://support.google.com/webmasters/answer/2648487) that in most cases it can assess which links to trust without additional guidance, and that most sites will not need the tool.
+Google states in its [Disavow tool documentation](https://support.google.com/webmasters/answer/2648487) that in most cases it can assess which links to trust without additional guidance, and that most sites will not need the tool.
 
 It makes sense when you think about it. If junk links alone could get a site penalized, anyone could take out a competitor for the price of a cheap link package. Google had to deal with that long ago, and its approach is to ignore junk links instead of punishing the site they point to.
 
@@ -100,7 +100,7 @@ It identifies requests that match known bot patterns and makes them solve a CPU-
 
 ### Test right after turning it on
 
-This step gets skipped, and it can cost more than the attack.
+Skipping this step can cost more than the attack.
 
 Bot Fight Mode on the Free plan covers the whole domain and **cannot have exceptions**. The docs are explicit: Skip and Allow rules have no effect on it. It may also challenge API and mobile app traffic.
 
@@ -133,7 +133,7 @@ or by network, if the bots come from the same hosting provider:
 
 Don't use Block on a whole country if you have real customers there. Managed Challenge is safer because real people can still get in.
 
-One note: all of this only works when traffic actually passes through Cloudflare. If the site runs on another platform, use that platform's firewall. The principle is the same: identify the source, challenge instead of blocking outright, then test the flows that matter.
+All of this only works when traffic actually passes through Cloudflare. If the site runs on another platform, use that platform's firewall. The principle is the same: identify the source, challenge instead of blocking outright, then test the flows that matter.
 
 ## What not to do
 
@@ -150,4 +150,4 @@ One note: all of this only works when traffic actually passes through Cloudflare
 4. If it is bots: turn on Bot Fight Mode or add a custom rule for the source, then test sign-in and checkout again.
 5. Watch for a few weeks. Rankings don't recover overnight.
 
-You don't need dirty tricks to run an honest business, but you should know how well your site is protected. If you want to go over your site's technical SEO, I wrote about [auditing a website with Claude SEO](/ai-for-devs/claude-seo-audit-website). And if you need someone to take a direct look, [message me from the homepage](/#contact).
+Once this is behind you, go over the site's technical SEO, because rankings drop from a site's own mistakes far more often than from an attack. The post on [auditing a website with Claude SEO](/ai-for-devs/claude-seo-audit-website) shows how. If you have questions, [get in touch](/#contact).

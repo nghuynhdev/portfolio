@@ -2,7 +2,7 @@
 title: "Accent-Insensitive Search for a Static Blog: No Algolia, No Server"
 seoTitle: "Accent-Insensitive Search for a Static Blog"
 slug: accent-insensitive-search-for-a-static-blog
-description: "How to build a search box with suggestions for a static Next.js blog: strip Vietnamese diacritics correctly, rank results and highlight matches, all in the browser."
+description: "A search box with suggestions for a static Next.js blog: strip Vietnamese diacritics correctly, rank results and highlight matches, in the browser."
 keywords: "accent-insensitive search, remove diacritics JavaScript, normalize NFD, Next.js blog search, React autocomplete, client-side search"
 tags: "Search, TypeScript, React, Next.js"
 date: 2026-11-13
@@ -12,7 +12,7 @@ date: 2026-11-13
 
 Vietnamese readers usually search without typing diacritics. If typing `bao mat` does not find the post titled "Bảo mật", the search box is broken as far as the reader is concerned. When I added search to this blog, I wanted three things: unaccented queries had to work, suggestions had to appear while typing, and I did not want to run another service.
 
-The blog has a few dozen posts, statically generated from Markdown. At that size the whole search can run in the browser with one React component and a few TypeScript functions. This post covers the three parts that were harder than I expected: stripping diacritics, ranking and highlighting.
+The blog lives alongside [my portfolio](/) and has a few dozen posts, statically generated from Markdown. At that size the whole search can run in the browser with one React component and a few TypeScript functions. This post covers the three parts that were harder than I expected: stripping diacritics, ranking and highlighting.
 
 ## Why not a search service
 
@@ -119,4 +119,4 @@ This approach has clear limits:
 - **Searching full post content:** use a build-time indexer such as Pagefind, or a library such as FlexSearch or MiniSearch.
 - **Typo tolerance or searching by meaning:** `indexOf` cannot do either. Searching by meaning is a job for embeddings, which I covered in the post on [hybrid search and reranking](/ai-for-devs/rag-production-tu-ingestion-den-hybrid-search).
 
-For a personal blog, the few functions above are enough, and you understand every line of them. If you want to see what else I use when building products, the [skills section on my homepage](/#skills) has the full list.
+For a personal blog, the few functions above are enough, and you understand every line of them.
