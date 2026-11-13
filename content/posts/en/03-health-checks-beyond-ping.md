@@ -124,7 +124,7 @@ Kubernetes asks two questions and reacts to each very differently:
 
 Now think it through: if liveness also checks Redis, then when Redis goes down every one of your pods gets restarted, over and over. Restarting the app does not fix Redis. You now have a second incident on top of the first.
 
-The Spring Boot docs say outright that the liveness probe should not depend on health checks for external systems. The [Kubernetes docs](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/) also warn that a badly implemented liveness probe can lead to cascading failures, and that it should only fail for unrecoverable problems such as a deadlock.
+The Spring Boot docs say outright that the liveness probe should not depend on health checks for external systems. The [Kubernetes docs](https://kubernetes.io/docs/concepts/workloads/pods/probes/) also warn that a badly implemented liveness probe can lead to cascading failures, and that it should only fail for unrecoverable problems such as a deadlock.
 
 So I split it into two paths:
 

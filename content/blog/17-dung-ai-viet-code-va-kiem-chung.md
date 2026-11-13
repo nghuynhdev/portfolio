@@ -44,7 +44,7 @@ Với thay đổi lớn, chia theo hành vi có thể kiểm tra: sửa phân qu
 
 ## Test phải đứng về phía yêu cầu
 
-Ví dụ logic phân quyền sau là hàm độc lập để minh họa. Trong ứng dụng, danh tính người gọi phải lấy từ session đã xác thực; repository phải thực thi cùng điều kiện quyền, không chỉ dựa vào việc ẩn nút trên UI.
+Ví dụ [logic phân quyền](https://top10.owasp.org/A01_2021-Broken_Access_Control/) sau là hàm độc lập để minh họa. Trong ứng dụng, danh tính người gọi phải lấy từ session đã xác thực; repository phải thực thi cùng điều kiện quyền, không chỉ dựa vào việc ẩn nút trên UI.
 
 ```ts
 import assert from 'node:assert/strict';

@@ -45,7 +45,7 @@ That way Claude has to prove navigation really works, not just that the page-num
 
 ## Observe first, then pick locators
 
-Playwright recommends testing user-visible behavior and using resilient locators. Labels and roles usually express intent better than selectors based on the position of a `div`.
+[Playwright recommends](https://playwright.dev/docs/best-practices) testing user-visible behavior and using resilient [locators](https://playwright.dev/docs/locators). Labels and roles usually express intent better than selectors based on the position of a `div`.
 
 This blog's pagination is a `nav` labeled "Pagination", and each page number is a link labeled "Page N". The Python script sticks to those labels:
 

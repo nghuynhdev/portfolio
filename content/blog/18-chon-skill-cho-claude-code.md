@@ -19,9 +19,9 @@ Nếu thường xuyên yêu cầu Claude thiết kế giao diện, sửa lỗi v
 
 Skill là hướng dẫn có cấu trúc cho một tác vụ hoặc lĩnh vực, thường có `SKILL.md` cùng tài nguyên phụ. Claude Code có thể tải skill phù hợp hoặc cho bạn gọi trực tiếp; chi tiết nằm trong [tài liệu skills](https://code.claude.com/docs/en/skills).
 
-Plugin đóng gói các thành phần như skill, agent, hook hoặc MCP server để cài như một đơn vị. Tài liệu plugin của Claude Code giải thích cách phân phối này. Vì thế một dự án được gọi là “skill pack” vẫn có thể được cài qua marketplace plugin.
+Plugin đóng gói các thành phần như skill, agent, hook hoặc MCP server để cài như một đơn vị. [Tài liệu plugin của Claude Code](https://code.claude.com/docs/en/plugins) giải thích cách phân phối này. Vì thế một dự án được gọi là “skill pack” vẫn có thể được cài qua marketplace plugin.
 
-MCP kết nối đến công cụ và dữ liệu. Cần hướng dẫn review UI thì tìm skill; cần đọc dữ liệu từ dịch vụ ngoài thì xem khả năng kết nối. Tài liệu MCP mô tả phần kết nối, còn quyền thao tác phải được cấu hình riêng.
+MCP kết nối đến công cụ và dữ liệu. Cần hướng dẫn review UI thì tìm skill; cần đọc dữ liệu từ dịch vụ ngoài thì xem khả năng kết nối. [Tài liệu MCP](https://code.claude.com/docs/en/mcp) mô tả phần kết nối, còn quyền thao tác phải được cấu hình riêng.
 
 ## Chọn theo việc sắp làm
 

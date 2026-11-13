@@ -51,7 +51,7 @@ function grade(output, e) {
 }
 ```
 
-- **LLM-as-judge.** For free-form output (answers, summaries), have another model grade against a rubric: "does the answer stick to the context, does it address the question, score 1–5". Powerful, but be careful: give the judge very clear criteria, and periodically compare its scores against human judgment to make sure it isn't grading on a whim.
+- **[LLM-as-judge](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests).** For free-form output (answers, summaries), have another model grade against a rubric: "does the answer stick to the context, does it address the question, score 1–5". Powerful, but be careful: give the judge very clear criteria, and periodically compare its scores against human judgment to make sure it isn't grading on a whim.
 
 ```ts
 const judgePrompt = `Grade the answer on a scale of 1-5.

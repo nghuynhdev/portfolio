@@ -57,7 +57,7 @@ Nhưng sổ tay chỉ dạy cách làm. Nó không tự mở được Gmail. Mu�
 
 ## MCP: chuẩn cổng cắm chung
 
-**MCP (Model Context Protocol)** là giao thức mở quy định cách một ứng dụng AI kết nối tới công cụ và nguồn dữ liệu. So sánh với USB-C khá sát: nhà sản xuất chỉ cần làm cổng theo chuẩn, thiết bị nào hỗ trợ chuẩn đó cũng cắm được.
+**MCP ([Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro))** là giao thức mở quy định cách một ứng dụng AI kết nối tới công cụ và nguồn dữ liệu. So sánh với USB-C khá sát: nhà sản xuất chỉ cần làm cổng theo chuẩn, thiết bị nào hỗ trợ chuẩn đó cũng cắm được.
 
 Trước MCP, mỗi ứng dụng AI phải tự viết tích hợp riêng cho từng công cụ. Có MCP, dịch vụ chỉ cần một **MCP server**, và mọi client hỗ trợ MCP (Claude, Claude Code, Cursor, VS Code…) đều dùng được. Server đó cung cấp cho AI các tool như “tìm email”, “đọc file”, “tạo trang Notion”.
 
@@ -82,7 +82,7 @@ Hai lưu ý khi nối dây:
 
 ## Plugin: cả bộ đóng gói sẵn
 
-Cài từng skill, nối từng connector, tự đặt lệnh tắt… làm vài lần thì mệt. Plugin gom những thứ đó thành một gói: skill, MCP server/connector, lệnh tắt (slash command), subagent và hook. Cài một lần là có đủ.
+Cài từng skill, nối từng connector, tự đặt lệnh tắt… làm vài lần thì mệt. Plugin gom những thứ đó thành một gói: skill, MCP server/connector, lệnh tắt (slash command), [subagent](https://code.claude.com/docs/en/sub-agents) và [hook](https://code.claude.com/docs/en/hooks). Cài một lần là có đủ.
 
 Ví dụ một plugin cho đội bán hàng có thể gồm:
 
@@ -90,7 +90,7 @@ Ví dụ một plugin cho đội bán hàng có thể gồm:
 - Connector tới CRM để lấy danh sách khách và lịch sử trao đổi.
 - Lệnh `/follow-up` để soạn email nhắc cho những khách chưa phản hồi sau 7 ngày.
 
-Trong Claude Code, plugin được cài từ marketplace bằng lệnh `/plugin` gõ ngay trong phiên làm việc. Như mọi gói cài đặt, plugin có thể chạy code và hook trên máy bạn, nên hãy xem repo nguồn trước khi cài. Cách chọn và kiểm tra nguồn được nói kỹ trong [bài chọn skill cho Claude Code](/ai-for-devs/chon-skill-cho-claude-code).
+Trong Claude Code, plugin được cài từ [marketplace](https://code.claude.com/docs/en/discover-plugins) bằng lệnh `/plugin` gõ ngay trong phiên làm việc. Như mọi gói cài đặt, plugin có thể chạy code và hook trên máy bạn, nên hãy xem repo nguồn trước khi cài. Cách chọn và kiểm tra nguồn được nói kỹ trong [bài chọn skill cho Claude Code](/ai-for-devs/chon-skill-cho-claude-code).
 
 ## Tóm lại trong bốn dòng
 

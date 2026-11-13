@@ -50,7 +50,7 @@ function availableEvidenceTokens(input: {
 }
 ```
 
-The inputs are measured token counts, not `string.length`. Extras such as tool descriptions also need to be counted in the right bucket. If the mandatory parts are already too large, stop or compact deliberately instead of silently cutting whatever happens to be there.
+The inputs are [measured token](https://platform.claude.com/docs/en/build-with-claude/token-counting) counts, not `string.length`. Extras such as tool descriptions also need to be counted in the right bucket. If the mandatory parts are already too large, stop or compact deliberately instead of silently cutting whatever happens to be there.
 
 ## Summarize so the work can continue
 

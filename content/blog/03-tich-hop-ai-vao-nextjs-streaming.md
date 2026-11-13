@@ -23,11 +23,11 @@ Hai lý do rất thực tế:
 - **Cảm giác nhanh.** Model sinh token dần dần; stream cho phép hiện chữ ngay từ token đầu thay vì đợi câu cuối. Thời gian tới chữ đầu tiên chỉ vài trăm ms, dù cả câu mất chục giây.
 - **Tránh timeout.** Một câu trả lời dài có thể vượt giới hạn thời gian của một request thường. Stream giữ kết nối mở và đẩy dữ liệu liên tục nên ít bị cắt ngang.
 
-Một hiểu lầm hay gặp: "muốn stream phải chạy Edge runtime". Không cần. Trên Next.js, route handler chạy Node.js bình thường vẫn stream được (`ReadableStream`, SSE), lại giữ đầy đủ Node API. Đừng thêm `export const runtime = 'edge'` chỉ để stream.
+Một hiểu lầm hay gặp: "muốn stream phải chạy Edge runtime". Không cần. Trên Next.js, [route handler](https://nextjs.org/docs/app/api-reference/file-conventions/route) chạy Node.js bình thường vẫn stream được (`ReadableStream`, [SSE](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)), lại giữ đầy đủ Node API. Đừng thêm `export const runtime = 'edge'` chỉ để stream.
 
 ## Phần server: một route handler đẩy token
 
-Mình dùng Vercel AI SDK cho gọn, vì nó lo sẵn phần định dạng stream giữa server và client. Model gọi qua gateway bằng chuỗi `"provider/model"` nên đổi nhà cung cấp chỉ là đổi chuỗi.
+Mình dùng [Vercel AI SDK](https://ai-sdk.dev/docs/introduction) cho gọn, vì nó lo sẵn phần định dạng stream giữa server và client. Model gọi qua gateway bằng chuỗi `"provider/model"` nên đổi nhà cung cấp chỉ là đổi chuỗi.
 
 ```ts
 // app/api/chat/route.ts

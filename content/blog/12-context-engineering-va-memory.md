@@ -50,7 +50,7 @@ function availableEvidenceTokens(input: {
 }
 ```
 
-Đầu vào là số token đã đo, không phải `string.length`. Các phần phụ như mô tả tool cũng phải được tính vào ngân sách phù hợp. Nếu phần bắt buộc đã quá lớn, nên dừng hoặc thu gọn có chủ đích thay vì âm thầm cắt bất kỳ thứ gì.
+Đầu vào là [số token đã đo](https://platform.claude.com/docs/en/build-with-claude/token-counting), không phải `string.length`. Các phần phụ như mô tả tool cũng phải được tính vào ngân sách phù hợp. Nếu phần bắt buộc đã quá lớn, nên dừng hoặc thu gọn có chủ đích thay vì âm thầm cắt bất kỳ thứ gì.
 
 ## Tóm tắt để tiếp tục công việc
 

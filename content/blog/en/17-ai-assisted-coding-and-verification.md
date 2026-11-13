@@ -44,7 +44,7 @@ For large changes, split by testable behavior: fix authorization first, then cha
 
 ## Tests must side with the requirements
 
-The authorization logic below is a standalone function for illustration. In the application, the caller's identity must come from an authenticated session; the repository must enforce the same permission condition, not rely on hiding a button in the UI.
+The [authorization logic](https://top10.owasp.org/A01_2021-Broken_Access_Control/) below is a standalone function for illustration. In the application, the caller's identity must come from an authenticated session; the repository must enforce the same permission condition, not rely on hiding a button in the UI.
 
 ```ts
 import assert from 'node:assert/strict';

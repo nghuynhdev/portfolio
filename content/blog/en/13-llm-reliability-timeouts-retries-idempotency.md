@@ -25,7 +25,7 @@ These are two sides of the same problem: the system has to know what to do when 
 
 Check the defaults of your SDK, gateway and queue before writing another loop. One place should decide the number of attempts and the time remaining; the other layers cooperate instead of multiplying retries.
 
-[AWS analyzes timeouts, retries and backoff with jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) and stresses a point that's easy to forget: **a timeout doesn't prove the side effect didn't happen**. A model call that was cut off may still have been billed; a notification tool may have already sent its message.
+[AWS analyzes timeouts, retries and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) and stresses a point that's easy to forget: **a timeout doesn't prove the side effect didn't happen**. A model call that was cut off may still have been billed; a notification tool may have already sent its message.
 
 ### A deadline for the whole request
 
@@ -64,7 +64,7 @@ async function requestWithBudget(url: string, payload: unknown, budgetMs = 12_00
 }
 ```
 
-This function is only for reads or for generating results that haven't been shown yet. In a real application, read the `Retry-After` header (both the seconds and HTTP-date forms) and stop if the retry time exceeds the deadline; distinguish a 429 from rate limiting from an exhausted quota. Authentication errors, malformed payloads or a model that doesn't support a feature need configuration fixes — repeating the identical call just costs more money.
+This function is only for reads or for generating results that haven't been shown yet. In a real application, read the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) header (both the seconds and HTTP-date forms) and stop if the retry time exceeds the deadline; distinguish a 429 from rate limiting from an exhausted quota. Authentication errors, malformed payloads or a model that doesn't support a feature need configuration fixes — repeating the identical call just costs more money.
 
 ### Streaming can't be silently replayed
 
@@ -95,7 +95,7 @@ Every state transition needs a clear condition. A worker only takes the `approve
 
 ### An idempotency key represents one action
 
-When the target service supports idempotency, resending with the same key means "complete this action", not "create a new one". The key is tied to a durably stored action:
+When the target service [supports idempotency](https://docs.stripe.com/api/idempotent_requests), resending with the same key means "complete this action", not "create a new one". The key is tied to a durably stored action:
 
 ```ts
 type ApprovedAction = {

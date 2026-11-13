@@ -14,13 +14,13 @@ cover: /images/blog/04-rag-tu-a-z-cho-dev-js-v2.webp
 
 **RAG (Retrieval-Augmented Generation) is a technique that lets an LLM answer from your own documents: before asking the model, the system finds the few most relevant passages and adds them to the prompt as context.** The model then answers from your private, up-to-date data without being retrained.
 
-The eternal question when building a company chatbot: "how do I make it answer based on our internal documents?". Many people's first instinct is to stuff every document into the prompt. Try it and two problems show up immediately: the documents are longer than the context window, and every question resends a mountain of text, which is slow and burns money.
+The eternal question when building a company chatbot: "how do I make it answer based on our internal documents?". Many people's first instinct is to stuff every document into the prompt. Try it and two problems show up immediately: the documents are longer than the [context window](https://platform.claude.com/docs/en/build-with-claude/context-windows), and every question resends a mountain of text, which is slow and burns money.
 
 The right answer is RAG. It sounds grand, but the model doesn't need to remember all your documents; it only needs to read the right excerpt you hand it.
 
 ## A recap from the first post: embeddings
 
-RAG is built on embeddings. As covered in [how LLMs work](/ai-for-devs/llm-hoat-dong-the-nao-cho-dev), an embedding turns a piece of text into a vector (a list of numbers), and two passages with **similar meaning** have vectors that are **close together**. That lets us search by *meaning* rather than exact keywords — a user asking "how do I get my money back" still finds the passage titled "refund policy".
+RAG is built on [embeddings](https://platform.claude.com/docs/en/build-with-claude/embeddings). As covered in [how LLMs work](/ai-for-devs/llm-hoat-dong-the-nao-cho-dev), an embedding turns a piece of text into a vector (a list of numbers), and two passages with **similar meaning** have vectors that are **close together**. That lets us search by *meaning* rather than exact keywords — a user asking "how do I get my money back" still finds the passage titled "refund policy".
 
 ## The RAG flow has two phases
 

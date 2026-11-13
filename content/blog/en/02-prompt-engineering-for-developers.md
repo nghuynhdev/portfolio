@@ -43,7 +43,7 @@ const messages = [
 ];
 ```
 
-Don't put user data into `system`. `system` is rules, `user` is data — mixing them opens the door to prompt injection (covered in its own post on [AI security and prompt injection](/ai-for-devs/bao-mat-ai-prompt-injection)).
+Don't put user data into `system`. `system` is rules, `user` is data — mixing them opens the door to [prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) (covered in its own post on [AI security and prompt injection](/ai-for-devs/bao-mat-ai-prompt-injection)).
 
 ## Few-shot: teach by example, not by lecture
 
@@ -64,7 +64,7 @@ Two or three examples that cover the "hard" cases (like a sentence that praises 
 
 This is the thing I see newer developers get wrong most: tell the model "answer in JSON", then slice the string with a regex. Every so often the model wraps it in ```json ... ``` or adds "Here is the result:", and the parser breaks.
 
-The right way is structured output with a schema. The model is forced to return exactly that structure:
+The right way is [structured output](https://platform.claude.com/docs/en/build-with-claude/structured-outputs) with a schema. The model is forced to return exactly that structure:
 
 ```ts
 import { generateText, Output } from 'ai';

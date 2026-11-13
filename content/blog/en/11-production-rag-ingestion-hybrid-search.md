@@ -114,7 +114,7 @@ console.log(fuseRankings([lexical, semantic])); // 'a' comes first
 
 ### The reranker sits after retrieval
 
-Once you have a candidate set, a reranker reads the question together with each passage and reorders them. A cross-encoder considers both at once, so it's more accurate but more expensive than a vector lookup — which is why it runs only on the narrowed set (Sentence Transformers describes this retrieve-then-rerank pipeline).
+Once you have a candidate set, a reranker reads the question together with each passage and reorders them. A cross-encoder considers both at once, so it's more accurate but more expensive than a vector lookup — which is why it runs only on the narrowed set ([Sentence Transformers](https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html) describes this retrieve-then-rerank pipeline).
 
 A configuration to start experimenting with: take 30 candidates per branch, merge them, rerank at most 40 passages, and keep the few that fit your context budget. Remember the reranker can't recover a passage that was dropped earlier — if the right document isn't in the candidate set, fix the search, not the reranker.
 

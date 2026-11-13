@@ -11,7 +11,7 @@ cover: /images/blog/10-mcp-model-context-protocol-v2.webp
 
 # MCP (Model Context Protocol) là gì và vì sao dev nên quan tâm
 
-**MCP (Model Context Protocol) là giao thức mở do Anthropic khởi xướng, chuẩn hóa cách ứng dụng AI kết nối với công cụ và nguồn dữ liệu bên ngoài.** Viết một MCP server cho công cụ của bạn một lần, mọi client hỗ trợ MCP như Claude, Cursor hay VS Code đều dùng được.
+**MCP ([Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)) là giao thức mở do Anthropic khởi xướng, chuẩn hóa cách ứng dụng AI kết nối với công cụ và nguồn dữ liệu bên ngoài.** Viết một MCP server cho công cụ của bạn một lần, mọi client hỗ trợ MCP như Claude, Cursor hay VS Code đều dùng được.
 
 Ở [bài về tool calling](/ai-for-devs/ai-agent-dau-tien-function-calling), ta thấy một agent mạnh lên nhờ được cắm thêm công cụ: tra dữ liệu, gọi API, đọc file. Nhưng làm nhiều rồi sẽ đụng một nỗi đau rất kỹ sư: mỗi ứng dụng AI lại phải tự viết lại cách kết nối tới từng công cụ. App A muốn đọc GitHub thì viết tích hợp GitHub; app B cũng muốn đọc GitHub thì... viết lại từ đầu. Nhân lên với hàng chục công cụ và hàng chục app, đó là bài toán tích hợp **N×M** kinh điển.
 
@@ -26,7 +26,7 @@ Ví von hay dùng: MCP giống **cổng USB-C cho AI**. Trước USB, mỗi thi�
 ## Một server MCP phơi ra ba thứ
 
 - **Tools** — hành động model có thể gọi (query DB, tạo issue, gửi tin). Giống tool calling ở bài trước, nhưng theo chuẩn chung.
-- **Resources** — dữ liệu model có thể đọc (file, bản ghi, tài liệu).
+- **[Resources](https://modelcontextprotocol.io/specification/2025-06-18/server/resources)** — dữ liệu model có thể đọc (file, bản ghi, tài liệu).
 - **Prompts** — mẫu prompt dựng sẵn cho các tác vụ hay dùng.
 
 Client (một IDE có AI, một app chat, một agent) kết nối tới server, hỏi "bạn có những gì", rồi để model dùng các tool/resource đó qua đúng một giao thức.

@@ -45,9 +45,9 @@ Nghĩ một chút thì cũng hợp lý. Nếu link rác trỏ về là đủ đ�
 
 ### Xem mình có bị phạt thật không
 
-Vào Search Console, mở mục **Manual Actions** (Thao tác thủ công).
+Vào Search Console, mở mục **[Manual Actions](https://support.google.com/webmasters/answer/9044175)** (Thao tác thủ công).
 
-Thao tác thủ công là khi một nhân viên của Google xem xét và xác định trang vi phạm chính sách chống spam. Nếu có, nó được ghi rõ ở đây kèm lý do. Nếu không có, bạn thấy một dấu tích xanh và dòng thông báo không phát hiện vấn đề.
+Thao tác thủ công là khi một nhân viên của Google xem xét và xác định trang vi phạm [chính sách chống spam](https://developers.google.com/search/docs/essentials/spam-policies). Nếu có, nó được ghi rõ ở đây kèm lý do. Nếu không có, bạn thấy một dấu tích xanh và dòng thông báo không phát hiện vấn đề.
 
 Dấu tích xanh nghĩa là bạn **chưa bị phạt thủ công**. Lúc này ai gọi điện hứa "gỡ phạt trong 48 giờ" là đang bán một thứ bạn không cần.
 

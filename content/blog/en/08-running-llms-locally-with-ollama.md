@@ -11,7 +11,7 @@ cover: /images/blog/08-chay-llm-local-voi-ollama-v2.webp
 
 # Running LLMs Locally with Ollama: When It Makes Sense and When It Doesn't
 
-Two things make developers want to run an LLM on their own machine: no per-token bill, and data that never leaves the machine. Both are legitimate. But before you excitedly rip out OpenAI, you need to look honestly at the cost. This post gets a local model running in a few minutes with Ollama, then talks frankly about when to use it and when not to.
+Two things make developers want to run an LLM on their own machine: no per-token bill, and data that never leaves the machine. Both are legitimate. But before you excitedly rip out OpenAI, you need to look honestly at the cost. This post gets a local model running in a few minutes with [Ollama](https://ollama.com/), then talks frankly about when to use it and when not to.
 
 ## Up and running in minutes
 
@@ -29,7 +29,7 @@ Ollama exposes an HTTP server at `localhost:11434`, so calling it from code is j
 
 ## Calling it from Node/Next.js
 
-The handiest part: Ollama exposes an OpenAI-compatible endpoint, so you reuse the SDK you already know and only change `baseURL`.
+The handiest part: Ollama exposes an [OpenAI-compatible endpoint](https://docs.ollama.com/api/openai-compatibility), so you reuse the SDK you already know and only change `baseURL`.
 
 ```ts
 import OpenAI from 'openai';

@@ -74,9 +74,9 @@ You don't need real secrets, data-receiving endpoints or real machine permission
 
 Record the model used, the environment, the date, where the instructions were placed and the number of attempts. Define success/failure conditions beforehand, and record the runs where the model stayed on task too. In Claude Code, also save the permission configuration and enabled tools, so you can distinguish the model's proposals from real actions.
 
-Add legitimate cases that quote an imperative sentence, such as an article analyzing prompt injection. The system needs to read and explain that sentence without obeying it. Blocking every document containing the word "ignore" would also break normal work.
+Add legitimate cases that quote an imperative sentence, such as an article analyzing [prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/). The system needs to read and explain that sentence without obeying it. Blocking every document containing the word "ignore" would also break normal work.
 
-Anthropic continues to update its defenses, including research on Constitutional Classifiers published in January 2026. The result of any one experiment depends on its setup; don't turn it into a claim that "Claude is immune" or that "every Claude is unlocked".
+Anthropic continues to update its defenses, including research on [Constitutional Classifiers](https://www.anthropic.com/research/next-generation-constitutional-classifiers) published in January 2026. The result of any one experiment depends on its setup; don't turn it into a claim that "Claude is immune" or that "every Claude is unlocked".
 
 ## If the goal is for Claude to get in the way less
 

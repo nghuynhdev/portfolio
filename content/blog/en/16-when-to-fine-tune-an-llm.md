@@ -31,7 +31,7 @@ This is the investigation order I recommend, not a hard boundary. RAG and fine-t
 
 ## LoRA shrinks what you have to train
 
-Instead of updating every weight, LoRA keeps the original weights frozen and learns smaller update matrices. [Hugging Face's PEFT documentation explains how this works](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora). It can reduce the resources needed for fine-tuning, but it doesn't make every model fit on a laptop.
+Instead of updating every weight, [LoRA](https://arxiv.org/abs/2106.09685) keeps the original weights frozen and learns smaller update matrices. [Hugging Face's PEFT documentation explains how this works](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora). It can reduce the resources needed for fine-tuning, but it doesn't make every model fit on a laptop.
 
 You still need memory for the base model, activations, sequence length and training configuration. In deployment, the adapter must be compatible with the base model and the way you serve it. Check the model's usage terms before turning an experiment into a product feature.
 

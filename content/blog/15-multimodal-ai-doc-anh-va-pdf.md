@@ -49,7 +49,7 @@ type ExtractedForm = {
 };
 ```
 
-Sau khi nhận output, validate runtime bằng JSON Schema hoặc thư viện phù hợp. TypeScript không kiểm tra dữ liệu JSON từ mạng. Structured output giúp ràng buộc hình dạng; nó không chứng minh mã đơn hoặc ngày đã đọc đúng.
+Sau khi nhận output, validate runtime bằng [JSON Schema](https://json-schema.org/) hoặc thư viện phù hợp. TypeScript không kiểm tra dữ liệu JSON từ mạng. [Structured output](https://platform.claude.com/docs/en/build-with-claude/structured-outputs) giúp ràng buộc hình dạng; nó không chứng minh mã đơn hoặc ngày đã đọc đúng.
 
 Trong prompt, yêu cầu không tự bổ sung ký tự mờ, không suy ngày còn thiếu và ghi trang bắt đầu từ 1. Với ngày `03/04`, nếu tài liệu không nêu quy ước và không đủ bằng chứng, giữ nguyên giá trị gốc để bước sau xử lý.
 

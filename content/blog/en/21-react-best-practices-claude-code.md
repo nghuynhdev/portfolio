@@ -11,7 +11,7 @@ cover: /images/blog/21-react-best-practices-skill-claude-code-v2.webp
 
 # React Best Practices: Use Claude to Optimize the Real Bottleneck
 
-A slow page doesn't mean the first thing to do is add `memo`. Two independent requests might be waiting on each other, a large library might be loaded on every route, or the whole page might have become a client component because of one small interactive button.
+A slow page doesn't mean the first thing to do is add [`memo`](https://react.dev/reference/react/memo). Two independent requests might be waiting on each other, a large library might be loaded on every route, or the whole page might have become a [client component](https://nextjs.org/docs/app/getting-started/server-and-client-components) because of one small interactive button.
 
 The **vercel-react-best-practices** skill in [Vercel's agent skills collection](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices) provides guidance on React/Next.js performance, prioritizing problems like waterfalls and bundle size. I use it to help investigate a symptom that can be measured.
 

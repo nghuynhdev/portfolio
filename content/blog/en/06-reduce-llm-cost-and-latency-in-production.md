@@ -46,7 +46,7 @@ await redis.set(key, text, { EX: 3600 }); // keep for 1 hour
 return text;
 ```
 
-- **Provider prompt caching.** If many requests share a long prompt prefix (system prompt, background documents), providers let you cache that prefix and charge much less for it next time. Tip: put the fixed part at the *start* of the prompt and the changing part at the end, so the shared prefix is as long as possible.
+- **Provider [prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching).** If many requests share a long prompt prefix (system prompt, background documents), providers let you cache that prefix and charge much less for it next time. Tip: put the fixed part at the *start* of the prompt and the changing part at the end, so the shared prefix is as long as possible.
 
 ## 3. Trim unnecessary tokens
 
@@ -70,7 +70,7 @@ const summaries = await Promise.all(
 );
 ```
 
-Total time becomes the slowest call instead of the sum. For batch work that doesn't need to be real-time (bulk labeling), consider the provider's batch API if it has one — it's usually noticeably cheaper.
+Total time becomes the slowest call instead of the sum. For batch work that doesn't need to be real-time (bulk labeling), consider the provider's [batch API](https://platform.claude.com/docs/en/build-with-claude/batch-processing) if it has one — it's usually noticeably cheaper.
 
 ## 6. Measure before you optimize
 

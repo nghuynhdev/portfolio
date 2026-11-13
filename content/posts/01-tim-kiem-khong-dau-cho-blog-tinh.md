@@ -23,7 +23,7 @@ Với vài chục bài, dữ liệu cần tìm chỉ là tiêu đề, mô tả, 
 
 ## Bỏ dấu tiếng Việt cho đúng
 
-Cách phổ biến là chuẩn hóa chuỗi về dạng NFD rồi xóa các dấu tổ hợp. Ở dạng NFD, chữ `ế` được tách thành `e` cộng hai ký tự dấu (dấu mũ và dấu sắc), nằm trong khoảng Unicode U+0300 đến U+036F:
+Cách phổ biến là chuẩn hóa chuỗi về dạng [NFD](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) rồi xóa các dấu tổ hợp. Ở dạng NFD, chữ `ế` được tách thành `e` cộng hai ký tự dấu (dấu mũ và dấu sắc), nằm trong khoảng Unicode U+0300 đến U+036F:
 
 ```ts
 function foldText(text: string): string {
@@ -117,7 +117,7 @@ Có một lỗi nhỏ dễ gặp: bấm chuột vào một gợi ý làm ô nh�
 Cách làm này có giới hạn rõ ràng:
 
 - **Số bài lên vài trăm:** gửi toàn bộ tiêu đề và mô tả xuống mọi lượt xem bắt đầu tốn. Lúc đó nên tách chỉ mục thành file JSON riêng, chỉ tải khi người đọc bấm vào ô tìm.
-- **Cần tìm trong toàn bộ nội dung bài:** nên dùng công cụ dựng chỉ mục lúc build như Pagefind hoặc thư viện như FlexSearch, MiniSearch.
+- **Cần tìm trong toàn bộ nội dung bài:** nên dùng công cụ dựng chỉ mục lúc build như [Pagefind](https://pagefind.app/) hoặc thư viện như FlexSearch, [MiniSearch](https://github.com/lucaong/minisearch).
 - **Cần chịu lỗi gõ sai hoặc tìm theo nghĩa:** `indexOf` không làm được. Tìm theo nghĩa là bài toán của embedding, mình đã viết ở bài về [hybrid search và rerank](/ai-for-devs/rag-production-tu-ingestion-den-hybrid-search).
 
 Còn với một blog cá nhân, vài hàm ở trên là đủ, và bạn hiểu từng dòng của nó.

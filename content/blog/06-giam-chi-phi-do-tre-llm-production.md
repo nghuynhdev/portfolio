@@ -46,7 +46,7 @@ await redis.set(key, text, { EX: 3600 }); // sống 1 giờ
 return text;
 ```
 
-- **Prompt caching của nhà cung cấp.** Nếu nhiều request dùng chung một đoạn đầu prompt dài (system prompt, tài liệu nền), các provider cho cache phần tiền tố đó và tính giá rẻ hơn hẳn cho lần sau. Mẹo: đặt phần cố định lên *đầu* prompt, phần thay đổi xuống cuối, để tiền tố trùng nhau càng nhiều càng tốt.
+- **[Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) của nhà cung cấp.** Nếu nhiều request dùng chung một đoạn đầu prompt dài (system prompt, tài liệu nền), các provider cho cache phần tiền tố đó và tính giá rẻ hơn hẳn cho lần sau. Mẹo: đặt phần cố định lên *đầu* prompt, phần thay đổi xuống cuối, để tiền tố trùng nhau càng nhiều càng tốt.
 
 ## 3. Cắt token thừa
 
@@ -70,7 +70,7 @@ const summaries = await Promise.all(
 );
 ```
 
-Tổng thời gian còn bằng lời gọi lâu nhất thay vì cộng dồn. Với việc theo lô không cần real-time (gắn nhãn hàng loạt), cân nhắc batch API nếu provider có — thường rẻ hơn đáng kể.
+Tổng thời gian còn bằng lời gọi lâu nhất thay vì cộng dồn. Với việc theo lô không cần real-time (gắn nhãn hàng loạt), cân nhắc [batch API](https://platform.claude.com/docs/en/build-with-claude/batch-processing) nếu provider có — thường rẻ hơn đáng kể.
 
 ## 6. Đo trước khi tối ưu
 

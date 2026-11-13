@@ -57,7 +57,7 @@ But a handbook only teaches the steps. It can't open Gmail. For the AI to touch 
 
 ## MCP: the shared port standard
 
-**MCP (Model Context Protocol)** is an open protocol that defines how an AI application connects to tools and data sources. The USB-C comparison holds up well: a manufacturer builds a port to the standard, and any device that supports the standard can plug in.
+**MCP ([Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro))** is an open protocol that defines how an AI application connects to tools and data sources. The USB-C comparison holds up well: a manufacturer builds a port to the standard, and any device that supports the standard can plug in.
 
 Before MCP, every AI app wrote its own integration for every tool. With MCP, a service only needs one **MCP server**, and every MCP client (Claude, Claude Code, Cursor, VS Code…) can use it. That server exposes tools to the AI, such as "search email", "read file" or "create a Notion page".
 
@@ -82,7 +82,7 @@ Two things to keep in mind when plugging in:
 
 ## Plugins: the whole kit, pre-packed
 
-Installing skills one by one, wiring each connector, setting up your own shortcuts… it gets tiring after a few rounds. A plugin bundles those into one package: skills, MCP servers or connectors, slash commands, subagents and hooks. One install and you have everything.
+Installing skills one by one, wiring each connector, setting up your own shortcuts… it gets tiring after a few rounds. A plugin bundles those into one package: skills, MCP servers or connectors, slash commands, [subagents](https://code.claude.com/docs/en/sub-agents) and [hooks](https://code.claude.com/docs/en/hooks). One install and you have everything.
 
 A plugin for a sales team might include:
 
@@ -90,7 +90,7 @@ A plugin for a sales team might include:
 - A connector to the CRM for the customer list and conversation history.
 - A `/follow-up` command that drafts reminders for customers who haven't replied in 7 days.
 
-In Claude Code, plugins are installed from a marketplace with the `/plugin` command inside a session. Like any package, a plugin can run code and hooks on your machine, so look at the source repo before installing. Choosing and vetting sources is covered in [the post on choosing Claude Code skills](/ai-for-devs/chon-skill-cho-claude-code).
+In Claude Code, plugins are installed from a [marketplace](https://code.claude.com/docs/en/discover-plugins) with the `/plugin` command inside a session. Like any package, a plugin can run code and hooks on your machine, so look at the source repo before installing. Choosing and vetting sources is covered in [the post on choosing Claude Code skills](/ai-for-devs/chon-skill-cho-claude-code).
 
 ## The four-line summary
 

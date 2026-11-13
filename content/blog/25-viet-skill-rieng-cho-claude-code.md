@@ -23,7 +23,7 @@ Mình sẽ xác định phạm vi như sau: đọc bài được chọn cùng c�
 
 ## Tạo cấu trúc tối thiểu
 
-Như đã nói trong bài [chọn skill cho Claude Code](/ai-for-devs/chon-skill-cho-claude-code), skill dự án có thể đặt dưới `.claude/skills/` với file `SKILL.md`. Ví dụ:
+Như đã nói trong bài [chọn skill cho Claude Code](/ai-for-devs/chon-skill-cho-claude-code), skill dự án có thể đặt dưới `.claude/skills/` với file [`SKILL.md`](https://code.claude.com/docs/en/skills). Ví dụ:
 
 ```text
 .claude/

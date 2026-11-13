@@ -63,7 +63,7 @@ One important consequence: because sampling is involved, **the same prompt can p
 
 The model has no memory. It doesn't "remember" what you said in the previous message. The illusion of memory comes from the fact that **on every call, you send the whole conversation history** for it to read from the top.
 
-Everything you send plus everything it generates has to fit inside the **context window** — the model's token limit (for example, 128k tokens). Two takeaways:
+Everything you send plus everything it generates has to fit inside the **[context window](https://platform.claude.com/docs/en/build-with-claude/context-windows)** — the model's token limit (for example, 128k tokens). Two takeaways:
 
 1. The longer the conversation, the more tokens each call costs (because you resend everything). Cost grows with length; it isn't constant.
 2. Once you exceed the window, you have to trim the history — and the model "forgets" whatever was cut. That "I already told you this" feeling happens because you dropped that part from the context, not because the model got confused.
@@ -83,7 +83,7 @@ In day-to-day coding, this is how I deal with it:
 
 ## Embeddings: when text becomes coordinates
 
-One more piece to complete the picture. Besides generating text, models can turn a piece of text into a **vector** — a list of numbers like `[0.01, -0.23, 0.88, ...]`, a few hundred to a few thousand dimensions long. That is an embedding.
+One more piece to complete the picture. Besides generating text, models can turn a piece of text into a **vector** — a list of numbers like `[0.01, -0.23, 0.88, ...]`, a few hundred to a few thousand dimensions long. That is an [embedding](https://platform.claude.com/docs/en/build-with-claude/embeddings).
 
 The neat part: two pieces of text that **mean similar things** have vectors that are **close together in that space**. "dog" and "puppy" are close; "dog" and "tax invoice" are far apart. That lets us search by meaning instead of just matching keywords. RAG, semantic search and "related posts" suggestions are all built on this idea. For now, just remember: **embedding = text → coordinates, similar meaning means nearby**.
 

@@ -28,7 +28,7 @@ Check the installed version and the workflow descriptions before using them. A f
 
 ## Require investigation before trying fixes
 
-The systematic-debugging skill emphasizes finding the root cause by reading errors, reproducing and checking evidence. Applied to the search bug, the task could be:
+The [systematic-debugging](https://github.com/obra/superpowers/tree/main/skills/systematic-debugging) skill emphasizes finding the root cause by reading errors, reproducing and checking evidence. Applied to the search bug, the task could be:
 
 ```text
 Investigate the bug where search results jump back to an old query.

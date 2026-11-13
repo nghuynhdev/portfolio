@@ -53,11 +53,11 @@ These are constraints on the task, not a guarantee the tool has enough data. If 
 
 Pick the listing page, one post and a URL that doesn't exist. Check whether the title, description, main content, internal links and HTTP status fit each page. Check that the sitemap contains the URLs being served, rather than just confirming the XML file exists.
 
-The canonical must point to the right representative page, not funnel every post to the homepage. Google describes canonicals as a preference signal, not a command that is guaranteed to be followed. When fixing, also check that redirects and internal links point to the same desired URL.
+The canonical must point to the right representative page, not funnel every post to the homepage. [Google describes canonicals](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) as a preference signal, not a command that is guaranteed to be followed. When fixing, also check that redirects and internal links point to the same desired URL.
 
 ## Schema must describe the real content
 
-For blog posts, compare the author, title and dates in JSON-LD with what's displayed. Don't create reviews, star ratings or fake author information just to fill fields. Google explains structured data as a way to provide structured information; being valid doesn't guarantee a rich result.
+For blog posts, compare the author, title and dates in JSON-LD with what's displayed. Don't create reviews, star ratings or fake author information just to fill fields. [Google explains structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) as a way to provide structured information; being valid doesn't guarantee a rich result.
 
 After fixing, use an appropriate validator and look at the HTML from the deployed build. A correct JSON object in source doesn't prove the final page outputs the right data.
 
@@ -67,4 +67,4 @@ I handle issues that block access or the main content first, then wrong metadata
 
 For content, use Google's helpful-content criteria: what question does the post answer, does it have verifiable examples, does it offer original information beyond rephrasing its sources? Don't make keyword repetition the goal of writing. The examples in this post assume a personal blog like [my website](/): a portfolio page plus a series of posts.
 
-An audit score is input for decisions, not a promise of better rankings. After deploying, monitor crawl/index status and Search Console data if you have access. Record the date of each change so you can evaluate over time, instead of treating one rerun of the report as proof that traffic went up.
+An audit score is input for decisions, not a promise of better rankings. After deploying, monitor crawl/index status and [Search Console](https://search.google.com/search-console/about) data if you have access. Record the date of each change so you can evaluate over time, instead of treating one rerun of the report as proof that traffic went up.

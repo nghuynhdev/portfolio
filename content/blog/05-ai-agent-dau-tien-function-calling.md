@@ -14,7 +14,7 @@ cover: /images/blog/05-ai-agent-dau-tien-function-calling-v2.webp
 
 Cụm "AI agent" bị marketing làm cho nghe huyền bí quá mức. Bóc tách ra, một agent chỉ là một LLM được cho thêm **công cụ (tool)** để gọi, và một **vòng lặp** để nó gọi tool, đọc kết quả, rồi quyết bước tiếp theo. Hết. Không có ý thức, không có mưu đồ, chỉ là đoán token cộng với khả năng nói "tôi muốn chạy hàm này với tham số kia".
 
-Bài này mình đi từ cơ chế tool calling đến cách dựng một agent nhỏ chạy được, và quan trọng hơn: những chỗ phải chặn để nó không làm bậy.
+Bài này mình đi từ cơ chế [tool calling](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview) đến cách dựng một agent nhỏ chạy được, và quan trọng hơn: những chỗ phải chặn để nó không làm bậy.
 
 ## Tool calling thực chất là gì
 
@@ -38,7 +38,7 @@ Cái "lặp cho tới khi" là linh hồn của agent: nó có thể gọi nhi�
 
 ## Định nghĩa tool bằng schema và chạy vòng lặp
 
-Với AI SDK, bạn khai báo tool kèm schema tham số; SDK lo luôn vòng lặp gọi lại model sau mỗi tool.
+Với [AI SDK](https://ai-sdk.dev/docs/foundations/tools), bạn khai báo tool kèm schema tham số; SDK lo luôn vòng lặp gọi lại model sau mỗi tool.
 
 ```ts
 import { generateText, tool, isStepCount } from 'ai';

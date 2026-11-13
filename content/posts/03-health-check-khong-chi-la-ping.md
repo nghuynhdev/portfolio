@@ -124,7 +124,7 @@ Kubernetes hỏi hai câu, và phản ứng với mỗi câu rất khác nhau:
 
 Giờ thử nghĩ: nếu liveness cũng kiểm tra Redis, thì khi Redis sập, toàn bộ pod của bạn bị khởi động lại, hết lượt này tới lượt khác. Khởi động lại app không sửa được Redis. Bạn chỉ có thêm một sự cố thứ hai chồng lên sự cố đầu.
 
-Tài liệu Spring Boot nói thẳng rằng liveness probe không nên phụ thuộc vào health check của hệ thống bên ngoài. [Tài liệu Kubernetes](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/) cũng cảnh báo liveness cấu hình sai có thể gây lỗi dây chuyền, và nó chỉ nên báo hỏng với những lỗi không tự phục hồi được như deadlock.
+Tài liệu Spring Boot nói thẳng rằng liveness probe không nên phụ thuộc vào health check của hệ thống bên ngoài. [Tài liệu Kubernetes](https://kubernetes.io/docs/concepts/workloads/pods/probes/) cũng cảnh báo liveness cấu hình sai có thể gây lỗi dây chuyền, và nó chỉ nên báo hỏng với những lỗi không tự phục hồi được như deadlock.
 
 Nên mình tách làm hai đường dẫn:
 

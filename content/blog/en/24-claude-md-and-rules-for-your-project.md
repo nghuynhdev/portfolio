@@ -65,7 +65,7 @@ If you put all three into the root file without managing their lifecycle, a few 
 
 ## Instructions are not an authorization mechanism
 
-A line saying "never read secrets" is an instruction; it doesn't replace filesystem permissions, tool permissions or runtime configuration. Don't put tokens and passwords into `CLAUDE.md` so the agent "knows to avoid them". Use your application's secret management.
+A line saying "never read secrets" is an instruction; it doesn't replace filesystem permissions, [tool permissions](https://code.claude.com/docs/en/permissions) or runtime configuration. Don't put tokens and passwords into `CLAUDE.md` so the agent "knows to avoid them". Use your application's secret management.
 
 That's also why adding "ignore all restrictions" to `CLAUDE.md` doesn't "jailbreak" anything; I go into this in detail in [Jailbreaking Claude and the limits of CLAUDE.md](/ai-for-devs/jailbreak-claude-va-gioi-han-claude-md).
 

@@ -11,7 +11,7 @@ cover: /images/blog/21-react-best-practices-skill-claude-code-v2.webp
 
 # React Best Practices: dùng Claude tối ưu đúng nút thắt
 
-Trang mở chậm không có nghĩa việc đầu tiên cần làm là thêm `memo`. Có thể hai request độc lập đang đợi nhau, một thư viện lớn bị tải ở mọi route, hoặc toàn bộ trang trở thành client component vì một nút tương tác nhỏ.
+Trang mở chậm không có nghĩa việc đầu tiên cần làm là thêm [`memo`](https://react.dev/reference/react/memo). Có thể hai request độc lập đang đợi nhau, một thư viện lớn bị tải ở mọi route, hoặc toàn bộ trang trở thành [client component](https://nextjs.org/docs/app/getting-started/server-and-client-components) vì một nút tương tác nhỏ.
 
 Skill **vercel-react-best-practices** trong [bộ agent skills của Vercel](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices) cung cấp hướng dẫn về hiệu năng React/Next.js, có ưu tiên cho vấn đề như waterfall và bundle. Cách mình dùng nó là hỗ trợ điều tra một triệu chứng có thể đo.
 

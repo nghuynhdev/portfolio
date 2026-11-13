@@ -73,7 +73,7 @@ Hai lưu ý khi dùng chung với bước 1: giữ các token đã chốt làm r
 
 ## Bước 3 — Web Design Guidelines: review có bằng chứng
 
-Skill **web-design-guidelines** của Vercel review UI code theo Web Interface Guidelines. Nguồn ở `vercel-labs/agent-skills`:
+Skill **web-design-guidelines** của Vercel review UI code theo [Web Interface Guidelines](https://vercel.com/design/guidelines). Nguồn ở `vercel-labs/agent-skills`:
 
 ```bash
 npx skills add vercel-labs/agent-skills --skill web-design-guidelines -a claude-code
@@ -89,7 +89,7 @@ Mỗi phát hiện cần file/dòng, tình huống xảy ra, bằng chứng và 
 Tách nhận xét về sở thích thị giác khỏi lỗi hành vi.
 ```
 
-Một phát hiện hữu ích trông như: "Nút xóa không có tên truy cập; khi liệt kê các nút, người dùng không biết nó xóa mục nào; thêm nhãn gắn với tên mục và kiểm tra lại bằng accessibility tree." Còn "UX chưa tốt, hãy làm hiện đại hơn" thì không chỉ ra lỗi lẫn tiêu chí hoàn tất.
+Một phát hiện hữu ích trông như: "Nút xóa không có tên truy cập; khi liệt kê các nút, người dùng không biết nó xóa mục nào; thêm nhãn gắn với tên mục và kiểm tra lại bằng [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree)." Còn "UX chưa tốt, hãy làm hiện đại hơn" thì không chỉ ra lỗi lẫn tiêu chí hoàn tất.
 
 Yêu cầu Claude ghi rõ phát hiện nào đến từ đọc source, phát hiện nào đã tái hiện trên trình duyệt. Code cho biết có dùng `button`, có nhãn, có xử lý lỗi; trình duyệt mới cho biết nút có bị lớp khác che, text có tràn, focus có mất sau render. Một lần review cũng không phải chứng nhận đạt toàn bộ tiêu chuẩn accessibility.
 

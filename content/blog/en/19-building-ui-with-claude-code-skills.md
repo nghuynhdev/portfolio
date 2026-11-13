@@ -73,7 +73,7 @@ Two notes when combining with step 1: keep the settled tokens as constraints rat
 
 ## Step 3 — Web Design Guidelines: evidence-based review
 
-Vercel's **web-design-guidelines** skill reviews UI code against the Web Interface Guidelines. Its source is in `vercel-labs/agent-skills`:
+Vercel's **web-design-guidelines** skill reviews UI code against the [Web Interface Guidelines](https://vercel.com/design/guidelines). Its source is in `vercel-labs/agent-skills`:
 
 ```bash
 npx skills add vercel-labs/agent-skills --skill web-design-guidelines -a claude-code
@@ -89,7 +89,7 @@ Each finding needs file/line, when it happens, evidence and how to verify it.
 Separate visual-preference remarks from behavioral bugs.
 ```
 
-A useful finding looks like: "The delete button has no accessible name; when buttons are listed, users can't tell which item it deletes; add a label tied to the item name and recheck in the accessibility tree." Whereas "the UX isn't great, make it more modern" points to neither a bug nor a definition of done.
+A useful finding looks like: "The delete button has no accessible name; when buttons are listed, users can't tell which item it deletes; add a label tied to the item name and recheck in the [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree)." Whereas "the UX isn't great, make it more modern" points to neither a bug nor a definition of done.
 
 Ask Claude to state which findings come from reading source and which were reproduced in a browser. Code tells you whether a `button` is used, whether it has a label, whether errors are handled; only the browser tells you whether the button is covered by another layer, text overflows, or focus is lost after a render. And one review is not a certificate of full accessibility compliance.
 

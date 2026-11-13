@@ -11,7 +11,7 @@ cover: /images/blog/09-bao-mat-ai-prompt-injection-v2.webp
 
 # Security When Shipping AI: Prompt Injection and Data Leaks
 
-When you plug an LLM into a product, you open a class of vulnerabilities that plain web apps never had. The most dangerous is **prompt injection**: a user (or a web page, or a document) slips instructions into the data, and the model — which can't reliably tell your instructions from data — follows them.
+When you plug an LLM into a product, you open a class of vulnerabilities that plain web apps never had. The most dangerous is **[prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)**: a user (or a web page, or a document) slips instructions into the data, and the model — which can't reliably tell your instructions from data — follows them.
 
 This post covers the common attacks and practical lines of defense. Let me say it up front: **there is no way to eliminate prompt injection completely**. The goal is to shrink the attack surface and contain the consequences, like any other security problem.
 
@@ -49,7 +49,7 @@ It doesn't stop 100% of attacks, but it's a cheap first step you should always h
 ### 2. Don't concentrate power in the model
 This is the strongest line, because it blocks the *consequences* instead of trying to block the *input*.
 - Tools with side effects (sending, deleting, spending money) must **require human approval** or strict limits — don't let the agent run them on its own.
-- Apply **least privilege**: the model may touch only the data and actions it needs. Don't hand it a master key.
+- Apply **[least privilege](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)**: the model may touch only the data and actions it needs. Don't hand it a master key.
 - Enforce permissions at the **data layer**, not by asking the model to keep secrets. If user A may not see user B's data, block it in the query; don't rely on "do not reveal" in the prompt.
 
 ### 3. Check both input and output

@@ -114,7 +114,7 @@ console.log(fuseRankings([lexical, semantic])); // 'a' lên đầu
 
 ### Reranker đứng sau retrieval
 
-Sau khi có tập ứng viên, reranker đọc câu hỏi cùng từng đoạn rồi xếp hạng lại. Cross-encoder xét hai phần cùng lúc nên chính xác hơn nhưng tốn hơn tra vector, vì vậy chỉ chạy trên tập đã thu hẹp (Sentence Transformers mô tả pipeline retrieve rồi re-rank).
+Sau khi có tập ứng viên, reranker đọc câu hỏi cùng từng đoạn rồi xếp hạng lại. Cross-encoder xét hai phần cùng lúc nên chính xác hơn nhưng tốn hơn tra vector, vì vậy chỉ chạy trên tập đã thu hẹp ([Sentence Transformers](https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html) mô tả pipeline retrieve rồi re-rank).
 
 Một cấu hình thử nghiệm: lấy 30 ứng viên mỗi nhánh, hợp nhất, rerank tối đa 40 đoạn, chọn vài đoạn vừa ngân sách context. Nhớ rằng reranker không tìm lại được đoạn đã bị loại từ bước trước — nếu tài liệu đúng không có trong tập ứng viên, sửa tìm kiếm chứ đừng sửa reranker.
 

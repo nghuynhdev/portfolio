@@ -25,7 +25,7 @@ Hai chuyện này là hai mặt của cùng một bài toán: hệ thống phả
 
 Kiểm tra mặc định của SDK, gateway và queue trước khi viết thêm vòng lặp. Một nơi nên quyết định số lần thử và thời gian còn lại; các tầng khác phối hợp thay vì tự nhân retry lên.
 
-[AWS phân tích timeout, retry và backoff với jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) và nhấn mạnh một điểm hay bị quên: **timeout không chứng minh tác dụng phụ chưa xảy ra**. Một lần gọi model bị ngắt vẫn có thể đã tính tiền; một tool gửi thông báo có thể đã gửi xong.
+[AWS phân tích timeout, retry và backoff với jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) và nhấn mạnh một điểm hay bị quên: **timeout không chứng minh tác dụng phụ chưa xảy ra**. Một lần gọi model bị ngắt vẫn có thể đã tính tiền; một tool gửi thông báo có thể đã gửi xong.
 
 ### Deadline cho toàn request
 
@@ -64,7 +64,7 @@ async function requestWithBudget(url: string, payload: unknown, budgetMs = 12_00
 }
 ```
 
-Hàm này chỉ dành cho thao tác đọc hoặc sinh kết quả chưa hiển thị. Trong ứng dụng thật, đọc header `Retry-After` (cả dạng giây lẫn ngày HTTP) và dừng nếu thời điểm thử lại vượt deadline; phân biệt 429 do giới hạn tốc độ với hết quota. Lỗi xác thực, payload sai hay model không hỗ trợ tính năng cần sửa cấu hình — gọi lại y hệt chỉ tốn thêm tiền.
+Hàm này chỉ dành cho thao tác đọc hoặc sinh kết quả chưa hiển thị. Trong ứng dụng thật, đọc header [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) (cả dạng giây lẫn ngày HTTP) và dừng nếu thời điểm thử lại vượt deadline; phân biệt 429 do giới hạn tốc độ với hết quota. Lỗi xác thực, payload sai hay model không hỗ trợ tính năng cần sửa cấu hình — gọi lại y hệt chỉ tốn thêm tiền.
 
 ### Streaming không thể phát lại âm thầm
 
@@ -95,7 +95,7 @@ Mỗi lần chuyển trạng thái cần điều kiện rõ. Worker chỉ nhận
 
 ### Khóa idempotency đại diện cho một hành động
 
-Khi dịch vụ đích hỗ trợ idempotency, gửi lại cùng khóa nghĩa là "hoàn tất hành động này", không phải "tạo hành động mới". Khóa gắn với một action đã lưu bền:
+Khi dịch vụ đích [hỗ trợ idempotency](https://docs.stripe.com/api/idempotent_requests), gửi lại cùng khóa nghĩa là "hoàn tất hành động này", không phải "tạo hành động mới". Khóa gắn với một action đã lưu bền:
 
 ```ts
 type ApprovedAction = {

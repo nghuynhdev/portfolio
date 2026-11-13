@@ -19,9 +19,9 @@ What I want from a set of skills is fewer reminders and better output. A long in
 
 A skill is structured guidance for a task or domain, usually a `SKILL.md` plus supporting resources. Claude Code can load a relevant skill automatically or let you invoke it directly; the details are in the [skills documentation](https://code.claude.com/docs/en/skills).
 
-A plugin bundles components such as skills, agents, hooks or MCP servers so they install as one unit. The Claude Code plugin documentation explains this distribution model. That's why a project described as a "skill pack" may still be installed through a plugin marketplace.
+A plugin bundles components such as skills, agents, hooks or MCP servers so they install as one unit. The Claude Code [plugin documentation](https://code.claude.com/docs/en/plugins) explains this distribution model. That's why a project described as a "skill pack" may still be installed through a plugin marketplace.
 
-MCP connects Claude to tools and data. If you need guidance for reviewing UI, look for a skill; if you need to read data from an external service, look at connections. The MCP documentation covers the connection side, while permissions to act have to be configured separately.
+MCP connects Claude to tools and data. If you need guidance for reviewing UI, look for a skill; if you need to read data from an external service, look at connections. The [MCP documentation](https://code.claude.com/docs/en/mcp) covers the connection side, while permissions to act have to be configured separately.
 
 ## Choose by the work in front of you
 

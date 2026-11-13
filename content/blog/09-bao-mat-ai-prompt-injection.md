@@ -11,7 +11,7 @@ cover: /images/blog/09-bao-mat-ai-prompt-injection-v2.webp
 
 # Bảo mật khi đưa AI vào sản phẩm: prompt injection và rò rỉ dữ liệu
 
-Khi gắn LLM vào sản phẩm, bạn vừa mở ra một lớp lỗ hổng mà hồi làm web thuần không có. Nguy hiểm nhất là **prompt injection**: người dùng (hoặc một trang web, một tài liệu) nhét chỉ thị vào phần dữ liệu, và model — vốn không phân biệt nổi đâu là lệnh của bạn đâu là dữ liệu — làm theo.
+Khi gắn LLM vào sản phẩm, bạn vừa mở ra một lớp lỗ hổng mà hồi làm web thuần không có. Nguy hiểm nhất là **[prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)**: người dùng (hoặc một trang web, một tài liệu) nhét chỉ thị vào phần dữ liệu, và model — vốn không phân biệt nổi đâu là lệnh của bạn đâu là dữ liệu — làm theo.
 
 Bài này nói về các kiểu tấn công hay gặp và những tuyến phòng thủ thực tế. Nói trước cho thẳng: **không có cách nào diệt sạch prompt injection**. Mục tiêu là giảm bề mặt tấn công và chặn hậu quả, y như mọi bài toán bảo mật khác.
 
@@ -49,7 +49,7 @@ Không chống được 100%, nhưng là bước đầu rẻ và nên có mọi 
 ### 2. Đừng dồn quyền vào tay model
 Đây là tuyến mạnh nhất, vì nó chặn *hậu quả* thay vì cố chặn *đầu vào*.
 - Tool có tác dụng phụ (gửi, xóa, chi tiền) phải **có người duyệt** hoặc giới hạn ngặt, không cho agent tự chạy.
-- Áp **đặc quyền tối thiểu**: model chỉ được chạm đúng dữ liệu và hành động nó cần. Đừng đưa cho nó cái khóa vạn năng.
+- Áp **[đặc quyền tối thiểu](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)**: model chỉ được chạm đúng dữ liệu và hành động nó cần. Đừng đưa cho nó cái khóa vạn năng.
 - Phân quyền ở **tầng dữ liệu**, không nhờ model tự giữ bí mật. Nếu người dùng A không được xem dữ liệu người dùng B, hãy chặn ở query, đừng tin vào câu "đừng tiết lộ" trong prompt.
 
 ### 3. Kiểm tra cả đầu vào lẫn đầu ra

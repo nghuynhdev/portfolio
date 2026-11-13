@@ -23,7 +23,7 @@ I'd define the scope like this: read the selected post and its relevant sources;
 
 ## Create the minimal structure
 
-As covered in [choosing skills for Claude Code](/ai-for-devs/chon-skill-cho-claude-code), project skills can live under `.claude/skills/` with a `SKILL.md` file. For example:
+As covered in [choosing skills for Claude Code](/ai-for-devs/chon-skill-cho-claude-code), project skills can live under `.claude/skills/` with a [`SKILL.md`](https://code.claude.com/docs/en/skills) file. For example:
 
 ```text
 .claude/

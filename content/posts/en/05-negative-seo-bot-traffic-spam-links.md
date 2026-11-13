@@ -45,9 +45,9 @@ It makes sense when you think about it. If junk links alone could get a site pen
 
 ### Check whether you were actually penalized
 
-In Search Console, open **Manual Actions**.
+In Search Console, open **[Manual Actions](https://support.google.com/webmasters/answer/9044175)**.
 
-A manual action is issued when a human reviewer at Google determines that a site violates the spam policies. If there is one, it is listed here with the reason. If there is none, you see a green check mark and a message saying no issues were detected.
+A manual action is issued when a human reviewer at Google determines that a site violates the [spam policies](https://developers.google.com/search/docs/essentials/spam-policies). If there is one, it is listed here with the reason. If there is none, you see a green check mark and a message saying no issues were detected.
 
 The green check means you have **not been manually penalized**. Anyone calling to promise "penalty removal in 48 hours" at that point is selling something you don't need.
 

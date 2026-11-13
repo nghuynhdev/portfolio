@@ -63,7 +63,7 @@ Một hệ quả quan trọng: vì có yếu tố bốc xác suất, **cùng m�
 
 Model không có bộ nhớ. Nó không "nhớ" bạn vừa nói gì ở tin nhắn trước. Ảo giác về trí nhớ đến từ việc **mỗi lần gọi, bạn gửi lại toàn bộ lịch sử hội thoại** cho nó đọc từ đầu.
 
-Toàn bộ những gì bạn gửi + những gì nó sinh ra phải nằm gọn trong **context window** — giới hạn số token của model (ví dụ 128k token). Hai điều rút ra:
+Toàn bộ những gì bạn gửi + những gì nó sinh ra phải nằm gọn trong **[context window](https://platform.claude.com/docs/en/build-with-claude/context-windows)** — giới hạn số token của model (ví dụ 128k token). Hai điều rút ra:
 
 1. Hội thoại càng dài, mỗi lượt gọi càng tốn token (vì phải gửi lại hết). Chi phí tăng tuyến tính theo độ dài, không phải hằng số.
 2. Vượt quá cửa sổ, bạn buộc phải cắt bớt lịch sử — và model sẽ "quên" phần bị cắt. Cảm giác "nãy nói rồi mà giờ hỏi lại" là do bạn đã cắt mất đoạn đó khỏi context, chứ không phải nó lú.
@@ -83,7 +83,7 @@ Thực tế khi code, mình xử lý thế này:
 
 ## Embedding: khi văn bản biến thành tọa độ
 
-Thêm một mảnh nữa để bạn đủ bức tranh. Ngoài việc sinh text, model còn biết biến một đoạn văn bản thành một **vector** — một dãy số, kiểu `[0.01, -0.23, 0.88, ...]` dài vài trăm tới vài nghìn chiều. Đó gọi là embedding.
+Thêm một mảnh nữa để bạn đủ bức tranh. Ngoài việc sinh text, model còn biết biến một đoạn văn bản thành một **vector** — một dãy số, kiểu `[0.01, -0.23, 0.88, ...]` dài vài trăm tới vài nghìn chiều. [Đó gọi là embedding](https://platform.claude.com/docs/en/build-with-claude/embeddings).
 
 Điểm hay: hai đoạn văn bản **gần nghĩa nhau** thì hai vector của chúng **gần nhau trong không gian**. "chó" và "cún" gần nhau; "chó" và "hóa đơn thuế" xa nhau. Nhờ vậy ta "tìm theo nghĩa" được, chứ không chỉ khớp từ khóa. Toàn bộ RAG, semantic search, gợi ý "bài liên quan" đều đứng trên ý tưởng này. Giờ chỉ cần nhớ: **embedding = văn bản → tọa độ, gần nghĩa thì gần nhau**.
 

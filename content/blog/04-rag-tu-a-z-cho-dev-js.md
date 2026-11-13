@@ -14,13 +14,13 @@ cover: /images/blog/04-rag-tu-a-z-cho-dev-js-v2.webp
 
 **RAG (Retrieval-Augmented Generation) là kỹ thuật cho LLM trả lời dựa trên tài liệu của bạn: trước khi hỏi model, hệ thống tìm vài đoạn tài liệu liên quan nhất rồi đưa vào prompt làm ngữ cảnh.** Nhờ đó model trả lời theo dữ liệu riêng và mới cập nhật mà không cần huấn luyện lại.
 
-Câu hỏi muôn thuở khi làm chatbot cho công ty: "làm sao để nó trả lời dựa trên tài liệu nội bộ của mình?". Nhiều người phản xạ đầu tiên là nhồi hết tài liệu vào prompt. Làm thử là thấy ngay hai vấn đề: tài liệu dài hơn context window, và mỗi câu hỏi lại gửi lại cả núi chữ nên vừa chậm vừa đốt tiền.
+Câu hỏi muôn thuở khi làm chatbot cho công ty: "làm sao để nó trả lời dựa trên tài liệu nội bộ của mình?". Nhiều người phản xạ đầu tiên là nhồi hết tài liệu vào prompt. Làm thử là thấy ngay hai vấn đề: tài liệu dài hơn [context window](https://platform.claude.com/docs/en/build-with-claude/context-windows), và mỗi câu hỏi lại gửi lại cả núi chữ nên vừa chậm vừa đốt tiền.
 
 Lời giải đúng là RAG. Nghe đao to búa lớn, nhưng model không cần nhớ toàn bộ tài liệu, nó chỉ cần đọc đúng mẩu bạn đưa.
 
 ## Nhắc lại một ý từ bài đầu: embedding
 
-RAG đứng trên embedding. Nhớ lại từ [bài LLM hoạt động thế nào](/ai-for-devs/llm-hoat-dong-the-nao-cho-dev): embedding biến một đoạn văn bản thành một vector (dãy số), và hai đoạn **gần nghĩa** thì hai vector **gần nhau**. Nhờ đó ta tìm theo *nghĩa* chứ không chỉ khớp từ khóa — người dùng hỏi "cách hoàn tiền" vẫn ra được đoạn viết "chính sách refund".
+RAG đứng trên [embedding](https://platform.claude.com/docs/en/build-with-claude/embeddings). Nhớ lại từ [bài LLM hoạt động thế nào](/ai-for-devs/llm-hoat-dong-the-nao-cho-dev): embedding biến một đoạn văn bản thành một vector (dãy số), và hai đoạn **gần nghĩa** thì hai vector **gần nhau**. Nhờ đó ta tìm theo *nghĩa* chứ không chỉ khớp từ khóa — người dùng hỏi "cách hoàn tiền" vẫn ra được đoạn viết "chính sách refund".
 
 ## Luồng RAG gồm hai pha
 

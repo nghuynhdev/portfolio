@@ -65,7 +65,7 @@ Nếu đưa cả ba vào file gốc mà không quản lý vòng đời, sau vài
 
 ## Nội dung hướng dẫn không phải cơ chế phân quyền
 
-Một câu “không được đọc bí mật” là chỉ thị, không thay thế quyền filesystem, quyền tool hay cấu hình runtime. Không đưa token và mật khẩu vào `CLAUDE.md` để agent “biết mà tránh dùng”. Dùng cơ chế quản lý bí mật của ứng dụng.
+Một câu “không được đọc bí mật” là chỉ thị, không thay thế quyền filesystem, [quyền tool](https://code.claude.com/docs/en/permissions) hay cấu hình runtime. Không đưa token và mật khẩu vào `CLAUDE.md` để agent “biết mà tránh dùng”. Dùng cơ chế quản lý bí mật của ứng dụng.
 
 Vì vậy thêm câu “bỏ qua mọi giới hạn” vào `CLAUDE.md` cũng không “jailbreak” được gì; mình phân tích kỹ trong bài [Jailbreak Claude và giới hạn của CLAUDE.md](/ai-for-devs/jailbreak-claude-va-gioi-han-claude-md).
 

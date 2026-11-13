@@ -78,7 +78,7 @@ A trace is only useful if it tells you **which version** was running. Don't stor
 
 Attach `release` to every trace. When quality drops after a deployment, you compare `prompt-v13` with `prompt-v14` instead of guessing which string just changed. If your provider only offers a model alias that can update itself, record that reproducibility limit and use a pinned snapshot when one is available.
 
-Attribute names like `app.prompt_version` are your application's own convention. If you want to follow a shared standard, look at the OpenTelemetry GenAI semantic conventions for the version you use.
+Attribute names like `app.prompt_version` are your application's own convention. If you want to follow a shared standard, look at the OpenTelemetry [GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions-genai) for the version you use.
 
 ## Part 3 — Roll out with a way back
 
@@ -92,7 +92,7 @@ Shadow mode runs the new version on a sample of inputs while users keep receivin
 
 ### Canaries with stable groups
 
-Google SRE describes a canary as a limited deployment followed by a decision on whether to expand. For a chatbot, keep the same group for the whole conversation so behavior doesn't change every turn:
+[Google SRE](https://sre.google/workbook/canarying-releases/) describes a canary as a limited deployment followed by a decision on whether to expand. For a chatbot, keep the same group for the whole conversation so behavior doesn't change every turn:
 
 ```ts
 import { createHash } from 'node:crypto';

@@ -14,7 +14,7 @@ cover: /images/blog/05-ai-agent-dau-tien-function-calling-v2.webp
 
 Marketing has made "AI agent" sound far more mysterious than it is. Strip it down and an agent is just an LLM given some **tools** it can call, plus a **loop** that lets it call a tool, read the result and decide the next step. That's all. No consciousness, no scheming — just token prediction plus the ability to say "I want to run this function with these arguments".
 
-This post goes from the mechanics of tool calling to building a small working agent, and more importantly: what you must block so it doesn't do damage.
+This post goes from the mechanics of [tool calling](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview) to building a small working agent, and more importantly: what you must block so it doesn't do damage.
 
 ## What tool calling really is
 
@@ -38,7 +38,7 @@ That "repeat until" is the soul of an agent: it can chain several tools (look up
 
 ## Define tools with schemas and run the loop
 
-With the AI SDK, you declare tools with a parameter schema; the SDK also runs the loop that calls the model again after each tool.
+With the [AI SDK](https://ai-sdk.dev/docs/foundations/tools), you declare tools with a parameter schema; the SDK also runs the loop that calls the model again after each tool.
 
 ```ts
 import { generateText, tool, isStepCount } from 'ai';

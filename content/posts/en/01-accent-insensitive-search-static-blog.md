@@ -23,7 +23,7 @@ With a few dozen posts, the searchable data is just titles, descriptions, keywor
 
 ## Stripping Vietnamese diacritics correctly
 
-The common approach is to normalize the string to NFD and delete the combining marks. In NFD, `ế` is split into `e` plus two mark characters (circumflex and acute), which sit in the Unicode range U+0300 to U+036F:
+The common approach is to normalize the string to [NFD](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) and delete the combining marks. In NFD, `ế` is split into `e` plus two mark characters (circumflex and acute), which sit in the Unicode range U+0300 to U+036F:
 
 ```ts
 function foldText(text: string): string {
@@ -117,7 +117,7 @@ One small bug is easy to hit: clicking a suggestion blurs the input, and the pan
 This approach has clear limits:
 
 - **A few hundred posts:** sending every title and description with each page view starts to cost. Move the index into its own JSON file and load it only when the reader focuses the search box.
-- **Searching full post content:** use a build-time indexer such as Pagefind, or a library such as FlexSearch or MiniSearch.
+- **Searching full post content:** use a build-time indexer such as [Pagefind](https://pagefind.app/), or a library such as FlexSearch or [MiniSearch](https://github.com/lucaong/minisearch).
 - **Typo tolerance or searching by meaning:** `indexOf` cannot do either. Searching by meaning is a job for embeddings, which I covered in the post on [hybrid search and reranking](/ai-for-devs/rag-production-tu-ingestion-den-hybrid-search).
 
 For a personal blog, the few functions above are enough, and you understand every line of them.

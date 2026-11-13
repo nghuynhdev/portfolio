@@ -45,7 +45,7 @@ const messages = [
 ];
 ```
 
-Đừng nhét dữ liệu người dùng vào `system`. `system` là luật, `user` là dữ liệu — lẫn lộn là mở đường cho prompt injection (mình viết riêng trong bài [bảo mật AI và prompt injection](/ai-for-devs/bao-mat-ai-prompt-injection)).
+Đừng nhét dữ liệu người dùng vào `system`. `system` là luật, `user` là dữ liệu — lẫn lộn là mở đường cho [prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) (mình viết riêng trong bài [bảo mật AI và prompt injection](/ai-for-devs/bao-mat-ai-prompt-injection)).
 
 ## Few-shot: dạy bằng ví dụ, không giảng lý thuyết
 
@@ -66,7 +66,7 @@ Hai ba ví dụ bao được các ca "khó" (như câu vừa khen vừa chê ở
 
 Đây là thứ mình thấy dev mới hay làm sai nhất: bảo model "trả lời dạng JSON" rồi dùng regex cắt chuỗi. Model thỉnh thoảng thêm ```json ... ```, thêm câu "Đây là kết quả:", thế là vỡ parser.
 
-Cách đúng là dùng structured output với schema. Model bị ép trả về đúng cấu trúc:
+Cách đúng là dùng [structured output](https://platform.claude.com/docs/en/build-with-claude/structured-outputs) với schema. Model bị ép trả về đúng cấu trúc:
 
 ```ts
 import { generateText, Output } from 'ai';

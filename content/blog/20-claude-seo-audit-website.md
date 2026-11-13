@@ -53,11 +53,11 @@ Không suy ra traffic, search volume hoặc thứ hạng khi chưa có nguồn.
 
 Chọn trang danh sách, một bài viết và một URL không tồn tại. Xem title, mô tả, nội dung chính, link nội bộ và trạng thái HTTP có phù hợp từng trang không. Kiểm tra sitemap có các URL đang phục vụ, tránh chỉ xác nhận file XML tồn tại.
 
-Canonical cần chỉ đúng trang đại diện, không gom mọi bài về trang chủ. Google mô tả canonical là tín hiệu ưu tiên, không phải mệnh lệnh chắc chắn được chọn. Khi sửa, xem cả redirect và liên kết nội bộ có cùng hướng đến URL mong muốn không.
+Canonical cần chỉ đúng trang đại diện, không gom mọi bài về trang chủ. [Google mô tả canonical](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) là tín hiệu ưu tiên, không phải mệnh lệnh chắc chắn được chọn. Khi sửa, xem cả redirect và liên kết nội bộ có cùng hướng đến URL mong muốn không.
 
 ## Schema phải mô tả nội dung thật
 
-Với bài blog, đối chiếu tác giả, tiêu đề và ngày trong JSON-LD với nội dung hiển thị. Không tạo review, đánh giá sao hay thông tin tác giả không có thật chỉ để lấp field. Google giải thích structured data như cách cung cấp thông tin có cấu trúc; việc hợp lệ không bảo đảm được hiển thị rich result.
+Với bài blog, đối chiếu tác giả, tiêu đề và ngày trong JSON-LD với nội dung hiển thị. Không tạo review, đánh giá sao hay thông tin tác giả không có thật chỉ để lấp field. [Google giải thích structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) như cách cung cấp thông tin có cấu trúc; việc hợp lệ không bảo đảm được hiển thị rich result.
 
 Sau sửa, dùng công cụ xác thực phù hợp và xem HTML từ bản triển khai. Một object JSON đúng trong source chưa chứng minh trang cuối đã xuất đúng dữ liệu.
 
@@ -67,4 +67,4 @@ Mình sẽ xử lý lỗi cản truy cập hoặc nội dung chính trước, r�
 
 Với nội dung, dùng tiêu chí hữu ích cho người đọc của Google: bài giải quyết câu hỏi gì, có ví dụ kiểm chứng được không, có thông tin riêng vượt qua việc diễn đạt lại nguồn không? Không lấy việc lặp từ khóa làm mục tiêu viết bài. Ví dụ trong bài lấy bối cảnh một blog cá nhân như [website của mình](/): trang giới thiệu cộng một series bài viết.
 
-Điểm audit là đầu vào để quyết định, không phải lời hứa tăng hạng. Sau khi triển khai, theo dõi trạng thái crawl/index và dữ liệu Search Console nếu bạn có quyền truy cập. Ghi riêng ngày thay đổi để đánh giá theo thời gian, thay vì coi một lần chạy lại báo cáo là bằng chứng traffic đã tăng.
+Điểm audit là đầu vào để quyết định, không phải lời hứa tăng hạng. Sau khi triển khai, theo dõi trạng thái crawl/index và dữ liệu [Search Console](https://search.google.com/search-console/about) nếu bạn có quyền truy cập. Ghi riêng ngày thay đổi để đánh giá theo thời gian, thay vì coi một lần chạy lại báo cáo là bằng chứng traffic đã tăng.

@@ -51,7 +51,7 @@ function grade(output, e) {
 }
 ```
 
-- **LLM-as-judge.** Với output tự do (câu trả lời, bản tóm tắt), dùng một model khác chấm theo rubric: "câu trả lời có bám ngữ cảnh không, có đúng trọng tâm không, cho điểm 1–5". Mạnh nhưng phải cẩn thận: cho judge tiêu chí thật rõ, và thỉnh thoảng đối chiếu điểm của judge với đánh giá của người để chắc nó không chấm tùy hứng.
+- **[LLM-as-judge](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests).** Với output tự do (câu trả lời, bản tóm tắt), dùng một model khác chấm theo rubric: "câu trả lời có bám ngữ cảnh không, có đúng trọng tâm không, cho điểm 1–5". Mạnh nhưng phải cẩn thận: cho judge tiêu chí thật rõ, và thỉnh thoảng đối chiếu điểm của judge với đánh giá của người để chắc nó không chấm tùy hứng.
 
 ```ts
 const judgePrompt = `Chấm câu trả lời theo thang 1-5.

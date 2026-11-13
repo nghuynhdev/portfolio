@@ -11,7 +11,7 @@ cover: /images/blog/08-chay-llm-local-voi-ollama-v2.webp
 
 # Chạy LLM local với Ollama: khi nào nên, khi nào đừng
 
-Có hai thứ khiến dev muốn chạy LLM ngay trên máy mình: không phải trả tiền theo token, và dữ liệu không rời khỏi máy. Cả hai đều chính đáng. Nhưng trước khi hào hứng gỡ hết OpenAI ra, cần nhìn thẳng vào cái giá của nó. Bài này cho bạn dựng một model local trong vài phút bằng Ollama, rồi bàn thật lòng khi nào nên và khi nào đừng.
+Có hai thứ khiến dev muốn chạy LLM ngay trên máy mình: không phải trả tiền theo token, và dữ liệu không rời khỏi máy. Cả hai đều chính đáng. Nhưng trước khi hào hứng gỡ hết OpenAI ra, cần nhìn thẳng vào cái giá của nó. Bài này cho bạn dựng một model local trong vài phút bằng [Ollama](https://ollama.com/), rồi bàn thật lòng khi nào nên và khi nào đừng.
 
 ## Dựng trong vài phút
 
@@ -29,7 +29,7 @@ Ollama mở sẵn một HTTP server ở `localhost:11434`, nên gọi từ code 
 
 ## Gọi từ Node/Next.js
 
-Điểm tiện nhất: Ollama phơi ra endpoint tương thích OpenAI, nên bạn dùng lại đúng SDK quen thuộc, chỉ đổi `baseURL`.
+Điểm tiện nhất: Ollama phơi ra [endpoint tương thích OpenAI](https://docs.ollama.com/api/openai-compatibility), nên bạn dùng lại đúng SDK quen thuộc, chỉ đổi `baseURL`.
 
 ```ts
 import OpenAI from 'openai';

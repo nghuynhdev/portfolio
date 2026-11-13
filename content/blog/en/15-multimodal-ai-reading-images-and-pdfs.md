@@ -49,7 +49,7 @@ type ExtractedForm = {
 };
 ```
 
-After receiving output, validate it at runtime with JSON Schema or a suitable library. TypeScript doesn't check JSON that arrives over the network. Structured output constrains the shape; it doesn't prove the order code or date was read correctly.
+After receiving output, validate it at runtime with [JSON Schema](https://json-schema.org/) or a suitable library. TypeScript doesn't check JSON that arrives over the network. [Structured output](https://platform.claude.com/docs/en/build-with-claude/structured-outputs) constrains the shape; it doesn't prove the order code or date was read correctly.
 
 In the prompt, require the model not to fill in blurry characters, not to infer missing dates, and to number pages starting from 1. For a date like `03/04`, if the document doesn't state its convention and there isn't enough evidence, keep the original value for a later step to handle.
 

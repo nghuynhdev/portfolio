@@ -11,7 +11,7 @@ cover: /images/blog/10-mcp-model-context-protocol-v2.webp
 
 # What Is MCP (Model Context Protocol) and Why Developers Should Care
 
-**MCP (Model Context Protocol) is an open protocol, started by Anthropic, that standardizes how AI applications connect to external tools and data sources.** Write one MCP server for your tool, and every MCP-capable client, such as Claude, Cursor or VS Code, can use it.
+**MCP ([Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)) is an open protocol, started by Anthropic, that standardizes how AI applications connect to external tools and data sources.** Write one MCP server for your tool, and every MCP-capable client, such as Claude, Cursor or VS Code, can use it.
 
 In [the post on tool calling](/ai-for-devs/ai-agent-dau-tien-function-calling), we saw an agent become more capable once it's given tools: looking up data, calling APIs, reading files. But after doing this a few times you hit a very engineering kind of pain: every AI application has to rewrite how it connects to each tool. App A wants to read GitHub, so it builds a GitHub integration; app B also wants to read GitHub, so it... builds one from scratch. Multiply by dozens of tools and dozens of apps and you get the classic **N×M** integration problem.
 
@@ -26,7 +26,7 @@ The usual analogy: MCP is a **USB-C port for AI**. Before USB, every device had 
 ## An MCP server exposes three things
 
 - **Tools** — actions the model can call (query a database, create an issue, send a message). Like tool calling from the previous post, but standardized.
-- **Resources** — data the model can read (files, records, documents).
+- **[Resources](https://modelcontextprotocol.io/specification/2025-06-18/server/resources)** — data the model can read (files, records, documents).
 - **Prompts** — ready-made prompt templates for common tasks.
 
 A client (an IDE with AI, a chat app, an agent) connects to the server, asks "what do you have?", and lets the model use those tools and resources through a single protocol.

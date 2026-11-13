@@ -77,7 +77,7 @@ Nhóm việc thứ hai là che chắn cho ứng dụng. Nội dung tĩnh đượ
 
 Khi bạn mở một trang web lớn, thứ bạn chạm vào gần như chắc chắn là reverse proxy chứ không phải server ứng dụng. [Site bạn đang đọc](/) cũng vậy: nó chạy trên Vercel, và request của bạn đi qua lớp mạng biên của họ trước khi tới được trang.
 
-Một cấu hình Nginx tối thiểu trông thế này:
+Một [cấu hình Nginx](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) tối thiểu trông thế này:
 
 ```nginx
 upstream api {
@@ -123,7 +123,7 @@ app.set('trust proxy', 1)
 
 Số `1` nghĩa là tin đúng một lớp proxy đứng ngay trước app. Có hai lớp, ví dụ Cloudflare rồi tới Nginx, thì là `2`.
 
-Đừng viết `app.set('trust proxy', true)` cho nhanh. Header là thứ client tự gửi được. Biến `$proxy_add_x_forwarded_for` của Nginx **nối thêm** IP thật vào sau giá trị client gửi lên chứ không ghi đè. Nếu app tin tất cả và lấy giá trị ngoài cùng bên trái, kẻ tấn công chỉ cần tự thêm header `X-Forwarded-For: 1.2.3.4` là đổi được IP của mình trong mắt app, và vượt qua giới hạn tần suất. [Tài liệu Express](https://expressjs.com/en/guide/behind-proxies.html) cảnh báo đúng điều này: nếu bật `true`, proxy cuối cùng phải xóa hoặc ghi đè các header đó, không thì client gửi giá trị nào cũng được.
+Đừng viết `app.set('trust proxy', true)` cho nhanh. Header là thứ client tự gửi được. Biến `$proxy_add_x_forwarded_for` của Nginx **nối thêm** IP thật vào sau giá trị client gửi lên chứ không ghi đè. Nếu app tin tất cả và lấy giá trị ngoài cùng bên trái, kẻ tấn công chỉ cần tự thêm header `X-Forwarded-For: 1.2.3.4` là đổi được IP của mình trong mắt app, và vượt qua giới hạn tần suất. [Tài liệu Express](https://expressjs.com/en/guide/behind-proxies/) cảnh báo đúng điều này: nếu bật `true`, proxy cuối cùng phải xóa hoặc ghi đè các header đó, không thì client gửi giá trị nào cũng được.
 
 Khai báo đúng số lớp proxy thì Express đếm từ phải sang, lấy đúng địa chỉ do proxy của bạn ghi vào, bỏ qua phần client tự bịa.
 

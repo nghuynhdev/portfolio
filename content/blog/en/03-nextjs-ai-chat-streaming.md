@@ -23,11 +23,11 @@ Two very practical reasons:
 - **It feels fast.** Models generate tokens gradually; streaming shows text from the first token instead of waiting for the last. Time to first text is a few hundred milliseconds, even if the whole answer takes ten seconds.
 - **It avoids timeouts.** A long answer can exceed the time limit of a normal request. Streaming keeps the connection open and pushes data continuously, so it is less likely to be cut off.
 
-A common misconception: "you need the Edge runtime to stream". You don't. In Next.js, a route handler on the regular Node.js runtime streams fine (`ReadableStream`, SSE) and keeps the full Node API. Don't add `export const runtime = 'edge'` just to stream.
+A common misconception: "you need the Edge runtime to stream". You don't. In Next.js, a [route handler](https://nextjs.org/docs/app/api-reference/file-conventions/route) on the regular Node.js runtime streams fine (`ReadableStream`, [SSE](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)) and keeps the full Node API. Don't add `export const runtime = 'edge'` just to stream.
 
 ## Server side: a route handler that pushes tokens
 
-I use the Vercel AI SDK to keep things short, since it handles the stream format between server and client. Models are called through the gateway with a `"provider/model"` string, so switching providers is just changing the string.
+I use the [Vercel AI SDK](https://ai-sdk.dev/docs/introduction) to keep things short, since it handles the stream format between server and client. Models are called through the gateway with a `"provider/model"` string, so switching providers is just changing the string.
 
 ```ts
 // app/api/chat/route.ts

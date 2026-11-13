@@ -31,7 +31,7 @@ Mình sẽ phân loại ca lỗi trước khi chọn giải pháp:
 
 ## LoRA giảm phần phải huấn luyện
 
-Thay vì cập nhật mọi trọng số, LoRA giữ trọng số gốc cố định và học các ma trận cập nhật nhỏ hơn. [Tài liệu PEFT của Hugging Face giải thích cơ chế này](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora). Nó có thể giảm tài nguyên dành cho fine-tuning, nhưng không khiến mọi model đều chạy vừa laptop.
+Thay vì cập nhật mọi trọng số, [LoRA giữ trọng số gốc cố định](https://arxiv.org/abs/2106.09685) và học các ma trận cập nhật nhỏ hơn. [Tài liệu PEFT của Hugging Face giải thích cơ chế này](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora). Nó có thể giảm tài nguyên dành cho fine-tuning, nhưng không khiến mọi model đều chạy vừa laptop.
 
 Bạn vẫn phải tính bộ nhớ cho base model, activation, độ dài chuỗi và cấu hình huấn luyện. Khi triển khai, adapter phải tương thích với base model và cách phục vụ. Kiểm tra điều kiện sử dụng model trước khi biến thử nghiệm thành tính năng sản phẩm.
 

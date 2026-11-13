@@ -45,7 +45,7 @@ Như vậy Claude phải chứng minh điều hướng thật sự hoạt độn
 
 ## Quan sát rồi mới chọn locator
 
-Playwright khuyến khích kiểm tra hành vi người dùng nhìn thấy và dùng locator bền vững. Tên nhãn hay vai trò thường diễn đạt ý định tốt hơn selector dựa vào vị trí của `div`.
+[Playwright khuyến khích](https://playwright.dev/docs/best-practices) kiểm tra hành vi người dùng nhìn thấy và dùng [locator bền vững](https://playwright.dev/docs/locators). Tên nhãn hay vai trò thường diễn đạt ý định tốt hơn selector dựa vào vị trí của `div`.
 
 Thanh phân trang của blog này là một `nav` có nhãn “Phân trang”, mỗi số trang là link có nhãn “Trang N”. Kịch bản Python bám đúng các nhãn đó:
 

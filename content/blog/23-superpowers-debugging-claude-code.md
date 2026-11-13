@@ -28,7 +28,7 @@ Kiểm tra bản cài và mô tả workflow trước khi dùng. Một bộ quy t
 
 ## Yêu cầu điều tra trước khi thử sửa
 
-Skill systematic-debugging nhấn mạnh tìm nguyên nhân gốc qua đọc lỗi, tái hiện và kiểm tra bằng chứng. Để áp vào lỗi tìm kiếm, đề bài có thể là:
+Skill [systematic-debugging](https://github.com/obra/superpowers/tree/main/skills/systematic-debugging) nhấn mạnh tìm nguyên nhân gốc qua đọc lỗi, tái hiện và kiểm tra bằng chứng. Để áp vào lỗi tìm kiếm, đề bài có thể là:
 
 ```text
 Điều tra lỗi kết quả tìm kiếm nhảy về từ khóa cũ.

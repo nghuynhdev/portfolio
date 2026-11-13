@@ -78,7 +78,7 @@ Một trace chỉ hữu ích khi nó cho biết **bản nào** đang chạy. Đ�
 
 Gắn `release` vào mọi trace. Khi chất lượng giảm sau một đợt triển khai, bạn so `prompt-v13` với `prompt-v14` thay vì đoán string nào vừa đổi. Nếu provider chỉ cho alias model có thể tự cập nhật, ghi nhận giới hạn tái lập đó và dùng snapshot cố định khi có.
 
-Tên thuộc tính như `app.prompt_version` là quy ước riêng của ứng dụng. Nếu muốn theo chuẩn chung, xem semantic conventions GenAI của OpenTelemetry đúng phiên bản bạn dùng.
+Tên thuộc tính như `app.prompt_version` là quy ước riêng của ứng dụng. Nếu muốn theo chuẩn chung, xem [semantic conventions GenAI](https://github.com/open-telemetry/semantic-conventions-genai) của OpenTelemetry đúng phiên bản bạn dùng.
 
 ## Phần 3 — Rollout có đường quay về
 
@@ -92,7 +92,7 @@ Shadow chạy bản mới trên một mẫu đầu vào trong khi người dùng
 
 ### Canary với nhóm ổn định
 
-Google SRE mô tả canary là triển khai giới hạn rồi quyết định có mở rộng không. Với chatbot, giữ cùng một nhóm cho cả hội thoại để không mỗi lượt một hành vi:
+[Google SRE](https://sre.google/workbook/canarying-releases/) mô tả canary là triển khai giới hạn rồi quyết định có mở rộng không. Với chatbot, giữ cùng một nhóm cho cả hội thoại để không mỗi lượt một hành vi:
 
 ```ts
 import { createHash } from 'node:crypto';

@@ -77,7 +77,7 @@ The second group of jobs is shielding the application. Static content is cached 
 
 When you open a large website, what you reach is almost certainly a reverse proxy, not an application server. [The site you are reading](/) is no different: it runs on Vercel, and your request passes through their edge network before it gets to the page.
 
-A minimal Nginx configuration looks like this:
+A minimal [Nginx configuration](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) looks like this:
 
 ```nginx
 upstream api {
@@ -123,7 +123,7 @@ app.set('trust proxy', 1)
 
 The `1` means: trust exactly one proxy directly in front of the app. With two layers, for example Cloudflare and then Nginx, it is `2`.
 
-Don't write `app.set('trust proxy', true)` as a shortcut. Headers are something the client can send too. Nginx's `$proxy_add_x_forwarded_for` variable **appends** the real IP after whatever the client sent. It does not overwrite it. If the app trusts everything and takes the left-most value, an attacker only has to add an `X-Forwarded-For: 1.2.3.4` header to change their IP as the app sees it, and get around rate limiting. The [Express docs](https://expressjs.com/en/guide/behind-proxies.html) warn about exactly this: with `true`, the last trusted proxy must remove or overwrite those headers, or the client can supply any value.
+Don't write `app.set('trust proxy', true)` as a shortcut. Headers are something the client can send too. Nginx's `$proxy_add_x_forwarded_for` variable **appends** the real IP after whatever the client sent. It does not overwrite it. If the app trusts everything and takes the left-most value, an attacker only has to add an `X-Forwarded-For: 1.2.3.4` header to change their IP as the app sees it, and get around rate limiting. The [Express docs](https://expressjs.com/en/guide/behind-proxies/) warn about exactly this: with `true`, the last trusted proxy must remove or overwrite those headers, or the client can supply any value.
 
 Declare the right number of proxy layers and Express counts from the right, takes the address your own proxy wrote, and ignores whatever the client made up.
 

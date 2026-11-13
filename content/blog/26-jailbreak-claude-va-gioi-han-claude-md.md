@@ -74,9 +74,9 @@ Không cần dùng bí mật thật, endpoint nhận dữ liệu hay quyền má
 
 Ghi model được dùng, môi trường, ngày chạy, vị trí đặt chỉ thị và số lần thử. Xác định trước điều kiện thành công/thất bại, rồi ghi cả những lần model giữ đúng nhiệm vụ. Trong Claude Code, lưu thêm cấu hình quyền và tool được bật để phân biệt đề nghị của model với hành động thật.
 
-Thêm ca hợp lệ có trích một câu mang dạng mệnh lệnh, chẳng hạn bài viết đang phân tích prompt injection. Hệ thống cần đọc và giải thích được câu đó mà không làm theo. Chặn mọi tài liệu chứa từ “bỏ qua” cũng sẽ làm hỏng công việc bình thường.
+Thêm ca hợp lệ có trích một câu mang dạng mệnh lệnh, chẳng hạn bài viết đang phân tích [prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/). Hệ thống cần đọc và giải thích được câu đó mà không làm theo. Chặn mọi tài liệu chứa từ “bỏ qua” cũng sẽ làm hỏng công việc bình thường.
 
-Anthropic tiếp tục cập nhật phòng vệ, trong đó có nghiên cứu Constitutional Classifiers công bố tháng 1/2026. Kết quả của một thử nghiệm phụ thuộc thiết lập; không nên biến nó thành tuyên bố “Claude đã miễn nhiễm” hoặc “mọi Claude đều bị mở khóa”.
+Anthropic tiếp tục cập nhật phòng vệ, trong đó có nghiên cứu [Constitutional Classifiers](https://www.anthropic.com/research/next-generation-constitutional-classifiers) công bố tháng 1/2026. Kết quả của một thử nghiệm phụ thuộc thiết lập; không nên biến nó thành tuyên bố “Claude đã miễn nhiễm” hoặc “mọi Claude đều bị mở khóa”.
 
 ## Nếu mục tiêu là Claude làm việc bớt vướng
 
