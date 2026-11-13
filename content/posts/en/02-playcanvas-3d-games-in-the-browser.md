@@ -112,7 +112,7 @@ These two are not really rivals. They suit different kinds of work.
 
 Pick **PlayCanvas** when you are building a game or a 3D experience with many scenes, and some people on the team don't write code. The Editor lets them adjust scenes on their own, and you stop being the go-between for every small change.
 
-Pick **Three.js** when you only need a little 3D inside an existing page: a rotatable product model, a background effect, a 3D chart. It is lighter, and if you use React, React Three Fiber lets you write a 3D scene the way you write components. The particle background on [my homepage](/) uses exactly that.
+Pick **Three.js** when you only need a little 3D inside an existing page: a rotatable product model, a background effect, a 3D chart. It is lighter, and if you use React, React Three Fiber lets you write a 3D scene the way you write components. The moving particles behind [the homepage](/) are built with exactly that.
 
 ## Cost
 

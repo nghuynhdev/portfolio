@@ -83,11 +83,11 @@ Sau khi tải lên, Google cần vài tuần để áp dụng. Việc xét duy�
 
 Trước hết nói về tác hại thật của nó. Nhiều người lo rằng bot vào rồi thoát ngay làm tỷ lệ thoát tăng, và Google nhìn thấy sẽ đánh tụt hạng. Người của Google đã nhiều lần nói họ không dùng dữ liệu Google Analytics để xếp hạng.
 
-Tác hại thật nằm ở chỗ khác:
+Tác hại thật nằm ở chỗ khác.
 
-- **Server quá tải.** Web chậm hoặc trả lỗi. Khách thật bỏ đi, và nếu Googlebot liên tục gặp lỗi khi vào thu thập, thứ hạng bị ảnh hưởng thật.
-- **Số liệu bị nhiễu.** Bạn không còn biết chiến dịch nào hiệu quả vì lượt truy cập thật lẫn trong lượt ảo.
-- **Tốn tiền.** Băng thông, tài nguyên server, và cả tiền quảng cáo nếu bot bấm vào quảng cáo.
+Nặng nhất là server quá tải. Web chậm hoặc trả lỗi, khách thật bỏ đi, và nếu Googlebot liên tục gặp lỗi khi vào thu thập thì thứ hạng bị ảnh hưởng thật.
+
+Kế đó là số liệu bị nhiễu: lượt truy cập thật lẫn trong lượt ảo, nên bạn không còn biết chiến dịch nào đang hiệu quả. Cuối cùng là tiền. Bạn trả cho băng thông và tài nguyên server mà bot ngốn, và trả cả tiền quảng cáo nếu bot bấm vào quảng cáo.
 
 ### Bật Bot Fight Mode trên Cloudflare
 
@@ -138,10 +138,11 @@ Tất cả những điều trên chỉ có tác dụng khi lưu lượng thật 
 
 ## Những việc không nên làm
 
-- **Trả tiền cho dịch vụ gỡ phạt khi chưa xem Manual Actions.** Không có thông báo phạt thì không có gì để gỡ.
-- **Disavow hàng loạt cho yên tâm.** Bạn có thể tự tay bỏ đi những link đang giúp mình.
-- **Chặn hẳn cả dải IP hoặc cả quốc gia khi chưa xem số liệu.** Bạn chặn luôn khách của mình.
-- **Bắn lại đối thủ.** Ngoài chuyện đạo đức, link bạn mua để hại người khác có khi còn bị Google bỏ qua, tiền mất mà không được gì.
+Đừng trả tiền cho dịch vụ gỡ phạt khi chưa mở Manual Actions ra xem. Không có thông báo phạt thì không có gì để gỡ.
+
+Đừng disavow hàng loạt cho yên tâm, vì bạn có thể tự tay bỏ đi những link đang giúp mình. Cũng đừng chặn hẳn cả dải IP hay cả quốc gia khi chưa xem số liệu, kẻo chặn luôn khách của mình.
+
+Và đừng bắn lại đối thủ. Chưa nói tới chuyện đạo đức, link bạn mua để hại người khác nhiều khả năng bị Google bỏ qua. Tiền mất mà không được gì.
 
 ## Thứ tự xử lý, gọn lại
 

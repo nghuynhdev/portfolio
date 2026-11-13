@@ -83,11 +83,11 @@ After the upload, Google needs a few weeks to apply it. Reviews also take days t
 
 First, the real damage. Many people worry that bots arriving and leaving raise the bounce rate, and that Google sees this and drops the ranking. People at Google have said repeatedly that they do not use Google Analytics data for ranking.
 
-The real damage is elsewhere:
+The real damage is elsewhere.
 
-- **An overloaded server.** The site slows down or returns errors. Real customers leave, and if Googlebot keeps hitting errors when it crawls, rankings do suffer.
-- **Polluted numbers.** You can no longer tell which campaign works, because real visits are mixed in with fake ones.
-- **Money.** Bandwidth, server resources, and ad spend if the bots click your ads.
+The worst of it is an overloaded server. The site slows down or returns errors, real customers leave, and if Googlebot keeps hitting errors when it crawls, rankings do suffer.
+
+Then there are polluted numbers: real visits are mixed in with fake ones, so you can no longer tell which campaign is working. Last is money. You pay for the bandwidth and server resources the bots consume, and for ad spend too if they click your ads.
 
 ### Turn on Bot Fight Mode in Cloudflare
 
@@ -138,10 +138,11 @@ All of this only works when traffic actually passes through Cloudflare. If the s
 
 ## What not to do
 
-- **Paying for penalty removal before looking at Manual Actions.** No penalty notice means nothing to remove.
-- **Disavowing in bulk for peace of mind.** You may throw away links that are helping you.
-- **Blocking whole IP ranges or countries before looking at the data.** You block your own customers.
-- **Attacking the competitor back.** Ethics aside, the links you buy to hurt someone may simply be ignored by Google. You spend money and get nothing.
+Don't pay for penalty removal before you have opened Manual Actions. No penalty notice means there is nothing to remove.
+
+Don't disavow in bulk for peace of mind, because you may throw away links that are helping you. Don't block whole IP ranges or countries before looking at the data either, or you block your own customers.
+
+And don't attack the competitor back. Ethics aside, the links you buy to hurt someone will most likely be ignored by Google. You spend money and get nothing.
 
 ## The order of operations
 

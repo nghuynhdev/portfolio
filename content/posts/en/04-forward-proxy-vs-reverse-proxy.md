@@ -69,16 +69,13 @@ Users don't know how many servers are behind it, what their addresses are, or wh
 
 And unlike a forward proxy, the client **does not know** a proxy is there. To the client, the reverse proxy is the server.
 
-Because every request has to pass through it, it is the most convenient place for shared concerns:
+Because every request has to pass through it, it is the most convenient place for shared concerns.
 
-- **Load balancing:** spread requests across servers and skip the ones that are down.
-- **TLS termination:** decrypt HTTPS at the proxy and use plain HTTP inside the private network. Certificates are managed in one place.
-- **Caching:** return static content without asking the servers behind it.
-- **Rate limiting:** stop an address that calls too often before it reaches the application.
-- **Attack filtering:** block malicious requests and absorb DDoS traffic.
-- **Path-based routing:** `/api` goes to one service, `/images` to another.
+The most familiar one is load balancing: spreading requests across servers and skipping the ones that are down. Next is TLS termination. The proxy decrypts HTTPS and the private network behind it uses plain HTTP, so certificates are managed in one place. It also routes by path, for example `/api` to one service and `/images` to another.
 
-When you open a large website, what you reach is almost certainly a reverse proxy, not an application server. [This portfolio](/) is no different: it runs on Vercel, and your request passes through their edge network before it gets to the page.
+The second group of jobs is shielding the application. Static content is cached and returned without asking the servers behind it. An address that calls too often is rate limited before it reaches the application. Malicious requests and DDoS traffic are filtered here too.
+
+When you open a large website, what you reach is almost certainly a reverse proxy, not an application server. [The site you are reading](/) is no different: it runs on Vercel, and your request passes through their edge network before it gets to the page.
 
 A minimal Nginx configuration looks like this:
 

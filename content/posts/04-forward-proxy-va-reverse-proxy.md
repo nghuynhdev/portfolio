@@ -69,16 +69,13 @@ Người dùng không biết phía sau có bao nhiêu server, địa chỉ là g
 
 Và khác với forward proxy, client **không biết** là có proxy. Với client, reverse proxy chính là server.
 
-Vì mọi request đều phải đi qua nó, đây là chỗ tiện nhất để đặt các việc dùng chung:
+Vì mọi request đều phải đi qua nó, đây là chỗ tiện nhất để đặt các việc dùng chung.
 
-- **Cân bằng tải:** chia request cho nhiều server, bỏ qua server đang hỏng.
-- **Kết thúc TLS:** giải mã HTTPS ở proxy, bên trong mạng nội bộ đi HTTP thường. Chứng chỉ chỉ cần quản lý ở một chỗ.
-- **Lưu đệm:** trả luôn nội dung tĩnh mà không cần hỏi server phía sau.
-- **Giới hạn tần suất:** chặn một địa chỉ gọi quá nhiều trước khi nó chạm tới ứng dụng.
-- **Lọc tấn công:** chặn request độc hại, hấp thụ DDoS.
-- **Định tuyến theo đường dẫn:** `/api` vào dịch vụ này, `/images` vào dịch vụ khác.
+Việc quen thuộc nhất là cân bằng tải: chia request cho nhiều server và bỏ qua server đang hỏng. Kế đó là kết thúc TLS. Proxy giải mã HTTPS, còn bên trong mạng nội bộ đi HTTP thường, nên chứng chỉ chỉ cần quản lý ở một chỗ. Nó cũng định tuyến theo đường dẫn, ví dụ `/api` vào dịch vụ này và `/images` vào dịch vụ khác.
 
-Khi bạn mở một trang web lớn, thứ bạn chạm vào gần như chắc chắn là reverse proxy chứ không phải server ứng dụng. [Trang portfolio này](/) cũng vậy: nó chạy trên Vercel, và request của bạn đi qua lớp mạng biên của họ trước khi tới được trang.
+Nhóm việc thứ hai là che chắn cho ứng dụng. Nội dung tĩnh được lưu đệm và trả luôn mà không cần hỏi server phía sau. Một địa chỉ gọi quá nhiều thì bị giới hạn tần suất trước khi chạm tới ứng dụng. Request độc hại và các đợt DDoS cũng bị lọc ở đây.
+
+Khi bạn mở một trang web lớn, thứ bạn chạm vào gần như chắc chắn là reverse proxy chứ không phải server ứng dụng. [Site bạn đang đọc](/) cũng vậy: nó chạy trên Vercel, và request của bạn đi qua lớp mạng biên của họ trước khi tới được trang.
 
 Một cấu hình Nginx tối thiểu trông thế này:
 

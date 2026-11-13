@@ -112,7 +112,7 @@ Hai thứ này không hẳn là đối thủ, chúng hợp với hai kiểu vi�
 
 Chọn **PlayCanvas** khi bạn làm game hoặc một trải nghiệm 3D có nhiều cảnh, và trong nhóm có người không viết code. Editor giúp họ tự chỉnh cảnh, còn bạn khỏi phải làm trung gian cho từng thay đổi nhỏ.
 
-Chọn **Three.js** khi bạn chỉ cần một chút 3D trong một trang web có sẵn: mô hình sản phẩm xoay được, hiệu ứng nền, biểu đồ 3D. Nó nhẹ hơn, và nếu đang dùng React thì React Three Fiber cho phép viết cảnh 3D như viết component. Phần nền hạt ở [trang chủ của mình](/) dùng đúng bộ đó.
+Chọn **Three.js** khi bạn chỉ cần một chút 3D trong một trang web có sẵn: mô hình sản phẩm xoay được, hiệu ứng nền, biểu đồ 3D. Nó nhẹ hơn, và nếu đang dùng React thì React Three Fiber cho phép viết cảnh 3D như viết component. Lớp hạt chuyển động làm nền cho [trang chủ](/) dùng đúng bộ đó.
 
 ## Chi phí
 
