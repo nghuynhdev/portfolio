@@ -16,6 +16,7 @@ export interface SearchItem {
 
 const MAX_RESULTS = 6
 const MAX_LATEST = 4
+const MAX_LATEST_MOBILE = 3
 const MAX_TOPICS = 8
 /** Tags on nearly every post: useless as topic suggestions. */
 const GENERIC_TAGS = new Set(['AI', 'Developer'])
@@ -288,7 +289,7 @@ export default function BlogSearch({
         onMouseDown={(e) => e.preventDefault()}
         className="blog-search-panel absolute inset-x-0 top-full mt-2 overflow-hidden rounded-2xl border border-black/[0.1] bg-white shadow-2xl shadow-black/20 dark:border-white/[0.1] dark:bg-card dark:shadow-black/50"
       >
-        <div className="max-h-[min(60vh,28rem)] overflow-y-auto overscroll-contain p-2">
+        <div className="max-h-[45vh] overflow-y-auto overscroll-contain p-2 sm:max-h-[min(60vh,28rem)]">
           {hasQuery && results.length === 0 && (
             <div className="px-3 pb-1 pt-3">
               <p className="text-sm font-medium text-gray-900 dark:text-white">{s.noResults(query.trim())}</p>
@@ -301,14 +302,15 @@ export default function BlogSearch({
               <div className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400">
                 {s.topics}
               </div>
-              <div className="mt-2 flex flex-wrap gap-2">
+              {/* One swipeable row on phones, where the keyboard already takes half the screen; wraps from sm up. */}
+              <div className="-mx-3 mt-2 flex gap-2 overflow-x-auto px-3 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
                 {topics.map((tag) => (
                   <button
                     key={tag}
                     type="button"
                     tabIndex={-1}
                     onClick={() => updateQuery(tag)}
-                    className="inline-flex min-h-9 items-center rounded-full border border-black/[0.1] px-3 text-sm text-gray-700 transition-colors hover:border-accent/50 hover:text-accent dark:border-white/[0.1] dark:text-gray-300"
+                    className="inline-flex min-h-9 shrink-0 items-center whitespace-nowrap rounded-full border border-black/[0.1] px-3 text-sm text-gray-700 transition-colors hover:border-accent/50 hover:text-accent dark:border-white/[0.1] dark:text-gray-300"
                   >
                     {tag}
                   </button>
@@ -334,6 +336,8 @@ export default function BlogSearch({
                 role="option"
                 aria-selected={i === active}
                 onMouseMove={() => setActive(i)}
+                // Phones show a shorter "latest posts" list to keep the panel compact.
+                className={!hasQuery && i >= MAX_LATEST_MOBILE ? 'max-sm:hidden' : undefined}
               >
                 <Link
                   href={item.url}
@@ -346,7 +350,7 @@ export default function BlogSearch({
                     {String(item.order).padStart(2, '0')}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-medium leading-snug text-gray-900 dark:text-white">
+                    <span className="block text-sm font-medium leading-snug text-gray-900 line-clamp-2 dark:text-white">
                       {highlight(item.title, tokens)}
                     </span>
                     {hasQuery && (
