@@ -3,10 +3,12 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 import FadeIn from '@/components/blog/FadeIn'
 import PostCover from '@/components/blog/PostCover'
+import BlogSearch, { type SearchItem } from '@/components/blog/BlogSearch'
 import {
   BLOG_BASES,
   BLOG_LANGS,
   formatDate,
+  getAllPosts,
   getPostsPage,
   getTotalPages,
   pageUrl,
@@ -63,6 +65,15 @@ export default function BlogIndex({ page, lang = 'vi' }: { page: number; lang?: 
   const totalPages = getTotalPages(lang)
   const posts = getPostsPage(page, lang)
   const isFirst = page <= 1
+  // Search covers the whole series, not just the posts on this page.
+  const searchItems: SearchItem[] = getAllPosts(lang).map((p) => ({
+    url: postUrl(p.slug, lang),
+    order: p.order,
+    title: p.title,
+    description: p.description,
+    keywords: p.keywords,
+    tags: p.tags,
+  }))
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -125,8 +136,10 @@ export default function BlogIndex({ page, lang = 'vi' }: { page: number; lang?: 
           )}
         </div>
 
+        <BlogSearch items={searchItems} lang={lang} className="mt-8" />
+
         {/* Posts */}
-        <ul className="mt-12 space-y-5">
+        <ul className="mt-8 space-y-5">
           {posts.map((post, i) => (
             <li key={post.slug}>
               <FadeIn delay={Math.min(i * 0.03, 0.15)}>
