@@ -1,0 +1,36 @@
+{
+  "mode": "built-in image_gen",
+  "size": "1600x900",
+  "images": [
+    {
+      "name": "01-tim-kiem-khong-dau-cho-blog-tinh",
+      "prompt": "Use case: stylized-concept. Create ONE landscape 16:9 editorial cover for a bilingual developer blog. Restrained sophisticated 3D/flat hybrid technical illustration, dark ink/navy background, frosted panels, cyan pathways, amber highlights, generous negative space. Large meaningful forms readable at thumbnail size. No title, prose, code blocks, logos, watermarks, robots or brains. Only the short labels explicitly allowed. Vietnamese accent-insensitive browser search: a translucent browser search field containing exact query 'bao mat' connects through a small normalization filter to a single highlighted result card reading 'bảo mật'. Show the accented character marks as small amber shapes being separated at the filter. All processing stays within one large browser window, no server or cloud. Only allowed text: 'bao mat', 'bảo mật', 'Normalize'. Sparse elegant visual mechanism.",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-4af00c9d-374f-4d7e-befe-e12968e45b10.png",
+      "file": "public/images/blog/posts/01-tim-kiem-khong-dau-cho-blog-tinh.webp"
+    },
+    {
+      "name": "02-playcanvas-lam-game-3d-tren-web",
+      "prompt": "Use case: stylized-concept. Create ONE landscape 16:9 editorial cover for a bilingual developer blog. Restrained sophisticated 3D/flat hybrid technical illustration, dark ink/navy background, frosted panels, cyan pathways, amber highlights, generous negative space. Large meaningful forms readable at thumbnail size. No title, prose, code blocks, logos, watermarks, robots or brains. Only the short labels explicitly allowed. Browser-based 3D game editor: one large floating browser window contains a small polished isometric game level with a ramp, platform, amber player sphere and a selected cyan cube with transform axis handles. A slim abstract scene hierarchy on one side, a small play triangle button above; a smaller browser preview floats alongside showing the same level rendered. Convey editing and playing a 3D game inside browser. No text at all. Avoid imitating actual product UI or adding logos.",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-57351e41-6ad6-4cc9-8859-9b6572e1d054.png",
+      "file": "public/images/blog/posts/02-playcanvas-lam-game-3d-tren-web.webp"
+    },
+    {
+      "name": "03-health-check-khong-chi-la-ping",
+      "prompt": "Use case: stylized-concept. Create ONE landscape 16:9 editorial cover for a bilingual developer blog. Restrained sophisticated 3D/flat hybrid technical illustration, dark ink/navy background, frosted panels, cyan pathways, amber highlights, generous negative space. Large meaningful forms readable at thumbnail size. No title, prose, code blocks, logos, watermarks, robots or brains. Only the short labels explicitly allowed. Backend health check mechanism: one application server has two clearly distinct small status indicators, green 'Live' and amber 'Ready'. A dependency database connected to the application is unavailable, connection broken with an amber cross. Incoming traffic through a load balancer diverts toward a second healthy application server, avoiding the live but unready first server. Sparse architecture illustration, make the traffic routing legible with cyan arrows. Exact allowed labels only: 'Live', 'Ready', 'DB'. Do not suggest liveness should check database.",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-d066816f-04c1-4784-8e9d-6c3673400fdd.png",
+      "file": "public/images/blog/posts/03-health-check-khong-chi-la-ping.webp"
+    },
+    {
+      "name": "04-forward-proxy-va-reverse-proxy",
+      "prompt": "Use case: stylized-concept. Create ONE landscape 16:9 editorial cover for a bilingual developer blog. Restrained sophisticated 3D/flat hybrid technical illustration, dark ink/navy background, frosted panels, cyan pathways, amber highlights, generous negative space. Large meaningful forms readable at thumbnail size. No title, prose, code blocks, logos, watermarks, robots or brains. Only the short labels explicitly allowed. Two sparse horizontal lanes illustrate proxy ownership. Upper lane: two small client laptop silhouettes within a shared translucent boundary with one forward proxy gateway, then a cyan arrow goes outward to an external server. Lower lane: external client sends cyan arrow toward a reverse proxy gateway and two backend servers together inside a service-side translucent boundary. Emphasize opposite ownership with the boundaries, not direction reversal. At most six main groups, generous space. Exact allowed labels: 'Forward proxy', 'Reverse proxy'. No other words.",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-a78be29e-1cf0-4b67-a521-0ac3e29e099c.png",
+      "file": "public/images/blog/posts/04-forward-proxy-va-reverse-proxy.webp"
+    },
+    {
+      "name": "05-web-bi-ban-traffic-ban-backlink",
+      "prompt": "Use case: stylized-concept. Create ONE landscape 16:9 editorial cover for a bilingual developer blog. Restrained sophisticated 3D/flat hybrid technical illustration, dark ink/navy background, frosted panels, cyan pathways, amber highlights, generous negative space. Large meaningful forms readable at thumbnail size. No title, prose, code blocks, logos, watermarks, robots or brains. Only the short labels explicitly allowed. Website security triage: central frosted browser window protected by a selective filtering gateway. On left a swarm of small repeated hollow request dots flows toward filter; amber bot dots are stopped while a few cyan legitimate requests pass to website. On right a cluster of dim suspicious chain-link symbols points toward a separate inspection tray with a magnifying glass, clearly distinct from the traffic filter. Editorial conceptual illustration, no claims about automatic SEO penalties or all backlinks being harmful. Exact allowed labels: 'Traffic', 'Backlinks', 'Inspect'. Sparse composition.",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-c3dc1bcf-b6cd-4fbb-9498-22d214180ef7.png",
+      "file": "public/images/blog/posts/05-web-bi-ban-traffic-ban-backlink.webp"
+    }
+  ]
+}
