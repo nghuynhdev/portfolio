@@ -1,17 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <title>Huynh. — Emerald H</title>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#134e4a"/>
-      <stop offset="100%" stop-color="#0a1f1c"/>
+    <linearGradient id="bg" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173D3B"/><stop offset="1" stop-color="#080F19"/>
     </linearGradient>
-    <linearGradient id="mark" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#46f2a7"/>
-      <stop offset="100%" stop-color="#2dd4bf"/>
+    <linearGradient id="face" x1="140" y1="130" x2="354" y2="354" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B0FFE0"/><stop offset=".46" stop-color="#4CE5B1"/><stop offset="1" stop-color="#20B6A2"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="152" y1="160" x2="354" y2="388" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#238D80"/><stop offset="1" stop-color="#075047"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="80" y1="0" x2="420" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#91F4CD" stop-opacity=".3"/><stop offset="1" stop-color="#91F4CD" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="8" fill="url(#bg)"/>
-  <rect x="5" y="6" width="2" height="20" rx="1" fill="url(#mark)"/>
-  <rect x="5" y="14.5" width="15" height="2" rx="1" fill="url(#mark)"/>
-  <rect x="18" y="6" width="2" height="20" rx="1" fill="url(#mark)"/>
-  <circle cx="27.5" cy="24.5" r="2.5" fill="#46f2a7"/>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="1" y="1" width="510" height="510" rx="111" stroke="url(#rim)" stroke-width="2"/>
+  <!-- Leckerli One H. converted to vector outlines; matches the site wordmark. -->
+  <defs><path id="wordmark" d="M199.266 223.158L199.266 223.158Q229.009 223.158 254.263 223.719L254.263 223.719Q267.451 170.406 280.078 149.642L280.078 149.642Q288.496 137.576 296.913 132.245L296.913 132.245Q300.281 130 303.788 130Q307.296 130 307.296 140.943Q307.296 151.887 305.472 163.952Q303.648 176.018 300.842 191.731L300.842 191.731Q291.582 243.361 286.952 274.227Q282.322 305.093 282.322 333.713L282.322 333.713Q282.322 341.570 271.099 341.570L271.099 341.570Q253.421 341.570 246.967 334.696Q240.513 327.821 240.513 309.722Q240.513 291.624 247.809 252.621L247.809 252.621Q216.943 251.218 208.806 251.218L208.806 251.218L197.301 251.218Q194.215 251.218 191.128 251.499L191.128 251.499Q178.501 299.761 178.501 327.821L178.501 327.821Q178.501 344.376 146.233 344.376L146.233 344.376Q139.218 344.376 137.955 337.221Q136.693 330.066 136.693 313.931Q136.693 297.797 146.794 255.988L146.794 255.988Q129.678 258.513 121.821 258.513L121.821 258.513Q118.173 258.513 118.173 255.707L118.173 255.707Q118.173 249.534 127.293 241.678Q136.412 233.821 154.090 229.051L154.090 229.051Q164.472 193.134 174.854 170.125L174.854 170.125Q144.549 170.687 130.239 181.910L130.239 181.910Q125.749 185.278 122.943 187.943Q120.137 190.609 118.033 190.609Q115.928 190.609 113.964 187.242Q112 183.875 112 178.263L112 178.263Q112 157.779 146.513 147.116L146.513 147.116Q174.012 138.699 210.490 138.418L210.490 138.418L211.051 138.418Q213.015 138.418 216.522 140.663Q220.030 142.907 220.030 147.958Q220.030 153.009 218.206 159.322Q216.382 165.636 213.296 168.722L213.296 168.722Q211.612 181.910 199.266 223.158ZM339.564 329.504Q345.176 315.194 356.400 305.794Q367.624 296.394 380.812 296.394Q394 296.394 394 310.985Q394 325.576 384.600 337.081Q375.200 348.585 365.660 348.304L365.660 348.304Q348.824 348.304 339.564 329.504L339.564 329.504Z"/></defs>
+  <use href="#wordmark" transform="translate(20 30)" fill="#040D13" opacity=".35"/>
+  <use href="#wordmark" transform="translate(16 16)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(15 15)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(14 14)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(13 13)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(12 12)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(11 11)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(10 10)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(9 9)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(8 8)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(7 7)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(6 6)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(5 5)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(4 4)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(3 3)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(2 2)" fill="url(#edge)"/>
+  <use href="#wordmark" transform="translate(1 1)" fill="url(#edge)"/>
+  <use href="#wordmark" fill="url(#face)" stroke="url(#face)" stroke-width=".8" stroke-linejoin="round"/>
 </svg>
