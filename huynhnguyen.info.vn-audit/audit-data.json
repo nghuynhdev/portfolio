@@ -1,0 +1,224 @@
+{
+  "summary": {
+    "health_score": 84,
+    "audit_date": "2026-11-13",
+    "url": "https://www.huynhnguyen.info.vn/",
+    "pages_crawled": 77,
+    "business_type": "Personal brand / portfolio + bilingual technical blog (VI/EN)",
+    "top_findings": [
+      "10 /blog posts use a WebP og:image",
+      "Internal prompt/brief files and img.png are publicly served from public/",
+      "datePublished is backdated on 54 series posts (owner decision to keep)",
+      "Most posts carry only 1 outbound source link",
+      "Homepage is indexable in English only; no hreflang"
+    ],
+    "quick_wins": [
+      "Export JPG OG images for the 5 /blog posts",
+      "Move PROMPTS/BRIEFS files and img.png out of public/",
+      "Add security headers in next.config.ts",
+      "Update 3 outbound links that 301",
+      "Fix footer label contrast and aria-label mismatches"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 88,
+      "what_works": [
+        "77/77 sitemap URLs return 200; no broken internal links",
+        "Self-referencing canonicals on all pages; index, follow",
+        "308 redirects apex to www and http to https; real 404 status",
+        "robots.txt allows all bots, blocks /api/, references sitemap"
+      ],
+      "findings": [
+        {
+          "title": "Internal files publicly served",
+          "severity": "High",
+          "description": "/images/blog/PROMPTS.md, PROMPTS.json, BRIEFS-v2.json, the same three under /images/blog/posts/, and /img.png all return 200.",
+          "recommendation": "Move them out of public/."
+        },
+        {
+          "title": "Missing security headers",
+          "severity": "Medium",
+          "description": "Only strict-transport-security is sent. No X-Content-Type-Options, Referrer-Policy, X-Frame-Options/CSP frame-ancestors, Permissions-Policy.",
+          "recommendation": "Add headers() to next.config.ts."
+        },
+        {
+          "title": "Homepage has no Vietnamese URL or hreflang",
+          "severity": "Medium",
+          "description": "/ renders lang=en with a client-side language toggle; 76 other pages have vi/en/x-default.",
+          "recommendation": "Add /vi with hreflang, or accept EN-only indexing."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 74,
+      "what_works": [
+        "Median article length 1,156 words; shortest 948",
+        "First-hand examples, byline and dates on every post",
+        "No duplicate titles or descriptions"
+      ],
+      "findings": [
+        {
+          "title": "Backdated datePublished",
+          "severity": "High",
+          "description": "54 series posts are dated 2024-02-15 to 2026-11-12 while their URLs first went live this week. Owner chose to keep.",
+          "recommendation": "Use real publish dates; keep dateModified for edits."
+        },
+        {
+          "title": "Few outbound source links",
+          "severity": "Medium",
+          "description": "Excluding profile and share links, posts have 0 to 4 outbound links; many series posts have exactly 1.",
+          "recommendation": "Add 3 to 5 links to official documentation per post."
+        },
+        {
+          "title": "3 outbound links redirect (301)",
+          "severity": "Medium",
+          "description": "AWS Builders' Library timeouts article, Express behind-proxies guide, Kubernetes probes page.",
+          "recommendation": "Update to the final URLs."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 90,
+      "what_works": [
+        "0 titles over 60 characters; 0 descriptions over 160",
+        "Exactly one H1 per page",
+        "hreflang reciprocal on 76 pages; html lang matches"
+      ],
+      "findings": [
+        {
+          "title": "/blog index overlaps /ai-for-devs index",
+          "severity": "Low",
+          "description": "/blog lists all 31 posts including the 26 series posts. Post canonicals are correct, so no duplicate content.",
+          "recommendation": "Intentional; no action needed."
+        },
+        {
+          "title": "Short pagination titles",
+          "severity": "Low",
+          "description": "\"Blog — Trang 2 | Huynh\" is 22 characters.",
+          "recommendation": "Optional: add a descriptive phrase."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 88,
+      "what_works": [
+        "0 JSON-LD parse errors across 77 pages",
+        "Person, WebSite, Blog, BlogPosting, BreadcrumbList present",
+        "BlogPosting has headline, dates, author, publisher, image, inLanguage, workTranslation"
+      ],
+      "findings": [
+        {
+          "title": "Person schema exposes email and phone",
+          "severity": "Low",
+          "description": "email and telephone are in the Person node on every page.",
+          "recommendation": "Consider removing telephone."
+        }
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 80,
+      "what_works": [
+        "CLS 0 on homepage and article",
+        "Homepage lab LCP 2.0 s (Slow 4G, 4x CPU)",
+        "Median TTFB 0.25 s; all pages prerendered with CDN cache HIT"
+      ],
+      "findings": [
+        {
+          "title": "Article lab LCP 3.6 s on throttled mobile",
+          "severity": "Medium",
+          "description": "TTFB 563 ms, cover image load 3,007 ms, render delay 20 ms. Cover already has priority and sizes; the 828w variant is 40 KB. No CrUX field data.",
+          "recommendation": "Re-measure with field data; if p75 exceeds 2.5 s, cut competing font preloads and early JS."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 80,
+      "what_works": [
+        "GPTBot, ClaudeBot, PerplexityBot, Google-Extended all receive 200",
+        "Lighthouse Agentic Browsing 100",
+        "Server-rendered HTML with clear heading structure and tables"
+      ],
+      "findings": [
+        {
+          "title": "No llms.txt",
+          "severity": "Low",
+          "description": "/llms.txt returns 404. Optional; Google does not use it.",
+          "recommendation": "Add if desired."
+        },
+        {
+          "title": "Thin citations reduce citability",
+          "severity": "Medium",
+          "description": "See Content Quality: few outbound source links.",
+          "recommendation": "Cite primary sources next to claims."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 88,
+      "what_works": [
+        "443 img tags, 100% with alt text",
+        "All images served through next/image as WebP with srcset",
+        "All 77 pages have og:image"
+      ],
+      "findings": [
+        {
+          "title": "10 /blog posts use a WebP og:image",
+          "severity": "High",
+          "description": "The 5 newest posts in both languages point og:image at .webp covers; the other 67 pages use JPG or generated PNG.",
+          "recommendation": "Export 1200x630 JPGs to public/images/blog/og/ and use them."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Export JPG OG images for the 5 /blog posts",
+          "Move PROMPTS/BRIEFS files and img.png out of public/"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Add security headers in next.config.ts",
+          "Update the 3 redirecting outbound links",
+          "Decide on a Vietnamese homepage URL with hreflang"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "Add 3 to 5 official source links per post",
+          "Fix footer contrast and aria-label mismatches",
+          "Optional llms.txt"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Connect Search Console and submit the sitemap",
+          "Re-measure article LCP with CrUX field data",
+          "Run /seo setup, then re-audit"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": null,
+    "screenshots_dir": null
+  }
+}
