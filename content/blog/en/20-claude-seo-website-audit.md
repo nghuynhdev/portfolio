@@ -6,6 +6,7 @@ description: "Website SEO audit with Claude SEO in Claude Code: install the plug
 keywords: "Claude SEO, Claude Code SEO skill, SEO audit, technical SEO, blog SEO, AgriciDaniel"
 tags: "AI, Claude Code, Skills, SEO"
 date: 2026-08-12
+cover: /images/blog/20-claude-seo-audit-website-v2.webp
 ---
 
 # Claude SEO: Audit Your Blog With Claude Code and Turn the Report Into Fixes

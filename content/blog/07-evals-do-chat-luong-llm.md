@@ -6,6 +6,7 @@ description: "'Thấy ổn' chưa đủ để lên production. Dựng bộ eval 
 keywords: "LLM evals, đánh giá AI, LLM as judge, test prompt, AI regression, AI cho developer"
 tags: "AI, Evals, Testing, Developer"
 date: 2025-06-17
+cover: /images/blog/07-evals-do-chat-luong-llm-v2.webp
 ---
 
 # Evals: làm sao biết prompt và model của bạn đủ tốt

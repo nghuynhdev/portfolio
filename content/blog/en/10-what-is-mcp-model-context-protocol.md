@@ -6,6 +6,7 @@ description: "What is MCP (Model Context Protocol)? How it turns N×M AI tool in
 keywords: "MCP, Model Context Protocol, AI tool integration, MCP server, AI agent, AI for developers"
 tags: "AI, MCP, Agent, Developer"
 date: 2026-03-18
+cover: /images/blog/10-mcp-model-context-protocol-v2.webp
 ---
 
 # What Is MCP (Model Context Protocol) and Why Developers Should Care

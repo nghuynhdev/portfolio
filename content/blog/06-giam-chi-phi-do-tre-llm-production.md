@@ -7,6 +7,7 @@ keywords: "chi phí LLM, tối ưu token, prompt caching, model routing, độ t
 tags: "AI, LLM, Performance, Cost, Developer"
 date: 2025-03-11
 updated: 2026-11-11
+cover: /images/blog/06-giam-chi-phi-do-tre-llm-production-v2.webp
 ---
 
 # Giảm chi phí và độ trễ khi gọi LLM trong production

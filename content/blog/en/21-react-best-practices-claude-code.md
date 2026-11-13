@@ -6,6 +6,7 @@ description: "Vercel's React Best Practices skill in Claude Code: find waterfall
 keywords: "vercel-react-best-practices, Claude Code React, Next.js performance, React skill, Vercel agent skills"
 tags: "AI, Claude Code, Skills, React"
 date: 2026-09-15
+cover: /images/blog/21-react-best-practices-skill-claude-code-v2.webp
 ---
 
 # React Best Practices: Use Claude to Optimize the Real Bottleneck

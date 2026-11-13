@@ -19,7 +19,8 @@ for (const file of covers) {
   await sharp(path.join(SRC, file))
     .resize(W, H, { fit: 'cover', position: 'centre' })
     .jpeg({ quality: 82, mozjpeg: true })
-    .toFile(path.join(OUT, file.replace(/\.webp$/, '.jpg')))
+    // Cover URLs may be versioned to bypass image caches; social lookup uses the article basename.
+    .toFile(path.join(OUT, file.replace(/(?:-v\d+)?\.webp$/, '.jpg')))
 }
 
 // Series image: 4×2 mosaic of the newest covers, darkened, with the series title on top.

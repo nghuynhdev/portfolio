@@ -6,6 +6,7 @@ description: "MCP (Model Context Protocol) là gì: biến bài toán tích hợ
 keywords: "MCP, Model Context Protocol, AI tool integration, MCP server, AI agent, AI cho developer"
 tags: "AI, MCP, Agent, Developer"
 date: 2026-03-18
+cover: /images/blog/10-mcp-model-context-protocol-v2.webp
 ---
 
 # MCP (Model Context Protocol) là gì và vì sao dev nên quan tâm

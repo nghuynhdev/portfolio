@@ -7,6 +7,7 @@ keywords: "LLM cost, token optimization, prompt caching, model routing, LLM late
 tags: "AI, LLM, Performance, Cost, Developer"
 date: 2025-03-11
 updated: 2026-11-11
+cover: /images/blog/06-giam-chi-phi-do-tre-llm-production-v2.webp
 ---
 
 # Cutting LLM Cost and Latency in Production

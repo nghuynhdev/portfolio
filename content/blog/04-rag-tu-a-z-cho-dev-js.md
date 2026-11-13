@@ -7,6 +7,7 @@ keywords: "RAG, retrieval augmented generation, embedding, vector database, chun
 tags: "AI, RAG, Embedding, Developer"
 date: 2024-09-24
 updated: 2026-11-11
+cover: /images/blog/04-rag-tu-a-z-cho-dev-js-v2.webp
 ---
 
 # RAG từ A–Z cho dev JS/TS: cho LLM "đọc" tài liệu của bạn

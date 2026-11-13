@@ -6,6 +6,7 @@ description: "Dùng AI viết code mà vẫn kiểm chứng được: context v�
 keywords: "AI coding assistant, AI viết code, code review, testing, developer workflow, AI cho developer"
 tags: "AI, Coding, Testing, Developer"
 date: 2026-06-28
+cover: /images/blog/17-dung-ai-viet-code-va-kiem-chung-v2.webp
 ---
 
 # Dùng AI viết code: giao việc rõ và kiểm chứng bằng hành vi

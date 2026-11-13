@@ -6,6 +6,7 @@ description: "Skill React Best Practices của Vercel trong Claude Code: tìm wa
 keywords: "vercel-react-best-practices, Claude Code React, Next.js performance, React skill, Vercel agent skills"
 tags: "AI, Claude Code, Skills, React"
 date: 2026-09-15
+cover: /images/blog/21-react-best-practices-skill-claude-code-v2.webp
 ---
 
 # React Best Practices: dùng Claude tối ưu đúng nút thắt

@@ -6,6 +6,7 @@ description: "AI-assisted coding you can verify: give just enough context, split
 keywords: "AI coding assistant, AI code generation, code review, testing, developer workflow, AI for developers"
 tags: "AI, Coding, Testing, Developer"
 date: 2026-06-28
+cover: /images/blog/17-dung-ai-viet-code-va-kiem-chung-v2.webp
 ---
 
 # Coding With AI: Give Clear Tasks and Verify Through Behavior

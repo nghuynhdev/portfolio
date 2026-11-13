@@ -6,6 +6,7 @@ description: "Đọc ảnh và PDF bằng AI đa phương thức: chọn trang, 
 keywords: "multimodal AI, vision model, PDF extraction, OCR, document AI, AI cho developer"
 tags: "AI, Multimodal, Documents, Developer"
 date: 2026-06-05
+cover: /images/blog/15-multimodal-ai-doc-anh-va-pdf-v2.webp
 ---
 
 # AI đọc ảnh và PDF: trích xuất dữ liệu sao cho kiểm chứng được

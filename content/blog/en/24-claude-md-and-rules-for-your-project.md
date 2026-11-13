@@ -6,6 +6,7 @@ description: "Write CLAUDE.md and rules for your project: keep CLAUDE.md short, 
 keywords: "CLAUDE.md, Claude Code rules, project instructions, AI context, Claude workflow"
 tags: "AI, Claude Code, Context, Developer"
 date: 2026-10-19
+cover: /images/blog/24-claude-md-va-rules-cho-du-an-v2.webp
 ---
 
 # CLAUDE.md and Rules: Teach Claude Your Project's Conventions Once

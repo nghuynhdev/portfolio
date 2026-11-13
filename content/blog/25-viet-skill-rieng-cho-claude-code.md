@@ -6,6 +6,7 @@ description: "Viết skill riêng cho Claude Code để review blog: định ngh
 keywords: "tạo Claude skill, SKILL.md, custom Claude Code skills, blog review, agent skills"
 tags: "AI, Claude Code, Skills, Workflow"
 date: 2026-10-31
+cover: /images/blog/25-viet-skill-rieng-cho-claude-code-v2.webp
 ---
 
 # Viết skill riêng cho Claude Code: bắt đầu bằng quy trình review blog

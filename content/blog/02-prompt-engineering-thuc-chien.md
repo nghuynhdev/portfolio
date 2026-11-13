@@ -7,6 +7,7 @@ keywords: "prompt engineering, system prompt, few-shot, structured output, JSON 
 tags: "AI, LLM, Prompt Engineering, Developer"
 date: 2024-05-08
 updated: 2026-11-11
+cover: /images/blog/02-prompt-engineering-thuc-chien-v2.webp
 ---
 
 # Prompt engineering thực chiến cho developer (không phải trò "thần chú")

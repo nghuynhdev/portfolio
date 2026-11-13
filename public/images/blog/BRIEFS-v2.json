@@ -1,0 +1,2316 @@
+{
+  "mode": "built-in image_gen",
+  "batchSize": 3,
+  "images": [
+    {
+      "n": 1,
+      "message": "Generation samples one next token, appends it to context, then repeats.",
+      "summaries": [
+        "Token sequence prediction and tokenization vary by language/model; do not visualize fixed token-cost ratios.",
+        "Next-token probabilities sampled with temperature; output not a pure deterministic truth oracle.",
+        "History is supplied within finite context; long histories consume tokens.",
+        "Plausible continuation may be false; ground and verify facts.",
+        "Embeddings place semantically related text near each other.",
+        "Mental model supports checking facts, controlling context and choosing temperature."
+      ],
+      "concepts": [
+        "Token printing mechanism with branching candidates and append loop.",
+        "Probability landscape feeding a sentence."
+      ],
+      "choice": "Token press: shows one sampled next token without personifying intelligence.",
+      "caveats": [
+        "No brain, knowledge lookup or guaranteed deterministic temperature zero.",
+        "No precise Vietnamese token ratios or price labels; not all generated text is truth."
+      ],
+      "prompt": "Create ONE landscape 16:9 premium editorial illustration explaining NEXT TOKEN generation to bilingual developer readers. A beautiful macro view of a bespoke mechanical typesetting press on warm ivory paper with deep indigo enamel, copper fittings and coral ink. A row of large abstract typographic token tiles already printed on a paper ribbon enters from left. In the center a precise selector sits over three candidate token tiles arranged as a small fan; three broad bars of DIFFERENT lengths behind the candidates suggest differing probability without numerical values. One coral candidate is selected and being snapped onto the END of the existing ribbon on the right. A single broad curved arrow beneath returns the newly extended sequence back toward the input, meaning repeat prediction. Render tactile paper, machined metal, precise engraved details, restrained ink texture, strong light and shadow. Main mechanism fills 80 percent, readable at 320x180. Only exact labels 'Context', 'Next token' in large clean type; token tiles have abstract letterlike geometric marks, no prose. Conceptual model, not a literal computer architecture. No brain, robot, cloud lookup, invented percentages, guarantees or logos/watermark. Avoid the navy/cyan glowing glass style. Clear hierarchy, 7 percent safe margin.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/01-llm-hoat-dong-the-nao.md",
+          "sha256": "d8b223ba57cda3a6e33d75588cb742b054d37e366806f8642dcce63eda78fea6",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Thực chất nó chỉ đoán token kế tiếp",
+              "summary": "Token sequence prediction and tokenization vary by language/model; do not visualize fixed token-cost ratios."
+            },
+            {
+              "heading": "\"Đoán\" nghĩa là có xác suất, và bạn chỉnh được",
+              "summary": "Next-token probabilities sampled with temperature; output not a pure deterministic truth oracle."
+            },
+            {
+              "heading": "Context window: trí nhớ ngắn hạn, và nó không miễn phí",
+              "summary": "History is supplied within finite context; long histories consume tokens."
+            },
+            {
+              "heading": "Vì sao nó bịa (hallucination)",
+              "summary": "Plausible continuation may be false; ground and verify facts."
+            },
+            {
+              "heading": "Embedding: khi văn bản biến thành tọa độ",
+              "summary": "Embeddings place semantically related text near each other."
+            },
+            {
+              "heading": "Vậy dev cần nhớ gì",
+              "summary": "Mental model supports checking facts, controlling context and choosing temperature."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/01-how-llms-work-for-developers.md",
+          "sha256": "6b777a4f36d9ac9f93ed5e795da31844852f4e0aab8a1279ca1a453f4ed28b4b",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "All it really does is guess the next token",
+              "summary": "Token sequence prediction and tokenization vary by language/model; do not visualize fixed token-cost ratios."
+            },
+            {
+              "heading": "\"Guessing\" means probabilities — and you can tune them",
+              "summary": "Next-token probabilities sampled with temperature; output not a pure deterministic truth oracle."
+            },
+            {
+              "heading": "The context window: short-term memory that isn't free",
+              "summary": "History is supplied within finite context; long histories consume tokens."
+            },
+            {
+              "heading": "Why it makes things up (hallucination)",
+              "summary": "Plausible continuation may be false; ground and verify facts."
+            },
+            {
+              "heading": "Embeddings: when text becomes coordinates",
+              "summary": "Embeddings place semantically related text near each other."
+            },
+            {
+              "heading": "What developers should remember",
+              "summary": "Mental model supports checking facts, controlling context and choosing temperature."
+            }
+          ]
+        }
+      },
+      "basename": "01-llm-hoat-dong-the-nao",
+      "file": "public/images/blog/01-llm-hoat-dong-the-nao-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-bc8cc97e-18a5-46c5-bae4-46a074341112.png",
+      "review": {
+        "thumbnail": "Context sequence, candidate selection, appended token and feedback loop clear at 320px; no lookup or deterministic guarantee.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 2,
+      "message": "A prompt is a specification: separated instructions and data, examples and a checked output structure.",
+      "summaries": [
+        "Specific role, task, format, constraints and data outperform vague request; omit unsupported 80 percent claim from visual.",
+        "System rules separate from user input.",
+        "Few-shot examples communicate format and edge cases.",
+        "Schema output is typed/validated instead of regex-parsing prose.",
+        "Reasoning instructions are task dependent, not magic.",
+        "Delimiters distinguish untrusted data but cannot guarantee security.",
+        "Iterate prompts against tests and version them; use desired output language."
+      ],
+      "concepts": [
+        "Architectural drafting desk showing spec and fitting output object.",
+        "Structured instruction and data layers feeding a typed result."
+      ],
+      "choice": "Drafting/spec desk: illustrates deliberate constraints instead of magical prompt tokens.",
+      "caveats": [
+        "No promise a delimiter blocks all injections or schema guarantees factual truth.",
+        "No magic phrases or numerical quality improvement."
+      ],
+      "prompt": "Create a highly designed 16:9 editorial cover about PROMPT ENGINEERING AS WRITING A SPEC, for English/Vietnamese developers. Top-down architect's drafting desk, cool pale blue technical paper, charcoal ink, saturated vermilion annotations and brushed aluminum drafting tools. Main subject is one large precise blueprint sheet divided into two clearly separate compartments labeled exactly 'Rules' and 'Data'. Rules contains a few clean checklist marks and rectangular constraint guides, Data contains one document-shaped insert, no text paragraphs. At the blueprint's right edge an arrow points to one LARGE elegant output object shaped like a structured bracket pair containing three aligned key/value slot shapes; this output fits perfectly into a matching schema stencil held above it, with a bold check beside the fit. Label that stencil exactly 'Schema'. A small stack of two example cards beside Rules shows same structure with differently colored values, implying few-shot examples. Fine drafting detail and purposeful hierarchy, NOT a dense infographic, no magic wand, robot, brain, prose, code blocks, percentages or tiny labels. Allowed words only Rules, Data, Schema; bracket punctuation permitted. One strong focal relationship: clear input specification produces shape-checked output, NOT guaranteed factual truth or guaranteed injection security. Slight tactile paper texture, disciplined beautiful editorial geometry, 7 percent safe margins; legible at thumbnail.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/02-prompt-engineering-thuc-chien.md",
+          "sha256": "4f8479d926e7382d7b5d8c491f0a7b9183ce2e348d08424cdf760057953f9bc3",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Prompt tệ sinh ra output tệ — và thường lỗi nằm ở bạn",
+              "summary": "Specific role, task, format, constraints and data outperform vague request; omit unsupported 80 percent claim from visual."
+            },
+            {
+              "heading": "System prompt và user prompt khác vai trò",
+              "summary": "System rules separate from user input."
+            },
+            {
+              "heading": "Few-shot: dạy bằng ví dụ, không giảng lý thuyết",
+              "summary": "Few-shot examples communicate format and edge cases."
+            },
+            {
+              "heading": "Ép JSON có schema, đừng đi parse văn xuôi",
+              "summary": "Schema output is typed/validated instead of regex-parsing prose."
+            },
+            {
+              "heading": "\"Nghĩ từng bước\" — đúng chỗ mới có tác dụng",
+              "summary": "Reasoning instructions are task dependent, not magic."
+            },
+            {
+              "heading": "Tách dữ liệu khỏi chỉ thị bằng delimiter",
+              "summary": "Delimiters distinguish untrusted data but cannot guarantee security."
+            },
+            {
+              "heading": "Lặp prompt như debug, và giữ nó trong version control",
+              "summary": "Iterate prompts against tests and version them; use desired output language."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/02-prompt-engineering-for-developers.md",
+          "sha256": "40fce73a12cc104d871bb5d04c40a365e96f22bff59175e79e6ca082e1057c9e",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Bad prompts produce bad output — and the fault is usually yours",
+              "summary": "Specific role, task, format, constraints and data outperform vague request; omit unsupported 80 percent claim from visual."
+            },
+            {
+              "heading": "System and user prompts play different roles",
+              "summary": "System rules separate from user input."
+            },
+            {
+              "heading": "Few-shot: teach by example, not by lecture",
+              "summary": "Few-shot examples communicate format and edge cases."
+            },
+            {
+              "heading": "Enforce JSON with a schema — don't parse prose",
+              "summary": "Schema output is typed/validated instead of regex-parsing prose."
+            },
+            {
+              "heading": "\"Think step by step\" — only where it helps",
+              "summary": "Reasoning instructions are task dependent, not magic."
+            },
+            {
+              "heading": "Separate data from instructions with delimiters",
+              "summary": "Delimiters distinguish untrusted data but cannot guarantee security."
+            },
+            {
+              "heading": "Iterate on prompts like debugging, and keep them in version control",
+              "summary": "Iterate prompts against tests and version them; use desired output language."
+            }
+          ]
+        }
+      },
+      "basename": "02-prompt-engineering-thuc-chien",
+      "file": "public/images/blog/02-prompt-engineering-thuc-chien-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-e51f081d-ed2e-4135-8d6e-e936b357a24a.png",
+      "review": {
+        "thumbnail": "Rules/Data separation, examples and matching schema stencil readable; structure check not factual-truth claim.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 3,
+      "message": "The server streams small response pieces to the browser, with cancellation and keys kept server-side.",
+      "summaries": [
+        "Streaming improves perceived response; Node route can stream without Edge requirement; no universal timeout immunity.",
+        "Server route converts UI messages and returns structured stream; provider key stays server.",
+        "useChat assembles message parts, submits input and provides Stop cancellation.",
+        "Abort on navigation, cap budgets, batch renders and surface midstream errors.",
+        "Persistence, RAG and tools are optional production additions, not needed for basic stream."
+      ],
+      "concepts": [
+        "Response ribbon arriving gradually through server boundary.",
+        "Before/after waiting spinner versus progressive response."
+      ],
+      "choice": "One flowing response ribbon showing server-to-client direction and a visible stop control.",
+      "caveats": [
+        "No provider secret in browser or direct provider request from client.",
+        "No claim stream accelerates model computation or eliminates every timeout."
+      ],
+      "prompt": "Create one cinematic yet technically clear 16:9 editorial illustration about STREAMING AI CHAT IN NEXT.JS. Rich midnight plum background with warm peach and mint accents, soft studio lighting and fine physical detail, no generic cyan server network. On the LEFT one large server-side cutaway enclosure contains a small clearly visible brass key safely INSIDE its wall. From the server a luminous peach paper ribbon made of separate rectangular token segments flows RIGHTWARD through a single open channel into a large browser chat window on the RIGHT. Near the browser, the segments visibly assemble into an unfinished response bubble: two solid completed lines, a short partially completed third line with a prominent caret, and empty room remaining. A large square stop button below the response, visually unambiguous, signals cancellation. One slender request path returns LEFT from browser to server, clearly secondary and directional; main response arrow goes server to browser. Browser must contain NO key, no model-provider secrets. Only exact large short labels 'Server', 'Stream', 'Client'; no chat prose, code, timings or numbers. Carefully sculpted paper ribbons and matte workstation components, dynamic graceful curve, bold focal response bubble, vivid but controlled lighting. Story is progressive delivery, not faster model inference. Keep essential forms within 7 percent margin, readable at 320x180. No logos, robots, brains, watermark or multi-panel poster.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/03-tich-hop-ai-vao-nextjs-streaming.md",
+          "sha256": "9ff4de1d71da676f880bd02df3c3168a8878ed75bb147704ecc5d7a117bb2100",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Vì sao phải stream",
+              "summary": "Streaming improves perceived response; Node route can stream without Edge requirement; no universal timeout immunity."
+            },
+            {
+              "heading": "Phần server: một route handler đẩy token",
+              "summary": "Server route converts UI messages and returns structured stream; provider key stays server."
+            },
+            {
+              "heading": "Phần client: `useChat` lo hết phần lằng nhằng",
+              "summary": "useChat assembles message parts, submits input and provides Stop cancellation."
+            },
+            {
+              "heading": "Mấy cái bẫy mình từng dính",
+              "summary": "Abort on navigation, cap budgets, batch renders and surface midstream errors."
+            },
+            {
+              "heading": "Gắn thêm cho ra sản phẩm thật",
+              "summary": "Persistence, RAG and tools are optional production additions, not needed for basic stream."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/03-nextjs-ai-chat-streaming.md",
+          "sha256": "3eb10f4e83c0d310ec7170a214cdd6e8b5b7efdd535624882197530b34fd9d24",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Why stream at all",
+              "summary": "Streaming improves perceived response; Node route can stream without Edge requirement; no universal timeout immunity."
+            },
+            {
+              "heading": "Server side: a route handler that pushes tokens",
+              "summary": "Server route converts UI messages and returns structured stream; provider key stays server."
+            },
+            {
+              "heading": "Client side: `useChat` handles the fiddly parts",
+              "summary": "useChat assembles message parts, submits input and provides Stop cancellation."
+            },
+            {
+              "heading": "Traps I've fallen into",
+              "summary": "Abort on navigation, cap budgets, batch renders and surface midstream errors."
+            },
+            {
+              "heading": "Turning it into a real product",
+              "summary": "Persistence, RAG and tools are optional production additions, not needed for basic stream."
+            }
+          ]
+        }
+      },
+      "basename": "03-tich-hop-ai-vao-nextjs-streaming",
+      "file": "public/images/blog/03-tich-hop-ai-vao-nextjs-streaming-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-36d099dc-bf8d-4c9a-9365-a56dd7a70722.png",
+      "review": {
+        "thumbnail": "Response flows server to browser, partial bubble and stop button clear, key stays inside server.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 4,
+      "message": "Retrieve relevant document chunks into context, not model retraining.",
+      "summaries": [
+        "Embeddings encode semantic proximity.",
+        "Index and query are distinct phases.",
+        "Chunk with overlap, embed and store passage/vector.",
+        "Embed question, retrieve nearest passages and supply context; allow unknown.",
+        "Chunk size, source quality, top-k, citations and eval determine quality.",
+        "Use for changing/source-grounded knowledge, not teaching model new weights."
+      ],
+      "concepts": [
+        "Library with selected passage cards feeding an answer.",
+        "Two-stage indexing and retrieval flow."
+      ],
+      "choice": "Tactile library retrieval, three selected passages distinguish evidence from whole corpus.",
+      "caveats": [
+        "No model retraining, whole library ingestion at question time or guaranteed truth."
+      ],
+      "prompt": "Create an exquisite 16:9 editorial technical illustration for RAG. A richly crafted miniature library in forest green and cream with walnut shelving and warm directional daylight. Left: several document folders in a compact archive cabinet. Center: a large magnifying lens selects exactly three small passage cards from different documents; selected cards share a burnt-orange edge stripe matching visible source tabs in the archive. Right: the selected three passages enter a single open context tray underneath a large response card with three tiny matching orange source-tab symbols. One continuous dark green directed path connects archive selection to context tray to response. The unselected corpus stays on shelf. Only large labels 'Retrieve', 'Context', 'Answer', no body text, invented citations, numbers or code. A refined physical paper model, fine purposeful craft detail, strong clear shapes, no robot, brain, glowing glass panels, generic AI chip or training imagery. Main meaning: find source excerpts, use them to answer, no retraining or guarantee truth. Readable at320x180, keep 7 percent margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/04-rag-tu-a-z-cho-dev-js.md",
+          "sha256": "884667a8a28c32c890dc73f663f6cdb1463ace465eebc243819458ce7fd2a44f",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Nhắc lại một ý từ bài đầu: embedding",
+              "summary": "Embeddings encode semantic proximity."
+            },
+            {
+              "heading": "Luồng RAG gồm hai pha",
+              "summary": "Index and query are distinct phases."
+            },
+            {
+              "heading": "Pha index: cắt nhỏ và nhúng",
+              "summary": "Chunk with overlap, embed and store passage/vector."
+            },
+            {
+              "heading": "Pha truy vấn: tìm gần nhất rồi hỏi",
+              "summary": "Embed question, retrieve nearest passages and supply context; allow unknown."
+            },
+            {
+              "heading": "Những chỗ quyết định chất lượng (và hay bị làm ẩu)",
+              "summary": "Chunk size, source quality, top-k, citations and eval determine quality."
+            },
+            {
+              "heading": "Khi nào RAG, khi nào không",
+              "summary": "Use for changing/source-grounded knowledge, not teaching model new weights."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/04-rag-from-a-to-z-for-js-developers.md",
+          "sha256": "94dd7c21f176683c651f73ccbda2556a8a28b8193ae2690f65739ba9b5920901",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "A recap from the first post: embeddings",
+              "summary": "Embeddings encode semantic proximity."
+            },
+            {
+              "heading": "The RAG flow has two phases",
+              "summary": "Index and query are distinct phases."
+            },
+            {
+              "heading": "Indexing: split and embed",
+              "summary": "Chunk with overlap, embed and store passage/vector."
+            },
+            {
+              "heading": "Querying: find the nearest, then ask",
+              "summary": "Embed question, retrieve nearest passages and supply context; allow unknown."
+            },
+            {
+              "heading": "What actually decides quality (and is often done sloppily)",
+              "summary": "Chunk size, source quality, top-k, citations and eval determine quality."
+            },
+            {
+              "heading": "When to use RAG, and when not to",
+              "summary": "Use for changing/source-grounded knowledge, not teaching model new weights."
+            }
+          ]
+        }
+      },
+      "basename": "04-rag-tu-a-z-cho-dev-js",
+      "file": "public/images/blog/04-rag-tu-a-z-cho-dev-js-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-881e04d6-e72f-480b-b80c-d71ce29fbfc2.png",
+      "review": {
+        "thumbnail": "Three selected source-tabbed passages flow into context then answer; labels clear at 320px.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 5,
+      "message": "Model proposes a tool call; application validates and executes, returns evidence.",
+      "summaries": [
+        "Model emits function call request; application actually runs function.",
+        "Loop returns results to model until answer or step limit.",
+        "Tool schema/description and bounded AI SDK steps define weather example.",
+        "Validate inputs, least privilege, logs and control side effects.",
+        "One agent often enough; more agents increase failure/cost; MCP shares tools."
+      ],
+      "concepts": [
+        "Proposal passes physical validation checkpoint to execution bench, return loop.",
+        "Turn-based board-game loop."
+      ],
+      "choice": "Application-owned checkpoint visually separates deciding from executing.",
+      "caveats": [
+        "No model hand directly executes API, no unbounded loop or blanket autonomous payments."
+      ],
+      "prompt": "Create ONE bold 16:9 editorial illustration explaining tool calling. Style sophisticated precision industrial diorama, matte cobalt blue application enclosure on warm pale yellow background, coral proposal cards and clean cream labels, beautiful modelmaking detail. LEFT one model module labeled exactly 'Model' ejects a small function-request card with bracket symbols only. CENTER a clearly bounded application workshop labeled exactly 'App' contains a prominent schema-shaped gauge with a check mark and a mechanical actuator. The proposal must pass the gauge before the APP actuator inserts it into a weather-tool module on the RIGHT labeled exactly 'Tool', recognizable sun/cloud dial. One broad return arrow carries a result card from tool back to model, distinct from outgoing proposal path. One finished response card exits model downward, no text. Show ownership by app enclosing the validation and actuator, model remains outside and does not touch tool directly. Large legible forms, no humans/robots/brains, no prose, no numeric claims, no logos/watermark. Only Model/App/Tool as words; brackets allowed. Clear bounded loop, no automatic payment/deletion symbols. Keep safe margins and thumbnail readability.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/05-ai-agent-dau-tien-function-calling.md",
+          "sha256": "d60317dda71a71004f450d1ce63323495308cab988c600cfd1638415ce6fd803",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Tool calling thực chất là gì",
+              "summary": "Model emits function call request; application actually runs function."
+            },
+            {
+              "heading": "Vòng lặp agent",
+              "summary": "Loop returns results to model until answer or step limit."
+            },
+            {
+              "heading": "Định nghĩa tool bằng schema và chạy vòng lặp",
+              "summary": "Tool schema/description and bounded AI SDK steps define weather example."
+            },
+            {
+              "heading": "Những ranh giới bắt buộc phải có",
+              "summary": "Validate inputs, least privilege, logs and control side effects."
+            },
+            {
+              "heading": "Đừng vội nhảy lên \"multi-agent\"",
+              "summary": "One agent often enough; more agents increase failure/cost; MCP shares tools."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/05-first-ai-agent-function-calling.md",
+          "sha256": "f96a34ad4b5f2354027e874c24eff2dd321366290072571dc435bc5abab0418c",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "What tool calling really is",
+              "summary": "Model emits function call request; application actually runs function."
+            },
+            {
+              "heading": "The agent loop",
+              "summary": "Loop returns results to model until answer or step limit."
+            },
+            {
+              "heading": "Define tools with schemas and run the loop",
+              "summary": "Tool schema/description and bounded AI SDK steps define weather example."
+            },
+            {
+              "heading": "Boundaries you must have",
+              "summary": "Validate inputs, least privilege, logs and control side effects."
+            },
+            {
+              "heading": "Don't rush into \"multi-agent\"",
+              "summary": "One agent often enough; more agents increase failure/cost; MCP shares tools."
+            }
+          ]
+        }
+      },
+      "basename": "05-ai-agent-dau-tien-function-calling",
+      "file": "public/images/blog/05-ai-agent-dau-tien-function-calling-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-091ba700-15a2-477b-b64d-c865a214a8e4.png",
+      "review": {
+        "thumbnail": "App enclosure owns schema gate and actuator; weather result returns to model; no direct model execution.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 6,
+      "message": "Measure cost, then route suitable tasks and reuse cached results.",
+      "summaries": [
+        "Route easy vs hard tasks to appropriate sized models.",
+        "Result cache avoids duplicate model calls; prefix caching is separate.",
+        "Trim unnecessary context and bound outputs.",
+        "Streaming changes perceived responsiveness, not total inference time.",
+        "Parallel independent calls; batch asynchronous work where supported.",
+        "Log model, tokens, estimated cost and duration; measure first."
+      ],
+      "concepts": [
+        "Rail switchyard with cache shortcut and small/large engines.",
+        "Budget desk comparing measured token loads."
+      ],
+      "choice": "Switchyard makes repeated-answer shortcut and model routing distinct.",
+      "caveats": [
+        "Cache is not literally zero network latency; no fabricated savings percent or streaming speedup."
+      ],
+      "prompt": "Create a highly polished landscape16:9 editorial technical illustration: LLM cost optimization as a miniature railway switchyard, not a chart. Isometric model on off-white base, vermilion rails, sea-green locomotives, brass signals, crisp sunny studio shadows. One incoming request cart reaches a junction. Upper SHORT route passes through a small archive cache shed labeled 'Cache' and delivers a ready answer parcel to the output WITHOUT crossing either inference engine. Lower route forks toward one compact efficient engine and one larger engine, both lead to same output parcel platform; rail switch clearly chooses a path, not both engines on every request. A small tasteful meter with unnumbered bars beside junction signifies measuring usage; two modest stacks of token chips vary in size without numerical costs. Text only 'Cache', 'Route', 'Model'; put Model beside shared lower-engine zone. Sophisticated physical model detail, bold easy-to-follow rails, no fake percentages/prices, no claim free infrastructure, no stopwatch implying streaming accelerates inference. Distinct editorial composition, no navy neon glass, logos, robot or watermark. 7 percent safe margins, legible thumbnail.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/06-giam-chi-phi-do-tre-llm-production.md",
+          "sha256": "90d56ca134d3735466aae68f1fac55ca507e57ef9322f456bea146fec8b2816e",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "1. Chọn đúng model cho đúng việc",
+              "summary": "Route easy vs hard tasks to appropriate sized models."
+            },
+            {
+              "heading": "2. Cache — thứ miễn phí mà hay bị quên",
+              "summary": "Result cache avoids duplicate model calls; prefix caching is separate."
+            },
+            {
+              "heading": "3. Cắt token thừa",
+              "summary": "Trim unnecessary context and bound outputs."
+            },
+            {
+              "heading": "4. Streaming để \"nhanh\" mà không cần nhanh hơn",
+              "summary": "Streaming changes perceived responsiveness, not total inference time."
+            },
+            {
+              "heading": "5. Song song và gộp việc",
+              "summary": "Parallel independent calls; batch asynchronous work where supported."
+            },
+            {
+              "heading": "6. Đo trước khi tối ưu",
+              "summary": "Log model, tokens, estimated cost and duration; measure first."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/06-reduce-llm-cost-and-latency-in-production.md",
+          "sha256": "5e6d63d72ac9297eeb386916796b85650da3295779f2b6ec55f54f78cdb13d93",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "1. Pick the right model for the job",
+              "summary": "Route easy vs hard tasks to appropriate sized models."
+            },
+            {
+              "heading": "2. Caching — free, and often forgotten",
+              "summary": "Result cache avoids duplicate model calls; prefix caching is separate."
+            },
+            {
+              "heading": "3. Trim unnecessary tokens",
+              "summary": "Trim unnecessary context and bound outputs."
+            },
+            {
+              "heading": "4. Stream to feel fast without being faster",
+              "summary": "Streaming changes perceived responsiveness, not total inference time."
+            },
+            {
+              "heading": "5. Parallelize and batch",
+              "summary": "Parallel independent calls; batch asynchronous work where supported."
+            },
+            {
+              "heading": "6. Measure before you optimize",
+              "summary": "Log model, tokens, estimated cost and duration; measure first."
+            }
+          ]
+        }
+      },
+      "basename": "06-giam-chi-phi-do-tre-llm-production",
+      "file": "public/images/blog/06-giam-chi-phi-do-tre-llm-production-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-70cb3f31-7524-44f8-bf0d-c219eca2a645.png",
+      "review": {
+        "thumbnail": "Cache shortcut bypasses both model engines; model branches visibly different, no fabricated cost numbers.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 7,
+      "message": "Evaluate a representative set against explicit criteria and inspect failures before shipping.",
+      "summaries": [
+        "Probabilistic outputs need criterion-based evaluation across diverse cases.",
+        "Build ordinary, edge and regression cases with expected behavior.",
+        "Use exact assertions where possible; rubric judge needs human calibration.",
+        "Run whole suite, compare aggregate and failing examples.",
+        "CI gate catches regression before controlled rollout.",
+        "Start small, account for cost/time and judge bias."
+      ],
+      "concepts": [
+        "Quality-control light table comparing accepted and failed answer cards.",
+        "Side-by-side before/after scorecards."
+      ],
+      "choice": "Inspection light table emphasizes case-level failures rather than impressive invented score.",
+      "caveats": [
+        "No perfect correctness guarantee, fabricated pass rates or self-grading as infallible."
+      ],
+      "prompt": "Create a premium 16:9 editorial illustration about evaluating LLM responses before release. Bright professional quality-control light table, white and graphite with sharp electric violet and coral accents, photographic material detail mixed with crisp editorial graphics. A stack of diverse answer cards enters a central large inspection frame labeled 'Evals'. Inside frame a bold rubric checklist overlays one response card, abstract lines only. On right the tested cards separate into two substantial trays: one with a large violet check icon, other with coral cross icon. Most important focal detail is a CORAL FAILED CARD pulled forward under a magnifying lens for investigation, not discarded. A small deployment gate beyond trays remains closed pending check. Only word 'Evals', no percentages, scores, prose, tiny code, logos or watermarks. Different word patterns on cards can pass same criteria; use abstract line shapes, not exact copied sentence strings. Elegant diagonal composition with tactile matte paper, no robot/brain, no gavel/judge character or glowing server. Clear inspection/pass/failure hierarchy readable at320x180; 7 percent safe margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/07-evals-do-chat-luong-llm.md",
+          "sha256": "59dc1484a346265b472b6743455b2c2e71903247c9eb8cfc83027eebabfae543",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Vì sao không test như code thường",
+              "summary": "Probabilistic outputs need criterion-based evaluation across diverse cases."
+            },
+            {
+              "heading": "Bước 1: dựng tập test",
+              "summary": "Build ordinary, edge and regression cases with expected behavior."
+            },
+            {
+              "heading": "Bước 2: chọn cách chấm",
+              "summary": "Use exact assertions where possible; rubric judge needs human calibration."
+            },
+            {
+              "heading": "Bước 3: chạy và đọc kết quả",
+              "summary": "Run whole suite, compare aggregate and failing examples."
+            },
+            {
+              "heading": "Bước 4: đưa vào CI",
+              "summary": "CI gate catches regression before controlled rollout."
+            },
+            {
+              "heading": "Vài lưu ý thật",
+              "summary": "Start small, account for cost/time and judge bias."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/07-llm-evals-measuring-quality.md",
+          "sha256": "45d66b89276174c2bb4fb8f844ac1ce51cc2da86e3c810cbb7ea41580a3b4fb5",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Why you can't test it like normal code",
+              "summary": "Probabilistic outputs need criterion-based evaluation across diverse cases."
+            },
+            {
+              "heading": "Step 1: build a test set",
+              "summary": "Build ordinary, edge and regression cases with expected behavior."
+            },
+            {
+              "heading": "Step 2: choose how to grade",
+              "summary": "Use exact assertions where possible; rubric judge needs human calibration."
+            },
+            {
+              "heading": "Step 3: run it and read the results",
+              "summary": "Run whole suite, compare aggregate and failing examples."
+            },
+            {
+              "heading": "Step 4: put it in CI",
+              "summary": "CI gate catches regression before controlled rollout."
+            },
+            {
+              "heading": "A few honest notes",
+              "summary": "Start small, account for cost/time and judge bias."
+            }
+          ]
+        }
+      },
+      "basename": "07-evals-do-chat-luong-llm",
+      "file": "public/images/blog/07-evals-do-chat-luong-llm-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-4458cd84-e505-47f3-bb0c-26d7391ff7f9.png",
+      "review": {
+        "thumbnail": "Rubric inspection, pass/fail trays and failed-card investigation visible at320px; no fake quality rate.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 8,
+      "message": "Local inference keeps the depicted data inside the machine, with hardware tradeoffs.",
+      "summaries": [
+        "Pull and run local model; HTTP server on localhost.",
+        "OpenAI-compatible baseURL lets Node/Next use local model.",
+        "Local embeddings, schema output and streaming supported.",
+        "Sensitive/offline/development and simple batches fit.",
+        "Hardware, power, model quality and concurrency limit local usefulness.",
+        "Hybrid local/cloud choice depends on task; no universal replacement."
+      ],
+      "concepts": [
+        "Cutaway laptop with local documents and model loop inside boundary.",
+        "Local/cloud workload tradeoff balance."
+      ],
+      "choice": "Contained laptop process: privacy/offline mechanism is instantly visible without a cost claim.",
+      "caveats": [
+        "No free compute, cloud-equivalent quality, guaranteed throughput or model download without internet."
+      ],
+      "prompt": "Create a beautiful16:9 editorial cover about RUNNING AN LLM LOCALLY WITH OLLAMA. One large open laptop in a quiet mint-green and warm oak workshop, strong close framing. Show a carefully designed cutaway through the laptop base revealing a modest memory module and cooling fan, realistic metal and fine circuit detail. On screen a document card and unfinished chat bubble are joined by a compact loop arrow entirely INSIDE screen boundary, conveying documents processed locally. A large small-footprint model package beside the chat carries exact label 'Local'. Under screen a small readable endpoint plate says exactly 'localhost'. A visibly unplugged network cable rests beside laptop with connector safely distant, no outgoing data path, no cloud. The machine is powered on, subtle fan vents remind hardware cost. Refined tactile product illustration, sage, warm white and soft terracotta, natural side light and restrained depth. No mascot, llama animal, robot, brain, price tags, free claims, benchmark numbers or invented API code. Not a product screenshot. Strong recognizable laptop and bounded processing loop at320x180, minimal text, no watermark/logos, safe margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/08-chay-llm-local-voi-ollama.md",
+          "sha256": "b111105274fd20546415c8a38652475a61e510d9aaf32cea7414b9991804100f",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Dựng trong vài phút",
+              "summary": "Pull and run local model; HTTP server on localhost."
+            },
+            {
+              "heading": "Gọi từ Node/Next.js",
+              "summary": "OpenAI-compatible baseURL lets Node/Next use local model."
+            },
+            {
+              "heading": "Nó còn làm được gì hay",
+              "summary": "Local embeddings, schema output and streaming supported."
+            },
+            {
+              "heading": "Khi nào local thật sự đáng",
+              "summary": "Sensitive/offline/development and simple batches fit."
+            },
+            {
+              "heading": "Khi nào đừng tự huyễn hoặc",
+              "summary": "Hardware, power, model quality and concurrency limit local usefulness."
+            },
+            {
+              "heading": "Lời khuyên gọn",
+              "summary": "Hybrid local/cloud choice depends on task; no universal replacement."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/08-running-llms-locally-with-ollama.md",
+          "sha256": "6ff268f44375e5136a7ddf86f1d0ef19da72e99ebbac22bdc96fb91f96108b90",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Up and running in minutes",
+              "summary": "Pull and run local model; HTTP server on localhost."
+            },
+            {
+              "heading": "Calling it from Node/Next.js",
+              "summary": "OpenAI-compatible baseURL lets Node/Next use local model."
+            },
+            {
+              "heading": "What else it does well",
+              "summary": "Local embeddings, schema output and streaming supported."
+            },
+            {
+              "heading": "When local is genuinely worth it",
+              "summary": "Sensitive/offline/development and simple batches fit."
+            },
+            {
+              "heading": "When not to fool yourself",
+              "summary": "Hardware, power, model quality and concurrency limit local usefulness."
+            },
+            {
+              "heading": "The short version",
+              "summary": "Hybrid local/cloud choice depends on task; no universal replacement."
+            }
+          ]
+        }
+      },
+      "basename": "08-chay-llm-local-voi-ollama",
+      "file": "public/images/blog/08-chay-llm-local-voi-ollama-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-f5a33c14-c95b-48db-92df-994ee84c6f90.png",
+      "review": {
+        "thumbnail": "Local processing loop, laptop hardware and unplugged cable clear; generator added accurate English title but understanding does not rely on it. Local/localhost remain readable.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 9,
+      "message": "Untrusted document instructions must not acquire execution authority.",
+      "summaries": [
+        "Natural-language commands/data mix; direct and indirect injection.",
+        "Leakage, malicious outputs and tool abuse can follow.",
+        "Layer delimiters, least privilege, data authorization and output validation; no perfect filter.",
+        "Assume compromise, contain serious side effects and spending; do not put real secrets in prompt."
+      ],
+      "concepts": [
+        "Injected document tries to cross from data tray into tool execution zone.",
+        "Layered permissions checkpoint around tool."
+      ],
+      "choice": "Crossing attempt blocked at execution boundary rather than magical prompt-filter shield.",
+      "caveats": [
+        "No perfect injection prevention; delimiters do not enforce actual data permissions.",
+        "No readable malicious instructions, secrets or model directly performing privileged actions."
+      ],
+      "prompt": "Create ONE sophisticated16:9 editorial security illustration in bold cut-paper relief, deep burgundy, parchment and vivid red with small petrol-blue accents. LEFT a stack of external document cards enters a clearly outlined region labeled exactly 'Data'. One card hides a red arrow-shaped insert among normal dark text-line shapes; that insert tries to climb upward across a boundary into a region labeled exactly 'Tools' on the RIGHT. The crossing meets a substantial physical permission turnstile anchored in an application wall; the red insert cannot pass, while a small correctly shaped blue authorized request token fits a separate validation slot. Behind boundary a few database-folder and send-envelope tool icons are protected by limited individual locks, not a universal master key or giant shield. Main story is a command smuggled in DATA does not grant execution permission; no assertion all prompt injection is prevented. Beautiful layered paper edges, dramatic directional shadows and clean large geometry, no hackers, robots, brains, gibberish prose, code, secret strings or slogans. Only Data and Tools as words, no guarantee/security percentages. Readable at320x180; safe margins7 percent, precise arrow direction and ownership.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/09-bao-mat-ai-prompt-injection.md",
+          "sha256": "33378ff0a1c224d86594907fc3fde89df85c57d7b63bd930b0bda5985b217a9c",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Vì sao injection vào AI khó hơn injection cũ",
+              "summary": "Natural-language commands/data mix; direct and indirect injection."
+            },
+            {
+              "heading": "Những hậu quả thật",
+              "summary": "Leakage, malicious outputs and tool abuse can follow."
+            },
+            {
+              "heading": "Tuyến phòng thủ, từ rẻ tới quan trọng",
+              "summary": "Layer delimiters, least privilege, data authorization and output validation; no perfect filter."
+            },
+            {
+              "heading": "Vài nguyên tắc đóng đinh",
+              "summary": "Assume compromise, contain serious side effects and spending; do not put real secrets in prompt."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/09-ai-security-prompt-injection.md",
+          "sha256": "47a7476c0de0b42439414d7a97682fe697bfae824b3bdd0b69d561222bb0be3e",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Why injecting into AI is harder to stop than classic injection",
+              "summary": "Natural-language commands/data mix; direct and indirect injection."
+            },
+            {
+              "heading": "The real consequences",
+              "summary": "Leakage, malicious outputs and tool abuse can follow."
+            },
+            {
+              "heading": "Lines of defense, from cheap to essential",
+              "summary": "Layer delimiters, least privilege, data authorization and output validation; no perfect filter."
+            },
+            {
+              "heading": "A few principles to nail down",
+              "summary": "Assume compromise, contain serious side effects and spending; do not put real secrets in prompt."
+            }
+          ]
+        }
+      },
+      "basename": "09-bao-mat-ai-prompt-injection",
+      "file": "public/images/blog/09-bao-mat-ai-prompt-injection-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-001c1bde-6963-4116-9863-ab8904d38e3e.png",
+      "review": {
+        "thumbnail": "Injected red arrow blocked by execution turnstile, authorized blue path separate; Data/Tools legible, no perfect input-filter promise.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 10,
+      "message": "A shared protocol lets multiple AI clients reuse tool/data server integrations.",
+      "summaries": [
+        "Shared client/server protocol replaces custom pairwise integration.",
+        "Servers expose tools, resources and prompt templates.",
+        "TypeScript stdio server exposes a validated customer lookup.",
+        "Reuse connectors across AI applications with centralized boundaries.",
+        "Protocol convenience does not replace least privilege or authorization."
+      ],
+      "concepts": [
+        "Universal modular connector hub.",
+        "Many incompatible plugs resolved by a shared bus."
+      ],
+      "choice": "Clean connector hub shows reuse without claiming every server exposes everything.",
+      "caveats": [
+        "No protocol equals model intelligence or automatic permission/security."
+      ],
+      "prompt": "Create one elegant16:9 editorial product-model illustration of MCP as a shared integration protocol. Pale lavender seamless backdrop, brushed silver, cobalt and vivid tangerine modules, very clean Scandinavian industrial design. LEFT three distinct AI app devices (chat window, code editor window, agent workflow tile), using pictograms only. Each plugs via the SAME standardized visible connector shape into a central horizontal bus labeled exactly 'MCP'. RIGHT bus connects to three distinct server modules: document resource tray, database cylinder and wrench-shaped action tool. Clearly separated cables with purposeful directions, no spaghetti. Small permission latch on each server connector suggests scoped access without guaranteed protection. Fine machining detail, large bold modules, soft architectural shadows. Only text MCP, no logos/code/prose, no robots/brains or glowing glass. This is interoperability through client/server boundaries, not a single supermodel or universal access key. Main hub clearly readable at320x180, generous safe margin7 percent.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/10-mcp-model-context-protocol.md",
+          "sha256": "13d8128187529a051ba721f2a4a2447bc8833ae51a90e6913d2e78908e3e71d5",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Ý tưởng cốt lõi: một chuẩn giao tiếp chung",
+              "summary": "Shared client/server protocol replaces custom pairwise integration."
+            },
+            {
+              "heading": "Một server MCP phơi ra ba thứ",
+              "summary": "Servers expose tools, resources and prompt templates."
+            },
+            {
+              "heading": "Một MCP server tối giản bằng TypeScript",
+              "summary": "TypeScript stdio server exposes a validated customer lookup."
+            },
+            {
+              "heading": "Vì sao điều này quan trọng với bạn",
+              "summary": "Reuse connectors across AI applications with centralized boundaries."
+            },
+            {
+              "heading": "Đừng quên bài học bảo mật",
+              "summary": "Protocol convenience does not replace least privilege or authorization."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/10-what-is-mcp-model-context-protocol.md",
+          "sha256": "09aed8cb0f5731b166eedfec881b3dce8b12f40c72eb1afd7cb750a872d30c7a",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "The core idea: one shared protocol",
+              "summary": "Shared client/server protocol replaces custom pairwise integration."
+            },
+            {
+              "heading": "An MCP server exposes three things",
+              "summary": "Servers expose tools, resources and prompt templates."
+            },
+            {
+              "heading": "A minimal MCP server in TypeScript",
+              "summary": "TypeScript stdio server exposes a validated customer lookup."
+            },
+            {
+              "heading": "Why this matters to you",
+              "summary": "Reuse connectors across AI applications with centralized boundaries."
+            },
+            {
+              "heading": "Don't forget the security lesson",
+              "summary": "Protocol convenience does not replace least privilege or authorization."
+            }
+          ]
+        }
+      },
+      "basename": "10-mcp-model-context-protocol",
+      "file": "public/images/blog/10-mcp-model-context-protocol-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-2cbb436d-3374-4ec5-ab72-c1ca73c97e7c.png",
+      "review": {
+        "thumbnail": "Three app clients share standardized connector/bus to scoped document/database/tool modules; MCP clear at320px.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 11,
+      "message": "Combine keyword and semantic candidates, then rerank only those candidates.",
+      "summaries": [
+        "Classify/parse documents by structure, retain metadata and permissions; stage complete revisions and switch atomically; clean deleted copies.",
+        "Filter both keyword/vector branches, fuse by rank then rerank; absent candidates cannot be recovered; avoid duplicate passages.",
+        "Measure ingestion, recall/rank/latency and answer eval separately before changing model."
+      ],
+      "concepts": [
+        "Two search channels merge into candidate sorter.",
+        "Clean ingestion assembly with version switch."
+      ],
+      "choice": "Hybrid retrieval merger makes this distinct from basic RAG library cover.",
+      "caveats": [
+        "No adding incomparable raw scores; reranker cannot retrieve missing candidate; permissions precede rerank."
+      ],
+      "prompt": "Create a striking16:9 editorial scientific illustration of HYBRID SEARCH THEN RERANK. Sophisticated white porcelain sorting apparatus on a deep teal workbench, orange and lilac passage cards, crisp studio photography and diagram-like clarity. LEFT two separate input channels labeled exactly 'Keyword' and 'Vector'. Keyword cards have distinct code-like geometric barcode marks; vector cards have semantic dot-cluster symbols, no actual text. Each channel has a small access-check gate BEFORE they merge. Both feed a central deduplicating candidate tray, a matching orange card appears only ONCE after merge. RIGHT a separate larger stepped sorting rack labeled exactly 'Rerank' reorders the candidate cards, placing the relevant orange card at front, a few selected cards exit into a slim context slot. Direction left to right. No new cards magically enter at rerank stage. Beautiful precise mechanical/paper detail, bold stages, no raw score numbers, invented percentages, robot, brain or model chip. Exact text only Keyword, Vector, Rerank; no poster title. At320x180 channels and downstream rerank remain clear; 7 percent margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/11-rag-production-ingestion-hybrid-search.md",
+          "sha256": "b10dd49e1490d923e3e4d5026aa598f469b3556e02b56d6bbd6b58395556e431",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Phần 1 — Ingestion: model chỉ đọc được thứ bạn đưa vào",
+              "summary": "Classify/parse documents by structure, retain metadata and permissions; stage complete revisions and switch atomically; clean deleted copies."
+            },
+            {
+              "heading": "Phần 2 — Retrieval: tìm đúng đoạn, không chỉ đoạn gần nghĩa",
+              "summary": "Filter both keyword/vector branches, fuse by rank then rerank; absent candidates cannot be recovered; avoid duplicate passages."
+            },
+            {
+              "heading": "Đo từng tầng trước khi thêm tầng mới",
+              "summary": "Measure ingestion, recall/rank/latency and answer eval separately before changing model."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/11-production-rag-ingestion-hybrid-search.md",
+          "sha256": "e1e29997d9d30f25bda04c8228b95ddf4ae00cd82dced9c719fda43520304320",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Part 1 — Ingestion: the model can only read what you put in",
+              "summary": "Classify/parse documents by structure, retain metadata and permissions; stage complete revisions and switch atomically; clean deleted copies."
+            },
+            {
+              "heading": "Part 2 — Retrieval: find the right passage, not just a similar one",
+              "summary": "Filter both keyword/vector branches, fuse by rank then rerank; absent candidates cannot be recovered; avoid duplicate passages."
+            },
+            {
+              "heading": "Measure each layer before adding another",
+              "summary": "Measure ingestion, recall/rank/latency and answer eval separately before changing model."
+            }
+          ]
+        }
+      },
+      "basename": "11-rag-production-ingestion-hybrid-search",
+      "file": "public/images/blog/11-rag-production-ingestion-hybrid-search-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-3a6c2cc8-d0a4-4473-a79e-fa92e18cfe37.png",
+      "review": {
+        "thumbnail": "Two permission-filtered channels merge before distinct rerank stage; no new candidate introduced downstream, text legible.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 12,
+      "message": "Choose relevant state, recent history and sourced memory within a finite context budget.",
+      "summaries": [
+        "History, current task state and lasting memory differ in lifetime/trust.",
+        "Budget measured tokens across mandatory instructions/state/messages/output reserve and evidence.",
+        "Summarize decisions and constraints, preserve sources/tool pairs; structured application state controls permissions.",
+        "Memory has tenant, source, timestamps, expiry and correction; external text not automatically trusted memory.",
+        "Evaluate ability to continue correctly after compaction, not verbatim recall."
+      ],
+      "concepts": [
+        "Finite suitcase with deliberate compartments.",
+        "Editor cutting room selects history and protected current decisions."
+      ],
+      "choice": "Compartmented finite context case makes selection and reserved space tangible.",
+      "caveats": [
+        "No memory equals weights, infinite context or summary grants permissions; leave output reserve empty."
+      ],
+      "prompt": "Create a warm sophisticated16:9 editorial still-life illustration about CONTEXT ENGINEERING, not generic AI memory. Top-down open finite rectangular archival travel case on a terracotta desk, cream linen lining, deep indigo dividers and sage cards. Case contains three clearly different compartments labeled exactly 'State', 'History', 'Memory'. State is a single firm checklist card held by a clip with an important coral constraint marker. History is a compact folded accordion of recent chat cards, earlier full-length archive scroll stays OUTSIDE case. Memory is a few source-tabbed cards with small clock symbols signifying expiry. A visibly EMPTY compartment at right labeled exactly 'Output' reserves room; do not fill it. One hand carefully places a small relevant evidence card into remaining space, no oversized pile or magic compression. Crisp bookbinding detail, shadows, tactile editorial craft, strong finite boundary and intentional hierarchy. Only State/History/Memory/Output as text, no prose, numbers or code. No brain/robot, cloud, glowing chip, unlimited storage or memory-as-authority symbols. Clearly readable at320x180, 7 percent margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/12-context-engineering-va-memory.md",
+          "sha256": "dc52f5a5c029c9543c9364bfef5569f008257b52295fda888436d19fa1931534",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Tách ba thứ thường bị gọi chung là memory",
+              "summary": "History, current task state and lasting memory differ in lifetime/trust."
+            },
+            {
+              "heading": "Đặt ngân sách cho từng phần",
+              "summary": "Budget measured tokens across mandatory instructions/state/messages/output reserve and evidence."
+            },
+            {
+              "heading": "Tóm tắt để tiếp tục công việc",
+              "summary": "Summarize decisions and constraints, preserve sources/tool pairs; structured application state controls permissions."
+            },
+            {
+              "heading": "Memory cần nguồn và cách hết hiệu lực",
+              "summary": "Memory has tenant, source, timestamps, expiry and correction; external text not automatically trusted memory."
+            },
+            {
+              "heading": "Đo khả năng tiếp tục sau khi thu gọn",
+              "summary": "Evaluate ability to continue correctly after compaction, not verbatim recall."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/12-context-engineering-and-memory.md",
+          "sha256": "1a55386c48f4345611823e66da373c7aaa43ac5a341689846d0326da3f50da60",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Separate three things that all get called \"memory\"",
+              "summary": "History, current task state and lasting memory differ in lifetime/trust."
+            },
+            {
+              "heading": "Budget each part",
+              "summary": "Budget measured tokens across mandatory instructions/state/messages/output reserve and evidence."
+            },
+            {
+              "heading": "Summarize so the work can continue",
+              "summary": "Summarize decisions and constraints, preserve sources/tool pairs; structured application state controls permissions."
+            },
+            {
+              "heading": "Memories need a source and a way to expire",
+              "summary": "Memory has tenant, source, timestamps, expiry and correction; external text not automatically trusted memory."
+            },
+            {
+              "heading": "Measure whether the work survives compaction",
+              "summary": "Evaluate ability to continue correctly after compaction, not verbatim recall."
+            }
+          ]
+        }
+      },
+      "basename": "12-context-engineering-va-memory",
+      "file": "public/images/blog/12-context-engineering-va-memory-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-4f80fbe4-bca0-4754-a7dd-75f099a0ed28.png",
+      "review": {
+        "thumbnail": "Finite compartments distinguish state/history/memory with clocks and preserve empty output reserve. Extra accurate heading present; main meaning still visual.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 13,
+      "message": "Retries need a deadline; repeated side-effect requests need one durable action identity.",
+      "summaries": [
+        "One retry owner, total deadline/jitter/cancellation, selective transient retries; streaming restart explicit; fallback preserves contract.",
+        "Durable revisioned state, exact approved payload, idempotency and outbox; unknown outcome requires reconciliation, not blind resend.",
+        "Fault injection: repeated503, post-send crash, competing workers and stale approvals."
+      ],
+      "concepts": [
+        "Mail dispatch deduplication station with repeated same-key tickets.",
+        "Deadline-controlled retry paths."
+      ],
+      "choice": "Deduplication dispatch emphasizes the consequential failure: retry must not send duplicate mail.",
+      "caveats": [
+        "No timeout proves nothing happened, checkpoint alone equals exactly-once, or universal idempotency guarantee."
+      ],
+      "prompt": "Create a memorable16:9 editorial illustration for LLM RELIABILITY, focusing on idempotent side effects. A beautifully detailed postal dispatch station rendered as precision clay/wood model, royal purple, warm cream and mustard yellow, side-lit on a graphite desk. LEFT three repeated identical action tickets arrive along a short curved retry path; ALL tickets bear the SAME simple hexagonal key symbol. CENTER a durable ledger slot and a keyed deduplication gate labeled exactly 'Same key' admit only ONE action, the other identical attempts rest in a checked-already tray, not sent again. RIGHT a single clearly visible sealed envelope exits toward one recipient inbox labeled exactly 'One action'. Above repeated path a finite timer dial with stop marker suggests retry budget, no numbered time or guarantee. Large obvious relationship repeated requests to one delivery, fine physical craft and pleasant editorial geometry. No hundreds of arrows, no actual email addresses, secret keys, dollar amounts, slogans or code. Only Same key/One action as words. Do not imply timeout means unsent or dedupe works without destination support; this shows a keyed endpoint honoring same action identity. Clear thumbnail and safe7percent margins, no logos/watermark/robots.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/13-do-tin-cay-llm-timeout-retry-idempotency.md",
+          "sha256": "2a34d298214cdd2994f79121cddb33e8967ab5c4033f2c833d798aa31de02442",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Phần 1 — Thao tác chỉ đọc: timeout và retry có ngân sách",
+              "summary": "One retry owner, total deadline/jitter/cancellation, selective transient retries; streaming restart explicit; fallback preserves contract."
+            },
+            {
+              "heading": "Phần 2 — Thao tác có tác dụng phụ: idempotency và workflow bền vững",
+              "summary": "Durable revisioned state, exact approved payload, idempotency and outbox; unknown outcome requires reconciliation, not blind resend."
+            },
+            {
+              "heading": "Kiểm thử bằng cách cố ý làm hỏng",
+              "summary": "Fault injection: repeated503, post-send crash, competing workers and stale approvals."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/13-llm-reliability-timeouts-retries-idempotency.md",
+          "sha256": "c5baaba4522e4f6cda4474a7ee1688bcd3c922836628f6bda0b0210fea6399e3",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Part 1 — Read-only operations: timeouts and budgeted retries",
+              "summary": "One retry owner, total deadline/jitter/cancellation, selective transient retries; streaming restart explicit; fallback preserves contract."
+            },
+            {
+              "heading": "Part 2 — Operations with side effects: idempotency and durable workflows",
+              "summary": "Durable revisioned state, exact approved payload, idempotency and outbox; unknown outcome requires reconciliation, not blind resend."
+            },
+            {
+              "heading": "Test by breaking things on purpose",
+              "summary": "Fault injection: repeated503, post-send crash, competing workers and stale approvals."
+            }
+          ]
+        }
+      },
+      "basename": "13-do-tin-cay-llm-timeout-retry-idempotency",
+      "file": "public/images/blog/13-do-tin-cay-llm-timeout-retry-idempotency-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-72941888-3c2d-4534-8cbd-51a0045dccac.png",
+      "review": {
+        "thumbnail": "Same-symbol retries meet ledger/dedup gate and only one envelope is dispatched; finite timer present; label readable at320px.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 14,
+      "message": "Trace behavior, version the complete release, and canary changes with a rollback route.",
+      "summaries": [
+        "Trace connected spans, measure relevant bounded metadata, protect prompt/customer data.",
+        "Release manifest versions prompt/model/tool/retrieval/index/output contracts together.",
+        "Offline eval, side-effect-free shadow, stable canary cohorts, concurrent control comparison; rollback compatible full configuration.",
+        "Feedback links individual traces to regression evals; rollout contains residual risk."
+      ],
+      "concepts": [
+        "Release control desk with trace ribbon and small canary branch.",
+        "Museum timeline of one request across release versions."
+      ],
+      "choice": "Control desk integrates run trace with a visibly reversible limited release.",
+      "caveats": [
+        "GreenHTTP status is not answer quality; shadow must not send emails; rollback cannot unsend effects."
+      ],
+      "prompt": "Create a sophisticated16:9 editorial cover about OPERATING LLM RELEASES. A dark cinematic mission-control console, graphite ceramic and brushed aluminum, luminous warm white, restrained violet and orange details. Across lower half one large clean trace timeline is an unbroken ribbon with four connected span blocks; one block has orange warning and a magnifying loupe examines it, no text payload. Upper half shows two complete release cartridges labeled exactly 'A' and 'B', each made of three mechanically interlocked layers signifying prompt/model/data together. Main traffic ribbon continues to cartridge A; a much narrower clearly separated branch reaches cartridge B, labeled exactly 'Canary'. One prominent return lever points from B back toward A; it switches release configuration, not reverses sent actions. No email/payment tools, fake metrics, percent signs, prose, vendor logos or confidential data. Only A, B, Canary, Trace allowed words (Trace beside timeline). Beautiful controlled instrumental detail, clear large forms, not a dense dashboard screenshot. Stable limited branch, visible rollback capability, no implication HTTP200 proves quality. Thumbnail readable with 7 percent margin.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/14-van-hanh-llm-tracing-version-rollout.md",
+          "sha256": "2b3c9b2240bf92c16a85b9f4c38fe4d4795a1e8173b9ac13215765659a388a7a",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Phần 1 — Trace theo đường đi của một câu hỏi",
+              "summary": "Trace connected spans, measure relevant bounded metadata, protect prompt/customer data."
+            },
+            {
+              "heading": "Phần 2 — Đóng gói thay đổi thành phiên bản",
+              "summary": "Release manifest versions prompt/model/tool/retrieval/index/output contracts together."
+            },
+            {
+              "heading": "Phần 3 — Rollout có đường quay về",
+              "summary": "Offline eval, side-effect-free shadow, stable canary cohorts, concurrent control comparison; rollback compatible full configuration."
+            },
+            {
+              "heading": "Nối trace với chất lượng",
+              "summary": "Feedback links individual traces to regression evals; rollout contains residual risk."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/14-operating-llms-tracing-versioning-rollout.md",
+          "sha256": "3403c023c786a8e130fc35c1e67771fcff63d192602787a9037e50c2286cf216",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Part 1 — Trace the path of a single question",
+              "summary": "Trace connected spans, measure relevant bounded metadata, protect prompt/customer data."
+            },
+            {
+              "heading": "Part 2 — Package changes into versions",
+              "summary": "Release manifest versions prompt/model/tool/retrieval/index/output contracts together."
+            },
+            {
+              "heading": "Part 3 — Roll out with a way back",
+              "summary": "Offline eval, side-effect-free shadow, stable canary cohorts, concurrent control comparison; rollback compatible full configuration."
+            },
+            {
+              "heading": "Connect traces to quality",
+              "summary": "Feedback links individual traces to regression evals; rollout contains residual risk."
+            }
+          ]
+        }
+      },
+      "basename": "14-van-hanh-llm-tracing-version-rollout",
+      "file": "public/images/blog/14-van-hanh-llm-tracing-version-rollout-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-e0c8cc4f-b99c-49f4-988b-c5efc43f9ca3.png",
+      "review": {
+        "thumbnail": "Whole release cartridges, limited canary branch, return lever and connected trace with warning visible. Extra headline accurate; no side-effect rollback depicted.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 15,
+      "message": "Extract fields linked to source evidence and keep unclear values unknown.",
+      "summaries": [
+        "OCR/vision complement each other; narrow pages carefully without missing evidence.",
+        "Fields distinguish read/missing/unclear; runtime schema validates shape not truth.",
+        "Quotes and coordinates need source verification and coordinate mapping.",
+        "Validate deterministic formats/dates/arithmetic; self confidence not calibrated probability.",
+        "Evaluate per field/doc type; version pipeline and treat document instructions as untrusted."
+      ],
+      "concepts": [
+        "Scan under evidence inspection with source-to-field linking.",
+        "Correct shape output contrasted with uncertain source field."
+      ],
+      "choice": "Source-linked extraction with one unresolved field, avoids falsely complete AI JSON.",
+      "caveats": [
+        "No guessed blurred character, fake exact confidence or highlighting equals verified truth."
+      ],
+      "prompt": "Create a beautifully legible16:9 editorial illustration for MULTIMODAL DOCUMENT EXTRACTION. Warm ivory document-inspection lightbox on slate blue surface, crisp coral source-region boxes and emerald verified marks, refined offset-print/photographic hybrid. LEFT a large scanned FORM page with abstract line text, three clearly framed source regions: two sharp and one visibly blurred. RIGHT one clean structured field card with three large horizontal slots; thin carefully routed leader lines connect each slot to its corresponding source region. First two slots show short geometric placeholder values and check marks. Third slot linked to BLURRED source remains visibly empty with exact large label 'Unclear' and a question-mark symbol, no invented value. A small magnifying lens over blurred source demonstrates review, not magic enhancement. Keep source page and output both large; show precise traceable relationship, not generic document icon feeding a brain. Only text 'Source', 'Fields', 'Unclear'; no fake personal data, numbers, confidence percentages, paragraphs or code. Elegant realistic paper detail and generous hierarchy; wrong-looking blur is deliberate uncertainty. No claim schema validates factual accuracy. Readable at320x180, safe7percent margins, no watermark/logo.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/15-multimodal-ai-doc-anh-va-pdf.md",
+          "sha256": "5ed8e8ffc863be21b90c3610d985f15ef16e7fbbfa6d0a2fce653c743e77eeb0",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "OCR, vision hay kết hợp?",
+              "summary": "OCR/vision complement each other; narrow pages carefully without missing evidence."
+            },
+            {
+              "heading": "Thiết kế field có quyền không biết",
+              "summary": "Fields distinguish read/missing/unclear; runtime schema validates shape not truth."
+            },
+            {
+              "heading": "Bằng chứng giúp kiểm tra, nhưng cũng có thể sai",
+              "summary": "Quotes and coordinates need source verification and coordinate mapping."
+            },
+            {
+              "heading": "Để code làm kiểm tra xác định được",
+              "summary": "Validate deterministic formats/dates/arithmetic; self confidence not calibrated probability."
+            },
+            {
+              "heading": "Đo theo field và theo loại tài liệu",
+              "summary": "Evaluate per field/doc type; version pipeline and treat document instructions as untrusted."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/15-multimodal-ai-reading-images-and-pdfs.md",
+          "sha256": "7ed9b788aa88a7b9d0f68e965f5c817a691f214c30a945de2600c74397bda979",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "OCR, vision, or both?",
+              "summary": "OCR/vision complement each other; narrow pages carefully without missing evidence."
+            },
+            {
+              "heading": "Design fields that are allowed to not know",
+              "summary": "Fields distinguish read/missing/unclear; runtime schema validates shape not truth."
+            },
+            {
+              "heading": "Evidence helps verification — but it can be wrong too",
+              "summary": "Quotes and coordinates need source verification and coordinate mapping."
+            },
+            {
+              "heading": "Let code do the deterministic checks",
+              "summary": "Validate deterministic formats/dates/arithmetic; self confidence not calibrated probability."
+            },
+            {
+              "heading": "Measure per field and per document type",
+              "summary": "Evaluate per field/doc type; version pipeline and treat document instructions as untrusted."
+            }
+          ]
+        }
+      },
+      "basename": "15-multimodal-ai-doc-anh-va-pdf",
+      "file": "public/images/blog/15-multimodal-ai-doc-anh-va-pdf-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-01fd1ac3-f9f3-4d19-8db6-a25e5e37d3d4.png",
+      "review": {
+        "thumbnail": "Two source-region symbols match corresponding verified fields, blurred source maps to Unclear, not guessed value; labels legible.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 16,
+      "message": "Diagnose recurring behavior errors, then test a small adapter against a baseline.",
+      "summaries": [
+        "Classify errors: new knowledge→retrieval, output→prompt/schema, repeated task errors may merit fine-tuning.",
+        "LoRA freezes base and trains smaller updates, still hardware/compatibility cost.",
+        "Use accurate realistic labels and missing-evidence examples, not model errors as gold.",
+        "Group paraphrases before train/validation/test split; check leakage and distribution.",
+        "Compare tuned model with strong baseline on held-out groups, cost/latency and regressions."
+      ],
+      "concepts": [
+        "Calibration bench with locked base and removable adapter.",
+        "Error-type decision tree."
+      ],
+      "choice": "Small adapter on frozen base, plus held-out comparison, conveys tuning rather than document upload.",
+      "caveats": [
+        "No model learns company documents as live source store, no universal laptop fit or guaranteed improvement."
+      ],
+      "prompt": "Create a refined16:9 editorial technical still-life about FINE-TUNING AFTER DIAGNOSIS. Minimal precision calibration laboratory with warm gray background, deep blue base module and vivid coral slim adapter. CENTER a large sturdy base-model block is held FIXED in a fixture with a visible clamp; a small removable coral adapter slides into a dedicated side slot, only adapter adjustment screws are active. LEFT a small stack of reviewed training example cards with matching category shapes feeds adapter calibration, no documents being stuffed into base. RIGHT a clearly separate sealed tray of held-out test cards sits beside a simple comparison instrument with two unnumbered traces, one baseline and one adjusted, no winner guarantee. Allowed short labels only 'Base', 'Adapter', 'Test'. Elegant macro detail, matte aluminum, precise engraving, no GPU glamour, robots, brains, invented metrics, prices or code. Main message small task adaptation to a frozen base must be evaluated on separate data; do not depict RAG or arbitrary new facts permanently remembered. Big forms, clear held-out boundary, readable at320x180,7percent margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/16-khi-nao-nen-fine-tune-llm.md",
+          "sha256": "36dbb8667629177587ceb2de01eec29e88bb66a6ac0a6d73cc8b8df5b45654ff",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Xác định model đang sai kiểu gì",
+              "summary": "Classify errors: new knowledge→retrieval, output→prompt/schema, repeated task errors may merit fine-tuning."
+            },
+            {
+              "heading": "LoRA giảm phần phải huấn luyện",
+              "summary": "LoRA freezes base and trains smaller updates, still hardware/compatibility cost."
+            },
+            {
+              "heading": "Dữ liệu cần phản ánh tác vụ thật",
+              "summary": "Use accurate realistic labels and missing-evidence examples, not model errors as gold."
+            },
+            {
+              "heading": "Chia tập trước khi tạo biến thể",
+              "summary": "Group paraphrases before train/validation/test split; check leakage and distribution."
+            },
+            {
+              "heading": "So với baseline đủ nghiêm túc",
+              "summary": "Compare tuned model with strong baseline on held-out groups, cost/latency and regressions."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/16-when-to-fine-tune-an-llm.md",
+          "sha256": "99d78d27d14a787a9d49182b71ec78a69207000410eab81545ac20fe1a0d188a",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Pin down how the model is wrong",
+              "summary": "Classify errors: new knowledge→retrieval, output→prompt/schema, repeated task errors may merit fine-tuning."
+            },
+            {
+              "heading": "LoRA shrinks what you have to train",
+              "summary": "LoRA freezes base and trains smaller updates, still hardware/compatibility cost."
+            },
+            {
+              "heading": "Data must reflect the real task",
+              "summary": "Use accurate realistic labels and missing-evidence examples, not model errors as gold."
+            },
+            {
+              "heading": "Split before creating variants",
+              "summary": "Group paraphrases before train/validation/test split; check leakage and distribution."
+            },
+            {
+              "heading": "Compare against a serious baseline",
+              "summary": "Compare tuned model with strong baseline on held-out groups, cost/latency and regressions."
+            }
+          ]
+        }
+      },
+      "basename": "16-khi-nao-nen-fine-tune-llm",
+      "file": "public/images/blog/16-khi-nao-nen-fine-tune-llm-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-ca92f049-7175-432f-b90b-95991ea9e28b.png",
+      "editPrompt": "Remove entire top headline sign and long subtitle; keep only Base/Adapter/Test; preserve frozen clamp, small adapter and held-out test tray; use freed space naturally without added objects.",
+      "review": {
+        "thumbnail": "Removed generated English headline/subtitle through image edit; frozen base, small adjustable adapter and separate locked test set clear at320px.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 17,
+      "message": "Small AI code changes need requirement-driven behavioral checks, not confident reports.",
+      "summaries": [
+        "Task defines verified behavior, scope and constraints using server-auth order access example.",
+        "Read relevant route/service/schema/tests and split by testable behavior.",
+        "Tests protect requirement including unauthorized paths; unit mocks don't prove endpoint enforcement.",
+        "Inspect actual diff, dependencies/config scope and real check outputs.",
+        "AI review suggests, not proves; measure confirmed completion and escaped bugs."
+      ],
+      "concepts": [
+        "Diff under reviewer lens with behavior tests attached.",
+        "Requirements linked to small patch then runnable test gates."
+      ],
+      "choice": "Diff review with one denied access case demonstrates verifying behavior rather than typing speed.",
+      "caveats": [
+        "No green typecheck alone guarantees endpoint security; no real-looking invented code."
+      ],
+      "prompt": "Create an exceptionally clear16:9 editorial illustration about VERIFYING AI-WRITTEN CODE. Bold contemporary flat/vector-like screenprint with subtle paper texture, bright white, charcoal, electric blue and red-orange, unlike a photoreal desk. One giant code-diff window fills center-left, showing a SMALL patch of a few abstract green added line shapes and red removed line shapes, no actual code text. A large magnifying loupe examines the narrow changed area. On RIGHT two substantial behavior-test cards connect back to the patch: one shows a user icon matching an order-card owner symbol with a check, the other a different user attempting that SAME owner-marked order and meeting a clear denied cross. A short requirements checklist sits above patch and connects to BOTH tests. Exact labels only 'Diff', 'Verify'; no fake line numbers, code, percentage, AI mascot or robot. Visually emphasize a small reviewable change and positive AND negative permission behavior, not huge volume of generated code. Confident graphic hierarchy, purposeful details, thumbnail legible,7percent safe margins, no logo/watermark.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/17-dung-ai-viet-code-va-kiem-chung.md",
+          "sha256": "376cecd4acaf2b28ea3b99b0d620dcbccca0cf9f118141e8363b683e646355b2",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Viết yêu cầu có ranh giới kiểm chứng",
+              "summary": "Task defines verified behavior, scope and constraints using server-auth order access example."
+            },
+            {
+              "heading": "Cung cấp context có mục đích",
+              "summary": "Read relevant route/service/schema/tests and split by testable behavior."
+            },
+            {
+              "heading": "Test phải đứng về phía yêu cầu",
+              "summary": "Tests protect requirement including unauthorized paths; unit mocks don't prove endpoint enforcement."
+            },
+            {
+              "heading": "Đọc diff trước khi tin báo cáo",
+              "summary": "Inspect actual diff, dependencies/config scope and real check outputs."
+            },
+            {
+              "heading": "AI review là một nguồn gợi ý",
+              "summary": "AI review suggests, not proves; measure confirmed completion and escaped bugs."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/17-ai-assisted-coding-and-verification.md",
+          "sha256": "61f9d070113a94513d5313d406b003fe55056bb42b381c96e7af33593e14fbc3",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Write requests with verifiable boundaries",
+              "summary": "Task defines verified behavior, scope and constraints using server-auth order access example."
+            },
+            {
+              "heading": "Give context with a purpose",
+              "summary": "Read relevant route/service/schema/tests and split by testable behavior."
+            },
+            {
+              "heading": "Tests must side with the requirements",
+              "summary": "Tests protect requirement including unauthorized paths; unit mocks don't prove endpoint enforcement."
+            },
+            {
+              "heading": "Read the diff before trusting the report",
+              "summary": "Inspect actual diff, dependencies/config scope and real check outputs."
+            },
+            {
+              "heading": "AI review is a source of suggestions",
+              "summary": "AI review suggests, not proves; measure confirmed completion and escaped bugs."
+            }
+          ]
+        }
+      },
+      "basename": "17-dung-ai-viet-code-va-kiem-chung",
+      "file": "public/images/blog/17-dung-ai-viet-code-va-kiem-chung-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-8343b8da-c1a1-4bbe-a524-38593ed72f91.png",
+      "review": {
+        "thumbnail": "Small highlighted diff tied to requirements and both permitted/denied same-owner order behavior, clear at320px.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 18,
+      "message": "Select the workflow skill that fits the task, not the largest collection.",
+      "summaries": [
+        "Skill procedure differs from plugin bundle and MCP connection.",
+        "Choose by design,SEO,React,browser testing or debug work, not ranking/count.",
+        "Inspect author source/runtime/scope before installing; terminal differs from slash commands.",
+        "Evaluate one comparable real task with evidence and scope control.",
+        "Shared repo rules belong in rules file; task procedures in focused skills."
+      ],
+      "concepts": [
+        "Choose one matching tool card from organized library.",
+        "Task puzzle socket accepts focused workflow card."
+      ],
+      "choice": "Task-shaped skill selection, discarding install-count spectacle.",
+      "caveats": [
+        "No magic capability, all skills installed or external access automatically authorized."
+      ],
+      "prompt": "Create a playful sophisticated16:9 editorial illustration of CHOOSING THE RIGHT AGENT SKILL. Overhead modular workspace on rich ultramarine background, cream task board, coral and sunshine-yellow workflow cards, crisp tactile paper relief. Main task board has a prominent browser-form pictogram and a single shaped socket. Around it a small fan of FOUR distinct workflow cards: design palette, SEO magnifier, browser test pointer, debugging probe, all represented only by pictograms. One hand selects the browser-test card whose tab shape matches the form task socket; the remaining cards stay organized in a small rack, not all installed. Selected card has three small procedural step symbols, showing a reusable workflow rather than an API connector. Only exact text 'Task' on board and 'Skill' on selected card, no product/vendor names or fake slash commands. Strong intelligent composition, clean large forms, fine paper craft, no robots, brains, magic wand, trophies or long checklist. The story is fit-to-job over accumulation. Legible320x180,7percent margins, no watermark.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/18-chon-skill-cho-claude-code.md",
+          "sha256": "2e076e67700351c7e13804a409d9daac23cddccd28d8bed289c072a55dd7dcb0",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Phân biệt skill, plugin và MCP",
+              "summary": "Skill procedure differs from plugin bundle and MCP connection."
+            },
+            {
+              "heading": "Chọn theo việc sắp làm",
+              "summary": "Choose by design,SEO,React,browser testing or debug work, not ranking/count."
+            },
+            {
+              "heading": "Đọc nguồn trước khi chạy trình cài",
+              "summary": "Inspect author source/runtime/scope before installing; terminal differs from slash commands."
+            },
+            {
+              "heading": "Thử trên một công việc có thể so sánh",
+              "summary": "Evaluate one comparable real task with evidence and scope control."
+            },
+            {
+              "heading": "Giữ phần dùng chung ở đúng chỗ",
+              "summary": "Shared repo rules belong in rules file; task procedures in focused skills."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/18-choosing-claude-code-skills.md",
+          "sha256": "487d095335c8975a3eb08f55d6ebcc69b55ee02a59da28ad047062e237e06429",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Skills, plugins and MCP are different things",
+              "summary": "Skill procedure differs from plugin bundle and MCP connection."
+            },
+            {
+              "heading": "Choose by the work in front of you",
+              "summary": "Choose by design,SEO,React,browser testing or debug work, not ranking/count."
+            },
+            {
+              "heading": "Read the source before running an installer",
+              "summary": "Inspect author source/runtime/scope before installing; terminal differs from slash commands."
+            },
+            {
+              "heading": "Try it on work you can compare",
+              "summary": "Evaluate one comparable real task with evidence and scope control."
+            },
+            {
+              "heading": "Keep shared rules in the right place",
+              "summary": "Shared repo rules belong in rules file; task procedures in focused skills."
+            }
+          ]
+        }
+      },
+      "basename": "18-chon-skill-cho-claude-code",
+      "file": "public/images/blog/18-chon-skill-cho-claude-code-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-2cd42e32-ac33-42b6-9340-3b2eeccc4777.png",
+      "review": {
+        "thumbnail": "One workflow card selected for matching task while other options remain in rack; Task/Skill readable, no install-everything message.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 19,
+      "message": "Design tokens guide a distinctive UI, then evidence-based review checks real interaction.",
+      "summaries": [
+        "Settle reusable type/color/spacing/focus rules and respect existing brand/tokens.",
+        "Choose one content-led visual emphasis; don't invent testimonials/metrics.",
+        "Review source and browser evidence separately, prioritize actionable accessibility/behavior findings.",
+        "Test long content, errors/loading, keyboard focus and reduced motion; user task must stay clear."
+      ],
+      "concepts": [
+        "Design board with token swatches feeding desktop/mobile and focus review.",
+        "Three-stage studio composition."
+      ],
+      "choice": "One cohesive design board shows deliberate visual system and actual state review.",
+      "caveats": [
+        "Not real product UI screenshot, accessibility certification or generic pretty hero."
+      ],
+      "prompt": "Create a visually exceptional16:9 editorial cover about USING SKILLS TO DESIGN AND REVIEW UI. Contemporary graphic designer's artboard, warm ivory, black typography shapes, acidic yellow and rich cobalt, bold editorial layout with tactile printed-paper layering. LEFT a compact set of reusable color swatches, type-size bars and spacing rulers forms a clear design foundation. CENTER a large striking conceptual browser page and matching mobile page share those SAME colors, typography and rhythm; page is an editorial portfolio with one large project preview and clear primary action, abstract lines instead of body copy. RIGHT an enlarged detail of a real button state has visible keyboard FOCUS outline, a cursor and a small review checklist, showing behavioral review not just aesthetics. Connect foundation→interface→review with subtle strong line, no flowchart poster. Only words 'Design', 'Build', 'Review', large and intentional, no extra prose/code/ratings, testimonials or logos. Main forms clear at320x180, beautiful proportion and authored asymmetry. No gradient card template, robot, brain, fake product screenshot or compliance seal.7percent safe margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/19-lam-ui-voi-claude-code-skills.md",
+          "sha256": "14f10a9dc6c7dff314a27e598c0b8cf715bfe6ece42caee30d3a5438d844674a",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Bước 1 — UI UX Pro Max: chốt design system trước khi vẽ",
+              "summary": "Settle reusable type/color/spacing/focus rules and respect existing brand/tokens."
+            },
+            {
+              "heading": "Bước 2 — frontend-design: tạo điểm nhấn có chủ đích",
+              "summary": "Choose one content-led visual emphasis; don't invent testimonials/metrics."
+            },
+            {
+              "heading": "Bước 3 — Web Design Guidelines: review có bằng chứng",
+              "summary": "Review source and browser evidence separately, prioritize actionable accessibility/behavior findings."
+            },
+            {
+              "heading": "Kiểm bằng nội dung khó và trạng thái thật",
+              "summary": "Test long content, errors/loading, keyboard focus and reduced motion; user task must stay clear."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/19-building-ui-with-claude-code-skills.md",
+          "sha256": "db8254d80bc36f8e498a48663259ba88cfdc10c8f1e8d4210dc26fecf9b4bd03",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Step 1 — UI UX Pro Max: settle the design system before drawing",
+              "summary": "Settle reusable type/color/spacing/focus rules and respect existing brand/tokens."
+            },
+            {
+              "heading": "Step 2 — frontend-design: add deliberate emphasis",
+              "summary": "Choose one content-led visual emphasis; don't invent testimonials/metrics."
+            },
+            {
+              "heading": "Step 3 — Web Design Guidelines: evidence-based review",
+              "summary": "Review source and browser evidence separately, prioritize actionable accessibility/behavior findings."
+            },
+            {
+              "heading": "Test with hard content and real states",
+              "summary": "Test long content, errors/loading, keyboard focus and reduced motion; user task must stay clear."
+            }
+          ]
+        }
+      },
+      "basename": "19-lam-ui-voi-claude-code-skills",
+      "file": "public/images/blog/19-lam-ui-voi-claude-code-skills-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-4c467b74-ce28-4780-b338-36b362432bd3.png",
+      "review": {
+        "thumbnail": "Consistent token swatches/typography across desktop/mobile and focus-state review; three short labels readable at320px.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 20,
+      "message": "An SEO audit is actionable when a finding links observed page evidence to a small verified fix.",
+      "summaries": [
+        "Install actual plugin/runtime and begin with one page/technical/schema scope.",
+        "Every finding needs URL/evidence/impact/recheck; distinguish hypotheses from observed facts.",
+        "Check list/post/missingURL journey, HTTP/sitemap/canonical consistency.",
+        "Structured data matches visible facts; valid schema doesn't guarantee rich result.",
+        "Fix access before metadata/content, monitor measured outcomes; no promised ranking gain."
+      ],
+      "concepts": [
+        "Page examined alongside sitemap and actionable finding card.",
+        "Long report condensed to one evidenced repair."
+      ],
+      "choice": "Evidence lens over page and matching repair ticket, avoids SEO-growth cliché.",
+      "caveats": [
+        "No invented rankings/traffic/star reviews or audit-score guarantees."
+      ],
+      "prompt": "Create ONE premium16:9 editorial illustration about an EVIDENCE-BASED SEO AUDIT. Refined blueprint meets paper editorial collage on deep pine green, warm white pages, vermilion annotations and small brass details. A large conceptual blog page lies at center with obvious title area, body lines and internal-link anchors rendered as abstract geometry. A magnifying lens enlarges a SMALL highlighted metadata/canonical tag region at top of page. A red leader line connects exactly that observed issue to one actionable repair ticket with a tiny wrench and check field. Behind page a compact three-node sitemap shows listing→article and a separate missing-page tile marked with a cross, no invented URLs. A structured-brace card beside page aligns with visible author/date placeholder slots, no star ratings. Large title exactly 'SEO' on a small audit tab, no other words, numeric scores, traffic graphs, rocket or ranking arrows. Technical investigation and recheck, not promise of search growth. Tactile paper edges, carefully authored composition, clear main lens/finding relationship at320x180,7percent margins, no AI mascot/logos/watermark.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/20-claude-seo-audit-website.md",
+          "sha256": "90f07fedd286e1395c244febd09c47a61f05cab49c5a94cbf1721bf5895d5575",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Cài rồi bắt đầu bằng phạm vi nhỏ",
+              "summary": "Install actual plugin/runtime and begin with one page/technical/schema scope."
+            },
+            {
+              "heading": "Yêu cầu báo cáo có bằng chứng",
+              "summary": "Every finding needs URL/evidence/impact/recheck; distinguish hypotheses from observed facts."
+            },
+            {
+              "heading": "Với blog, kiểm tra một hành trình hoàn chỉnh",
+              "summary": "Check list/post/missingURL journey, HTTP/sitemap/canonical consistency."
+            },
+            {
+              "heading": "Schema phải mô tả nội dung thật",
+              "summary": "Structured data matches visible facts; valid schema doesn't guarantee rich result."
+            },
+            {
+              "heading": "Ưu tiên việc sửa và đo lại",
+              "summary": "Fix access before metadata/content, monitor measured outcomes; no promised ranking gain."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/20-claude-seo-website-audit.md",
+          "sha256": "3baa971944f39e32f5fa31b6fa1f690253f1d27b5cdcd2a82069a4a9fc697b5a",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Install, then start with a small scope",
+              "summary": "Install actual plugin/runtime and begin with one page/technical/schema scope."
+            },
+            {
+              "heading": "Require a report backed by evidence",
+              "summary": "Every finding needs URL/evidence/impact/recheck; distinguish hypotheses from observed facts."
+            },
+            {
+              "heading": "For a blog, check one complete journey",
+              "summary": "Check list/post/missingURL journey, HTTP/sitemap/canonical consistency."
+            },
+            {
+              "heading": "Schema must describe the real content",
+              "summary": "Structured data matches visible facts; valid schema doesn't guarantee rich result."
+            },
+            {
+              "heading": "Prioritize fixes and measure again",
+              "summary": "Fix access before metadata/content, monitor measured outcomes; no promised ranking gain."
+            }
+          ]
+        }
+      },
+      "basename": "20-claude-seo-audit-website",
+      "file": "public/images/blog/20-claude-seo-audit-website-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-bbbbf432-ae18-4889-817c-d4d32632d4ba.png",
+      "review": {
+        "thumbnail": "Metadata/canonical inspection linked to repair ticket; sitemap and visible author/date evidence; no ranking promises.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 21,
+      "message": "Measure the actual waterfall and parallelize only independent work while preserving behavior.",
+      "summaries": [
+        "Use real version and measured symptom to narrow scope before refactoring.",
+        "Parallel example applies only to independent authenticated operations; consider failures/downstream limits.",
+        "Inspect initial bundle/lazy interaction cost and precise server/client boundary.",
+        "Cache has tenant scope, freshness and invalidation; use version-matched rules.",
+        "Compare same route/data/build/device, preserve error/loading and behavior."
+      ],
+      "concepts": [
+        "Waterfall timeline untangled into independent aligned lanes.",
+        "Bundle weight and server-client boundary map."
+      ],
+      "choice": "Parallel lane comparison shows concrete bottleneck, more meaningful than React-logo hero.",
+      "caveats": [
+        "No dependent auth/query concurrency, universal speedup, fabricated performance score or indiscriminate memo."
+      ],
+      "prompt": "Create a crisp sophisticated16:9 editorial cover about REACT PERFORMANCE: FIX THE REAL WATERFALL. Bold flat technical graphic with slight dimensional depth, charcoal background, off-white timeline rails, bright lime and electric violet request blocks. Two clearly separated horizontal examples. TOP labeled exactly 'Serial': two independent request blocks appear one after another, large idle gap indicated by dotted segment, ending at a screen-render marker. BOTTOM labeled exactly 'Parallel': the SAME two request blocks occupy two aligned lanes sharing a start line, with a join AFTER BOTH complete leading to the SAME screen-render marker. Keep block lengths internally consistent; no numeric timing, percent, benchmark or guaranteed score. A small magnifying loupe over the top idle gap marks observed bottleneck; no React logo as main subject, no invented code. Minimal exact text only Serial/Parallel, large enough at320x180. Visually explain independence and join, not start privileged work before auth. Confident contemporary magazine composition, precise clean geometry, no generic 3D server boxes, robots or watermarks.7percent safe margin.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/21-react-best-practices-skill-claude-code.md",
+          "sha256": "9b07c09af9b753f5cecbc96bc251d9ae451afda6fd05364c23664dad838c1f5e",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Cài rồi đưa ra triệu chứng cụ thể",
+              "summary": "Use real version and measured symptom to narrow scope before refactoring."
+            },
+            {
+              "heading": "Xác nhận dữ liệu có thật sự độc lập",
+              "summary": "Parallel example applies only to independent authenticated operations; consider failures/downstream limits."
+            },
+            {
+              "heading": "Kiểm tra thứ người dùng thật sự phải tải",
+              "summary": "Inspect initial bundle/lazy interaction cost and precise server/client boundary."
+            },
+            {
+              "heading": "Cache phải giữ đúng phạm vi dữ liệu",
+              "summary": "Cache has tenant scope, freshness and invalidation; use version-matched rules."
+            },
+            {
+              "heading": "Đo kết quả với cùng điều kiện",
+              "summary": "Compare same route/data/build/device, preserve error/loading and behavior."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/21-react-best-practices-claude-code.md",
+          "sha256": "96feab60ff4b50cdfb1011738aba2a1081d926fdcf4a52c38645cdfbec784a4c",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Install it, then describe a concrete symptom",
+              "summary": "Use real version and measured symptom to narrow scope before refactoring."
+            },
+            {
+              "heading": "Confirm the data really is independent",
+              "summary": "Parallel example applies only to independent authenticated operations; consider failures/downstream limits."
+            },
+            {
+              "heading": "Check what users actually have to download",
+              "summary": "Inspect initial bundle/lazy interaction cost and precise server/client boundary."
+            },
+            {
+              "heading": "Caches must keep the right data scope",
+              "summary": "Cache has tenant scope, freshness and invalidation; use version-matched rules."
+            },
+            {
+              "heading": "Measure under the same conditions",
+              "summary": "Compare same route/data/build/device, preserve error/loading and behavior."
+            }
+          ]
+        }
+      },
+      "basename": "21-react-best-practices-skill-claude-code",
+      "file": "public/images/blog/21-react-best-practices-skill-claude-code-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-4d62ba30-6ee2-483a-a05a-25fe418f392c.png",
+      "editPrompt": "Remove title/slogan/captions/request text; keep only Serial/Parallel; show shared time scale, consistent task lengths, consecutive serial vs aligned parallel lanes joining after both finish; no numerical benchmark.",
+      "review": {
+        "thumbnail": "Removed oversized headline and extra captions; same-color tasks have comparable widths and parallel join completes earlier. Schematic comparison, not benchmark; only Serial/Parallel labels.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 22,
+      "message": "Browser interaction plus assertions prove a user journey beyond a static screenshot.",
+      "summaries": [
+        "Skill needs actual browser/runtime; inability to launch limits evidence.",
+        "Concrete pagination journey includes navigation/back, canonical page1 redirect and missing-page404.",
+        "Observe UI then use resilient role/label locators and meaningful state assertions.",
+        "Screenshots evidence a state, not full behavior; capture repro context.",
+        "Use isolated test data, controlled external effects and rerun exact failing flow."
+      ],
+      "concepts": [
+        "Browser click journey with checkpoint screenshots.",
+        "Covered button revealed by real interaction."
+      ],
+      "choice": "Pagination journey with checkpoints shows behavior, distinct from UI design cover.",
+      "caveats": [
+        "No static image proves full correctness or unsafe live data mutation."
+      ],
+      "prompt": "Create one elegant16:9 editorial illustration about REAL BROWSER TESTING. Bright crisp isometric paper interface model on lavender-gray background, black browser frames, vivid emerald checkpoints and tangerine pointer. Three overlapping browser states form one clear journey LEFT TO RIGHT: listing with pagination, selected second-page listing, opened article. A large mouse pointer actively presses the second pagination chip in first browser; a curved back arrow from article returns to the second listing, not root. Green assertion markers sit at the reached states; a small screenshot/contact-sheet strip beneath records these states. One separate small missing-page tile at far right bears a large cross to show expected error state, no invented status text. Exact words only 'Click', 'Assert', 'Verify', no code, vendor logos, fake real screenshot data or prose. Fine tactile detail, purposeful interface geometry, legible thumbnail. Do not show mere screenshot as proof of behavior; pointer and navigation arrows tell the action. Safe margins7percent, no robots/brains/watermark.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/22-webapp-testing-playwright-claude-code.md",
+          "sha256": "1281384c801a12487201b4a9649205905c9f4ef5f12e902996d30e31745b9cdf",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Cài skill không đồng nghĩa có sẵn browser",
+              "summary": "Skill needs actual browser/runtime; inability to launch limits evidence."
+            },
+            {
+              "heading": "Giao một hành trình có kết quả rõ",
+              "summary": "Concrete pagination journey includes navigation/back, canonical page1 redirect and missing-page404."
+            },
+            {
+              "heading": "Quan sát rồi mới chọn locator",
+              "summary": "Observe UI then use resilient role/label locators and meaningful state assertions."
+            },
+            {
+              "heading": "Screenshot là bằng chứng của một trạng thái",
+              "summary": "Screenshots evidence a state, not full behavior; capture repro context."
+            },
+            {
+              "heading": "Giữ test tách biệt và đúng phạm vi",
+              "summary": "Use isolated test data, controlled external effects and rerun exact failing flow."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/22-webapp-testing-playwright-claude-code.md",
+          "sha256": "0cc6599d2320da245711e4da3308c52ebaa4bd4c96c0c0def415a360c046aac0",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Installing the skill doesn't mean you have a browser",
+              "summary": "Skill needs actual browser/runtime; inability to launch limits evidence."
+            },
+            {
+              "heading": "Hand it a journey with a clear outcome",
+              "summary": "Concrete pagination journey includes navigation/back, canonical page1 redirect and missing-page404."
+            },
+            {
+              "heading": "Observe first, then pick locators",
+              "summary": "Observe UI then use resilient role/label locators and meaningful state assertions."
+            },
+            {
+              "heading": "A screenshot is evidence of one state",
+              "summary": "Screenshots evidence a state, not full behavior; capture repro context."
+            },
+            {
+              "heading": "Keep tests isolated and in scope",
+              "summary": "Use isolated test data, controlled external effects and rerun exact failing flow."
+            }
+          ]
+        }
+      },
+      "basename": "22-webapp-testing-playwright-claude-code",
+      "file": "public/images/blog/22-webapp-testing-playwright-claude-code-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-71b8f5dc-e352-42ae-be84-a9b361b21504.png",
+      "review": {
+        "thumbnail": "Pagination click, reached states, article back path and expected error checkpoint visible at320px; screenshot strip accompanies actual interactions. Extra accurate short headline present.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 23,
+      "message": "Reproduce and distinguish hypotheses before a small fix, then rerun the failing sequence.",
+      "summaries": [
+        "Install/version workflow, scale to job.",
+        "Reproduce old-query result overwrite before assigning cause.",
+        "Differentiate race/cache/URL hypotheses using controlled sequence and timing.",
+        "One scoped change and regression recreates old response arriving late.",
+        "Real output/reproduction needed before claiming fixed; typecheck insufficient.",
+        "Use process where uncertainty warrants it, not ritual for trivial edits."
+      ],
+      "concepts": [
+        "Out-of-order response tracks under diagnostic lens.",
+        "Three hypotheses narrowed by one discriminating experiment."
+      ],
+      "choice": "Out-of-order responses concretely connect debugging method to article example.",
+      "caveats": [
+        "Race shown as test scenario, not unverified actual repo bug; abort may not stop server work."
+      ],
+      "prompt": "Create a sharply readable16:9 technical editorial illustration about EVIDENCE-DRIVEN DEBUGGING of stale search responses. Style precise blueprint drawing blended with bold screenprint on warm cream, deep navy, coral old response and emerald current response, beautiful fine technical annotation lines but NO tiny prose. LEFT a search input shows exact short text 'rag'; below it two request tracks are visible, old coral track labeled 'react' starts earlier but takes a long curved route, green track labeled 'rag' starts later and arrives sooner. RIGHT browser result slot is protected by a current-query matching gate: green rag response is accepted with check, late coral react response stops beside a cross and does not overwrite it. A large magnifying lens sits over the arrival-order junction to show reproducing and observing the cause. Exact allowed words only react and rag, no claims this exact site has this bug, no code, timing numbers, title or paragraphs. One coherent diagnostic scene, not generic bug squashing or superhero. Strong geometric hierarchy readable320x180, safe7percent margins, no logos/watermark.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/23-superpowers-debugging-claude-code.md",
+          "sha256": "38e8fe2e2a2741474decbaf5a75fc0ec79d1360affdd3ac46a97f0cfa676988e",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Cài bộ quy trình theo hướng dẫn gốc",
+              "summary": "Install/version workflow, scale to job."
+            },
+            {
+              "heading": "Yêu cầu điều tra trước khi thử sửa",
+              "summary": "Reproduce old-query result overwrite before assigning cause."
+            },
+            {
+              "heading": "Một giả thuyết cần phép thử phân biệt",
+              "summary": "Differentiate race/cache/URL hypotheses using controlled sequence and timing."
+            },
+            {
+              "heading": "Giữ một thay đổi trả lời một nguyên nhân",
+              "summary": "One scoped change and regression recreates old response arriving late."
+            },
+            {
+              "heading": "Đọc output trước khi nói đã sửa",
+              "summary": "Real output/reproduction needed before claiming fixed; typecheck insufficient."
+            },
+            {
+              "heading": "Dùng quy trình đúng mức",
+              "summary": "Use process where uncertainty warrants it, not ritual for trivial edits."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/23-superpowers-debugging-claude-code.md",
+          "sha256": "8f430aae0ec6a5debdaa86b32db6d64b6f4fba7df67167317b471266595c77e5",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Install the workflow following the original instructions",
+              "summary": "Install/version workflow, scale to job."
+            },
+            {
+              "heading": "Require investigation before trying fixes",
+              "summary": "Reproduce old-query result overwrite before assigning cause."
+            },
+            {
+              "heading": "A hypothesis needs a test that tells causes apart",
+              "summary": "Differentiate race/cache/URL hypotheses using controlled sequence and timing."
+            },
+            {
+              "heading": "Keep one change answering one cause",
+              "summary": "One scoped change and regression recreates old response arriving late."
+            },
+            {
+              "heading": "Read the output before saying it's fixed",
+              "summary": "Real output/reproduction needed before claiming fixed; typecheck insufficient."
+            },
+            {
+              "heading": "Use the workflow at the right scale",
+              "summary": "Use process where uncertainty warrants it, not ritual for trivial edits."
+            }
+          ]
+        }
+      },
+      "basename": "23-superpowers-debugging-claude-code",
+      "file": "public/images/blog/23-superpowers-debugging-claude-code-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-29c06b81-d130-4c99-883d-8ef638246f85.png",
+      "review": {
+        "thumbnail": "Current rag accepted, stale react rejected, old path longer and lens marks arrival-order experiment; exact strings correct, not a claim of actual repo bug.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 24,
+      "message": "Short shared project conventions and scoped rules guide work but do not grant runtime permission.",
+      "summaries": [
+        "Write specific stable repo conventions, not generic expert slogans.",
+        "Check commands must exist and checks match change type.",
+        "Rules scoped by topic/paths, keep precedence/version consistency.",
+        "Durable repo instructions differ from current task and work state.",
+        "Instruction text does not enforce filesystem/tool permissions or keep secrets safe.",
+        "Move reusable task workflow into skill, keep global guidance concise."
+      ],
+      "concepts": [
+        "Short root manual branches to path-scoped rule folders.",
+        "Shared conventions spine with task cards kept separate."
+      ],
+      "choice": "Repo tree with scoped rule tabs makes reusable organization visible.",
+      "caveats": [
+        "No CLAUDE.md grants access, stores secrets or all files read by all agents."
+      ],
+      "prompt": "Create a refined16:9 editorial book-design illustration of PROJECT INSTRUCTIONS AND SCOPED RULES. Overhead architectural archive layout, warm ivory background, muted olive folders and burnt-orange tabs, elegant black typography, fine paper and linen detail. CENTER LEFT one SHORT well-organized root manual with exact clear filename 'CLAUDE.md', showing only a few bold checklist lines. Its binding spine branches via precise thin tree lines to three compact project folders on RIGHT: article-page pictogram, component-grid pictogram, test-flask pictogram. Each folder has its own small scoped rule tab clipped just to that folder, not one enormous rule sheet covering everything. Below manual a separate removable task card with small clock symbol remains outside durable binding. In background edge a distinct small physical key switch on device silhouette indicates runtime permissions live separately, NOT in the manual; no secret tokens or passwords. Only words CLAUDE.md and Rules. No long prose, commands, fake directory paths, robots, brains or blanket security shield. Strong hierarchy and beautiful restrained craftsmanship, clear at320x180,7percent safe margins.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/24-claude-md-va-rules-cho-du-an.md",
+          "sha256": "3d624288b994d1ff4518e9e44004968144ef690ed4d8c27abc6b1c47be489bc4",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Ghi điều repo thật sự cần",
+              "summary": "Write specific stable repo conventions, not generic expert slogans."
+            },
+            {
+              "heading": "Lệnh kiểm tra phải tồn tại",
+              "summary": "Check commands must exist and checks match change type."
+            },
+            {
+              "heading": "Chia rules theo công việc liên quan",
+              "summary": "Rules scoped by topic/paths, keep precedence/version consistency."
+            },
+            {
+              "heading": "Tách hướng dẫn bền vững khỏi dữ liệu của một việc",
+              "summary": "Durable repo instructions differ from current task and work state."
+            },
+            {
+              "heading": "Nội dung hướng dẫn không phải cơ chế phân quyền",
+              "summary": "Instruction text does not enforce filesystem/tool permissions or keep secrets safe."
+            },
+            {
+              "heading": "Khi nào chuyển sang skill?",
+              "summary": "Move reusable task workflow into skill, keep global guidance concise."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/24-claude-md-and-rules-for-your-project.md",
+          "sha256": "46892a8a13d3fa0c71fbe8ec2bfb4aed09367268210611187ac44c0bcd7974b5",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Write down what the repo really needs",
+              "summary": "Write specific stable repo conventions, not generic expert slogans."
+            },
+            {
+              "heading": "Check commands must exist",
+              "summary": "Check commands must exist and checks match change type."
+            },
+            {
+              "heading": "Split rules by the work they relate to",
+              "summary": "Rules scoped by topic/paths, keep precedence/version consistency."
+            },
+            {
+              "heading": "Separate durable instructions from one task's data",
+              "summary": "Durable repo instructions differ from current task and work state."
+            },
+            {
+              "heading": "Instructions are not an authorization mechanism",
+              "summary": "Instruction text does not enforce filesystem/tool permissions or keep secrets safe."
+            },
+            {
+              "heading": "When should it become a skill?",
+              "summary": "Move reusable task workflow into skill, keep global guidance concise."
+            }
+          ]
+        }
+      },
+      "basename": "24-claude-md-va-rules-cho-du-an",
+      "file": "public/images/blog/24-claude-md-va-rules-cho-du-an-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-d82ef786-b25d-4d91-91bf-64bca2eb8a34.png",
+      "review": {
+        "thumbnail": "Short root manual branches to three scoped rule folders, task clock card and independent hardware control; no manual-grants-permission implication.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 25,
+      "message": "Package one bounded, testable review procedure as a small reusable skill.",
+      "summaries": [
+        "Define one review task with input/criteria/output and no automatic edit/publish.",
+        "Minimal SKILL.md plus only useful supporting checklist.",
+        "Description and evidence-based findings define trigger/output; explicit invocation is template choice.",
+        "Main entry routes to focused references; stable repo rules stay elsewhere.",
+        "Test flawed and correct posts; avoid inventing findings.",
+        "Version/review scope and separate editing from evaluation."
+      ],
+      "concepts": [
+        "Workflow recipe bound into skill folder and tested on good/bad drafts.",
+        "Instructions assembled with references."
+      ],
+      "choice": "Packaged manual plus two test drafts shows reusable bounded procedure.",
+      "caveats": [
+        "Not automatically installed by article text; no auto publishing/edits during review."
+      ],
+      "prompt": "Create a crafted16:9 editorial illustration about writing a custom agent SKILL. Bookbinder's table in warm ivory, rust orange and deep petrol blue, exquisite paper/linen detail. CENTER one modest open folder labeled exactly 'SKILL.md' contains a short procedural checklist, a template card and ONE reference booklet in a side pocket. LEFT loose repeated instruction notes are being neatly organized into that bounded folder. RIGHT two blog draft pages lie under the same review gauge: first has one broken chain-link icon marked with a precise coral finding tab, second has an intact chain-link and a check, demonstrating bad AND good test samples. Separate small report card receives finding tabs, no pen editing originals or publish/send button. Only words SKILL.md and Review, NO headline, NO sentences, NO code or fake article body. Beautiful fine tactile craft and authored composition, large silhouettes readable320x180, safe7percent margins. No robot/brain/logo/watermark or universal toolkit.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/25-viet-skill-rieng-cho-claude-code.md",
+          "sha256": "7d9a1b83598ba7882373503125e12c29359cce050fbd2963c102f7d59d5e5590",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Chọn một việc có điểm kết thúc rõ",
+              "summary": "Define one review task with input/criteria/output and no automatic edit/publish."
+            },
+            {
+              "heading": "Tạo cấu trúc tối thiểu",
+              "summary": "Minimal SKILL.md plus only useful supporting checklist."
+            },
+            {
+              "heading": "Viết mô tả và đầu ra cụ thể",
+              "summary": "Description and evidence-based findings define trigger/output; explicit invocation is template choice."
+            },
+            {
+              "heading": "Đừng nhét mọi tài liệu vào file chính",
+              "summary": "Main entry routes to focused references; stable repo rules stay elsewhere."
+            },
+            {
+              "heading": "Thử với bài tốt lẫn bài cố ý có lỗi",
+              "summary": "Test flawed and correct posts; avoid inventing findings."
+            },
+            {
+              "heading": "Duy trì như một phần của dự án",
+              "summary": "Version/review scope and separate editing from evaluation."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/25-writing-your-own-claude-code-skill.md",
+          "sha256": "36eccf7c46a298422260fe03f94b741bce4339f0f2e6d0a930b8089a1a894a18",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Pick a task with a clear end point",
+              "summary": "Define one review task with input/criteria/output and no automatic edit/publish."
+            },
+            {
+              "heading": "Create the minimal structure",
+              "summary": "Minimal SKILL.md plus only useful supporting checklist."
+            },
+            {
+              "heading": "Write a specific description and output",
+              "summary": "Description and evidence-based findings define trigger/output; explicit invocation is template choice."
+            },
+            {
+              "heading": "Don't stuff every document into the main file",
+              "summary": "Main entry routes to focused references; stable repo rules stay elsewhere."
+            },
+            {
+              "heading": "Test with good posts and deliberately broken ones",
+              "summary": "Test flawed and correct posts; avoid inventing findings."
+            },
+            {
+              "heading": "Maintain it as part of the project",
+              "summary": "Version/review scope and separate editing from evaluation."
+            }
+          ]
+        }
+      },
+      "basename": "25-viet-skill-rieng-cho-claude-code",
+      "file": "public/images/blog/25-viet-skill-rieng-cho-claude-code-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-b72ca6f3-08a7-4056-aa3e-b3deeec4b2cf.png",
+      "review": {
+        "thumbnail": "Bounded skill folder, loose instructions organized, good and broken-link drafts plus separate finding report clear at320px.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 26,
+      "message": "Instruction text influences behavior but does not grant OS/tool execution permissions.",
+      "summaries": [
+        "Jailbreak attempts evade model constraints; old/screenshot result doesn't generalize.",
+        "Presentation, injection, safety evasion and execution config differ.",
+        "CLAUDE.md cannot grant OS rights; actual action depends on environment/tool scope.",
+        "Use fake-data tests and dummy no-side-effect tools.",
+        "Record setup/trials/controls and distinguish describing marker from obeying it.",
+        "Fix valid task context or permissions at correct layer, not pressure phrases."
+      ],
+      "concepts": [
+        "Instruction manual and separate permission hardware.",
+        "Model reply layer distinct from runtime gate."
+      ],
+      "choice": "Separated guidance/output versus actual execution directly counters magic-unlock claim.",
+      "caveats": [
+        "No jailbreak payload, immunity claim, broken sandbox or text-grants-access message."
+      ],
+      "prompt": "Create ONE compelling16:9 editorial architectural cutaway showing that a CLAUDE.md file is NOT an unlock switch. Matte plum and cream, scarlet instruction paper, distinct mint permission console, fine material detail and strong light/shadow. LEFT large manual labeled exactly 'CLAUDE.md' feeds a small speech/output panel through a thin text ribbon, panel has abstract conversation lines ONLY. RIGHT a physically SEPARATE substantial runtime enclosure labeled exactly 'Permissions' contains file/database/tool pictograms behind separately controlled gates. Real hardware-style switch mounted on enclosure OUTSIDE panel; text ribbon ends at speech panel, DOES NOT reach or flip this switch. Show a clear physical gap and boundary, no connecting magic key. Only CLAUDE.md and Permissions as words. NO headline, NO sentences, no broken locks, hackers, secret strings or actual instructions. No claim all models immune or all tools one sandbox. Large forms readable320x180, safe7percent margins, no logo/watermark.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/26-jailbreak-claude-va-gioi-han-claude-md.md",
+          "sha256": "dd50b31f24b7711ccb63f602e721ea40e841534411403612298c2d0e0252ab0a",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Jailbreak Claude là gì?",
+              "summary": "Jailbreak attempts evade model constraints; old/screenshot result doesn't generalize."
+            },
+            {
+              "heading": "Bốn thứ cần phân biệt",
+              "summary": "Presentation, injection, safety evasion and execution config differ."
+            },
+            {
+              "heading": "CLAUDE.md không phải công tắc mở khóa",
+              "summary": "CLAUDE.md cannot grant OS rights; actual action depends on environment/tool scope."
+            },
+            {
+              "heading": "Thử ranh giới bằng dữ liệu giả",
+              "summary": "Use fake-data tests and dummy no-side-effect tools."
+            },
+            {
+              "heading": "Đo điều gì thay vì săn một screenshot?",
+              "summary": "Record setup/trials/controls and distinguish describing marker from obeying it."
+            },
+            {
+              "heading": "Nếu mục tiêu là Claude làm việc bớt vướng",
+              "summary": "Fix valid task context or permissions at correct layer, not pressure phrases."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/26-jailbreaking-claude-and-claude-md-limits.md",
+          "sha256": "73b80ef5a3533fb9ab92aac513e02b1039ede2b2fc5ad5fae4db609e5cb595b4",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "What is jailbreaking Claude?",
+              "summary": "Jailbreak attempts evade model constraints; old/screenshot result doesn't generalize."
+            },
+            {
+              "heading": "Four things to tell apart",
+              "summary": "Presentation, injection, safety evasion and execution config differ."
+            },
+            {
+              "heading": "CLAUDE.md is not an unlock switch",
+              "summary": "CLAUDE.md cannot grant OS rights; actual action depends on environment/tool scope."
+            },
+            {
+              "heading": "Test the boundary with fake data",
+              "summary": "Use fake-data tests and dummy no-side-effect tools."
+            },
+            {
+              "heading": "Measure something instead of hunting for a screenshot",
+              "summary": "Record setup/trials/controls and distinguish describing marker from obeying it."
+            },
+            {
+              "heading": "If the goal is for Claude to get in the way less",
+              "summary": "Fix valid task context or permissions at correct layer, not pressure phrases."
+            }
+          ]
+        }
+      },
+      "basename": "26-jailbreak-claude-va-gioi-han-claude-md",
+      "file": "public/images/blog/26-jailbreak-claude-va-gioi-han-claude-md-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-eed9c4ca-82c0-418c-8c0f-c86646859f95.png",
+      "review": {
+        "thumbnail": "Guidance ribbon ends at output panel; physical gap separates permission enclosure/switch; short labels legible and no magic unlock.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    },
+    {
+      "n": 27,
+      "message": "Skill is procedure, MCP protocol, connector a concrete service connection, plugin a bundle.",
+      "summaries": [
+        "Process knowledge differs from service account access.",
+        "Skills include instructions/assets/scripts and load relevant detail progressively.",
+        "MCP standardizes communication; not itself one installable product.",
+        "Connector authenticates a particular service using scoped account rights.",
+        "Plugin distributes components; inspect source/hooks before installation.",
+        "Four terms have distinct roles.",
+        "Start focused skill then needed connection; bundle when useful.",
+        "Project context, execution permission and verification still required; installed pieces don't prove correct result."
+      ],
+      "concepts": [
+        "Exploded toolkit with handbook/port/cable/case.",
+        "Distinct roles assemble around work request."
+      ],
+      "choice": "Exploded kit explicitly distinguishes process, protocol, concrete service and packaging.",
+      "caveats": [
+        "No installed bundle grants sending/payment rights or connector automatically trusted; not every plugin has all parts."
+      ],
+      "prompt": "Create an elegant richly legible16:9 editorial exploded product illustration distinguishing Skill, MCP, Connector, Plugin. Soft cream backdrop, cobalt, coral and forest-green components, brushed aluminum and textured paper. Open fitted toolkit CASE along lower center labeled exactly 'Plugin', with compartments for three EXAMPLE components hovering above. LEFT a small procedure HANDBOOK labeled exactly 'Skill' with checklist pictogram. CENTER standardized PORT MODULE labeled exactly 'MCP', precise repeated connector geometry and small bidirectional protocol arrows. RIGHT concrete CABLE labeled exactly 'Connector' already connects matching port to a generic calendar-service tile with a small account permission latch. Dashed assembly guides point components toward corresponding case compartments; this is example packaging, not claim every plugin includes all pieces. Handbook is NOT wired like API; MCP port not entire service; connector clearly concrete authenticated connection. Only words Skill/MCP/Connector/Plugin, NO headline, sentences, vendor logos or code. Strong varied component silhouettes at320x180, fine purposeful material detail, safe7percent margins, no robot/brain/magic automation/watermark.",
+      "articles": {
+        "vi": {
+          "path": "content/blog/27-skill-mcp-connector-plugin.md",
+          "sha256": "1b2b652aef323879e7221fdf7c288db6747864cb79f3b75a3f08b265abe86c9d",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Hình dung AI như một nhân viên mới",
+              "summary": "Process knowledge differs from service account access."
+            },
+            {
+              "heading": "Skill: cuốn sổ tay quy trình",
+              "summary": "Skills include instructions/assets/scripts and load relevant detail progressively."
+            },
+            {
+              "heading": "MCP: chuẩn cổng cắm chung",
+              "summary": "MCP standardizes communication; not itself one installable product."
+            },
+            {
+              "heading": "Connector: sợi dây đã cắm sẵn",
+              "summary": "Connector authenticates a particular service using scoped account rights."
+            },
+            {
+              "heading": "Plugin: cả bộ đóng gói sẵn",
+              "summary": "Plugin distributes components; inspect source/hooks before installation."
+            },
+            {
+              "heading": "Tóm lại trong bốn dòng",
+              "summary": "Four terms have distinct roles."
+            },
+            {
+              "heading": "Nên bắt đầu từ đâu?",
+              "summary": "Start focused skill then needed connection; bundle when useful."
+            },
+            {
+              "heading": "Đủ bốn mảnh vẫn chưa phải là xong",
+              "summary": "Project context, execution permission and verification still required; installed pieces don't prove correct result."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/blog/en/27-skills-mcp-connectors-plugins.md",
+          "sha256": "a21b2a90f1ff480c957216f72792ea7cf80e66609a1c3b8ef0c96279fa384e07",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Think of the AI as a new hire",
+              "summary": "Process knowledge differs from service account access."
+            },
+            {
+              "heading": "Skills: the process handbook",
+              "summary": "Skills include instructions/assets/scripts and load relevant detail progressively."
+            },
+            {
+              "heading": "MCP: the shared port standard",
+              "summary": "MCP standardizes communication; not itself one installable product."
+            },
+            {
+              "heading": "Connectors: the pre-plugged cable",
+              "summary": "Connector authenticates a particular service using scoped account rights."
+            },
+            {
+              "heading": "Plugins: the whole kit, pre-packed",
+              "summary": "Plugin distributes components; inspect source/hooks before installation."
+            },
+            {
+              "heading": "The four-line summary",
+              "summary": "Four terms have distinct roles."
+            },
+            {
+              "heading": "Where to start",
+              "summary": "Start focused skill then needed connection; bundle when useful."
+            },
+            {
+              "heading": "Four pieces still isn't the finish line",
+              "summary": "Project context, execution permission and verification still required; installed pieces don't prove correct result."
+            }
+          ]
+        }
+      },
+      "basename": "27-skill-mcp-connector-plugin",
+      "file": "public/images/blog/27-skill-mcp-connector-plugin-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-00360ce9-8a4a-42ae-930b-85867f9ec848.png",
+      "review": {
+        "thumbnail": "Handbook, standard ports, authenticated service cable and package case have distinct silhouettes and four correct labels at320px; exploded example bundle.",
+        "site": "200 + decoded image, VI 1440px, VI/EN 390px; per-article screenshots captured; cover present on paginated series index."
+      }
+    }
+  ]
+}

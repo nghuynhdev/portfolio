@@ -7,6 +7,7 @@ keywords: "Next.js AI, streaming chat, Vercel AI SDK, useChat, streamText, App R
 tags: "AI, Next.js, Streaming, Developer"
 date: 2024-07-16
 updated: 2026-11-11
+cover: /images/blog/03-tich-hop-ai-vao-nextjs-streaming-v2.webp
 ---
 
 # Adding AI to a Next.js App: Building a Proper Streaming Chat

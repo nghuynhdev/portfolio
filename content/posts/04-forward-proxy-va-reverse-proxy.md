@@ -6,6 +6,7 @@ description: "Forward proxy đứng về phía client, reverse proxy đứng v�
 keywords: "forward proxy, reverse proxy, proxy là gì, Nginx reverse proxy, X-Forwarded-For, trust proxy Express, load balancer, VPN khác proxy"
 tags: "Networking, Nginx, Backend, Node.js"
 date: 2026-11-13
+cover: /images/blog/posts/04-forward-proxy-va-reverse-proxy-v2.webp
 ---
 
 # Forward proxy và reverse proxy: khác nhau ở chỗ nó làm việc cho ai

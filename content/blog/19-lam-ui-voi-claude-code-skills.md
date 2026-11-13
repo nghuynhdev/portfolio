@@ -7,6 +7,7 @@ keywords: "UI UX Pro Max, frontend-design skill, web-design-guidelines, Claude C
 tags: "AI, Claude Code, Skills, UI UX"
 date: 2026-08-01
 updated: 2026-11-11
+cover: /images/blog/19-lam-ui-voi-claude-code-skills-v2.webp
 ---
 
 # Làm UI với Claude Code: UI UX Pro Max, frontend-design và Web Design Guidelines

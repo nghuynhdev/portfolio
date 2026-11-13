@@ -6,6 +6,7 @@ description: "What jailbreaking Claude means, how it differs from prompt injecti
 keywords: "jailbreak Claude, Claude Code jailbreak, CLAUDE.md, prompt injection, Claude Code security"
 tags: "AI, Claude Code, Security, Jailbreak"
 date: 2026-11-11
+cover: /images/blog/26-jailbreak-claude-va-gioi-han-claude-md-v2.webp
 ---
 
 # Jailbreaking Claude: Can a CLAUDE.md File Really 'Unlock' the AI?

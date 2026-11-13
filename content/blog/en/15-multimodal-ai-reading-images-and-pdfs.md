@@ -6,6 +6,7 @@ description: "Read images and PDFs with multimodal AI: pick the right pages, req
 keywords: "multimodal AI, vision model, PDF extraction, OCR, document AI, AI for developers"
 tags: "AI, Multimodal, Documents, Developer"
 date: 2026-06-05
+cover: /images/blog/15-multimodal-ai-doc-anh-va-pdf-v2.webp
 ---
 
 # AI That Reads Images and PDFs: Extracting Data You Can Verify

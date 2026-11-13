@@ -1,0 +1,526 @@
+{
+  "mode": "built-in image_gen",
+  "scope": "Five general-blog covers",
+  "reading": "All ten VI/EN articles read in full through EOF; section summaries below apply to corresponding sections of both languages; no material translation mismatch found.",
+  "images": [
+    {
+      "n": 1,
+      "name": "01-tim-kiem-khong-dau-cho-blog-tinh",
+      "message": "Unaccented queries match original Vietnamese titles without a search server.",
+      "coverage": [
+        "Metadata loaded once into browser; no per-keystroke search service.",
+        "NFD plus removal of combining marks, explicit đ mapping and lowercase on both query and corpus.",
+        "All words required; title outranks tag, keyword and description; stable ties.",
+        "Original character index map preserves accented display and highlighting.",
+        "Empty and no-result suggestions offer tags/latest posts.",
+        "ARIA combobox and keyboard interaction, prevent mousedown blur.",
+        "Metadata scan suits small blogs; not full-text, fuzzy or semantic search."
+      ],
+      "concepts": [
+        "A large search interaction with accented original result visibly selected.",
+        "Two normalized comparison lanes feeding a match."
+      ],
+      "choice": "Large search interaction; readable at thumbnail without a dense algorithm chart.",
+      "caveats": [
+        "Do not turn accent stripping into adding accents to the input.",
+        "No cloud request, fuzzy/semantic capabilities or full-text claim."
+      ],
+      "prompt": "Use case: stylized-concept. Create a meticulously art-directed 16:9 editorial cover for a developer article about Vietnamese accent-insensitive search running locally in the browser. Use a luminous warm ivory background, bold ultramarine typography, crisp coral selection and fine blue print texture, elegant contemporary Swiss editorial composition with a subtle dimensional paper-cut quality. One oversized browser search panel occupies the central 80 percent. In its search input show EXACT lowercase text 'bao mat' beside a large recognizable magnifying glass and small insertion cursor. Directly below, show one large selected result card with EXACT text 'Bảo mật' in beautifully accurate Vietnamese typography. The original accented result is retained; give the result a broad coral highlight behind the words and a blue check at right. Two narrower unselected cards behind it contain only abstract horizontal line shapes, no words. A small elegant keyboard enter key in the lower-right of the search panel conveys choosing the result. Faint index-card edges within the same browser frame imply a local collection. This is a conceptual search interface, not a product screenshot and not a flowchart. The message is query without diacritics finds the accented original; do NOT show a normalization arrow transforming the unaccented query into accented text, do NOT show detached accent marks added to query, no server/cloud, no arrows needed. Text allowed only 'bao mat', 'Bảo mật', and the return-arrow symbol on the key. Large memorable hierarchy, confident asymmetric framing, polished editorial finish; no big article title, logos, watermark, glassmorphism, neon, ornamental code, brains or robots. Keep important elements safely inside a 7 percent margin, legible at 320x180.",
+      "articles": {
+        "vi": {
+          "path": "content/posts/01-tim-kiem-khong-dau-cho-blog-tinh.md",
+          "sha256": "9720510037ed74c6350dd5b0e46fab5e337a60196be6e62421fbc383871d7b54",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Vì sao không dùng dịch vụ tìm kiếm",
+              "summary": "Metadata loaded once into browser; no per-keystroke search service."
+            },
+            {
+              "heading": "Bỏ dấu tiếng Việt cho đúng",
+              "summary": "NFD plus removal of combining marks, explicit đ mapping and lowercase on both query and corpus."
+            },
+            {
+              "heading": "Xếp hạng: khớp ở tiêu đề quan trọng hơn khớp ở mô tả",
+              "summary": "All words required; title outranks tag, keyword and description; stable ties."
+            },
+            {
+              "heading": "Tô sáng từ khóa trong chuỗi còn dấu",
+              "summary": "Original character index map preserves accented display and highlighting."
+            },
+            {
+              "heading": "Gợi ý khi chưa gõ gì",
+              "summary": "Empty and no-result suggestions offer tags/latest posts."
+            },
+            {
+              "heading": "Bàn phím và trình đọc màn hình",
+              "summary": "ARIA combobox and keyboard interaction, prevent mousedown blur."
+            },
+            {
+              "heading": "Khi nào cách này hết phù hợp",
+              "summary": "Metadata scan suits small blogs; not full-text, fuzzy or semantic search."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/posts/en/01-accent-insensitive-search-static-blog.md",
+          "sha256": "1f7c0bdcf6e6d776862282eb2a66be80133c4d2fbc580e0558ac3eaf1985bb8a",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Why not a search service",
+              "summary": "Metadata loaded once into browser; no per-keystroke search service."
+            },
+            {
+              "heading": "Stripping Vietnamese diacritics correctly",
+              "summary": "NFD plus removal of combining marks, explicit đ mapping and lowercase on both query and corpus."
+            },
+            {
+              "heading": "Ranking: a title match beats a description match",
+              "summary": "All words required; title outranks tag, keyword and description; stable ties."
+            },
+            {
+              "heading": "Highlighting matches in the accented text",
+              "summary": "Original character index map preserves accented display and highlighting."
+            },
+            {
+              "heading": "Suggestions before the reader types",
+              "summary": "Empty and no-result suggestions offer tags/latest posts."
+            },
+            {
+              "heading": "Keyboard and screen readers",
+              "summary": "ARIA combobox and keyboard interaction, prevent mousedown blur."
+            },
+            {
+              "heading": "When this stops being enough",
+              "summary": "Metadata scan suits small blogs; not full-text, fuzzy or semantic search."
+            }
+          ]
+        }
+      },
+      "file": "public/images/blog/posts/01-tim-kiem-khong-dau-cho-blog-tinh-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-727e2196-a0a0-4827-a0e3-106146963a60.png",
+      "review": {
+        "fullResolution": "Viewed generated image",
+        "thumbnail": "Viewed at 320x180 in contact sheet",
+        "notes": "At 320x180 the unaccented query and accented original result are readable; no false accent-adding transformation. Warm graphic typography differs from adjacent game scene.",
+        "site": "Verified: ten VI/EN post pages returned 200 and decoded cover images; both index languages tested at 1440px and 390px. Captured each cover after fade-in and inspected the desktop/VI-mobile/EN-mobile contact sheet; v2 URL avoids the stale optimizer cache. Old unversioned cover file removed after both translations selected v2."
+      }
+    },
+    {
+      "n": 2,
+      "name": "02-playcanvas-lam-game-3d-tren-web",
+      "message": "Build and run an interactive 3D scene directly in a browser editor.",
+      "coverage": [
+        "Engine JavaScript library separate from browser editor, entity/component workflow.",
+        "Collaborative editing, version control, browser code editor, launch and publishing.",
+        "Full engine build measured 2.24.1 around 750 KB gzip; rendering-only comparison differs in capabilities.",
+        "WebGPU with WebGL2 fallback; performance depends on scene.",
+        "Gaussian splat rendering and SuperSplat for captured spaces.",
+        "Games, product configurators and scanned environments.",
+        "Sample constructs Application, entity cube, camera/light and delta-time rotation.",
+        "Choose editor for team game scenes; Three.js/R3F for lighter embedded effects.",
+        "Engine MIT; hosted editor private projects require paid plan."
+      ],
+      "concepts": [
+        "A rich game diorama inside browser editing canvas, selected object and play control.",
+        "Collaborating designers shaping the same scene."
+      ],
+      "choice": "Editor/diorama with matching playable preview; strongest visual connection to browser game building.",
+      "caveats": [
+        "Illustrative UI, not a claim to be an exact screenshot.",
+        "No universal FPS promise, pricing, 200 KB claim or imply engine requires editor."
+      ],
+      "prompt": "Use case: stylized-concept. Create a premium richly detailed 16:9 cover illustration about making a 3D game directly inside a browser-based scene editor, inspired by the subject PlayCanvas but NOT a screenshot or exact recreation of its UI. A single oversized desktop browser frame fills most of the composition, straight-on with a very slight cinematic perspective. Inside its large central viewport is a beautifully crafted miniature playable floating-island obstacle course: weathered sandstone platforms, a curved wooden bridge over blue water, one small red capsule player, a few grass tufts and simple coin-like pickups. Everything is coherent game geometry, no random clutter. One stone platform is selected with a thin vivid orange wireframe outline and a correctly centered three-axis transform gizmo. A compact left hierarchy contains recognizable object thumbnails and indentation lines ONLY, no tiny text. A compact right inspector has a few clean sliders ONLY. Upper browser toolbar has a prominent play triangle. On the lower right overlapping the main browser, a small separate clean browser preview shows the SAME course, same bridge, red capsule and camera angle, without gizmo. Use warm sunset peach lighting, teal water and deep plum frame, tactile stylized PBR render with fine stone/wood detail and warm atmospheric depth. The course, browser frame and play button must remain recognizable at thumbnail scale. The story is edit a game scene then play it in the browser, no download installer or laptop desk photo. No text at all, no logo, no watermark, no invented code, no generic glowing cube as the whole scene, no navy/cyan/amber glass panels. Keep all essential forms within a 6 percent safe margin.",
+      "articles": {
+        "vi": {
+          "path": "content/posts/02-playcanvas-lam-game-3d-tren-web.md",
+          "sha256": "ef6bd955e859f9311efc6d280b3390ddb10f9a8d8e856e1c88e5d8335addca32",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "PlayCanvas gồm hai phần",
+              "summary": "Engine JavaScript library separate from browser editor, entity/component workflow."
+            },
+            {
+              "heading": "Nhiều người sửa chung một cảnh",
+              "summary": "Collaborative editing, version control, browser code editor, launch and publishing."
+            },
+            {
+              "heading": "Engine nặng bao nhiêu",
+              "summary": "Full engine build measured 2.24.1 around 750 KB gzip; rendering-only comparison differs in capabilities."
+            },
+            {
+              "heading": "WebGL2 và WebGPU",
+              "summary": "WebGPU with WebGL2 fallback; performance depends on scene."
+            },
+            {
+              "heading": "Gaussian Splatting và SuperSplat",
+              "summary": "Gaussian splat rendering and SuperSplat for captured spaces."
+            },
+            {
+              "heading": "Người ta dùng nó vào việc gì",
+              "summary": "Games, product configurators and scanned environments."
+            },
+            {
+              "heading": "Thử một khối hộp xoay",
+              "summary": "Sample constructs Application, entity cube, camera/light and delta-time rotation."
+            },
+            {
+              "heading": "Chọn PlayCanvas hay Three.js",
+              "summary": "Choose editor for team game scenes; Three.js/R3F for lighter embedded effects."
+            },
+            {
+              "heading": "Chi phí",
+              "summary": "Engine MIT; hosted editor private projects require paid plan."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/posts/en/02-playcanvas-3d-games-in-the-browser.md",
+          "sha256": "04e920ecf9e67ca4c21b83dffd786b77fd9694bfeb390a370ef43317755cbef3",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "PlayCanvas is two things",
+              "summary": "Engine JavaScript library separate from browser editor, entity/component workflow."
+            },
+            {
+              "heading": "Several people in one scene",
+              "summary": "Collaborative editing, version control, browser code editor, launch and publishing."
+            },
+            {
+              "heading": "How big the engine is",
+              "summary": "Full engine build measured 2.24.1 around 750 KB gzip; rendering-only comparison differs in capabilities."
+            },
+            {
+              "heading": "WebGL2 and WebGPU",
+              "summary": "WebGPU with WebGL2 fallback; performance depends on scene."
+            },
+            {
+              "heading": "Gaussian Splatting and SuperSplat",
+              "summary": "Gaussian splat rendering and SuperSplat for captured spaces."
+            },
+            {
+              "heading": "What people use it for",
+              "summary": "Games, product configurators and scanned environments."
+            },
+            {
+              "heading": "Trying a spinning cube",
+              "summary": "Sample constructs Application, entity cube, camera/light and delta-time rotation."
+            },
+            {
+              "heading": "PlayCanvas or Three.js",
+              "summary": "Choose editor for team game scenes; Three.js/R3F for lighter embedded effects."
+            },
+            {
+              "heading": "Cost",
+              "summary": "Engine MIT; hosted editor private projects require paid plan."
+            }
+          ]
+        }
+      },
+      "file": "public/images/blog/posts/02-playcanvas-lam-game-3d-tren-web-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-69259e55-ebf3-4271-a640-c11390be7eec.png",
+      "review": {
+        "fullResolution": "Viewed generated image",
+        "thumbnail": "Viewed at 320x180 in contact sheet",
+        "notes": "Browser, selected platform/gizmo and playable preview remain recognizable at 320x180. Fine environmental detail is secondary. Conceptual UI, not an actual screenshot.",
+        "site": "Verified: ten VI/EN post pages returned 200 and decoded cover images; both index languages tested at 1440px and 390px. Captured each cover after fade-in and inspected the desktop/VI-mobile/EN-mobile contact sheet; v2 URL avoids the stale optimizer cache. Old unversioned cover file removed after both translations selected v2."
+      }
+    },
+    {
+      "n": 3,
+      "name": "03-health-check-khong-chi-la-ping",
+      "message": "A running application can be unready because its required database connection fails.",
+      "coverage": [
+        "Ping proves process HTTP response only; dependency health uses machine-readable statuses.",
+        "Framework support differs, Redis indicator not built into Terminus.",
+        "NestJS aggregates DB and custom Redis checks, timeout bounds each check.",
+        "Liveness restart differs from readiness removing traffic; external failure must not drive restart loops.",
+        "Optional dependencies need not remove pods; shared failure may make every pod unready.",
+        "Protect detailed health output, cheap checks, actual permissions, graceful shutdown hooks.",
+        "Keep live probe, add selected readiness dependencies with per-check timeouts."
+      ],
+      "concepts": [
+        "One running app with working live probe but broken database dependency.",
+        "Two probe decision diagrams showing restart versus removal."
+      ],
+      "choice": "One incident close-up: reveals the article's distinction without a second page of workflow.",
+      "caveats": [
+        "No healthy alternate pod secretly using same failed DB.",
+        "External DB failure does not mean app liveness failed; do not promise probe fixes outage.",
+        "Readiness dependency selected for the depicted app, not every optional service."
+      ],
+      "prompt": "Use case: stylized-concept. Create a striking 16:9 technical editorial cover explaining that an application can be alive but unable to serve useful requests. Style: refined high-contrast dark charcoal technical cutaway, controlled matte materials, precise white linework, emerald green for the live process and vermilion red for failed readiness. NOT the common navy cyan amber glass-server aesthetic. Center-left one large application process enclosure, internally an elegant continuous green pulse loop shows its worker is still running. Attach two very large clean status tabs to this same enclosure: top tab EXACT 'LIVE' with a green circular check; lower tab EXACT 'READY' with a red square cross. Center-right one clearly identifiable large database cylinder. A single necessary application-to-database connection runs horizontally from enclosure to database and has a visible gap interrupted by a large red X. The database is dim, with a small red failure indicator. One incoming white request path from left stops at a closed red traffic gate just before entering the application; use a simple request-card shape to show it cannot be admitted while the process remains alive. This is one app and one database, no extra servers or alternate healthy pods, no restart arrows, no pulse on database, no imaginary repair. The live pulse must be visibly independent of the failed DB path. Allowed exact text only 'LIVE', 'READY', 'DB' (DB on database). Big tangible forms, intelligent hierarchy and intentional fine detail, not an infographic poster. No heading, prose, tiny labels, decorative shields, logos or watermark. Compose with 7 percent safe margins; LIVE/READY, failed connection and active process read clearly at 320x180.",
+      "articles": {
+        "vi": {
+          "path": "content/posts/03-health-check-khong-chi-la-ping.md",
+          "sha256": "8ef3d26c4abdbfd6f07b6f78a5f4468bed3a20243456091c8adc0438d4cf4c36",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "/ping thật ra đo cái gì",
+              "summary": "Ping proves process HTTP response only; dependency health uses machine-readable statuses."
+            },
+            {
+              "heading": "Các framework đều có sẵn",
+              "summary": "Framework support differs, Redis indicator not built into Terminus."
+            },
+            {
+              "heading": "Làm với NestJS Terminus",
+              "summary": "NestJS aggregates DB and custom Redis checks, timeout bounds each check."
+            },
+            {
+              "heading": "Liveness và readiness: hai câu hỏi khác nhau",
+              "summary": "Liveness restart differs from readiness removing traffic; external failure must not drive restart loops."
+            },
+            {
+              "heading": "Không phải thứ gì cũng đáng đưa vào readiness",
+              "summary": "Optional dependencies need not remove pods; shared failure may make every pod unready."
+            },
+            {
+              "heading": "Vài chi tiết nữa",
+              "summary": "Protect detailed health output, cheap checks, actual permissions, graceful shutdown hooks."
+            },
+            {
+              "heading": "Bắt đầu từ đâu",
+              "summary": "Keep live probe, add selected readiness dependencies with per-check timeouts."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/posts/en/03-health-checks-beyond-ping.md",
+          "sha256": "647c38a237143caaca9fd5d8b97295e9a0a46675be05b58a5586e2512bec73d0",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "What /ping actually measures",
+              "summary": "Ping proves process HTTP response only; dependency health uses machine-readable statuses."
+            },
+            {
+              "heading": "Every major framework has one",
+              "summary": "Framework support differs, Redis indicator not built into Terminus."
+            },
+            {
+              "heading": "Building one with NestJS Terminus",
+              "summary": "NestJS aggregates DB and custom Redis checks, timeout bounds each check."
+            },
+            {
+              "heading": "Liveness and readiness are two different questions",
+              "summary": "Liveness restart differs from readiness removing traffic; external failure must not drive restart loops."
+            },
+            {
+              "heading": "Not everything belongs in readiness",
+              "summary": "Optional dependencies need not remove pods; shared failure may make every pod unready."
+            },
+            {
+              "heading": "A few more details",
+              "summary": "Protect detailed health output, cheap checks, actual permissions, graceful shutdown hooks."
+            },
+            {
+              "heading": "Where to start",
+              "summary": "Keep live probe, add selected readiness dependencies with per-check timeouts."
+            }
+          ]
+        }
+      },
+      "file": "public/images/blog/posts/03-health-check-khong-chi-la-ping-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-b1d81a43-5ff4-48ea-a7ed-750c9cb89d6b.png",
+      "review": {
+        "fullResolution": "Viewed generated image",
+        "thumbnail": "Viewed at 320x180 in contact sheet",
+        "notes": "LIVE check and READY cross remain readable at 320x180; same running process and broken DB path explain the distinction. No invented healthy failover or dependency-triggered restart.",
+        "site": "Verified: ten VI/EN post pages returned 200 and decoded cover images; both index languages tested at 1440px and 390px. Captured each cover after fade-in and inspected the desktop/VI-mobile/EN-mobile contact sheet; v2 URL avoids the stale optimizer cache. Old unversioned cover file removed after both translations selected v2."
+      }
+    },
+    {
+      "n": 4,
+      "name": "04-forward-proxy-va-reverse-proxy",
+      "message": "The defining difference is whether the proxy represents clients or the service.",
+      "coverage": [
+        "Proxy forwards request/response; software may support both roles.",
+        "Forward proxy owned/configured by client side; hides client's source IP.",
+        "CONNECT tunnels TLS ordinarily; corporate root certificate enables interception.",
+        "VPN network tunnel differs from application proxy; DNS/firewall blocking not proof of proxy.",
+        "Reverse proxy belongs to service; single front door, routing, TLS, cache and balancing.",
+        "Nginx forwards Host and original IP/protocol headers to upstream pool.",
+        "Express trust proxy must match controlled topology; blanket trust permits spoofed header issues.",
+        "Comparison table ownership, visibility and client awareness; check live app configuration."
+      ],
+      "concepts": [
+        "Side-by-side ownership boundaries with consistent request direction.",
+        "Two architectural gatehouse metaphors representing a client office and service campus."
+      ],
+      "choice": "Ownership boundaries drawn as distinct architectural floorplans; visual grouping conveys meaning even before labels.",
+      "caveats": [
+        "Requests flow toward origin in both cases; reverse is not reversed arrow direction.",
+        "Do not imply all proxies decrypt TLS or proxy equals VPN.",
+        "Do not use forged IP or trust settings in decorative labels."
+      ],
+      "prompt": "Use case: scientific-educational. Create a polished landscape 16:9 editorial network architecture illustration, two carefully balanced side-by-side scenes with no connecting path between scenes. Graphic style: precise axonometric architectural model on warm cream paper with fine engraved contour lines, subtle cast shadows, cobalt client objects and rich terracotta service objects, sophisticated clean print design. LEFT scene heading exactly 'FORWARD PROXY'. A clearly visible blue-outlined client-side platform contains two laptop clients and a gateway at the outgoing edge; gateway is inside this SAME platform. A large cobalt arrow leaves laptops through that gateway, crosses open neutral space, reaches a separate terracotta origin server OUTSIDE the platform. RIGHT scene heading exactly 'REVERSE PROXY'. One cobalt laptop OUTSIDE the service platform sends a large arrow rightward across neutral space to a gateway on the entrance of a terracotta-outlined service platform; gateway and two terracotta origin servers are all inside this SAME platform. The gateway splits the received path to the two origin servers within the service platform. In BOTH scenes requests move from clients toward servers, left to right. Ownership shown by visibly raised bases with complete enclosing borders, not by different arrow direction. Depict laptops and servers with distinctive silhouettes and gateways as clean vertical archways, not shield icons or cloned generic boxes. Only two headings, no other text, letters, numbers or subtitles. Important: left grouping is clients plus proxy; right grouping is proxy plus origins. Keep ample separation and hierarchy; technical meaning must remain visible with headings covered. Refined detailed models yet bold at 320x180. No glow, translucent glass, branded logos, watermark, or tiny UI panels. Safe margins 6 percent.",
+      "articles": {
+        "vi": {
+          "path": "content/posts/04-forward-proxy-va-reverse-proxy.md",
+          "sha256": "ed8c6973481bee31ea27b2a6c154153692a38aba773d70cdc561a1362562b4d3",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Proxy chỉ là người đứng giữa",
+              "summary": "Proxy forwards request/response; software may support both roles."
+            },
+            {
+              "heading": "Forward proxy: người đại diện của client",
+              "summary": "Forward proxy owned/configured by client side; hides client's source IP. CONNECT tunnels TLS ordinarily; corporate root certificate enables interception. VPN network tunnel differs from application proxy; DNS/firewall blocking not proof of proxy."
+            },
+            {
+              "heading": "Reverse proxy: người gác cổng của server",
+              "summary": "Reverse proxy belongs to service; single front door, routing, TLS, cache and balancing. Nginx forwards Host and original IP/protocol headers to upstream pool."
+            },
+            {
+              "heading": "Lỗi hay gặp: app Node.js sau reverse proxy thấy sai IP",
+              "summary": "Express trust proxy must match controlled topology; blanket trust permits spoofed header issues."
+            },
+            {
+              "heading": "Đặt cạnh nhau",
+              "summary": "Comparison table ownership, visibility and client awareness; check live app configuration."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/posts/en/04-forward-proxy-vs-reverse-proxy.md",
+          "sha256": "7a10e0b74608059932e6d53d3e4187073aceb660698fbfb60f006e1d5459647e",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "A proxy is just a middleman",
+              "summary": "Proxy forwards request/response; software may support both roles."
+            },
+            {
+              "heading": "Forward proxy: the client's representative",
+              "summary": "Forward proxy owned/configured by client side; hides client's source IP. CONNECT tunnels TLS ordinarily; corporate root certificate enables interception. VPN network tunnel differs from application proxy; DNS/firewall blocking not proof of proxy."
+            },
+            {
+              "heading": "Reverse proxy: the server's gatekeeper",
+              "summary": "Reverse proxy belongs to service; single front door, routing, TLS, cache and balancing. Nginx forwards Host and original IP/protocol headers to upstream pool."
+            },
+            {
+              "heading": "A common bug: a Node.js app behind a reverse proxy sees the wrong IP",
+              "summary": "Express trust proxy must match controlled topology; blanket trust permits spoofed header issues."
+            },
+            {
+              "heading": "Side by side",
+              "summary": "Comparison table ownership, visibility and client awareness; check live app configuration."
+            }
+          ]
+        }
+      },
+      "file": "public/images/blog/posts/04-forward-proxy-va-reverse-proxy-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-213d4f76-1ae4-4815-9ad9-336976039481.png",
+      "review": {
+        "fullResolution": "Viewed generated image",
+        "thumbnail": "Viewed at 320x180 in contact sheet",
+        "notes": "Both headings readable at 320x180; client/proxy and proxy/origin boundaries visible. Both request arrows point to origins. No HTTPS inspection or VPN claim.",
+        "site": "Verified: ten VI/EN post pages returned 200 and decoded cover images; both index languages tested at 1440px and 390px. Captured each cover after fade-in and inspected the desktop/VI-mobile/EN-mobile contact sheet; v2 URL avoids the stale optimizer cache. Old unversioned cover file removed after both translations selected v2."
+      }
+    },
+    {
+      "n": 5,
+      "name": "05-web-bi-ban-traffic-ban-backlink",
+      "message": "Investigate bot traffic and suspicious backlinks as different problems; evidence before overreaction.",
+      "coverage": [
+        "Traffic floods overload resources; spam links aim at rankings but not proof of penalty.",
+        "Check Analytics traffic evidence and Search Console linking domains before assuming attack.",
+        "Most sites do not need disavow; manual action status and strict conditions matter.",
+        "Spam removal/disavow/review takes time, no instant recovery.",
+        "Traffic harms availability, analytics and costs; bounce rate is not GA-based ranking signal.",
+        "Cloudflare bot challenge can break APIs/payment callbacks; Free mode lacks exceptions.",
+        "Target source with managed challenge and re-test legitimate flows; avoid blanket block.",
+        "Avoid unnecessary penalty services, bulk disavow and retaliation.",
+        "Evidence, manual status, targeted action and monitoring before technical SEO review."
+      ],
+      "concepts": [
+        "Two diagnostic lenses distinguishing a traffic spike from suspicious link relationships.",
+        "Website at the junction of a request flood and a link web, with separate handling."
+      ],
+      "choice": "Editorial investigation scene; evidence is the focal action, rather than another generic security shield.",
+      "caveats": [
+        "No automated penalty, all bots bad, instant ranking recovery, disavow-all or firewall deleting backlinks.",
+        "This is a conceptual investigation, not actual portfolio metrics."
+      ],
+      "prompt": "Use case: stylized-concept. Create an exceptional 16:9 editorial magazine illustration about investigating bot traffic and spam backlinks before taking drastic action. Use a distinctive sophisticated cut-paper / screenprint collage aesthetic: deep aubergine desk background, warm off-white paper, coral traffic marks and acid-lime inspection accents; tactile paper grain, crisp deliberate geometry, subtle layered shadows, no generic cyber glow. Main focal point is one oversized magnifying glass in the foreground centered over the seam between two large evidence cards on a desk. LEFT evidence card has exact short heading 'TRAFFIC': a clear coral time-series with one abnormally tall spike, beside a neat group of repeated small request rectangles; two distinct legitimate rounded user tokens remain visible among those rectangles, so it is not a claim all traffic is malicious. RIGHT evidence card has exact short heading 'BACKLINKS': a simple network of several small page silhouettes with chain-link marks pointing toward one larger website page; a few suspicious links are coral while a few normal links remain neutral. Under magnifying glass the relevant request and chain details are larger and sharper, emphasizing examining evidence, not automatic removal. A small plain browser-shaped central website silhouette quietly connects the meaning of the two evidence cards; it is not burning, broken or labeled penalized. Differentiate a graph of request volume from a network of linking pages visually. No shields, giant padlocks, hooded hackers, robots, flags, giant red delete buttons, falling ranking arrows, guaranteed penalty or instant repair. Only exact text 'TRAFFIC' and 'BACKLINKS', no invented dashboard numbers or sentences. Confident composition, rich crafted editorial detail, one strong focal action readable at thumbnail 320x180; keep essential content inside 7 percent safe margins.",
+      "articles": {
+        "vi": {
+          "path": "content/posts/05-web-bi-ban-traffic-ban-backlink.md",
+          "sha256": "d3a110f96adc0ad604c9064d6576e6467001971810aede64d4fc60e90cf348b0",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Hai kiểu chơi xấu",
+              "summary": "Traffic floods overload resources; spam links aim at rankings but not proof of penalty."
+            },
+            {
+              "heading": "Trước hết: có chắc là bị tấn công không",
+              "summary": "Check Analytics traffic evidence and Search Console linking domains before assuming attack."
+            },
+            {
+              "heading": "Bị bắn backlink: thường không cần làm gì",
+              "summary": "Most sites do not need disavow; manual action status and strict conditions matter. Spam removal/disavow/review takes time, no instant recovery."
+            },
+            {
+              "heading": "Bị bắn traffic: chặn ở cửa",
+              "summary": "Traffic harms availability, analytics and costs; bounce rate is not GA-based ranking signal. Cloudflare bot challenge can break APIs/payment callbacks; Free mode lacks exceptions. Target source with managed challenge and re-test legitimate flows; avoid blanket block."
+            },
+            {
+              "heading": "Những việc không nên làm",
+              "summary": "Avoid unnecessary penalty services, bulk disavow and retaliation."
+            },
+            {
+              "heading": "Thứ tự xử lý, gọn lại",
+              "summary": "Evidence, manual status, targeted action and monitoring before technical SEO review."
+            }
+          ]
+        },
+        "en": {
+          "path": "content/posts/en/05-negative-seo-bot-traffic-spam-links.md",
+          "sha256": "8b17c91a289cca0d1109c2077810b0ab7b5d416743a9845f034c88a33fc34356",
+          "readToEOF": true,
+          "sections": [
+            {
+              "heading": "Two dirty tricks",
+              "summary": "Traffic floods overload resources; spam links aim at rankings but not proof of penalty."
+            },
+            {
+              "heading": "First: are you sure it is an attack?",
+              "summary": "Check Analytics traffic evidence and Search Console linking domains before assuming attack."
+            },
+            {
+              "heading": "Spam backlinks: usually nothing to do",
+              "summary": "Most sites do not need disavow; manual action status and strict conditions matter. Spam removal/disavow/review takes time, no instant recovery."
+            },
+            {
+              "heading": "Fake traffic: stop it at the door",
+              "summary": "Traffic harms availability, analytics and costs; bounce rate is not GA-based ranking signal. Cloudflare bot challenge can break APIs/payment callbacks; Free mode lacks exceptions. Target source with managed challenge and re-test legitimate flows; avoid blanket block."
+            },
+            {
+              "heading": "What not to do",
+              "summary": "Avoid unnecessary penalty services, bulk disavow and retaliation."
+            },
+            {
+              "heading": "The order of operations",
+              "summary": "Evidence, manual status, targeted action and monitoring before technical SEO review."
+            }
+          ]
+        }
+      },
+      "file": "public/images/blog/posts/05-web-bi-ban-traffic-ban-backlink-v2.webp",
+      "source": "/Users/ebram/.codex/generated_images/01a1d325-5039-7793-bbff-11aec5d89b03/exec-c04a0b77-42b9-4290-9db7-b86a65263ecc.png",
+      "review": {
+        "fullResolution": "Viewed generated image",
+        "thumbnail": "Viewed at 320x180 in contact sheet",
+        "notes": "Traffic spike, link network and investigative lens remain distinct at 320x180; legitimate user tokens and neutral links avoid blanket-malicious implication. No automatic penalty or disavow-all claim.",
+        "site": "Verified: ten VI/EN post pages returned 200 and decoded cover images; both index languages tested at 1440px and 390px. Captured each cover after fade-in and inspected the desktop/VI-mobile/EN-mobile contact sheet; v2 URL avoids the stale optimizer cache. Old unversioned cover file removed after both translations selected v2."
+      }
+    }
+  ]
+}

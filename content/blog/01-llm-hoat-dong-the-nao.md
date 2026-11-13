@@ -7,6 +7,7 @@ keywords: "LLM là gì, large language model, token, context window, hallucinati
 tags: "AI, LLM, Developer, Fundamentals"
 date: 2024-02-15
 updated: 2026-11-11
+cover: /images/blog/01-llm-hoat-dong-the-nao-v2.webp
 ---
 
 # LLM hoạt động thế nào? Giải thích kiểu dev, bỏ qua mấy thứ huyền bí

@@ -7,6 +7,7 @@ keywords: "AI agent, tool calling, function calling, LLM agent, AI SDK tools, AI
 tags: "AI, Agent, Tool Calling, Developer"
 date: 2024-12-03
 updated: 2026-11-11
+cover: /images/blog/05-ai-agent-dau-tien-function-calling-v2.webp
 ---
 
 # Building Your First AI Agent: Understanding Function/Tool Calling Properly

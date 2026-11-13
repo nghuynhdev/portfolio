@@ -6,6 +6,7 @@ description: "A forward proxy works for the client, a reverse proxy for the serv
 keywords: "forward proxy, reverse proxy, what is a proxy, Nginx reverse proxy, X-Forwarded-For, Express trust proxy, load balancer, VPN vs proxy"
 tags: "Networking, Nginx, Backend, Node.js"
 date: 2026-11-13
+cover: /images/blog/posts/04-forward-proxy-va-reverse-proxy-v2.webp
 ---
 
 # Forward Proxy vs Reverse Proxy: The Difference Is Who It Works For

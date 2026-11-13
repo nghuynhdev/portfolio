@@ -6,6 +6,7 @@ description: "What prompt injection is, how it differs from classic injection, a
 keywords: "prompt injection, AI security, LLM security, data leakage, jailbreak, AI for developers"
 tags: "AI, Security, Prompt Injection, Developer"
 date: 2025-11-25
+cover: /images/blog/09-bao-mat-ai-prompt-injection-v2.webp
 ---
 
 # Security When Shipping AI: Prompt Injection and Data Leaks

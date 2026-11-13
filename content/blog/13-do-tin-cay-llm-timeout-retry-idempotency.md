@@ -7,6 +7,7 @@ keywords: "LLM retry, timeout, exponential backoff, jitter, model fallback, idem
 tags: "AI, Reliability, Agent, Backend"
 date: 2026-05-02
 updated: 2026-11-11
+cover: /images/blog/13-do-tin-cay-llm-timeout-retry-idempotency-v2.webp
 ---
 
 # Độ tin cậy cho LLM: timeout, retry, fallback và idempotency

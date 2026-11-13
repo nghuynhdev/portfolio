@@ -6,6 +6,7 @@ description: "Chạy LLM local bằng Ollama trong vài phút, gọi từ Node/N
 keywords: "Ollama, LLM local, chạy model offline, self-host LLM, local AI, AI cho developer"
 tags: "AI, Ollama, Local LLM, Developer"
 date: 2025-09-02
+cover: /images/blog/08-chay-llm-local-voi-ollama-v2.webp
 ---
 
 # Chạy LLM local với Ollama: khi nào nên, khi nào đừng

@@ -6,6 +6,7 @@ description: "Run an LLM locally with Ollama and call it from Node/Next.js, plus
 keywords: "Ollama, local LLM, run models offline, self-hosted LLM, local AI, AI for developers"
 tags: "AI, Ollama, Local LLM, Developer"
 date: 2025-09-02
+cover: /images/blog/08-chay-llm-local-voi-ollama-v2.webp
 ---
 
 # Running LLMs Locally with Ollama: When It Makes Sense and When It Doesn't

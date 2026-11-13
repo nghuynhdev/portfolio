@@ -6,6 +6,7 @@ description: "Prompt injection là gì, khác injection truyền thống ra sao 
 keywords: "prompt injection, bảo mật AI, LLM security, rò rỉ dữ liệu, jailbreak, AI cho developer"
 tags: "AI, Security, Prompt Injection, Developer"
 date: 2025-11-25
+cover: /images/blog/09-bao-mat-ai-prompt-injection-v2.webp
 ---
 
 # Bảo mật khi đưa AI vào sản phẩm: prompt injection và rò rỉ dữ liệu

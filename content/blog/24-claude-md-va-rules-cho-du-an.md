@@ -6,6 +6,7 @@ description: "Viết CLAUDE.md và rules cho dự án: giữ CLAUDE.md ngắn, c
 keywords: "CLAUDE.md, Claude Code rules, project instructions, AI context, Claude workflow"
 tags: "AI, Claude Code, Context, Developer"
 date: 2026-10-19
+cover: /images/blog/24-claude-md-va-rules-cho-du-an-v2.webp
 ---
 
 # CLAUDE.md và rules: để Claude hiểu quy ước dự án mà không phải nhắc lại

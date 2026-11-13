@@ -6,6 +6,7 @@ description: "Choosing Claude Code skills: UI UX Pro Max, Claude SEO, frontend-d
 keywords: "Claude Code skills, Claude skills, UI UX Pro Max, Claude SEO, agent skills"
 tags: "AI, Claude Code, Skills, Developer"
 date: 2026-07-21
+cover: /images/blog/18-chon-skill-cho-claude-code-v2.webp
 ---
 
 # Choosing Skills for Claude Code: Install for the Job, Use Them at the Right Time

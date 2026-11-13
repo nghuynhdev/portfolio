@@ -6,6 +6,7 @@ description: "Debug với bộ skill Superpowers trong Claude Code: tái hiện 
 keywords: "Superpowers Claude Code, obra superpowers, systematic debugging, verification before completion, AI debugging"
 tags: "AI, Claude Code, Skills, Debugging"
 date: 2026-10-08
+cover: /images/blog/23-superpowers-debugging-claude-code-v2.webp
 ---
 
 # Superpowers cho Claude Code: debug có giả thuyết, sửa có bằng chứng

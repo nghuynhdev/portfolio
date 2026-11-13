@@ -6,6 +6,7 @@ description: "Endpoint /ping chỉ cho biết process còn chạy. Health check 
 keywords: "health check, liveness probe, readiness probe, NestJS Terminus, Spring Boot Actuator, ASP.NET Core health checks, Kubernetes probe, giám sát backend"
 tags: "Backend, NestJS, Kubernetes, Monitoring"
 date: 2026-11-13
+cover: /images/blog/posts/03-health-check-khong-chi-la-ping-v2.webp
 ---
 
 # Health check: vì sao /ping trả về pong vẫn chưa nói lên điều gì

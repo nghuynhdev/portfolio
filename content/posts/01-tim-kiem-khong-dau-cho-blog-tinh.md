@@ -6,6 +6,7 @@ description: "Cách làm ô tìm kiếm có gợi ý cho blog Next.js tĩnh: b�
 keywords: "tìm kiếm không dấu, bỏ dấu tiếng Việt JavaScript, normalize NFD, search blog Next.js, autocomplete React, client-side search"
 tags: "Search, TypeScript, React, Next.js"
 date: 2026-11-13
+cover: /images/blog/posts/01-tim-kiem-khong-dau-cho-blog-tinh-v2.webp
 ---
 
 # Tìm kiếm tiếng Việt không dấu cho blog tĩnh: không cần Algolia, không cần server

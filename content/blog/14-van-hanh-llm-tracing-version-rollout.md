@@ -7,6 +7,7 @@ keywords: "LLM observability, AI tracing, OpenTelemetry, prompt versioning, cana
 tags: "AI, Observability, Deployment, Backend"
 date: 2026-05-14
 updated: 2026-11-11
+cover: /images/blog/14-van-hanh-llm-tracing-version-rollout-v2.webp
 ---
 
 # Vận hành LLM trong production: tracing, phiên bản và rollout an toàn

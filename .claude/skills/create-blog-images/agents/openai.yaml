@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Images VI/EN"
+  short_description: "Ảnh blog Việt/Anh từ nội dung đầy đủ, dễ đọc hình"
+  default_prompt: "Dùng $create-blog-images để đọc hết bài Việt/Anh và tạo ảnh bìa dễ hiểu, có ý tưởng riêng theo nội dung, rồi kiểm tra thumbnail và hiển thị trên site."

@@ -7,6 +7,7 @@ keywords: "what is an LLM, large language model, tokens, context window, halluci
 tags: "AI, LLM, Developer, Fundamentals"
 date: 2024-02-15
 updated: 2026-11-11
+cover: /images/blog/01-llm-hoat-dong-the-nao-v2.webp
 ---
 
 # How Do LLMs Actually Work? A Developer's Explanation, Minus the Mystique

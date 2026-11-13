@@ -6,6 +6,7 @@ description: "'Looks fine' isn't enough. Build LLM evals for an AI feature: a te
 keywords: "LLM evals, AI evaluation, LLM as judge, prompt testing, AI regression, AI for developers"
 tags: "AI, Evals, Testing, Developer"
 date: 2025-06-17
+cover: /images/blog/07-evals-do-chat-luong-llm-v2.webp
 ---
 
 # Evals: How to Know Your Prompt and Model Are Good Enough

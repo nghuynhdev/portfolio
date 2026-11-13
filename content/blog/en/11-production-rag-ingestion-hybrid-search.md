@@ -7,6 +7,7 @@ keywords: "production RAG, RAG ingestion, hybrid search, reranking, RRF, PDF OCR
 tags: "AI, RAG, Search, Data Pipeline"
 date: 2026-03-29
 updated: 2026-11-11
+cover: /images/blog/11-rag-production-ingestion-hybrid-search-v2.webp
 ---
 
 # Production RAG: From Ingesting Documents to Hybrid Search and Reranking

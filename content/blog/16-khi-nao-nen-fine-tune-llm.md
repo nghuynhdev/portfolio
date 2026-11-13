@@ -6,6 +6,7 @@ description: "Khi nào nên fine-tune LLM thay vì prompt hay RAG: phân loại 
 keywords: "LLM fine tuning, LoRA, PEFT, training data, RAG vs fine tuning, AI cho developer"
 tags: "AI, Fine Tuning, Data, Developer"
 date: 2026-06-17
+cover: /images/blog/16-khi-nao-nen-fine-tune-llm-v2.webp
 ---
 
 # Khi nào nên fine-tune LLM? Bắt đầu từ lỗi, đừng bắt đầu từ GPU

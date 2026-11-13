@@ -6,6 +6,7 @@ description: "Context engineering cho chatbot và agent: chia ngân sách token,
 keywords: "context engineering, AI memory, context window, conversation summary, AI agent, AI cho developer"
 tags: "AI, Context, Memory, Developer"
 date: 2026-04-21
+cover: /images/blog/12-context-engineering-va-memory-v2.webp
 ---
 
 # Context engineering: cho AI nhớ đúng thứ, đúng lúc

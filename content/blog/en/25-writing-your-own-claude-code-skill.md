@@ -6,6 +6,7 @@ description: "Write your own Claude Code skill for reviewing blog posts: define 
 keywords: "create Claude skill, SKILL.md, custom Claude Code skills, blog review, agent skills"
 tags: "AI, Claude Code, Skills, Workflow"
 date: 2026-10-31
+cover: /images/blog/25-viet-skill-rieng-cho-claude-code-v2.webp
 ---
 
 # Writing Your Own Claude Code Skill: Start With a Blog Review Workflow

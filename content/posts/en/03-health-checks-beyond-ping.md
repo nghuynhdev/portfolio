@@ -6,6 +6,7 @@ description: "A /ping endpoint only tells you the process is running. What a rea
 keywords: "health check, liveness probe, readiness probe, NestJS Terminus, Spring Boot Actuator, ASP.NET Core health checks, Kubernetes probes, backend monitoring"
 tags: "Backend, NestJS, Kubernetes, Monitoring"
 date: 2026-11-13
+cover: /images/blog/posts/03-health-check-khong-chi-la-ping-v2.webp
 ---
 
 # Health Checks: Why a /ping That Returns pong Tells You Very Little

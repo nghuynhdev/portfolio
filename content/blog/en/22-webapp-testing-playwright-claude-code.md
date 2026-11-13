@@ -7,6 +7,7 @@ keywords: "webapp-testing skill, Claude Code Playwright, browser testing, E2E te
 tags: "AI, Claude Code, Skills, Testing"
 date: 2026-09-27
 updated: 2026-11-11
+cover: /images/blog/22-webapp-testing-playwright-claude-code-v2.webp
 ---
 
 # webapp-testing: Let Claude Test Your Web App in a Real Browser
