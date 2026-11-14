@@ -5,7 +5,8 @@ slug: chay-llm-local-voi-ollama
 description: "Chạy LLM local bằng Ollama trong vài phút, gọi từ Node/Next.js, và khi nào local đáng dùng, khi nào API cloud vẫn hơn."
 keywords: "Ollama, LLM local, chạy model offline, self-host LLM, local AI, AI cho developer"
 tags: "AI, Ollama, Local LLM, Developer"
-date: 2025-09-02
+date: 2026-02-20
+updated: 2026-11-13
 cover: /images/blog/08-chay-llm-local-voi-ollama-v2.webp
 ---
 

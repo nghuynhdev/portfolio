@@ -5,7 +5,8 @@ slug: react-best-practices-claude-code
 description: "Vercel's React Best Practices skill in Claude Code: find waterfalls, check the bundle and server/client boundary, measure gains."
 keywords: "vercel-react-best-practices, Claude Code React, Next.js performance, React skill, Vercel agent skills"
 tags: "AI, Claude Code, Skills, React"
-date: 2026-09-15
+date: 2026-08-20
+updated: 2026-11-13
 cover: /images/blog/21-react-best-practices-skill-claude-code-v2.webp
 ---
 

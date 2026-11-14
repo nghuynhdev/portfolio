@@ -5,8 +5,8 @@ slug: first-ai-agent-function-calling
 description: "How tool calling turns an LLM into an agent that acts: the agent loop, tool schemas and the safety boundaries you must have."
 keywords: "AI agent, tool calling, function calling, LLM agent, AI SDK tools, AI for developers"
 tags: "AI, Agent, Tool Calling, Developer"
-date: 2024-12-03
-updated: 2026-11-11
+date: 2026-01-09
+updated: 2026-11-13
 cover: /images/blog/05-ai-agent-dau-tien-function-calling-v2.webp
 ---
 

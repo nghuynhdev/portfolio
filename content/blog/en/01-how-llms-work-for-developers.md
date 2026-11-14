@@ -5,8 +5,8 @@ slug: how-llms-work-for-developers
 description: "A developer's mental model of LLMs: tokens, next-token probability, context windows and why models make things up. No math required."
 keywords: "what is an LLM, large language model, tokens, context window, hallucination, AI for developers"
 tags: "AI, LLM, Developer, Fundamentals"
-date: 2024-02-15
-updated: 2026-11-11
+date: 2025-11-14
+updated: 2026-11-13
 cover: /images/blog/01-llm-hoat-dong-the-nao-v2.webp
 ---
 

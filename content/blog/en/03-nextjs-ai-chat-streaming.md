@@ -5,8 +5,8 @@ slug: nextjs-ai-chat-streaming
 description: "Add a streaming AI chat to the Next.js App Router: a route handler that streams tokens, useChat, cancellation and server-side keys."
 keywords: "Next.js AI, streaming chat, Vercel AI SDK, useChat, streamText, App Router, AI for developers"
 tags: "AI, Next.js, Streaming, Developer"
-date: 2024-07-16
-updated: 2026-11-11
+date: 2025-12-12
+updated: 2026-11-13
 cover: /images/blog/03-tich-hop-ai-vao-nextjs-streaming-v2.webp
 ---
 

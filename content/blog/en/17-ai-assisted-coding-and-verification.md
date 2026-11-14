@@ -5,7 +5,8 @@ slug: ai-assisted-coding-and-verification
 description: "AI-assisted coding you can verify: give just enough context, split changes, review the diff and write tests from requirements."
 keywords: "AI coding assistant, AI code generation, code review, testing, developer workflow, AI for developers"
 tags: "AI, Coding, Testing, Developer"
-date: 2026-06-28
+date: 2026-06-25
+updated: 2026-11-13
 cover: /images/blog/17-dung-ai-viet-code-va-kiem-chung-v2.webp
 ---
 

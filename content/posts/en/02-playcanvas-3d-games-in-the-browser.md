@@ -5,7 +5,8 @@ slug: playcanvas-3d-games-in-the-browser
 description: "PlayCanvas is an open-source 3D engine with a browser-based editor: what it includes, how big it really is, and when to pick it over Three.js."
 keywords: "PlayCanvas, what is PlayCanvas, 3D games on the web, WebGL, WebGPU, Gaussian Splatting, SuperSplat, Three.js vs PlayCanvas"
 tags: "PlayCanvas, WebGL, WebGPU, Game Dev"
-date: 2026-11-13
+date: 2026-02-27
+updated: 2026-11-13
 cover: /images/blog/posts/02-playcanvas-lam-game-3d-tren-web-v2.webp
 ---
 

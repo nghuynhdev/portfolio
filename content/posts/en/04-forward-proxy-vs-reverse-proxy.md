@@ -5,7 +5,8 @@ slug: forward-proxy-vs-reverse-proxy
 description: "A forward proxy works for the client, a reverse proxy for the server. What each does, how HTTPS passes through, and the req.ip bug behind Nginx."
 keywords: "forward proxy, reverse proxy, what is a proxy, Nginx reverse proxy, X-Forwarded-For, Express trust proxy, load balancer, VPN vs proxy"
 tags: "Networking, Nginx, Backend, Node.js"
-date: 2026-11-13
+date: 2026-08-19
+updated: 2026-11-13
 cover: /images/blog/posts/04-forward-proxy-va-reverse-proxy-v2.webp
 ---
 

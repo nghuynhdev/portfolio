@@ -5,7 +5,8 @@ slug: chon-skill-cho-claude-code
 description: "Chọn skill cho Claude Code: UI UX Pro Max, Claude SEO, frontend-design, React, testing. Cách chọn, kiểm tra nguồn và đánh giá."
 keywords: "Claude Code skills, skill Claude, UI UX Pro Max, Claude SEO, agent skills"
 tags: "AI, Claude Code, Skills, Developer"
-date: 2026-07-21
+date: 2026-07-09
+updated: 2026-11-13
 cover: /images/blog/18-chon-skill-cho-claude-code-v2.webp
 ---
 

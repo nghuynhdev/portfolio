@@ -5,7 +5,8 @@ slug: writing-your-own-claude-code-skill
 description: "Write your own Claude Code skill for reviewing blog posts: define scope, write SKILL.md, require evidence, test before sharing."
 keywords: "create Claude skill, SKILL.md, custom Claude Code skills, blog review, agent skills"
 tags: "AI, Claude Code, Skills, Workflow"
-date: 2026-10-31
+date: 2026-10-15
+updated: 2026-11-13
 cover: /images/blog/25-viet-skill-rieng-cho-claude-code-v2.webp
 ---
 

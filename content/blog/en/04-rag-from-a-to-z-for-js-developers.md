@@ -5,8 +5,8 @@ slug: rag-from-a-to-z-for-js-developers
 description: "RAG for full-stack JS developers: embeddings, chunking, vector search and prompt context, with minimal code and common pitfalls."
 keywords: "RAG, retrieval augmented generation, embeddings, vector database, chunking, semantic search, AI for developers"
 tags: "AI, RAG, Embedding, Developer"
-date: 2024-09-24
-updated: 2026-11-11
+date: 2025-12-26
+updated: 2026-11-13
 cover: /images/blog/04-rag-tu-a-z-cho-dev-js-v2.webp
 ---
 

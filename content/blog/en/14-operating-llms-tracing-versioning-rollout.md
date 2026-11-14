@@ -5,8 +5,8 @@ slug: operating-llms-tracing-versioning-rollout
 description: "Operate LLMs like an engineer: OpenTelemetry tracing, versioning prompt, model and index together, rollout via evals and canaries."
 keywords: "LLM observability, AI tracing, OpenTelemetry, prompt versioning, canary release, shadow traffic, AI rollback, LLMOps, AI for developers"
 tags: "AI, Observability, Deployment, Backend"
-date: 2026-05-14
-updated: 2026-11-11
+date: 2026-05-15
+updated: 2026-11-13
 cover: /images/blog/14-van-hanh-llm-tracing-version-rollout-v2.webp
 ---
 
@@ -71,7 +71,7 @@ A trace is only useful if it tells you **which version** was running. Don't stor
   "modelConfigVersion": "model-config-v3",
   "toolSchemaVersion": "support-tools-v2",
   "retrievalConfigVersion": "search-v5",
-  "documentIndexRevision": "docs-2026-11-11-a",
+  "documentIndexRevision": "docs-2026-05-12-a",
   "outputSchemaVersion": "answer-v2"
 }
 ```

@@ -5,7 +5,8 @@ slug: dung-ai-viet-code-va-kiem-chung
 description: "Dùng AI viết code mà vẫn kiểm chứng được: context vừa đủ, chia nhỏ thay đổi, review diff và viết test từ yêu cầu."
 keywords: "AI coding assistant, AI viết code, code review, testing, developer workflow, AI cho developer"
 tags: "AI, Coding, Testing, Developer"
-date: 2026-06-28
+date: 2026-06-25
+updated: 2026-11-13
 cover: /images/blog/17-dung-ai-viet-code-va-kiem-chung-v2.webp
 ---
 

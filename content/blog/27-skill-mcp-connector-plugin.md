@@ -6,6 +6,7 @@ description: "Skill, MCP, Connector và Plugin khác nhau ra sao, ghép thế n�
 keywords: "Claude skill, MCP, Claude connector, Claude Code plugin, AI agent, tự động hóa với AI"
 tags: "AI, Claude Code, Skills, MCP"
 date: 2026-11-12
+updated: 2026-11-13
 cover: /images/blog/27-skill-mcp-connector-plugin-v2.webp
 ---
 

@@ -5,7 +5,8 @@ slug: claude-md-va-rules-cho-du-an
 description: "Viết CLAUDE.md và rules cho dự án: giữ CLAUDE.md ngắn, chia rules theo phạm vi, ghi lệnh kiểm tra thật và giữ context gọn."
 keywords: "CLAUDE.md, Claude Code rules, project instructions, AI context, Claude workflow"
 tags: "AI, Claude Code, Context, Developer"
-date: 2026-10-19
+date: 2026-10-01
+updated: 2026-11-13
 cover: /images/blog/24-claude-md-va-rules-cho-du-an-v2.webp
 ---
 

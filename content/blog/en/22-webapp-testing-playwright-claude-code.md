@@ -5,8 +5,8 @@ slug: webapp-testing-playwright-claude-code
 description: "Webapp testing with Playwright and Claude Code's webapp-testing skill: reproduce interactions, check states and save evidence."
 keywords: "webapp-testing skill, Claude Code Playwright, browser testing, E2E testing, Anthropic skills"
 tags: "AI, Claude Code, Skills, Testing"
-date: 2026-09-27
-updated: 2026-11-11
+date: 2026-09-03
+updated: 2026-11-13
 cover: /images/blog/22-webapp-testing-playwright-claude-code-v2.webp
 ---
 

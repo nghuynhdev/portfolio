@@ -5,8 +5,8 @@ slug: rag-tu-a-z-cho-dev-js
 description: "RAG cho dev fullstack JS: embedding, chunking, vector search, ghép context vào prompt. Kèm code tối giản và lỗi hay gặp."
 keywords: "RAG, retrieval augmented generation, embedding, vector database, chunking, semantic search, AI cho developer"
 tags: "AI, RAG, Embedding, Developer"
-date: 2024-09-24
-updated: 2026-11-11
+date: 2025-12-26
+updated: 2026-11-13
 cover: /images/blog/04-rag-tu-a-z-cho-dev-js-v2.webp
 ---
 

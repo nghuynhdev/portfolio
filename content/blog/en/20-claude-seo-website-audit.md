@@ -5,7 +5,8 @@ slug: claude-seo-website-audit
 description: "Website SEO audit with Claude SEO in Claude Code: install the plugin, audit each page, check technical SEO and schema, then fix."
 keywords: "Claude SEO, Claude Code SEO skill, SEO audit, technical SEO, blog SEO, AgriciDaniel"
 tags: "AI, Claude Code, Skills, SEO"
-date: 2026-08-12
+date: 2026-08-06
+updated: 2026-11-13
 cover: /images/blog/20-claude-seo-audit-website-v2.webp
 ---
 

@@ -5,7 +5,8 @@ slug: tim-kiem-tieng-viet-khong-dau-cho-blog-tinh
 description: "Cách làm ô tìm kiếm có gợi ý cho blog Next.js tĩnh: bỏ dấu tiếng Việt đúng cách, chấm điểm kết quả và tô sáng từ khóa, chạy hoàn toàn trên trình duyệt."
 keywords: "tìm kiếm không dấu, bỏ dấu tiếng Việt JavaScript, normalize NFD, search blog Next.js, autocomplete React, client-side search"
 tags: "Search, TypeScript, React, Next.js"
-date: 2026-11-13
+date: 2025-12-03
+updated: 2026-11-13
 cover: /images/blog/posts/01-tim-kiem-khong-dau-cho-blog-tinh-v2.webp
 ---
 

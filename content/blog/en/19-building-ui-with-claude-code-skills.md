@@ -5,8 +5,8 @@ slug: building-ui-with-claude-code-skills
 description: "Build UI with Claude Code skills: UI UX Pro Max for the design system, frontend-design for visuals, design guidelines for review."
 keywords: "UI UX Pro Max, frontend-design skill, web-design-guidelines, Claude Code UI, Anthropic skills, Vercel skills, AI UI design, UI review"
 tags: "AI, Claude Code, Skills, UI UX"
-date: 2026-08-01
-updated: 2026-11-11
+date: 2026-07-23
+updated: 2026-11-13
 cover: /images/blog/19-lam-ui-voi-claude-code-skills-v2.webp
 ---
 

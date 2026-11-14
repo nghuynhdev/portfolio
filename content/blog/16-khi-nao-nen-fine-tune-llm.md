@@ -5,7 +5,8 @@ slug: khi-nao-nen-fine-tune-llm
 description: "Khi nào nên fine-tune LLM thay vì prompt hay RAG: phân loại lỗi, chuẩn bị dữ liệu huấn luyện, đánh giá chất lượng và chi phí."
 keywords: "LLM fine tuning, LoRA, PEFT, training data, RAG vs fine tuning, AI cho developer"
 tags: "AI, Fine Tuning, Data, Developer"
-date: 2026-06-17
+date: 2026-06-11
+updated: 2026-11-13
 cover: /images/blog/16-khi-nao-nen-fine-tune-llm-v2.webp
 ---
 

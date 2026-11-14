@@ -5,8 +5,8 @@ slug: van-hanh-llm-tracing-version-rollout
 description: "Vận hành LLM như kỹ sư: tracing bằng OpenTelemetry, version prompt/model/index cùng nhau, rollout qua eval, canary và rollback."
 keywords: "LLM observability, AI tracing, OpenTelemetry, prompt versioning, canary release, shadow traffic, AI rollback, LLMOps, AI cho developer"
 tags: "AI, Observability, Deployment, Backend"
-date: 2026-05-14
-updated: 2026-11-11
+date: 2026-05-15
+updated: 2026-11-13
 cover: /images/blog/14-van-hanh-llm-tracing-version-rollout-v2.webp
 ---
 
@@ -71,7 +71,7 @@ Một trace chỉ hữu ích khi nó cho biết **bản nào** đang chạy. Đ�
   "modelConfigVersion": "model-config-v3",
   "toolSchemaVersion": "support-tools-v2",
   "retrievalConfigVersion": "search-v5",
-  "documentIndexRevision": "docs-2026-11-11-a",
+  "documentIndexRevision": "docs-2026-05-12-a",
   "outputSchemaVersion": "answer-v2"
 }
 ```

@@ -5,7 +5,8 @@ slug: what-is-mcp-model-context-protocol
 description: "What is MCP (Model Context Protocol)? How it turns N×M AI tool integrations into N+M, plus a minimal MCP server in TypeScript."
 keywords: "MCP, Model Context Protocol, AI tool integration, MCP server, AI agent, AI for developers"
 tags: "AI, MCP, Agent, Developer"
-date: 2026-03-18
+date: 2026-03-20
+updated: 2026-11-13
 cover: /images/blog/10-mcp-model-context-protocol-v2.webp
 ---
 

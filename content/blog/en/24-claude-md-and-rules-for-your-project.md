@@ -5,7 +5,8 @@ slug: claude-md-and-rules-for-your-project
 description: "Write CLAUDE.md and rules for your project: keep CLAUDE.md short, scope rules, list real check commands, keep context lean."
 keywords: "CLAUDE.md, Claude Code rules, project instructions, AI context, Claude workflow"
 tags: "AI, Claude Code, Context, Developer"
-date: 2026-10-19
+date: 2026-10-01
+updated: 2026-11-13
 cover: /images/blog/24-claude-md-va-rules-cho-du-an-v2.webp
 ---
 

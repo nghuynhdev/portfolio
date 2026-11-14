@@ -5,8 +5,8 @@ slug: do-tin-cay-llm-timeout-retry-idempotency
 description: "Làm ứng dụng LLM chịu lỗi: deadline cho request, retry có backoff + jitter, fallback giữ hợp đồng và idempotency chống chạy trùng."
 keywords: "LLM retry, timeout, exponential backoff, jitter, model fallback, idempotency, durable AI workflow, outbox, AI agent, AI cho developer"
 tags: "AI, Reliability, Agent, Backend"
-date: 2026-05-02
-updated: 2026-11-11
+date: 2026-05-01
+updated: 2026-11-13
 cover: /images/blog/13-do-tin-cay-llm-timeout-retry-idempotency-v2.webp
 ---
 

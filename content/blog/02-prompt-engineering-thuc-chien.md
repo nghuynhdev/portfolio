@@ -5,8 +5,8 @@ slug: prompt-engineering-thuc-chien-cho-dev
 description: "Prompt engineering cho dev: coi prompt như spec. System prompt, few-shot, ép JSON theo schema, delimiter chống injection."
 keywords: "prompt engineering, system prompt, few-shot, structured output, JSON schema, AI cho developer"
 tags: "AI, LLM, Prompt Engineering, Developer"
-date: 2024-05-08
-updated: 2026-11-11
+date: 2025-11-28
+updated: 2026-11-13
 cover: /images/blog/02-prompt-engineering-thuc-chien-v2.webp
 ---
 

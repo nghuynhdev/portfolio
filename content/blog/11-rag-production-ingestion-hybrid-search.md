@@ -5,8 +5,8 @@ slug: rag-production-tu-ingestion-den-hybrid-search
 description: "Đưa RAG lên production: parse PDF giữ cấu trúc, metadata, cập nhật index an toàn, hybrid search bằng RRF, reranker và recall@k."
 keywords: "RAG production, RAG ingestion, hybrid search, reranking, RRF, PDF OCR, chunking, vector index, AI cho developer"
 tags: "AI, RAG, Search, Data Pipeline"
-date: 2026-03-29
-updated: 2026-11-11
+date: 2026-04-03
+updated: 2026-11-13
 cover: /images/blog/11-rag-production-ingestion-hybrid-search-v2.webp
 ---
 

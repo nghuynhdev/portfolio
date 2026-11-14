@@ -5,8 +5,8 @@ slug: ai-agent-dau-tien-function-calling
 description: "Tool calling biến LLM thành agent biết hành động: vòng lặp agent, định nghĩa tool bằng schema và ranh giới an toàn bắt buộc."
 keywords: "AI agent, tool calling, function calling, LLM agent, AI SDK tools, AI cho developer"
 tags: "AI, Agent, Tool Calling, Developer"
-date: 2024-12-03
-updated: 2026-11-11
+date: 2026-01-09
+updated: 2026-11-13
 cover: /images/blog/05-ai-agent-dau-tien-function-calling-v2.webp
 ---
 

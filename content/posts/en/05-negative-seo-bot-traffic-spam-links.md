@@ -6,6 +6,7 @@ description: "Fake traffic and spam backlinks are meant to push a site down in G
 keywords: "negative SEO, spam backlinks, bot traffic attack, Manual Actions, disavow links, Bot Fight Mode, Cloudflare block bots, site dropped in Google"
 tags: "SEO, Security, Cloudflare, Web"
 date: 2026-11-13
+updated: 2026-11-13
 cover: /images/blog/posts/05-web-bi-ban-traffic-ban-backlink-v2.webp
 ---
 

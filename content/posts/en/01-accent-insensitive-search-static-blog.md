@@ -5,7 +5,8 @@ slug: accent-insensitive-search-for-a-static-blog
 description: "A search box with suggestions for a static Next.js blog: strip Vietnamese diacritics correctly, rank results and highlight matches, in the browser."
 keywords: "accent-insensitive search, remove diacritics JavaScript, normalize NFD, Next.js blog search, React autocomplete, client-side search"
 tags: "Search, TypeScript, React, Next.js"
-date: 2026-11-13
+date: 2025-12-03
+updated: 2026-11-13
 cover: /images/blog/posts/01-tim-kiem-khong-dau-cho-blog-tinh-v2.webp
 ---
 

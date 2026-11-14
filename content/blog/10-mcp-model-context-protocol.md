@@ -5,7 +5,8 @@ slug: mcp-model-context-protocol-la-gi
 description: "MCP (Model Context Protocol) là gì: biến bài toán tích hợp AI N×M thành N+M, cách hoạt động và một MCP server bằng TypeScript."
 keywords: "MCP, Model Context Protocol, AI tool integration, MCP server, AI agent, AI cho developer"
 tags: "AI, MCP, Agent, Developer"
-date: 2026-03-18
+date: 2026-03-20
+updated: 2026-11-13
 cover: /images/blog/10-mcp-model-context-protocol-v2.webp
 ---
 

@@ -5,7 +5,8 @@ slug: viet-skill-rieng-cho-claude-code
 description: "Viết skill riêng cho Claude Code để review blog: định nghĩa phạm vi, viết SKILL.md, yêu cầu bằng chứng và test trước khi chia sẻ."
 keywords: "tạo Claude skill, SKILL.md, custom Claude Code skills, blog review, agent skills"
 tags: "AI, Claude Code, Skills, Workflow"
-date: 2026-10-31
+date: 2026-10-15
+updated: 2026-11-13
 cover: /images/blog/25-viet-skill-rieng-cho-claude-code-v2.webp
 ---
 

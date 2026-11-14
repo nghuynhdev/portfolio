@@ -6,6 +6,7 @@ description: "Bắn traffic và bắn backlink là hai trò kéo web đối th�
 keywords: "bắn traffic, bắn backlink, negative SEO, SEO bẩn, Manual Actions, Disavow links, Bot Fight Mode, Cloudflare chặn bot, web rớt top Google"
 tags: "SEO, Security, Cloudflare, Web"
 date: 2026-11-13
+updated: 2026-11-13
 cover: /images/blog/posts/05-web-bi-ban-traffic-ban-backlink-v2.webp
 ---
 

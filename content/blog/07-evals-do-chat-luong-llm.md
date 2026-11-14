@@ -5,7 +5,8 @@ slug: evals-do-chat-luong-llm
 description: "'Thấy ổn' chưa đủ để lên production. Dựng bộ eval cho tính năng AI: tập test, cách chấm, LLM-as-judge và chạy eval trong CI."
 keywords: "LLM evals, đánh giá AI, LLM as judge, test prompt, AI regression, AI cho developer"
 tags: "AI, Evals, Testing, Developer"
-date: 2025-06-17
+date: 2026-02-06
+updated: 2026-11-13
 cover: /images/blog/07-evals-do-chat-luong-llm-v2.webp
 ---
 

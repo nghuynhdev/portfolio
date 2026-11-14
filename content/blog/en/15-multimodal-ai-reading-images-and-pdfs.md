@@ -5,7 +5,8 @@ slug: multimodal-ai-reading-images-and-pdfs
 description: "Read images and PDFs with multimodal AI: pick the right pages, require evidence, allow missing data, check business rules in code."
 keywords: "multimodal AI, vision model, PDF extraction, OCR, document AI, AI for developers"
 tags: "AI, Multimodal, Documents, Developer"
-date: 2026-06-05
+date: 2026-05-28
+updated: 2026-11-13
 cover: /images/blog/15-multimodal-ai-doc-anh-va-pdf-v2.webp
 ---
 

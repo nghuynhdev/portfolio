@@ -5,8 +5,8 @@ slug: prompt-engineering-for-developers
 description: "Prompt engineering for developers: treat the prompt as a spec. System prompts, few-shot, schema-enforced JSON, injection delimiters."
 keywords: "prompt engineering, system prompt, few-shot, structured output, JSON schema, AI for developers"
 tags: "AI, LLM, Prompt Engineering, Developer"
-date: 2024-05-08
-updated: 2026-11-11
+date: 2025-11-28
+updated: 2026-11-13
 cover: /images/blog/02-prompt-engineering-thuc-chien-v2.webp
 ---
 

@@ -5,7 +5,8 @@ slug: multimodal-ai-doc-anh-va-pdf
 description: "Đọc ảnh và PDF bằng AI đa phương thức: chọn trang, yêu cầu bằng chứng, cho phép thiếu dữ liệu và kiểm tra quy tắc bằng code."
 keywords: "multimodal AI, vision model, PDF extraction, OCR, document AI, AI cho developer"
 tags: "AI, Multimodal, Documents, Developer"
-date: 2026-06-05
+date: 2026-05-28
+updated: 2026-11-13
 cover: /images/blog/15-multimodal-ai-doc-anh-va-pdf-v2.webp
 ---
 

@@ -5,7 +5,8 @@ slug: forward-proxy-va-reverse-proxy
 description: "Forward proxy đứng về phía client, reverse proxy đứng về phía server. Mỗi loại làm gì, HTTPS đi qua proxy ra sao, và lỗi req.ip khi app Node.js nằm sau Nginx."
 keywords: "forward proxy, reverse proxy, proxy là gì, Nginx reverse proxy, X-Forwarded-For, trust proxy Express, load balancer, VPN khác proxy"
 tags: "Networking, Nginx, Backend, Node.js"
-date: 2026-11-13
+date: 2026-08-19
+updated: 2026-11-13
 cover: /images/blog/posts/04-forward-proxy-va-reverse-proxy-v2.webp
 ---
 

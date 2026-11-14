@@ -5,7 +5,8 @@ slug: playcanvas-lam-game-3d-tren-trinh-duyet
 description: "PlayCanvas là engine 3D mã nguồn mở có editor chạy trên trình duyệt. Nó gồm những gì, nặng bao nhiêu, mạnh ở đâu và khi nào nên chọn thay cho Three.js."
 keywords: "PlayCanvas, PlayCanvas là gì, game 3D trên web, WebGL, WebGPU, Gaussian Splatting, SuperSplat, so sánh Three.js PlayCanvas"
 tags: "PlayCanvas, WebGL, WebGPU, Game Dev"
-date: 2026-11-13
+date: 2026-02-27
+updated: 2026-11-13
 cover: /images/blog/posts/02-playcanvas-lam-game-3d-tren-web-v2.webp
 ---
 

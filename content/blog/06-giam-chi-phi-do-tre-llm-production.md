@@ -5,8 +5,8 @@ slug: giam-chi-phi-do-tre-llm-production
 description: "Cách giảm chi phí và độ trễ LLM: chọn model theo tác vụ, prompt caching, cắt token thừa, streaming và đo lường thực tế."
 keywords: "chi phí LLM, tối ưu token, prompt caching, model routing, độ trễ LLM, AI cho developer"
 tags: "AI, LLM, Performance, Cost, Developer"
-date: 2025-03-11
-updated: 2026-11-11
+date: 2026-01-23
+updated: 2026-11-13
 cover: /images/blog/06-giam-chi-phi-do-tre-llm-production-v2.webp
 ---
 

@@ -5,8 +5,8 @@ slug: llm-hoat-dong-the-nao-cho-dev
 description: "Mental model để developer hiểu LLM: token, xác suất token kế tiếp, context window và vì sao model 'bịa'. Không cần toán."
 keywords: "LLM là gì, large language model, token, context window, hallucination, AI cho developer"
 tags: "AI, LLM, Developer, Fundamentals"
-date: 2024-02-15
-updated: 2026-11-11
+date: 2025-11-14
+updated: 2026-11-13
 cover: /images/blog/01-llm-hoat-dong-the-nao-v2.webp
 ---
 

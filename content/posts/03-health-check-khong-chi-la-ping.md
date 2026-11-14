@@ -5,7 +5,8 @@ slug: health-check-khong-chi-la-ping
 description: "Endpoint /ping chỉ cho biết process còn chạy. Health check đúng nghĩa là gì, liveness khác readiness thế nào, và cách làm với NestJS Terminus."
 keywords: "health check, liveness probe, readiness probe, NestJS Terminus, Spring Boot Actuator, ASP.NET Core health checks, Kubernetes probe, giám sát backend"
 tags: "Backend, NestJS, Kubernetes, Monitoring"
-date: 2026-11-13
+date: 2026-05-25
+updated: 2026-11-13
 cover: /images/blog/posts/03-health-check-khong-chi-la-ping-v2.webp
 ---
 

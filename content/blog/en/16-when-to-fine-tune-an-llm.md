@@ -5,7 +5,8 @@ slug: when-to-fine-tune-an-llm
 description: "When to fine-tune an LLM vs. prompting or RAG: diagnose the error type, prepare clean training data, and judge quality and cost."
 keywords: "LLM fine tuning, LoRA, PEFT, training data, RAG vs fine tuning, AI for developers"
 tags: "AI, Fine Tuning, Data, Developer"
-date: 2026-06-17
+date: 2026-06-11
+updated: 2026-11-13
 cover: /images/blog/16-khi-nao-nen-fine-tune-llm-v2.webp
 ---
 

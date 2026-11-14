@@ -5,7 +5,8 @@ slug: jailbreak-claude-va-gioi-han-claude-md
 description: "Jailbreak Claude là gì, khác prompt injection ra sao, vì sao CLAUDE.md không cấp thêm quyền và cách kiểm tra ranh giới an toàn."
 keywords: "jailbreak Claude, Claude Code jailbreak, CLAUDE.md, prompt injection, Claude Code security"
 tags: "AI, Claude Code, Security, Jailbreak"
-date: 2026-11-11
+date: 2026-10-29
+updated: 2026-11-13
 cover: /images/blog/26-jailbreak-claude-va-gioi-han-claude-md-v2.webp
 ---
 

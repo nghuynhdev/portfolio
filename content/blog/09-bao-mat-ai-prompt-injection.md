@@ -5,7 +5,8 @@ slug: bao-mat-ai-prompt-injection
 description: "Prompt injection là gì, khác injection truyền thống ra sao và cách phòng thủ: tách dữ liệu khỏi lệnh, giới hạn tool, lọc output."
 keywords: "prompt injection, bảo mật AI, LLM security, rò rỉ dữ liệu, jailbreak, AI cho developer"
 tags: "AI, Security, Prompt Injection, Developer"
-date: 2025-11-25
+date: 2026-03-06
+updated: 2026-11-13
 cover: /images/blog/09-bao-mat-ai-prompt-injection-v2.webp
 ---
 

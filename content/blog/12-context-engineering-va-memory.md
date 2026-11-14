@@ -5,7 +5,8 @@ slug: context-engineering-va-memory
 description: "Context engineering cho chatbot và agent: chia ngân sách token, tóm tắt lịch sử, giữ trạng thái và lưu memory có nguồn, có hạn."
 keywords: "context engineering, AI memory, context window, conversation summary, AI agent, AI cho developer"
 tags: "AI, Context, Memory, Developer"
-date: 2026-04-21
+date: 2026-04-17
+updated: 2026-11-13
 cover: /images/blog/12-context-engineering-va-memory-v2.webp
 ---
 

@@ -5,8 +5,8 @@ slug: tich-hop-ai-vao-nextjs-streaming
 description: "Gắn chat AI streaming vào Next.js App Router: route handler stream token, useChat ở client, hủy request, giữ API key ở server."
 keywords: "Next.js AI, streaming chat, Vercel AI SDK, useChat, streamText, App Router, AI cho developer"
 tags: "AI, Next.js, Streaming, Developer"
-date: 2024-07-16
-updated: 2026-11-11
+date: 2025-12-12
+updated: 2026-11-13
 cover: /images/blog/03-tich-hop-ai-vao-nextjs-streaming-v2.webp
 ---
 

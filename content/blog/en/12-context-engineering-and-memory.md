@@ -5,7 +5,8 @@ slug: context-engineering-and-memory
 description: "Context engineering for chatbots and agents: budget tokens, summarize history, keep task state and store memories with expiry."
 keywords: "context engineering, AI memory, context window, conversation summary, AI agent, AI for developers"
 tags: "AI, Context, Memory, Developer"
-date: 2026-04-21
+date: 2026-04-17
+updated: 2026-11-13
 cover: /images/blog/12-context-engineering-va-memory-v2.webp
 ---
 

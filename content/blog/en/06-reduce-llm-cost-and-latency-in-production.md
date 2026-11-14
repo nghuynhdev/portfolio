@@ -5,8 +5,8 @@ slug: reduce-llm-cost-and-latency-in-production
 description: "Cut LLM cost and latency in production: pick models per task, use prompt caching, trim tokens, stream responses and measure."
 keywords: "LLM cost, token optimization, prompt caching, model routing, LLM latency, AI for developers"
 tags: "AI, LLM, Performance, Cost, Developer"
-date: 2025-03-11
-updated: 2026-11-11
+date: 2026-01-23
+updated: 2026-11-13
 cover: /images/blog/06-giam-chi-phi-do-tre-llm-production-v2.webp
 ---
 
