@@ -1,0 +1,30 @@
+{
+  "vi": "content/posts/06-forward-deployed-engineer-la-gi.md",
+  "en": "content/posts/en/06-forward-deployed-engineer-explained.md",
+  "coverage": [
+    "Origin: Palantir Dev builds reusable capabilities, Delta solves one customer's goals.",
+    "Day to day: discovery, scoping, production code and adoption alongside customer engineers.",
+    "Role comparison: production implementation differs from consulting reports and presales; titles vary.",
+    "Skills: full stack integrations, reliability, evaluations, business decomposition, autonomy.",
+    "Fork trap: explicit interface isolates customer adapters; sample fetches SQL tickets, maps fields and assigns +07:00 timezone, core accepts TicketSource; repeatable work feeds product.",
+    "Fit: frequent travel, glue code and competing pressures; customer impact and career mobility.",
+    "Starting: join rollout, separate adapter, build real integration, assess evidence against postings. Both files read fully through EOF; no material mismatch."
+  ],
+  "message": "FDE writes and integrates software alongside the customer so it works in their real operations.",
+  "caveats": "Not sales or advice alone; role varies; custom integration should not imply uncontrolled product forks. Illustration does not promise adoption or defect reduction.",
+  "concepts": [
+    "People collaborating inside customer operations, with adapter schematic and live result.",
+    "Core and multiple customer adapter architecture comparison."
+  ],
+  "choice": "People-first scene communicates career role more directly than an architecture-only diagram.",
+  "neighbor": "Gouache workplace scene contrasts with previous burgundy investigation collage.",
+  "prompt": "Use case: illustration-story\nAsset type: shared Vietnamese/English technology blog cover, landscape 16:9.\nPrimary request: show what a Forward Deployed Engineer does: hands-on software integration alongside a customer's team inside their operational workplace.\nScene: an editorial illustrated cutaway of a customer's factory office overlooking a working conveyor through a wide interior window. Foreground, two software engineers collaborate at one desk: visiting engineer wearing a clearly visible simple badge \"FDE\", typing on an open laptop; customer's engineer beside them points at a large operational display. The display shows a simple large connected chain: one purple software module, one distinct small coral adapter coupling, a grey database cylinder, ending at a green checked workflow card. It is a conceptual integration schematic, not a screenshot. The physical conveyor visible behind the glass establishes real operations. Make the people and hands-on work the main subject, with readable silhouettes, not tiny figures.\nStyle: sophisticated editorial gouache illustration with tactile matte brushwork, clean purposeful geometry, believable anatomy, warm ivory background, muted sage factory, indigo clothing and coral adapter accent. Soft daylight, comfortable professional atmosphere, strong dark/light hierarchy. Wide medium view, not sprawling isometric city.\nText (verbatim): \"FDE\" on the visitor badge, \"LIVE\" beside the green checked workflow. No other text, no pseudo code.\nTechnical constraints: the product is integrated through a distinct adapter into customer systems; no copied core modules or suggestion of a product fork for every client. No sales handshake, military imagery, robots, brains, magic AI powers, corporate logos, watermarks or decorative neon. Factory example is illustrative, not an actual company. Keep all essential people, schematic and labels in central 80% with generous crop-safe edges. At 320x180 the two colleagues, laptop and connected production workflow must read immediately.",
+  "review": {
+    "full": "Reviewed generated full-size illustration: two colleagues at laptop inside customer factory; distinct product, adapter, database and live output. FDE and LIVE rendered correctly. No company logos or fork implication.",
+    "thumbnail": "Inspected actual 320x180 thumbnail: collaboration and laptop clear, LIVE and FDE remain readable; factory is supporting context.",
+    "bilingual": "Both complete articles share message; no frontmatter cover override, findCover pairs order 06 within blog using Vietnamese basename.",
+    "browser": "No browser tool available; visual page/crop check unavailable. Component uses 16:9 object-cover; image reviewed at this ratio."
+  },
+  "output": "public/images/blog/posts/06-forward-deployed-engineer-la-gi.webp",
+  "og": "public/images/blog/posts/og/06-forward-deployed-engineer-la-gi.jpg"
+}
